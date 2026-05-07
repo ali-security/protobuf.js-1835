@@ -286,7 +286,7 @@ See [examples/decorators.ts](./examples/decorators.ts) for an example.
 
 ### Descriptors
 
-For protobuf descriptor interoperability, see [ext/descriptor](./ext/descriptor). Note that because the internals of this package do not rely on `google/protobuf/descriptor.proto`, options are parsed and presented literally.
+For protobuf descriptor interoperability, see [ext/descriptor](./ext/README.md#descriptor). Note that because the internals of this package do not rely on `descriptor.proto` itself, options are parsed and presented literally.
 
 ### Content Security Policy
 
@@ -302,7 +302,7 @@ protobuf.js favors transparent disclosure. Security-impacting reports are handle
 
 ## Conformance
 
-protobuf.js targets full binary wire-format conformance for **Proto2**, **Proto3** and **Editions**. CI runs the official Protocol Buffers conformance suite, with logs uploaded as artifacts.
+protobuf.js targets full binary wire-format conformance for **Proto2**, **Proto3** and **Editions**. **TextFormat** is supported via [ext/textformat](./ext/README.md#textformat). CI runs the official Protocol Buffers conformance suite, with logs uploaded as artifacts.
 
 ## Performance
 
