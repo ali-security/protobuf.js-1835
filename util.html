@@ -193,6 +193,8 @@
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
                 
+                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
+                
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
                     <li data-name="util.codegen(2)"><a href="util.html#.codegen2">codegen</a></li>
@@ -475,6 +477,8 @@
                 
                     <li data-name="BufferReader#string"><a href="BufferReader.html#string">string</a></li>
                 
+                    <li data-name="BufferReader#tag"><a href="BufferReader.html#tag">tag</a></li>
+                
                     <li data-name="BufferReader#uint32"><a href="BufferReader.html#uint32">uint32</a></li>
                 
                     <li data-name="BufferReader#uint64"><a href="BufferReader.html#uint64">uint64</a></li>
@@ -524,6 +528,8 @@
                     <li data-name="BufferWriter#double"><a href="BufferWriter.html#double">double</a></li>
                 
                     <li data-name="BufferWriter#finish"><a href="BufferWriter.html#finish">finish</a></li>
+                
+                    <li data-name="BufferWriter#finishInto"><a href="BufferWriter.html#finishInto">finishInto</a></li>
                 
                     <li data-name="BufferWriter#fixed32"><a href="BufferWriter.html#fixed32">fixed32</a></li>
                 
@@ -1431,6 +1437,8 @@
                 
                     <li data-name="Reader#string"><a href="Reader.html#string">string</a></li>
                 
+                    <li data-name="Reader#tag"><a href="Reader.html#tag">tag</a></li>
+                
                     <li data-name="Reader#uint32"><a href="Reader.html#uint32">uint32</a></li>
                 
                     <li data-name="Reader#uint64"><a href="Reader.html#uint64">uint64</a></li>
@@ -1813,6 +1821,8 @@
                 
                     <li data-name="Type#getOption"><a href="Type.html#getOption">getOption</a></li>
                 
+                    <li data-name="Type#getTypeUrl"><a href="Type.html#getTypeUrl">getTypeUrl</a></li>
+                
                     <li data-name="Type#isReservedId"><a href="Type.html#isReservedId">isReservedId</a></li>
                 
                     <li data-name="Type#isReservedName"><a href="Type.html#isReservedName">isReservedName</a></li>
@@ -1906,6 +1916,8 @@
                     <li data-name="Writer#double"><a href="Writer.html#double">double</a></li>
                 
                     <li data-name="Writer#finish"><a href="Writer.html#finish">finish</a></li>
+                
+                    <li data-name="Writer#finishInto"><a href="Writer.html#finishInto">finishInto</a></li>
                 
                     <li data-name="Writer#fixed32"><a href="Writer.html#fixed32">fixed32</a></li>
                 
@@ -2391,6 +2403,8 @@
     
     
 
+    
+        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
     
     
     
@@ -3109,7 +3123,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L246">line 246</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L254">line 254</a>
         </div>
         
     </div>
@@ -3257,7 +3271,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L98">line 98</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L112">line 112</a>
         </div>
         
     </div>
@@ -3383,6 +3397,186 @@
                     
             </td>
             <td class="description last">Converted string</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id=".checkDepth">
+            
+            util.checkDepth<span class="signature">(depth)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ number }</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L34">line 34</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks a recursion depth.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>depth</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">undefined</span>
+
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                <p>Depth of recursion</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    <h5>Throws:</h5>
+    
+            
+
+<table class="params">
+    <thead>
+	<tr>
+		<th>Type</th>	
+		<th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="type">
+            
+<span class="param-type">Error</span>
+
+
+
+        </td>
+        <td class="description last">
+            <p>If depth exceeds util.recursionLimit</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+        
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        number
+                        
+                    
+            </td>
+            <td class="description last">Depth of recursion</td>
         </tr>
     
     </tbody>
@@ -3744,7 +3938,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L110">line 110</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L124">line 124</a>
         </div>
         
     </div>
@@ -3916,7 +4110,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L153">line 153</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L169">line 169</a>
         </div>
         
     </div>
@@ -3993,6 +4187,8 @@
     
 
     
+        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
+    
     
     
     
@@ -4064,7 +4260,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L122">line 122</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L137">line 137</a>
         </div>
         
     </div>
@@ -4230,6 +4426,8 @@
     
 
     
+        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
+    
     
     
     
@@ -4301,7 +4499,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L33">line 33</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L31">line 31</a>
         </div>
         
     </div>
@@ -4497,7 +4695,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L57">line 57</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L55">line 55</a>
         </div>
         
     </div>
@@ -4669,7 +4867,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L67">line 67</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js">util/fetch.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/fetch.js#L65">line 65</a>
         </div>
         
     </div>
@@ -4853,7 +5051,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/inquire.js">util/inquire.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/inquire.js#L10">line 10</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/inquire.js">util/inquire.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/inquire.js#L11">line 11</a>
         </div>
         
     </div>
@@ -4929,6 +5127,8 @@
     
     
 
+    
+        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy optional require helper. Will be removed in a future release.</li></ul></dd>
     
     
     
@@ -5297,7 +5497,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L67">line 67</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L81">line 81</a>
         </div>
         
     </div>
@@ -5938,7 +6138,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L298">line 298</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L306">line 306</a>
         </div>
         
     </div>
@@ -6086,7 +6286,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L222">line 222</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L230">line 230</a>
         </div>
         
     </div>
@@ -6285,7 +6485,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L235">line 235</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L243">line 243</a>
         </div>
         
     </div>
@@ -6487,7 +6687,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L210">line 210</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L218">line 218</a>
         </div>
         
     </div>
@@ -6638,7 +6838,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L283">line 283</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L291">line 291</a>
         </div>
         
     </div>
@@ -6867,7 +7067,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L258">line 258</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L266">line 266</a>
         </div>
         
     </div>
@@ -7265,7 +7465,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L308">line 308</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L316">line 316</a>
         </div>
         
     </div>
@@ -7413,7 +7613,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L397">line 397</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L405">line 405</a>
         </div>
         
     </div>
@@ -7561,7 +7761,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L427">line 427</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L435">line 435</a>
         </div>
         
     </div>
@@ -7938,7 +8138,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L76">line 76</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L90">line 90</a>
         </div>
         
     </div>
@@ -8086,7 +8286,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L178">line 178</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L194">line 194</a>
         </div>
         
     </div>
@@ -8331,7 +8531,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L33">line 33</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L47">line 47</a>
         </div>
         
     </div>
@@ -8479,7 +8679,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L50">line 50</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L64">line 64</a>
         </div>
         
     </div>
@@ -8627,7 +8827,7 @@ This is an alias of <a href="util.html#.isSet">util.isSet</a>.</p>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L87">line 87</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js">util.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util.js#L101">line 101</a>
         </div>
         
     </div>

@@ -193,6 +193,8 @@
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
                 
+                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
+                
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
                     <li data-name="util.codegen(2)"><a href="util.html#.codegen2">codegen</a></li>
@@ -475,6 +477,8 @@
                 
                     <li data-name="BufferReader#string"><a href="BufferReader.html#string">string</a></li>
                 
+                    <li data-name="BufferReader#tag"><a href="BufferReader.html#tag">tag</a></li>
+                
                     <li data-name="BufferReader#uint32"><a href="BufferReader.html#uint32">uint32</a></li>
                 
                     <li data-name="BufferReader#uint64"><a href="BufferReader.html#uint64">uint64</a></li>
@@ -524,6 +528,8 @@
                     <li data-name="BufferWriter#double"><a href="BufferWriter.html#double">double</a></li>
                 
                     <li data-name="BufferWriter#finish"><a href="BufferWriter.html#finish">finish</a></li>
+                
+                    <li data-name="BufferWriter#finishInto"><a href="BufferWriter.html#finishInto">finishInto</a></li>
                 
                     <li data-name="BufferWriter#fixed32"><a href="BufferWriter.html#fixed32">fixed32</a></li>
                 
@@ -1431,6 +1437,8 @@
                 
                     <li data-name="Reader#string"><a href="Reader.html#string">string</a></li>
                 
+                    <li data-name="Reader#tag"><a href="Reader.html#tag">tag</a></li>
+                
                     <li data-name="Reader#uint32"><a href="Reader.html#uint32">uint32</a></li>
                 
                     <li data-name="Reader#uint64"><a href="Reader.html#uint64">uint64</a></li>
@@ -1813,6 +1821,8 @@
                 
                     <li data-name="Type#getOption"><a href="Type.html#getOption">getOption</a></li>
                 
+                    <li data-name="Type#getTypeUrl"><a href="Type.html#getTypeUrl">getTypeUrl</a></li>
+                
                     <li data-name="Type#isReservedId"><a href="Type.html#isReservedId">isReservedId</a></li>
                 
                     <li data-name="Type#isReservedName"><a href="Type.html#isReservedName">isReservedName</a></li>
@@ -1906,6 +1916,8 @@
                     <li data-name="Writer#double"><a href="Writer.html#double">double</a></li>
                 
                     <li data-name="Writer#finish"><a href="Writer.html#finish">finish</a></li>
+                
+                    <li data-name="Writer#finishInto"><a href="Writer.html#finishInto">finishInto</a></li>
                 
                     <li data-name="Writer#fixed32"><a href="Writer.html#fixed32">fixed32</a></li>
                 
@@ -2152,7 +2164,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L96">line 96</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L98">line 98</a>
         </div>
         
     </div>
@@ -2838,7 +2850,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L249">line 249</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L253">line 253</a>
         </div>
         
     </div>
@@ -3037,12 +3049,12 @@
     <div class="nameContainer">
         <h4 class="name" id="addJSON">
             
-            addJSON<span class="signature">(nestedJson)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Namespace.html">Namespace</a> }</span>
+            addJSON<span class="signature">(nestedJson, <span class="optional">depth</span>)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Namespace.html">Namespace</a> }</span>
         </h4>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L196">line 196</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L199">line 199</a>
         </div>
         
     </div>
@@ -3101,7 +3113,43 @@
             
             <td class="description last">
                 
+                    
+                    
+                        
+                    
+                
                 <p>Any nested object descriptors</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>depth</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Current nesting depth, defaults to <code>0</code></p></td>
         </tr>
 	
 	
@@ -3190,7 +3238,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L328">line 328</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L332">line 332</a>
         </div>
         
     </div>
@@ -3377,7 +3425,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L223">line 223</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L227">line 227</a>
         </div>
         
     </div>
@@ -3528,7 +3576,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L236">line 236</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L240">line 240</a>
         </div>
         
     </div>
@@ -3856,7 +3904,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L396">line 396</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L400">line 400</a>
         </div>
         
     </div>
@@ -4094,7 +4142,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L479">line 479</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L485">line 485</a>
         </div>
         
     </div>
@@ -4296,7 +4344,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L511">line 511</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L517">line 517</a>
         </div>
         
     </div>
@@ -4477,7 +4525,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L539">line 539</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L545">line 545</a>
         </div>
         
     </div>
@@ -4658,7 +4706,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L497">line 497</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L503">line 503</a>
         </div>
         
     </div>
@@ -4839,7 +4887,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L525">line 525</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L531">line 531</a>
         </div>
         
     </div>
@@ -5320,7 +5368,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L307">line 307</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L311">line 311</a>
         </div>
         
     </div>
@@ -5627,7 +5675,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L356">line 356</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L360">line 360</a>
         </div>
         
     </div>
@@ -6330,7 +6378,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L184">line 184</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L186">line 186</a>
         </div>
         
     </div>

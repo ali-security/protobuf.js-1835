@@ -193,6 +193,8 @@
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
                 
+                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
+                
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
                     <li data-name="util.codegen(2)"><a href="util.html#.codegen2">codegen</a></li>
@@ -475,6 +477,8 @@
                 
                     <li data-name="BufferReader#string"><a href="BufferReader.html#string">string</a></li>
                 
+                    <li data-name="BufferReader#tag"><a href="BufferReader.html#tag">tag</a></li>
+                
                     <li data-name="BufferReader#uint32"><a href="BufferReader.html#uint32">uint32</a></li>
                 
                     <li data-name="BufferReader#uint64"><a href="BufferReader.html#uint64">uint64</a></li>
@@ -524,6 +528,8 @@
                     <li data-name="BufferWriter#double"><a href="BufferWriter.html#double">double</a></li>
                 
                     <li data-name="BufferWriter#finish"><a href="BufferWriter.html#finish">finish</a></li>
+                
+                    <li data-name="BufferWriter#finishInto"><a href="BufferWriter.html#finishInto">finishInto</a></li>
                 
                     <li data-name="BufferWriter#fixed32"><a href="BufferWriter.html#fixed32">fixed32</a></li>
                 
@@ -1431,6 +1437,8 @@
                 
                     <li data-name="Reader#string"><a href="Reader.html#string">string</a></li>
                 
+                    <li data-name="Reader#tag"><a href="Reader.html#tag">tag</a></li>
+                
                     <li data-name="Reader#uint32"><a href="Reader.html#uint32">uint32</a></li>
                 
                     <li data-name="Reader#uint64"><a href="Reader.html#uint64">uint64</a></li>
@@ -1813,6 +1821,8 @@
                 
                     <li data-name="Type#getOption"><a href="Type.html#getOption">getOption</a></li>
                 
+                    <li data-name="Type#getTypeUrl"><a href="Type.html#getTypeUrl">getTypeUrl</a></li>
+                
                     <li data-name="Type#isReservedId"><a href="Type.html#isReservedId">isReservedId</a></li>
                 
                     <li data-name="Type#isReservedName"><a href="Type.html#isReservedName">isReservedName</a></li>
@@ -1906,6 +1916,8 @@
                     <li data-name="Writer#double"><a href="Writer.html#double">double</a></li>
                 
                     <li data-name="Writer#finish"><a href="Writer.html#finish">finish</a></li>
+                
+                    <li data-name="Writer#finishInto"><a href="Writer.html#finishInto">finishInto</a></li>
                 
                     <li data-name="Writer#fixed32"><a href="Writer.html#fixed32">fixed32</a></li>
                 
@@ -2160,7 +2172,7 @@
   <a target="_blank" href="https://www.jsdelivr.com/package/npm/protobufjs"><img src="https://img.shields.io/jsdelivr/npm/hm/protobufjs?label=requests&logo=jsdelivr" alt=""></a>
 </p>
 <p><strong>Protocol Buffers</strong> are a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more, originally designed at Google (<a target="_blank" href="https://protobuf.dev/">see</a>).</p>
-<p><strong>protobuf.js</strong> is a freestanding JavaScript implementation of Protocol Buffers with TypeScript support for Node.js and the browser. It works with <code>.proto</code> files out of the box and can generate optimized encoders and decoders at runtime or emit them statically.</p>
+<p><strong>protobuf.js</strong> is a standalone JavaScript implementation of Protocol Buffers with TypeScript support for Node.js and the browser. It works with <code>.proto</code> files out of the box, is optimized for fast binary I/O, and supports runtime reflection as well as static code generation.</p>
 <h2 id="getting-started">Getting started</h2>
 <h3 id="install">Install</h3>
 <pre class="prettyprint source lang-sh"><code>npm install protobufjs
@@ -2168,7 +2180,7 @@
 <p>The <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/cli/">command line utility</a> for generating reflection bundles, static code and TypeScript declarations is published as an add-on package:</p>
 <pre class="prettyprint source lang-sh"><code>npm install --save-dev protobufjs-cli
 </code></pre>
-<p>The CLI is a small but capable standalone protobuf.js toolchain. It does not require <code>protoc</code>.</p>
+<p>The CLI is a small but capable standalone protobuf.js toolchain. It does not require <code>protoc</code> or a language plugin.</p>
 <h3 id="choose-a-runtime">Choose a runtime</h3>
 <table>
 <thead>
@@ -2196,7 +2208,7 @@
 </tr>
 </tbody>
 </table>
-<p>Builds with reflection include just-in-time code generation. Use the CLI to emit the same optimized code ahead of time and run it on the minimal runtime. The full build includes the light build, and the light build includes the minimal runtime.</p>
+<p>The full build includes the light build, and the light build includes the minimal runtime.</p>
 <h3 id="browser-builds">Browser builds</h3>
 <p>Pick the distribution matching your runtime variant and pin an exact version:</p>
 <pre class="prettyprint source lang-html"><code>&lt;!-- Full -->
@@ -2206,7 +2218,7 @@
 &lt;!-- Minimal -->
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/protobufjs@8.X.X/dist/minimal/protobuf.min.js&quot;>&lt;/script>
 </code></pre>
-<p>Browser builds support CommonJS and AMD loaders and export globally as <code>window.protobuf</code>. Native ESM support is planned for a future release.</p>
+<p>Browser builds support CommonJS and AMD loaders and export globally as <code>window.protobuf</code>.</p>
 <h2 id="usage">Usage</h2>
 <p>The examples below use this schema:</p>
 <pre class="prettyprint source lang-proto"><code>syntax = &quot;proto3&quot;;
@@ -2240,7 +2252,7 @@ const decoded = AwesomeMessage.decode(encoded);
 </code></pre>
 <p><code>encode</code> expects a message instance or equivalent plain object and does not verify input implicitly. Use <code>verify</code> for plain objects whose shape is not guaranteed, <code>create</code> to create a message instance from already valid data when useful, and <code>fromObject</code> when conversion from broader JavaScript input is needed.</p>
 <p>Plain objects can be encoded directly when they already use protobuf.js runtime types: numbers for 32-bit numeric fields, booleans for <code>bool</code>, strings for <code>string</code>, <code>Uint8Array</code> or <code>Buffer</code> for <code>bytes</code>, arrays for repeated fields, and plain objects for maps. Map keys are the string representation of the respective value or an 8-character hash string for 64-bit/<code>Long</code> keys. Use <code>fromObject</code> when input may use broader JSON-style forms such as enum names, base64 strings for bytes, or decimal strings for 64-bit values.</p>
-<p>Install <a target="_blank" href="https://github.com/dcodeIO/long.js"><code>long</code></a> with protobuf.js when exact 64-bit integer support is required. Native <code>BigInt</code> support is planned for a future release.</p>
+<p>Install <a target="_blank" href="https://github.com/dcodeIO/long.js"><code>long</code></a> with protobuf.js when exact 64-bit integer support is required.</p>
 <h3 id="convert-plain-objects">Convert plain objects</h3>
 <pre class="prettyprint source lang-js"><code>const message = AwesomeMessage.fromObject({ awesomeField: 42 });
 const object = AwesomeMessage.toObject(message, {
@@ -2249,24 +2261,7 @@ const object = AwesomeMessage.toObject(message, {
   bytes: String
 });
 </code></pre>
-<h2 id="message-api">Message API</h2>
-<p>Message types expose focused methods for validation, conversion, and binary I/O.</p>
-<ul>
-<li>
-<p><strong>verify</strong>(object: <code>object</code>): <code>null | string</code><br>
-Checks whether a plain object can be encoded as-is. Returns <code>null</code> if valid, otherwise an error message.</p>
-</li>
-<li>
-<p><strong>create</strong>(properties?: <code>object</code>): <code>Message</code><br>
-Creates a message instance from already valid data.</p>
-</li>
-<li>
-<p><strong>fromObject</strong>(object: <code>object</code>): <code>Message</code><br>
-Converts broader JavaScript input into a message instance.</p>
-</li>
-<li>
-<p><strong>toObject</strong>(message: <code>Message</code>, options?: <code>ConversionOptions</code>): <code>object</code><br>
-Converts a message instance to a plain object for JSON or interoperability. Common options:</p>
+<p>Common <code>ConversionOptions</code> are:</p>
 <table>
 <thead>
 <tr>
@@ -2309,6 +2304,24 @@ Converts a message instance to a plain object for JSON or interoperability. Comm
 </tr>
 </tbody>
 </table>
+<h2 id="message-api">Message API</h2>
+<p>Message types expose focused methods for validation, conversion, and binary I/O.</p>
+<ul>
+<li>
+<p><strong>verify</strong>(object: <code>object</code>): <code>null | string</code><br>
+Checks whether a plain object can be encoded as-is. Returns <code>null</code> if valid, otherwise an error message.</p>
+</li>
+<li>
+<p><strong>create</strong>(properties?: <code>object</code>): <code>Message</code><br>
+Creates a message instance from already valid data.</p>
+</li>
+<li>
+<p><strong>fromObject</strong>(object: <code>object</code>): <code>Message</code><br>
+Converts broader JavaScript input into a message instance.</p>
+</li>
+<li>
+<p><strong>toObject</strong>(message: <code>Message</code>, options?: <code>ConversionOptions</code>): <code>object</code><br>
+Converts a message instance to a plain object for JSON or interoperability.</p>
 </li>
 <li>
 <p><strong>encode</strong>(message: <code>Message | object</code>, writer?: <code>Writer</code>): <code>Writer</code><br>
@@ -2333,8 +2346,8 @@ Converts a message instance to JSON-compatible output using default conversion o
 </ul>
 <p>Length-delimited methods read and write a varint byte length before the message, which is useful for streams and framed protocols.</p>
 <p>If required fields are missing while decoding proto2 data, <code>decode</code> throws <code>protobuf.util.ProtocolError</code> with the partially decoded message available as <code>err.instance</code>.</p>
-<h2 id="schemas-and-code-generation">Schemas and code generation</h2>
-<p>Use <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/cli/"><code>protobufjs-cli</code></a> to generate reflection bundles, static JavaScript code and TypeScript declarations.</p>
+<h2 id="code-generation">Code generation</h2>
+<p>Use <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/cli/"><code>protobufjs-cli</code></a> to generate reflection bundles, static JavaScript code and TypeScript declarations, either directly with <code>pbjs</code> or through its <code>protoc-gen-pbjs</code> plugin.</p>
 <p>Reflection keeps schemas as descriptors and generates optimized functions at runtime. Static code emits the same optimized functions ahead of time. The main tradeoffs are how schemas are loaded, how bundle size scales with schema size, whether runtime code generation is allowed by your environment, and whether reflection metadata should remain available at runtime.</p>
 <table>
 <thead>
@@ -2367,9 +2380,17 @@ Converts a message instance to JSON-compatible output using default conversion o
 </tr>
 </tbody>
 </table>
-<p>Module targets support <code>--wrap default</code> for CommonJS and AMD, plus <code>commonjs</code>, <code>amd</code>, <code>es6</code>, and <code>closure</code>; <code>--wrap</code> can also load a custom wrapper module.</p>
+<p>Module targets support <code>--wrap default</code> for CommonJS and AMD, plus <code>commonjs</code>, <code>amd</code>, <code>esm</code>, and <code>closure</code>; <code>--wrap</code> can also load a custom wrapper module.</p>
+<h3 id="static-modules">Static modules</h3>
+<p>Static modules generate dedicated JavaScript code for your schema, so they only need <code>protobufjs/minimal.js</code>.</p>
+<pre class="prettyprint source lang-sh"><code>npx pbjs -t static-module -w esm -o awesome.js --dts awesome.proto
+</code></pre>
+<pre class="prettyprint source lang-ts"><code>import { awesomepackage } from &quot;./awesome.js&quot;;
+
+const message = awesomepackage.AwesomeMessage.create({ awesomeField: &quot;hello&quot; });
+</code></pre>
 <h3 id="reflection-bundles">Reflection bundles</h3>
-<p>Bundling schemas to JSON avoids reparsing <code>.proto</code> files and can reduce browser requests when schemas would otherwise be loaded separately.</p>
+<p>Bundling schemas avoids reparsing <code>.proto</code> files at runtime and can reduce browser requests when schemas would otherwise be loaded separately. While reflection requires at least <code>protobufjs/light.js</code>, large schemas often produce smaller bundles than equivalent static modules because most code is shared via reflection.</p>
 <pre class="prettyprint source lang-sh"><code>npx pbjs -t json -o awesome.json awesome1.proto awesome2.proto ...
 </code></pre>
 <pre class="prettyprint source lang-js"><code>const bundle = require(&quot;./awesome.json&quot;);
@@ -2377,28 +2398,15 @@ Converts a message instance to JSON-compatible output using default conversion o
 const root = protobuf.Root.fromJSON(bundle);
 const AwesomeMessage = root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;);
 </code></pre>
-<pre class="prettyprint source lang-sh"><code>npx pbjs -t json-module -w es6 -o awesome.json awesome.proto
+<pre class="prettyprint source lang-sh"><code>npx pbjs -t json-module -w esm -o awesome.js --dts awesome.proto
 </code></pre>
-<pre class="prettyprint source lang-js"><code>const root = require(&quot;./awesome.js&quot;);
+<pre class="prettyprint source lang-js"><code>import { awesomepackage } from &quot;./awesome.js&quot;;
 
-const AwesomeMessage = root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;);
+const AwesomeMessage = awesomepackage.AwesomeMessage;
 </code></pre>
-<p>Reflection bundles can be loaded with <code>protobufjs/light.js</code> because the <code>.proto</code> parser is not required.</p>
-<h3 id="static-modules">Static modules</h3>
-<pre class="prettyprint source lang-sh"><code>npx pbjs -t static-module -w es6 -o awesome.js awesome.proto
-npx pbts -o awesome.d.ts awesome.js
-</code></pre>
-<pre class="prettyprint source lang-ts"><code>import { awesomepackage } from &quot;./awesome.js&quot;;
-
-const message = awesomepackage.AwesomeMessage.create({ awesomeField: &quot;hello&quot; });
-</code></pre>
-<p>Generated static code only needs <code>protobufjs/minimal.js</code>.</p>
+<p>JSON modules export the reflection root and, with <code>-w esm</code>, also provide top-level named exports that align with static modules. Their declarations mirror <code>static-module</code> typings, but because JSON modules are backed by reflection objects, message instances should be created with <code>MyMessage.create(...)</code> instead of constructors. Code using <code>create(...)</code> works with static modules as well.</p>
 <h3 id="typescript-integration">TypeScript integration</h3>
-<p>The protobuf.js runtime API is typed, but fields of dynamically loaded messages are only known at runtime. For statically typed messages and fields, either generate static code with declarations, or use reflection bundles with declarations generated from the equivalent static module:</p>
-<pre class="prettyprint source lang-sh"><code>npx pbjs -t json-module -w commonjs -o awesome.js awesome.proto
-npx pbjs -t static-module awesome.proto | npx pbts -o awesome.d.ts -
-</code></pre>
-<p>Use <code>create(...)</code> instead of constructors with reflection-backed declarations.</p>
+<p>TypeScript is a first-class target in protobuf.js. The runtime API is typed, and with <code>--dts</code>, both <code>json-module</code> and <code>static-module</code> emit ready-to-run JavaScript modules together with matching TypeScript declarations. No separate transpile step is necessary.</p>
 <h2 id="advanced-usage">Advanced usage</h2>
 <h3 id="programmatic-schemas">Programmatic schemas</h3>
 <p>The full and light builds can construct schemas directly through reflection:</p>
@@ -2430,34 +2438,51 @@ root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;).ctor = AwesomeMessage
 <p>Custom constructors are populated with static <code>create</code>, <code>encode</code>, <code>encodeDelimited</code>, <code>decode</code>, <code>decodeDelimited</code>, <code>verify</code>, <code>fromObject</code>, <code>toObject</code>, and the instance method <code>toJSON</code>. The reflected type is available as <code>AwesomeMessage.$type</code> and <code>message.$type</code>.</p>
 <h3 id="services">Services</h3>
 <p>protobuf.js supports service clients built from reflected service definitions. The service API is transport-agnostic: provide an <code>rpcImpl</code> function to connect it to HTTP, WebSocket, gRPC, or another transport. See <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/examples/streaming-rpc.js">examples/streaming-rpc.js</a> for details.</p>
-<h3 id="decorators">Decorators</h3>
-<p>Experimental decorators are available for defining message classes directly in code.</p>
-<ul>
-<li>
-<p><strong>Type.d(typeName?: <code>string</code>)</strong>   <em>(optional)</em><br /><br>
-Annotates a class as a protobuf message type.</p>
-</li>
-<li>
-<p><strong>Field.d&lt;T&gt;(fieldId: <code>number</code>, fieldType: <code>string | Constructor&lt;T&gt;</code>, fieldRule?: <code>&quot;optional&quot; | &quot;required&quot; | &quot;repeated&quot;</code>, defaultValue?: <code>T</code>)</strong><br /><br>
-Annotates a property as a protobuf field.</p>
-</li>
-<li>
-<p><strong>MapField.d&lt;T extends { [key: string]: any }&gt;(fieldId: <code>number</code>, fieldKeyType: <code>string</code>, fieldValueType: <code>string | Constructor&lt;{}&gt;</code>)</strong><br /><br>
-Annotates a property as a protobuf map field.</p>
-</li>
-<li>
-<p><strong>OneOf.d&lt;T extends string&gt;(...fieldNames: <code>string[]</code>)</strong><br /><br>
-Annotates a property as a protobuf oneof discriminator.</p>
-</li>
-</ul>
-<p>See <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/examples/decorators.ts">examples/decorators.ts</a> for an example.</p>
 <h3 id="descriptors">Descriptors</h3>
-<p>For protobuf descriptor interoperability, see <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/ext/descriptor">ext/descriptor</a>. Note that because the internals of this package do not rely on <code>google/protobuf/descriptor.proto</code>, options are parsed and presented literally.</p>
+<p>For <code>google/protobuf/descriptor.proto</code> interoperability, see <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/ext/README.md#descriptor">ext/descriptor</a>. Note that because protobuf.js does not use <code>descriptor.proto</code> internally, options are parsed and presented literally.</p>
+<h3 id="text-format">Text format</h3>
+<p>Protocol Buffers <a target="_blank" href="https://protobuf.dev/reference/protobuf/textformat-spec/">Text Format</a> is supported via <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/ext/README.md#textformat">ext/textformat</a>.</p>
 <h3 id="content-security-policy">Content Security Policy</h3>
 <p>In <a target="_blank" href="https://w3c.github.io/webappsec-csp/">CSP</a>-restricted environments that disallow unsafe-eval, use generated static code instead of runtime code generation.</p>
+<h2 id="compatibility">Compatibility</h2>
+<p>Supported runtimes are browsers, Node.js v12+, Deno (<code>deno add npm:protobufjs</code>) and Bun (<code>bun add protobufjs</code>). When using the CLI with Bun, Node.js must also be installed.</p>
+<h2 id="security">Security</h2>
+<p>protobuf.js favors transparent disclosure. Security-impacting reports are handled through coordinated GitHub Security Advisories where appropriate. See <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/SECURITY.md">SECURITY.md</a> for supported release lines, reporting instructions, and notes on untrusted schema input.</p>
+<h2 id="conformance">Conformance</h2>
+<p>protobuf.js targets full binary wire-format conformance for <strong>Proto2</strong>, <strong>Proto3</strong> and <strong>Editions</strong>. CI runs the official Protocol Buffers conformance suite, with logs uploaded as artifacts.</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th style="text-align:right">Total</th>
+<th style="text-align:right">Required</th>
+<th style="text-align:right">Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proto2</td>
+<td style="text-align:right">100.00% (694/694)</td>
+<td style="text-align:right">100.00% (485/485)</td>
+<td style="text-align:right">100.00% (209/209)</td>
+</tr>
+<tr>
+<td>Proto3</td>
+<td style="text-align:right">100.00% (689/689)</td>
+<td style="text-align:right">100.00% (482/482)</td>
+<td style="text-align:right">100.00% (207/207)</td>
+</tr>
+<tr>
+<td>Editions</td>
+<td style="text-align:right">100.00% (1176/1176)</td>
+<td style="text-align:right">100.00% (926/926)</td>
+<td style="text-align:right">100.00% (250/250)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="performance">Performance</h2>
-<p>Both protobuf.js reflection and static modes execute specialized encoder and decoder functions generated for each message type instead of a generic descriptor-walking interpreter.</p>
-<p>The repository includes a small benchmark for the bundled fixture in <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/bench/"><code>bench/</code></a>. It compares protobuf.js reflection and static code against native <code>JSON.stringify</code>/<code>JSON.parse</code> and <a target="_blank" href="https://www.npmjs.com/package/google-protobuf">google-protobuf</a>. Results depend on hardware, Node.js version, and the message shape, so they should be treated as indicative rather than absolute.</p>
+<p>In both reflection and static modes, protobuf.js builds specialized encoders and decoders for each message type instead of interpreting descriptors at runtime.</p>
+<p>The repository includes a small benchmark for the bundled fixture in <a target="_blank" href="https://github.com/protobufjs/protobuf.js/tree/master/bench/"><code>bench/</code></a>. It compares protobuf.js reflection and static code against native <code>JSON.stringify</code>/<code>JSON.parse</code> and <a target="_blank" href="https://www.npmjs.com/package/google-protobuf">google-protobuf</a> (<code>protoc-gen-js</code>). Results depend on hardware, Node.js version, and the message shape, so they should be treated as indicative rather than absolute.</p>
 <p>One run on an AMD Ryzen 9 9950X3D with Node.js 24.13.0 and google-protobuf 4.0.2 produced:</p>
 <pre class="prettyprint source"><code>benchmarking encoding performance ...
 
@@ -2519,7 +2544,6 @@ npm install
 <ul>
 <li><a target="_blank" href="https://protobufjs.github.io/protobuf.js">API Documentation</a></li>
 <li><a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/CHANGELOG.md">Changelog</a></li>
-<li><a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/SECURITY.md">Security Policy</a></li>
 <li><a target="_blank" href="https://protobuf.dev/">Protocol Buffers Documentation</a></li>
 </ul></article>
     </section>

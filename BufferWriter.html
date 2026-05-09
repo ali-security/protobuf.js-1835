@@ -193,6 +193,8 @@
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
                 
+                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
+                
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
                     <li data-name="util.codegen(2)"><a href="util.html#.codegen2">codegen</a></li>
@@ -475,6 +477,8 @@
                 
                     <li data-name="BufferReader#string"><a href="BufferReader.html#string">string</a></li>
                 
+                    <li data-name="BufferReader#tag"><a href="BufferReader.html#tag">tag</a></li>
+                
                     <li data-name="BufferReader#uint32"><a href="BufferReader.html#uint32">uint32</a></li>
                 
                     <li data-name="BufferReader#uint64"><a href="BufferReader.html#uint64">uint64</a></li>
@@ -524,6 +528,8 @@
                     <li data-name="BufferWriter#double"><a href="BufferWriter.html#double">double</a></li>
                 
                     <li data-name="BufferWriter#finish"><a href="BufferWriter.html#finish">finish</a></li>
+                
+                    <li data-name="BufferWriter#finishInto"><a href="BufferWriter.html#finishInto">finishInto</a></li>
                 
                     <li data-name="BufferWriter#fixed32"><a href="BufferWriter.html#fixed32">fixed32</a></li>
                 
@@ -1431,6 +1437,8 @@
                 
                     <li data-name="Reader#string"><a href="Reader.html#string">string</a></li>
                 
+                    <li data-name="Reader#tag"><a href="Reader.html#tag">tag</a></li>
+                
                     <li data-name="Reader#uint32"><a href="Reader.html#uint32">uint32</a></li>
                 
                     <li data-name="Reader#uint64"><a href="Reader.html#uint64">uint64</a></li>
@@ -1813,6 +1821,8 @@
                 
                     <li data-name="Type#getOption"><a href="Type.html#getOption">getOption</a></li>
                 
+                    <li data-name="Type#getTypeUrl"><a href="Type.html#getTypeUrl">getTypeUrl</a></li>
+                
                     <li data-name="Type#isReservedId"><a href="Type.html#isReservedId">isReservedId</a></li>
                 
                     <li data-name="Type#isReservedName"><a href="Type.html#isReservedName">isReservedName</a></li>
@@ -1906,6 +1916,8 @@
                     <li data-name="Writer#double"><a href="Writer.html#double">double</a></li>
                 
                     <li data-name="Writer#finish"><a href="Writer.html#finish">finish</a></li>
+                
+                    <li data-name="Writer#finishInto"><a href="Writer.html#finishInto">finishInto</a></li>
                 
                     <li data-name="Writer#fixed32"><a href="Writer.html#fixed32">fixed32</a></li>
                 
@@ -2965,6 +2977,206 @@
                     
             </td>
             <td class="description last">Finished buffer</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer inherited">
+        <h4 class="name" id="finishInto">
+            
+                <span class="inherited"><a href="Writer.html#finishInto">inherited</a></span>
+            
+            finishInto<span class="signature">(buf, <span class="optional">offset</span>)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ T }</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/writer.js">writer.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/writer.js#L471">line 471</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Finishes the write operation, writing into the provided buffer.<br>
+The caller must ensure that <code>buf</code> has enough space starting at <code>offset</code><br>
+to hold <a href="Writer.html#len">Writer#len</a> bytes.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		<th>Default</th>
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>buf</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">T</span>
+
+
+
+            
+            </td>
+            
+            
+                <td class="default">
+                
+                </td>
+            
+            
+            <td class="description last">
+                
+                    
+                    
+                        
+                    
+                
+                <p>Target buffer</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>offset</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+            
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Offset to start writing at</p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        T
+                        
+                    
+            </td>
+            <td class="description last">The provided buffer</td>
         </tr>
     
     </tbody>

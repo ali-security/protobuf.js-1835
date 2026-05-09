@@ -193,6 +193,8 @@
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
                 
+                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
+                
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
                     <li data-name="util.codegen(2)"><a href="util.html#.codegen2">codegen</a></li>
@@ -475,6 +477,8 @@
                 
                     <li data-name="BufferReader#string"><a href="BufferReader.html#string">string</a></li>
                 
+                    <li data-name="BufferReader#tag"><a href="BufferReader.html#tag">tag</a></li>
+                
                     <li data-name="BufferReader#uint32"><a href="BufferReader.html#uint32">uint32</a></li>
                 
                     <li data-name="BufferReader#uint64"><a href="BufferReader.html#uint64">uint64</a></li>
@@ -524,6 +528,8 @@
                     <li data-name="BufferWriter#double"><a href="BufferWriter.html#double">double</a></li>
                 
                     <li data-name="BufferWriter#finish"><a href="BufferWriter.html#finish">finish</a></li>
+                
+                    <li data-name="BufferWriter#finishInto"><a href="BufferWriter.html#finishInto">finishInto</a></li>
                 
                     <li data-name="BufferWriter#fixed32"><a href="BufferWriter.html#fixed32">fixed32</a></li>
                 
@@ -1431,6 +1437,8 @@
                 
                     <li data-name="Reader#string"><a href="Reader.html#string">string</a></li>
                 
+                    <li data-name="Reader#tag"><a href="Reader.html#tag">tag</a></li>
+                
                     <li data-name="Reader#uint32"><a href="Reader.html#uint32">uint32</a></li>
                 
                     <li data-name="Reader#uint64"><a href="Reader.html#uint64">uint64</a></li>
@@ -1813,6 +1821,8 @@
                 
                     <li data-name="Type#getOption"><a href="Type.html#getOption">getOption</a></li>
                 
+                    <li data-name="Type#getTypeUrl"><a href="Type.html#getTypeUrl">getTypeUrl</a></li>
+                
                     <li data-name="Type#isReservedId"><a href="Type.html#isReservedId">isReservedId</a></li>
                 
                     <li data-name="Type#isReservedName"><a href="Type.html#isReservedName">isReservedName</a></li>
@@ -1906,6 +1916,8 @@
                     <li data-name="Writer#double"><a href="Writer.html#double">double</a></li>
                 
                     <li data-name="Writer#finish"><a href="Writer.html#finish">finish</a></li>
+                
+                    <li data-name="Writer#finishInto"><a href="Writer.html#finishInto">finishInto</a></li>
                 
                     <li data-name="Writer#fixed32"><a href="Writer.html#fixed32">fixed32</a></li>
                 
@@ -3192,7 +3204,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L359">line 359</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L361">line 361</a>
         </div>
         
     </div>
@@ -3393,12 +3405,12 @@ Assigning a function replaces the internal constructor. If the function does not
             
                 <span class="inherited"><a href="NamespaceBase.html#addJSON">inherited</a></span>
             
-            addJSON<span class="signature">(nestedJson)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Namespace.html">Namespace</a> }</span>
+            addJSON<span class="signature">(nestedJson, <span class="optional">depth</span>)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Namespace.html">Namespace</a> }</span>
         </h4>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L196">line 196</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L199">line 199</a>
         </div>
         
     </div>
@@ -3457,7 +3469,43 @@ Assigning a function replaces the internal constructor. If the function does not
             
             <td class="description last">
                 
+                    
+                    
+                        
+                    
+                
                 <p>Any nested object descriptors</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>depth</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Current nesting depth, defaults to <code>0</code></p></td>
         </tr>
 	
 	
@@ -3546,7 +3594,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L454">line 454</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L456">line 456</a>
         </div>
         
     </div>
@@ -3701,7 +3749,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L538">line 538</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L540">line 540</a>
         </div>
         
     </div>
@@ -3944,7 +3992,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L549">line 549</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L551">line 551</a>
         </div>
         
     </div>
@@ -4153,7 +4201,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L328">line 328</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L332">line 332</a>
         </div>
         
     </div>
@@ -4340,7 +4388,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L516">line 516</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L518">line 518</a>
         </div>
         
     </div>
@@ -4527,7 +4575,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L526">line 526</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L528">line 528</a>
         </div>
         
     </div>
@@ -4714,7 +4762,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L569">line 569</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L571">line 571</a>
         </div>
         
     </div>
@@ -4864,7 +4912,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L342">line 342</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L344">line 344</a>
         </div>
         
     </div>
@@ -5017,7 +5065,7 @@ Assigning a function replaces the internal constructor. If the function does not
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L236">line 236</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L240">line 240</a>
         </div>
         
     </div>
@@ -5338,6 +5386,161 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
             
 <dt>
     <div class="nameContainer">
+        <h4 class="name" id="getTypeUrl">
+            
+            getTypeUrl<span class="signature">(<span class="optional">prefix</span>)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ string }</span>
+        </h4>
+    
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L609">line 609</a>
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets the type url for this type.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>prefix</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Custom type url prefix, defaults to <code>&quot;type.googleapis.com&quot;</code></p></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+        
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            <td class="description last">The type url</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
         <h4 class="name" id="isReservedId">
             
             isReservedId<span class="signature">(id)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ boolean }</span>
@@ -5345,7 +5548,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L436">line 436</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L438">line 438</a>
         </div>
         
     </div>
@@ -5493,7 +5696,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L445">line 445</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L447">line 447</a>
         </div>
         
     </div>
@@ -5643,7 +5846,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L396">line 396</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L400">line 400</a>
         </div>
         
     </div>
@@ -5883,7 +6086,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L479">line 479</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L485">line 485</a>
         </div>
         
     </div>
@@ -6087,7 +6290,7 @@ This methods differs from <a href="Namespace.html#get">get</a> in that it return
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L511">line 511</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L517">line 517</a>
         </div>
         
     </div>
@@ -6270,7 +6473,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L539">line 539</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L545">line 545</a>
         </div>
         
     </div>
@@ -6453,7 +6656,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L497">line 497</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L503">line 503</a>
         </div>
         
     </div>
@@ -6636,7 +6839,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L525">line 525</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L531">line 531</a>
         </div>
         
     </div>
@@ -7117,7 +7320,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L404">line 404</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L406">line 406</a>
         </div>
         
     </div>
@@ -7426,7 +7629,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L308">line 308</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L310">line 310</a>
         </div>
         
     </div>
@@ -8129,7 +8332,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L462">line 462</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L464">line 464</a>
         </div>
         
     </div>
@@ -8230,7 +8433,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L289">line 289</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L291">line 291</a>
         </div>
         
     </div>
@@ -8385,7 +8588,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L598">line 598</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L600">line 600</a>
         </div>
         
     </div>
@@ -8672,7 +8875,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L560">line 560</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L562">line 562</a>
         </div>
         
     </div>
@@ -8823,7 +9026,7 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L617">line 617</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L633">line 633</a>
         </div>
         
     </div>
@@ -8907,6 +9110,8 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     
 
     
+        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
+    
     
     
     
@@ -8973,12 +9178,12 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
     <div class="nameContainer">
         <h4 class="name" id=".fromJSON">
             
-            Type.fromJSON<span class="signature">(name, json)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Type.html">Type</a> }</span>
+            Type.fromJSON<span class="signature">(name, json, <span class="optional">depth</span>)</span><span class="return-arrow" aria-hidden="true">&rarr;</span><span class="type-signature returnType">{ <a href="Type.html">Type</a> }</span>
         </h4>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L240">line 240</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L241">line 241</a>
         </div>
         
     </div>
@@ -9037,6 +9242,11 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
             
             <td class="description last">
                 
+                    
+                    
+                        
+                    
+                
                 <p>Message name</p></td>
         </tr>
 	
@@ -9061,7 +9271,43 @@ Besides its signature, this methods differs from <a href="Namespace.html#lookup"
             
             <td class="description last">
                 
+                    
+                    
+                        
+                    
+                
                 <p>Message type descriptor</p></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>depth</code></td>
+            
+            
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+            
+            
+            
+            <td class="description last">
+                
+                    
+                        <span class="optional">optional</span>
+                    
+                    
+                        
+                    
+                
+                <p>Current nesting depth, defaults to <code>0</code></p></td>
         </tr>
 	
 	
