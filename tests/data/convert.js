@@ -13,8 +13,7 @@ $root.Message = (function() {
 
     /**
      * Properties of a Message.
-     * @exports IMessage
-     * @interface IMessage
+     * @typedef {Object} Message.$Properties
      * @property {string|null} [stringVal] Message stringVal
      * @property {Array.<string>|null} [stringRepeated] Message stringRepeated
      * @property {number|Long|null} [uint64Val] Message uint64Val
@@ -28,12 +27,25 @@ $root.Message = (function() {
      */
 
     /**
+     * Properties of a Message.
+     * @exports IMessage
+     * @interface IMessage
+     * @augments Message.$Properties
+     * @deprecated Use Message.$Properties instead.
+     */
+
+    /**
+     * Shape of a Message.
+     * @typedef {Message.$Properties} Message.$Shape
+     */
+
+    /**
      * Constructs a new Message.
      * @exports Message
      * @classdesc Represents a Message.
-     * @implements IMessage
+     * @implements Message.$Properties
      * @constructor
-     * @param {IMessage=} [properties] Properties to set
+     * @param {Message.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
      */
     function Message(properties) {
@@ -125,7 +137,7 @@ $root.Message = (function() {
      * @function create
      * @memberof Message
      * @static
-     * @param {IMessage=} [properties] Properties to set
+     * @param {Message.$Properties=} [properties] Properties to set
      * @returns {Message} Message instance
      */
     Message.create = function create(properties) {
@@ -137,7 +149,7 @@ $root.Message = (function() {
      * @function encode
      * @memberof Message
      * @static
-     * @param {IMessage} message Message message or plain object to encode
+     * @param {Message.$Properties} message Message message or plain object to encode
      * @param {$protobuf.Writer} [writer] Writer to encode to
      * @returns {$protobuf.Writer} Writer
      */
@@ -184,7 +196,7 @@ $root.Message = (function() {
      * @function encodeDelimited
      * @memberof Message
      * @static
-     * @param {IMessage} message Message message or plain object to encode
+     * @param {Message.$Properties} message Message message or plain object to encode
      * @param {$protobuf.Writer} [writer] Writer to encode to
      * @returns {$protobuf.Writer} Writer
      */

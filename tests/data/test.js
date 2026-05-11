@@ -31,18 +31,30 @@ $root.jspb = (function() {
 
             /**
              * Properties of an Empty.
+             * @typedef {Object} jspb.test.Empty.$Properties
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an Empty.
              * @memberof jspb.test
              * @interface IEmpty
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.Empty.$Properties
+             * @deprecated Use jspb.test.Empty.$Properties instead.
+             */
+
+            /**
+             * Shape of an Empty.
+             * @typedef {jspb.test.Empty.$Properties} jspb.test.Empty.$Shape
              */
 
             /**
              * Constructs a new Empty.
              * @memberof jspb.test
              * @classdesc Represents an Empty.
-             * @implements IEmpty
+             * @implements jspb.test.Empty.$Properties
              * @constructor
-             * @param {jspb.test.IEmpty=} [properties] Properties to set
+             * @param {jspb.test.Empty.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function Empty(properties) {
@@ -57,7 +69,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.Empty
              * @static
-             * @param {jspb.test.IEmpty=} [properties] Properties to set
+             * @param {jspb.test.Empty.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Empty} Empty instance
              */
             Empty.create = function create(properties) {
@@ -69,7 +81,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.Empty
              * @static
-             * @param {jspb.test.IEmpty} message Empty message or plain object to encode
+             * @param {jspb.test.Empty.$Properties} message Empty message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -87,7 +99,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.Empty
              * @static
-             * @param {jspb.test.IEmpty} message Empty message or plain object to encode
+             * @param {jspb.test.Empty.$Properties} message Empty message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -241,19 +253,31 @@ $root.jspb = (function() {
 
             /**
              * Properties of an EnumContainer.
-             * @memberof jspb.test
-             * @interface IEnumContainer
+             * @typedef {Object} jspb.test.EnumContainer.$Properties
              * @property {jspb.test.OuterEnum|null} [outerEnum] EnumContainer outerEnum
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an EnumContainer.
+             * @memberof jspb.test
+             * @interface IEnumContainer
+             * @augments jspb.test.EnumContainer.$Properties
+             * @deprecated Use jspb.test.EnumContainer.$Properties instead.
+             */
+
+            /**
+             * Shape of an EnumContainer.
+             * @typedef {jspb.test.EnumContainer.$Properties} jspb.test.EnumContainer.$Shape
              */
 
             /**
              * Constructs a new EnumContainer.
              * @memberof jspb.test
              * @classdesc Represents an EnumContainer.
-             * @implements IEnumContainer
+             * @implements jspb.test.EnumContainer.$Properties
              * @constructor
-             * @param {jspb.test.IEnumContainer=} [properties] Properties to set
+             * @param {jspb.test.EnumContainer.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function EnumContainer(properties) {
@@ -276,7 +300,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.EnumContainer
              * @static
-             * @param {jspb.test.IEnumContainer=} [properties] Properties to set
+             * @param {jspb.test.EnumContainer.$Properties=} [properties] Properties to set
              * @returns {jspb.test.EnumContainer} EnumContainer instance
              */
             EnumContainer.create = function create(properties) {
@@ -288,7 +312,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.EnumContainer
              * @static
-             * @param {jspb.test.IEnumContainer} message EnumContainer message or plain object to encode
+             * @param {jspb.test.EnumContainer.$Properties} message EnumContainer message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -308,7 +332,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.EnumContainer
              * @static
-             * @param {jspb.test.IEnumContainer} message EnumContainer message or plain object to encode
+             * @param {jspb.test.EnumContainer.$Properties} message EnumContainer message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -489,8 +513,7 @@ $root.jspb = (function() {
 
             /**
              * Properties of a Simple1.
-             * @memberof jspb.test
-             * @interface ISimple1
+             * @typedef {Object} jspb.test.Simple1.$Properties
              * @property {string} aString Simple1 aString
              * @property {Array.<string>|null} [aRepeatedString] Simple1 aRepeatedString
              * @property {boolean|null} [aBoolean] Simple1 aBoolean
@@ -498,12 +521,25 @@ $root.jspb = (function() {
              */
 
             /**
+             * Properties of a Simple1.
+             * @memberof jspb.test
+             * @interface ISimple1
+             * @augments jspb.test.Simple1.$Properties
+             * @deprecated Use jspb.test.Simple1.$Properties instead.
+             */
+
+            /**
+             * Shape of a Simple1.
+             * @typedef {jspb.test.Simple1.$Properties} jspb.test.Simple1.$Shape
+             */
+
+            /**
              * Constructs a new Simple1.
              * @memberof jspb.test
              * @classdesc Represents a Simple1.
-             * @implements ISimple1
+             * @implements jspb.test.Simple1.$Properties
              * @constructor
-             * @param {jspb.test.ISimple1=} [properties] Properties to set
+             * @param {jspb.test.Simple1.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function Simple1(properties) {
@@ -543,7 +579,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.Simple1
              * @static
-             * @param {jspb.test.ISimple1=} [properties] Properties to set
+             * @param {jspb.test.Simple1.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Simple1} Simple1 instance
              */
             Simple1.create = function create(properties) {
@@ -555,7 +591,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.Simple1
              * @static
-             * @param {jspb.test.ISimple1} message Simple1 message or plain object to encode
+             * @param {jspb.test.Simple1.$Properties} message Simple1 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -579,7 +615,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.Simple1
              * @static
-             * @param {jspb.test.ISimple1} message Simple1 message or plain object to encode
+             * @param {jspb.test.Simple1.$Properties} message Simple1 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -786,20 +822,32 @@ $root.jspb = (function() {
 
             /**
              * Properties of a Simple2.
-             * @memberof jspb.test
-             * @interface ISimple2
+             * @typedef {Object} jspb.test.Simple2.$Properties
              * @property {string} aString Simple2 aString
              * @property {Array.<string>|null} [aRepeatedString] Simple2 aRepeatedString
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a Simple2.
+             * @memberof jspb.test
+             * @interface ISimple2
+             * @augments jspb.test.Simple2.$Properties
+             * @deprecated Use jspb.test.Simple2.$Properties instead.
+             */
+
+            /**
+             * Shape of a Simple2.
+             * @typedef {jspb.test.Simple2.$Properties} jspb.test.Simple2.$Shape
+             */
+
+            /**
              * Constructs a new Simple2.
              * @memberof jspb.test
              * @classdesc Represents a Simple2.
-             * @implements ISimple2
+             * @implements jspb.test.Simple2.$Properties
              * @constructor
-             * @param {jspb.test.ISimple2=} [properties] Properties to set
+             * @param {jspb.test.Simple2.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function Simple2(properties) {
@@ -831,7 +879,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.Simple2
              * @static
-             * @param {jspb.test.ISimple2=} [properties] Properties to set
+             * @param {jspb.test.Simple2.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Simple2} Simple2 instance
              */
             Simple2.create = function create(properties) {
@@ -843,7 +891,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.Simple2
              * @static
-             * @param {jspb.test.ISimple2} message Simple2 message or plain object to encode
+             * @param {jspb.test.Simple2.$Properties} message Simple2 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -865,7 +913,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.Simple2
              * @static
-             * @param {jspb.test.ISimple2} message Simple2 message or plain object to encode
+             * @param {jspb.test.Simple2.$Properties} message Simple2 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -1057,8 +1105,7 @@ $root.jspb = (function() {
 
             /**
              * Properties of a SpecialCases.
-             * @memberof jspb.test
-             * @interface ISpecialCases
+             * @typedef {Object} jspb.test.SpecialCases.$Properties
              * @property {string} normal SpecialCases normal
              * @property {string} "default" SpecialCases default
              * @property {string} "function" SpecialCases function
@@ -1067,12 +1114,25 @@ $root.jspb = (function() {
              */
 
             /**
+             * Properties of a SpecialCases.
+             * @memberof jspb.test
+             * @interface ISpecialCases
+             * @augments jspb.test.SpecialCases.$Properties
+             * @deprecated Use jspb.test.SpecialCases.$Properties instead.
+             */
+
+            /**
+             * Shape of a SpecialCases.
+             * @typedef {jspb.test.SpecialCases.$Properties} jspb.test.SpecialCases.$Shape
+             */
+
+            /**
              * Constructs a new SpecialCases.
              * @memberof jspb.test
              * @classdesc Represents a SpecialCases.
-             * @implements ISpecialCases
+             * @implements jspb.test.SpecialCases.$Properties
              * @constructor
-             * @param {jspb.test.ISpecialCases=} [properties] Properties to set
+             * @param {jspb.test.SpecialCases.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function SpecialCases(properties) {
@@ -1119,7 +1179,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.SpecialCases
              * @static
-             * @param {jspb.test.ISpecialCases=} [properties] Properties to set
+             * @param {jspb.test.SpecialCases.$Properties=} [properties] Properties to set
              * @returns {jspb.test.SpecialCases} SpecialCases instance
              */
             SpecialCases.create = function create(properties) {
@@ -1131,7 +1191,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.SpecialCases
              * @static
-             * @param {jspb.test.ISpecialCases} message SpecialCases message or plain object to encode
+             * @param {jspb.test.SpecialCases.$Properties} message SpecialCases message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -1153,7 +1213,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.SpecialCases
              * @static
-             * @param {jspb.test.ISpecialCases} message SpecialCases message or plain object to encode
+             * @param {jspb.test.SpecialCases.$Properties} message SpecialCases message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -1362,23 +1422,35 @@ $root.jspb = (function() {
 
             /**
              * Properties of an OptionalFields.
-             * @memberof jspb.test
-             * @interface IOptionalFields
+             * @typedef {Object} jspb.test.OptionalFields.$Properties
              * @property {string|null} [aString] OptionalFields aString
              * @property {boolean} aBool OptionalFields aBool
-             * @property {jspb.test.OptionalFields.INested|null} [aNestedMessage] OptionalFields aNestedMessage
-             * @property {Array.<jspb.test.OptionalFields.INested>|null} [aRepeatedMessage] OptionalFields aRepeatedMessage
+             * @property {jspb.test.OptionalFields.Nested.$Properties|null} [aNestedMessage] OptionalFields aNestedMessage
+             * @property {Array.<jspb.test.OptionalFields.Nested.$Properties>|null} [aRepeatedMessage] OptionalFields aRepeatedMessage
              * @property {Array.<string>|null} [aRepeatedString] OptionalFields aRepeatedString
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an OptionalFields.
+             * @memberof jspb.test
+             * @interface IOptionalFields
+             * @augments jspb.test.OptionalFields.$Properties
+             * @deprecated Use jspb.test.OptionalFields.$Properties instead.
+             */
+
+            /**
+             * Shape of an OptionalFields.
+             * @typedef {jspb.test.OptionalFields.$Properties} jspb.test.OptionalFields.$Shape
              */
 
             /**
              * Constructs a new OptionalFields.
              * @memberof jspb.test
              * @classdesc Represents an OptionalFields.
-             * @implements IOptionalFields
+             * @implements jspb.test.OptionalFields.$Properties
              * @constructor
-             * @param {jspb.test.IOptionalFields=} [properties] Properties to set
+             * @param {jspb.test.OptionalFields.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function OptionalFields(properties) {
@@ -1408,7 +1480,7 @@ $root.jspb = (function() {
 
             /**
              * OptionalFields aNestedMessage.
-             * @member {jspb.test.OptionalFields.INested|null|undefined} aNestedMessage
+             * @member {jspb.test.OptionalFields.Nested.$Properties|null|undefined} aNestedMessage
              * @memberof jspb.test.OptionalFields
              * @instance
              */
@@ -1416,7 +1488,7 @@ $root.jspb = (function() {
 
             /**
              * OptionalFields aRepeatedMessage.
-             * @member {Array.<jspb.test.OptionalFields.INested>} aRepeatedMessage
+             * @member {Array.<jspb.test.OptionalFields.Nested.$Properties>} aRepeatedMessage
              * @memberof jspb.test.OptionalFields
              * @instance
              */
@@ -1435,7 +1507,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.OptionalFields
              * @static
-             * @param {jspb.test.IOptionalFields=} [properties] Properties to set
+             * @param {jspb.test.OptionalFields.$Properties=} [properties] Properties to set
              * @returns {jspb.test.OptionalFields} OptionalFields instance
              */
             OptionalFields.create = function create(properties) {
@@ -1447,7 +1519,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.OptionalFields
              * @static
-             * @param {jspb.test.IOptionalFields} message OptionalFields message or plain object to encode
+             * @param {jspb.test.OptionalFields.$Properties} message OptionalFields message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -1476,7 +1548,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.OptionalFields
              * @static
-             * @param {jspb.test.IOptionalFields} message OptionalFields message or plain object to encode
+             * @param {jspb.test.OptionalFields.$Properties} message OptionalFields message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -1733,19 +1805,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a Nested.
-                 * @memberof jspb.test.OptionalFields
-                 * @interface INested
+                 * @typedef {Object} jspb.test.OptionalFields.Nested.$Properties
                  * @property {number|null} [anInt] Nested anInt
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a Nested.
+                 * @memberof jspb.test.OptionalFields
+                 * @interface INested
+                 * @augments jspb.test.OptionalFields.Nested.$Properties
+                 * @deprecated Use jspb.test.OptionalFields.Nested.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Nested.
+                 * @typedef {jspb.test.OptionalFields.Nested.$Properties} jspb.test.OptionalFields.Nested.$Shape
                  */
 
                 /**
                  * Constructs a new Nested.
                  * @memberof jspb.test.OptionalFields
                  * @classdesc Represents a Nested.
-                 * @implements INested
+                 * @implements jspb.test.OptionalFields.Nested.$Properties
                  * @constructor
-                 * @param {jspb.test.OptionalFields.INested=} [properties] Properties to set
+                 * @param {jspb.test.OptionalFields.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Nested(properties) {
@@ -1768,7 +1852,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.OptionalFields.Nested
                  * @static
-                 * @param {jspb.test.OptionalFields.INested=} [properties] Properties to set
+                 * @param {jspb.test.OptionalFields.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.OptionalFields.Nested} Nested instance
                  */
                 Nested.create = function create(properties) {
@@ -1780,7 +1864,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.OptionalFields.Nested
                  * @static
-                 * @param {jspb.test.OptionalFields.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.OptionalFields.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -1800,7 +1884,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.OptionalFields.Nested
                  * @static
-                 * @param {jspb.test.OptionalFields.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.OptionalFields.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -1965,33 +2049,45 @@ $root.jspb = (function() {
 
             /**
              * Properties of a HasExtensions.
-             * @memberof jspb.test
-             * @interface IHasExtensions
+             * @typedef {Object} jspb.test.HasExtensions.$Properties
              * @property {string|null} [str1] HasExtensions str1
              * @property {string|null} [str2] HasExtensions str2
              * @property {string|null} [str3] HasExtensions str3
-             * @property {jspb.test.IIsExtension|null} [".jspb.test.IsExtension.extField"] HasExtensions .jspb.test.IsExtension.extField
-             * @property {jspb.test.ISimple1|null} [".jspb.test.IndirectExtension.simple"] HasExtensions .jspb.test.IndirectExtension.simple
+             * @property {jspb.test.IsExtension.$Properties|null} [".jspb.test.IsExtension.extField"] HasExtensions .jspb.test.IsExtension.extField
+             * @property {jspb.test.Simple1.$Properties|null} [".jspb.test.IndirectExtension.simple"] HasExtensions .jspb.test.IndirectExtension.simple
              * @property {string|null} [".jspb.test.IndirectExtension.str"] HasExtensions .jspb.test.IndirectExtension.str
              * @property {Array.<string>|null} [".jspb.test.IndirectExtension.repeatedStr"] HasExtensions .jspb.test.IndirectExtension.repeatedStr
-             * @property {Array.<jspb.test.ISimple1>|null} [".jspb.test.IndirectExtension.repeatedSimple"] HasExtensions .jspb.test.IndirectExtension.repeatedSimple
-             * @property {jspb.test.ISimple1|null} [".jspb.test.simple1"] HasExtensions .jspb.test.simple1
+             * @property {Array.<jspb.test.Simple1.$Properties>|null} [".jspb.test.IndirectExtension.repeatedSimple"] HasExtensions .jspb.test.IndirectExtension.repeatedSimple
+             * @property {jspb.test.Simple1.$Properties|null} [".jspb.test.simple1"] HasExtensions .jspb.test.simple1
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a HasExtensions.
+             * @memberof jspb.test
+             * @interface IHasExtensions
+             * @augments jspb.test.HasExtensions.$Properties
+             * @deprecated Use jspb.test.HasExtensions.$Properties instead.
+             */
+
+            /**
+             * Shape of a HasExtensions.
+             * @typedef {jspb.test.HasExtensions.$Properties} jspb.test.HasExtensions.$Shape
              */
 
             /**
              * Constructs a new HasExtensions.
              * @memberof jspb.test
              * @classdesc Represents a HasExtensions.
-             * @implements IHasExtensions
+             * @implements jspb.test.HasExtensions.$Properties
              * @constructor
-             * @param {jspb.test.IHasExtensions=} [properties] Properties to set
-             * @property {jspb.test.IIsExtension|null} [".jspb.test.IsExtension.extField"] HasExtensions .jspb.test.IsExtension.extField
-             * @property {jspb.test.ISimple1|null} [".jspb.test.IndirectExtension.simple"] HasExtensions .jspb.test.IndirectExtension.simple
+             * @param {jspb.test.HasExtensions.$Properties=} [properties] Properties to set
+             * @property {jspb.test.IsExtension.$Properties|null} [".jspb.test.IsExtension.extField"] HasExtensions .jspb.test.IsExtension.extField
+             * @property {jspb.test.Simple1.$Properties|null} [".jspb.test.IndirectExtension.simple"] HasExtensions .jspb.test.IndirectExtension.simple
              * @property {string} ".jspb.test.IndirectExtension.str" HasExtensions .jspb.test.IndirectExtension.str
              * @property {Array.<string>} ".jspb.test.IndirectExtension.repeatedStr" HasExtensions .jspb.test.IndirectExtension.repeatedStr
-             * @property {Array.<jspb.test.ISimple1>} ".jspb.test.IndirectExtension.repeatedSimple" HasExtensions .jspb.test.IndirectExtension.repeatedSimple
-             * @property {jspb.test.ISimple1|null} [".jspb.test.simple1"] HasExtensions .jspb.test.simple1
+             * @property {Array.<jspb.test.Simple1.$Properties>} ".jspb.test.IndirectExtension.repeatedSimple" HasExtensions .jspb.test.IndirectExtension.repeatedSimple
+             * @property {jspb.test.Simple1.$Properties|null} [".jspb.test.simple1"] HasExtensions .jspb.test.simple1
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function HasExtensions(properties) {
@@ -2039,7 +2135,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.HasExtensions
              * @static
-             * @param {jspb.test.IHasExtensions=} [properties] Properties to set
+             * @param {jspb.test.HasExtensions.$Properties=} [properties] Properties to set
              * @returns {jspb.test.HasExtensions} HasExtensions instance
              */
             HasExtensions.create = function create(properties) {
@@ -2051,7 +2147,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.HasExtensions
              * @static
-             * @param {jspb.test.IHasExtensions} message HasExtensions message or plain object to encode
+             * @param {jspb.test.HasExtensions.$Properties} message HasExtensions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -2089,7 +2185,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.HasExtensions
              * @static
-             * @param {jspb.test.IHasExtensions} message HasExtensions message or plain object to encode
+             * @param {jspb.test.HasExtensions.$Properties} message HasExtensions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -2414,23 +2510,35 @@ $root.jspb = (function() {
 
             /**
              * Properties of a Complex.
-             * @memberof jspb.test
-             * @interface IComplex
+             * @typedef {Object} jspb.test.Complex.$Properties
              * @property {string} aString Complex aString
              * @property {boolean} anOutOfOrderBool Complex anOutOfOrderBool
-             * @property {jspb.test.Complex.INested|null} [aNestedMessage] Complex aNestedMessage
-             * @property {Array.<jspb.test.Complex.INested>|null} [aRepeatedMessage] Complex aRepeatedMessage
+             * @property {jspb.test.Complex.Nested.$Properties|null} [aNestedMessage] Complex aNestedMessage
+             * @property {Array.<jspb.test.Complex.Nested.$Properties>|null} [aRepeatedMessage] Complex aRepeatedMessage
              * @property {Array.<string>|null} [aRepeatedString] Complex aRepeatedString
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a Complex.
+             * @memberof jspb.test
+             * @interface IComplex
+             * @augments jspb.test.Complex.$Properties
+             * @deprecated Use jspb.test.Complex.$Properties instead.
+             */
+
+            /**
+             * Shape of a Complex.
+             * @typedef {jspb.test.Complex.$Properties} jspb.test.Complex.$Shape
              */
 
             /**
              * Constructs a new Complex.
              * @memberof jspb.test
              * @classdesc Represents a Complex.
-             * @implements IComplex
+             * @implements jspb.test.Complex.$Properties
              * @constructor
-             * @param {jspb.test.IComplex=} [properties] Properties to set
+             * @param {jspb.test.Complex.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function Complex(properties) {
@@ -2460,7 +2568,7 @@ $root.jspb = (function() {
 
             /**
              * Complex aNestedMessage.
-             * @member {jspb.test.Complex.INested|null|undefined} aNestedMessage
+             * @member {jspb.test.Complex.Nested.$Properties|null|undefined} aNestedMessage
              * @memberof jspb.test.Complex
              * @instance
              */
@@ -2468,7 +2576,7 @@ $root.jspb = (function() {
 
             /**
              * Complex aRepeatedMessage.
-             * @member {Array.<jspb.test.Complex.INested>} aRepeatedMessage
+             * @member {Array.<jspb.test.Complex.Nested.$Properties>} aRepeatedMessage
              * @memberof jspb.test.Complex
              * @instance
              */
@@ -2487,7 +2595,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.Complex
              * @static
-             * @param {jspb.test.IComplex=} [properties] Properties to set
+             * @param {jspb.test.Complex.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Complex} Complex instance
              */
             Complex.create = function create(properties) {
@@ -2499,7 +2607,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.Complex
              * @static
-             * @param {jspb.test.IComplex} message Complex message or plain object to encode
+             * @param {jspb.test.Complex.$Properties} message Complex message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -2527,7 +2635,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.Complex
              * @static
-             * @param {jspb.test.IComplex} message Complex message or plain object to encode
+             * @param {jspb.test.Complex.$Properties} message Complex message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -2785,19 +2893,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a Nested.
-                 * @memberof jspb.test.Complex
-                 * @interface INested
+                 * @typedef {Object} jspb.test.Complex.Nested.$Properties
                  * @property {number} anInt Nested anInt
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a Nested.
+                 * @memberof jspb.test.Complex
+                 * @interface INested
+                 * @augments jspb.test.Complex.Nested.$Properties
+                 * @deprecated Use jspb.test.Complex.Nested.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Nested.
+                 * @typedef {jspb.test.Complex.Nested.$Properties} jspb.test.Complex.Nested.$Shape
                  */
 
                 /**
                  * Constructs a new Nested.
                  * @memberof jspb.test.Complex
                  * @classdesc Represents a Nested.
-                 * @implements INested
+                 * @implements jspb.test.Complex.Nested.$Properties
                  * @constructor
-                 * @param {jspb.test.Complex.INested=} [properties] Properties to set
+                 * @param {jspb.test.Complex.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Nested(properties) {
@@ -2820,7 +2940,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.Complex.Nested
                  * @static
-                 * @param {jspb.test.Complex.INested=} [properties] Properties to set
+                 * @param {jspb.test.Complex.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.Complex.Nested} Nested instance
                  */
                 Nested.create = function create(properties) {
@@ -2832,7 +2952,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.Complex.Nested
                  * @static
-                 * @param {jspb.test.Complex.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.Complex.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -2851,7 +2971,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.Complex.Nested
                  * @static
-                 * @param {jspb.test.Complex.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.Complex.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -3017,18 +3137,30 @@ $root.jspb = (function() {
 
             /**
              * Properties of an OuterMessage.
+             * @typedef {Object} jspb.test.OuterMessage.$Properties
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an OuterMessage.
              * @memberof jspb.test
              * @interface IOuterMessage
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.OuterMessage.$Properties
+             * @deprecated Use jspb.test.OuterMessage.$Properties instead.
+             */
+
+            /**
+             * Shape of an OuterMessage.
+             * @typedef {jspb.test.OuterMessage.$Properties} jspb.test.OuterMessage.$Shape
              */
 
             /**
              * Constructs a new OuterMessage.
              * @memberof jspb.test
              * @classdesc Represents an OuterMessage.
-             * @implements IOuterMessage
+             * @implements jspb.test.OuterMessage.$Properties
              * @constructor
-             * @param {jspb.test.IOuterMessage=} [properties] Properties to set
+             * @param {jspb.test.OuterMessage.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function OuterMessage(properties) {
@@ -3043,7 +3175,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.OuterMessage
              * @static
-             * @param {jspb.test.IOuterMessage=} [properties] Properties to set
+             * @param {jspb.test.OuterMessage.$Properties=} [properties] Properties to set
              * @returns {jspb.test.OuterMessage} OuterMessage instance
              */
             OuterMessage.create = function create(properties) {
@@ -3055,7 +3187,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.OuterMessage
              * @static
-             * @param {jspb.test.IOuterMessage} message OuterMessage message or plain object to encode
+             * @param {jspb.test.OuterMessage.$Properties} message OuterMessage message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3073,7 +3205,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.OuterMessage
              * @static
-             * @param {jspb.test.IOuterMessage} message OuterMessage message or plain object to encode
+             * @param {jspb.test.OuterMessage.$Properties} message OuterMessage message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3210,19 +3342,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a Complex.
-                 * @memberof jspb.test.OuterMessage
-                 * @interface IComplex
+                 * @typedef {Object} jspb.test.OuterMessage.Complex.$Properties
                  * @property {number|null} [innerComplexField] Complex innerComplexField
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a Complex.
+                 * @memberof jspb.test.OuterMessage
+                 * @interface IComplex
+                 * @augments jspb.test.OuterMessage.Complex.$Properties
+                 * @deprecated Use jspb.test.OuterMessage.Complex.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Complex.
+                 * @typedef {jspb.test.OuterMessage.Complex.$Properties} jspb.test.OuterMessage.Complex.$Shape
                  */
 
                 /**
                  * Constructs a new Complex.
                  * @memberof jspb.test.OuterMessage
                  * @classdesc Represents a Complex.
-                 * @implements IComplex
+                 * @implements jspb.test.OuterMessage.Complex.$Properties
                  * @constructor
-                 * @param {jspb.test.OuterMessage.IComplex=} [properties] Properties to set
+                 * @param {jspb.test.OuterMessage.Complex.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Complex(properties) {
@@ -3245,7 +3389,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.OuterMessage.Complex
                  * @static
-                 * @param {jspb.test.OuterMessage.IComplex=} [properties] Properties to set
+                 * @param {jspb.test.OuterMessage.Complex.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.OuterMessage.Complex} Complex instance
                  */
                 Complex.create = function create(properties) {
@@ -3257,7 +3401,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.OuterMessage.Complex
                  * @static
-                 * @param {jspb.test.OuterMessage.IComplex} message Complex message or plain object to encode
+                 * @param {jspb.test.OuterMessage.Complex.$Properties} message Complex message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -3277,7 +3421,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.OuterMessage.Complex
                  * @static
-                 * @param {jspb.test.OuterMessage.IComplex} message Complex message or plain object to encode
+                 * @param {jspb.test.OuterMessage.Complex.$Properties} message Complex message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -3442,19 +3586,31 @@ $root.jspb = (function() {
 
             /**
              * Properties of an IsExtension.
-             * @memberof jspb.test
-             * @interface IIsExtension
+             * @typedef {Object} jspb.test.IsExtension.$Properties
              * @property {string|null} [ext1] IsExtension ext1
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an IsExtension.
+             * @memberof jspb.test
+             * @interface IIsExtension
+             * @augments jspb.test.IsExtension.$Properties
+             * @deprecated Use jspb.test.IsExtension.$Properties instead.
+             */
+
+            /**
+             * Shape of an IsExtension.
+             * @typedef {jspb.test.IsExtension.$Properties} jspb.test.IsExtension.$Shape
              */
 
             /**
              * Constructs a new IsExtension.
              * @memberof jspb.test
              * @classdesc Represents an IsExtension.
-             * @implements IIsExtension
+             * @implements jspb.test.IsExtension.$Properties
              * @constructor
-             * @param {jspb.test.IIsExtension=} [properties] Properties to set
+             * @param {jspb.test.IsExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function IsExtension(properties) {
@@ -3477,7 +3633,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.IsExtension
              * @static
-             * @param {jspb.test.IIsExtension=} [properties] Properties to set
+             * @param {jspb.test.IsExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.IsExtension} IsExtension instance
              */
             IsExtension.create = function create(properties) {
@@ -3489,7 +3645,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.IsExtension
              * @static
-             * @param {jspb.test.IIsExtension} message IsExtension message or plain object to encode
+             * @param {jspb.test.IsExtension.$Properties} message IsExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3509,7 +3665,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.IsExtension
              * @static
-             * @param {jspb.test.IIsExtension} message IsExtension message or plain object to encode
+             * @param {jspb.test.IsExtension.$Properties} message IsExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3671,18 +3827,30 @@ $root.jspb = (function() {
 
             /**
              * Properties of an IndirectExtension.
+             * @typedef {Object} jspb.test.IndirectExtension.$Properties
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an IndirectExtension.
              * @memberof jspb.test
              * @interface IIndirectExtension
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.IndirectExtension.$Properties
+             * @deprecated Use jspb.test.IndirectExtension.$Properties instead.
+             */
+
+            /**
+             * Shape of an IndirectExtension.
+             * @typedef {jspb.test.IndirectExtension.$Properties} jspb.test.IndirectExtension.$Shape
              */
 
             /**
              * Constructs a new IndirectExtension.
              * @memberof jspb.test
              * @classdesc Represents an IndirectExtension.
-             * @implements IIndirectExtension
+             * @implements jspb.test.IndirectExtension.$Properties
              * @constructor
-             * @param {jspb.test.IIndirectExtension=} [properties] Properties to set
+             * @param {jspb.test.IndirectExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function IndirectExtension(properties) {
@@ -3697,7 +3865,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.IndirectExtension
              * @static
-             * @param {jspb.test.IIndirectExtension=} [properties] Properties to set
+             * @param {jspb.test.IndirectExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.IndirectExtension} IndirectExtension instance
              */
             IndirectExtension.create = function create(properties) {
@@ -3709,7 +3877,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.IndirectExtension
              * @static
-             * @param {jspb.test.IIndirectExtension} message IndirectExtension message or plain object to encode
+             * @param {jspb.test.IndirectExtension.$Properties} message IndirectExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3727,7 +3895,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.IndirectExtension
              * @static
-             * @param {jspb.test.IIndirectExtension} message IndirectExtension message or plain object to encode
+             * @param {jspb.test.IndirectExtension.$Properties} message IndirectExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3867,8 +4035,7 @@ $root.jspb = (function() {
 
             /**
              * Properties of a DefaultValues.
-             * @memberof jspb.test
-             * @interface IDefaultValues
+             * @typedef {Object} jspb.test.DefaultValues.$Properties
              * @property {string|null} [stringField] DefaultValues stringField
              * @property {boolean|null} [boolField] DefaultValues boolField
              * @property {number|Long|null} [intField] DefaultValues intField
@@ -3879,12 +4046,25 @@ $root.jspb = (function() {
              */
 
             /**
+             * Properties of a DefaultValues.
+             * @memberof jspb.test
+             * @interface IDefaultValues
+             * @augments jspb.test.DefaultValues.$Properties
+             * @deprecated Use jspb.test.DefaultValues.$Properties instead.
+             */
+
+            /**
+             * Shape of a DefaultValues.
+             * @typedef {jspb.test.DefaultValues.$Properties} jspb.test.DefaultValues.$Shape
+             */
+
+            /**
              * Constructs a new DefaultValues.
              * @memberof jspb.test
              * @classdesc Represents a DefaultValues.
-             * @implements IDefaultValues
+             * @implements jspb.test.DefaultValues.$Properties
              * @constructor
-             * @param {jspb.test.IDefaultValues=} [properties] Properties to set
+             * @param {jspb.test.DefaultValues.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function DefaultValues(properties) {
@@ -3947,7 +4127,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.DefaultValues
              * @static
-             * @param {jspb.test.IDefaultValues=} [properties] Properties to set
+             * @param {jspb.test.DefaultValues.$Properties=} [properties] Properties to set
              * @returns {jspb.test.DefaultValues} DefaultValues instance
              */
             DefaultValues.create = function create(properties) {
@@ -3959,7 +4139,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.DefaultValues
              * @static
-             * @param {jspb.test.IDefaultValues} message DefaultValues message or plain object to encode
+             * @param {jspb.test.DefaultValues.$Properties} message DefaultValues message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -3989,7 +4169,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.DefaultValues
              * @static
-             * @param {jspb.test.IDefaultValues} message DefaultValues message or plain object to encode
+             * @param {jspb.test.DefaultValues.$Properties} message DefaultValues message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -4282,8 +4462,7 @@ $root.jspb = (function() {
 
             /**
              * Properties of a FloatingPointFields.
-             * @memberof jspb.test
-             * @interface IFloatingPointFields
+             * @typedef {Object} jspb.test.FloatingPointFields.$Properties
              * @property {number|null} [optionalFloatField] FloatingPointFields optionalFloatField
              * @property {number} requiredFloatField FloatingPointFields requiredFloatField
              * @property {Array.<number>|null} [repeatedFloatField] FloatingPointFields repeatedFloatField
@@ -4296,12 +4475,25 @@ $root.jspb = (function() {
              */
 
             /**
+             * Properties of a FloatingPointFields.
+             * @memberof jspb.test
+             * @interface IFloatingPointFields
+             * @augments jspb.test.FloatingPointFields.$Properties
+             * @deprecated Use jspb.test.FloatingPointFields.$Properties instead.
+             */
+
+            /**
+             * Shape of a FloatingPointFields.
+             * @typedef {jspb.test.FloatingPointFields.$Properties} jspb.test.FloatingPointFields.$Shape
+             */
+
+            /**
              * Constructs a new FloatingPointFields.
              * @memberof jspb.test
              * @classdesc Represents a FloatingPointFields.
-             * @implements IFloatingPointFields
+             * @implements jspb.test.FloatingPointFields.$Properties
              * @constructor
-             * @param {jspb.test.IFloatingPointFields=} [properties] Properties to set
+             * @param {jspb.test.FloatingPointFields.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FloatingPointFields(properties) {
@@ -4382,7 +4574,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.FloatingPointFields
              * @static
-             * @param {jspb.test.IFloatingPointFields=} [properties] Properties to set
+             * @param {jspb.test.FloatingPointFields.$Properties=} [properties] Properties to set
              * @returns {jspb.test.FloatingPointFields} FloatingPointFields instance
              */
             FloatingPointFields.create = function create(properties) {
@@ -4394,7 +4586,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.FloatingPointFields
              * @static
-             * @param {jspb.test.IFloatingPointFields} message FloatingPointFields message or plain object to encode
+             * @param {jspb.test.FloatingPointFields.$Properties} message FloatingPointFields message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -4428,7 +4620,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.FloatingPointFields
              * @static
-             * @param {jspb.test.IFloatingPointFields} message FloatingPointFields message or plain object to encode
+             * @param {jspb.test.FloatingPointFields.$Properties} message FloatingPointFields message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -4737,25 +4929,37 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestClone.
-             * @memberof jspb.test
-             * @interface ITestClone
+             * @typedef {Object} jspb.test.TestClone.$Properties
              * @property {string|null} [str] TestClone str
-             * @property {jspb.test.ISimple1|null} [simple1] TestClone simple1
-             * @property {Array.<jspb.test.ISimple1>|null} [simple2] TestClone simple2
+             * @property {jspb.test.Simple1.$Properties|null} [simple1] TestClone simple1
+             * @property {Array.<jspb.test.Simple1.$Properties>|null} [simple2] TestClone simple2
              * @property {Uint8Array|null} [bytesField] TestClone bytesField
              * @property {string|null} [unused] TestClone unused
-             * @property {jspb.test.ICloneExtension|null} [".jspb.test.CloneExtension.extField"] TestClone .jspb.test.CloneExtension.extField
+             * @property {jspb.test.CloneExtension.$Properties|null} [".jspb.test.CloneExtension.extField"] TestClone .jspb.test.CloneExtension.extField
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestClone.
+             * @memberof jspb.test
+             * @interface ITestClone
+             * @augments jspb.test.TestClone.$Properties
+             * @deprecated Use jspb.test.TestClone.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestClone.
+             * @typedef {jspb.test.TestClone.$Properties} jspb.test.TestClone.$Shape
              */
 
             /**
              * Constructs a new TestClone.
              * @memberof jspb.test
              * @classdesc Represents a TestClone.
-             * @implements ITestClone
+             * @implements jspb.test.TestClone.$Properties
              * @constructor
-             * @param {jspb.test.ITestClone=} [properties] Properties to set
-             * @property {jspb.test.ICloneExtension|null} [".jspb.test.CloneExtension.extField"] TestClone .jspb.test.CloneExtension.extField
+             * @param {jspb.test.TestClone.$Properties=} [properties] Properties to set
+             * @property {jspb.test.CloneExtension.$Properties|null} [".jspb.test.CloneExtension.extField"] TestClone .jspb.test.CloneExtension.extField
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestClone(properties) {
@@ -4776,7 +4980,7 @@ $root.jspb = (function() {
 
             /**
              * TestClone simple1.
-             * @member {jspb.test.ISimple1|null|undefined} simple1
+             * @member {jspb.test.Simple1.$Properties|null|undefined} simple1
              * @memberof jspb.test.TestClone
              * @instance
              */
@@ -4784,7 +4988,7 @@ $root.jspb = (function() {
 
             /**
              * TestClone simple2.
-             * @member {Array.<jspb.test.ISimple1>} simple2
+             * @member {Array.<jspb.test.Simple1.$Properties>} simple2
              * @memberof jspb.test.TestClone
              * @instance
              */
@@ -4813,7 +5017,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestClone
              * @static
-             * @param {jspb.test.ITestClone=} [properties] Properties to set
+             * @param {jspb.test.TestClone.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestClone} TestClone instance
              */
             TestClone.create = function create(properties) {
@@ -4825,7 +5029,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestClone
              * @static
-             * @param {jspb.test.ITestClone} message TestClone message or plain object to encode
+             * @param {jspb.test.TestClone.$Properties} message TestClone message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -4856,7 +5060,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestClone
              * @static
-             * @param {jspb.test.ITestClone} message TestClone message or plain object to encode
+             * @param {jspb.test.TestClone.$Properties} message TestClone message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -5128,19 +5332,31 @@ $root.jspb = (function() {
 
             /**
              * Properties of a CloneExtension.
-             * @memberof jspb.test
-             * @interface ICloneExtension
+             * @typedef {Object} jspb.test.CloneExtension.$Properties
              * @property {string|null} [ext] CloneExtension ext
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a CloneExtension.
+             * @memberof jspb.test
+             * @interface ICloneExtension
+             * @augments jspb.test.CloneExtension.$Properties
+             * @deprecated Use jspb.test.CloneExtension.$Properties instead.
+             */
+
+            /**
+             * Shape of a CloneExtension.
+             * @typedef {jspb.test.CloneExtension.$Properties} jspb.test.CloneExtension.$Shape
              */
 
             /**
              * Constructs a new CloneExtension.
              * @memberof jspb.test
              * @classdesc Represents a CloneExtension.
-             * @implements ICloneExtension
+             * @implements jspb.test.CloneExtension.$Properties
              * @constructor
-             * @param {jspb.test.ICloneExtension=} [properties] Properties to set
+             * @param {jspb.test.CloneExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function CloneExtension(properties) {
@@ -5163,7 +5379,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.CloneExtension
              * @static
-             * @param {jspb.test.ICloneExtension=} [properties] Properties to set
+             * @param {jspb.test.CloneExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.CloneExtension} CloneExtension instance
              */
             CloneExtension.create = function create(properties) {
@@ -5175,7 +5391,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.CloneExtension
              * @static
-             * @param {jspb.test.ICloneExtension} message CloneExtension message or plain object to encode
+             * @param {jspb.test.CloneExtension.$Properties} message CloneExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -5195,7 +5411,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.CloneExtension
              * @static
-             * @param {jspb.test.ICloneExtension} message CloneExtension message or plain object to encode
+             * @param {jspb.test.CloneExtension.$Properties} message CloneExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -5357,26 +5573,38 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestGroup.
+             * @typedef {Object} jspb.test.TestGroup.$Properties
+             * @property {Array.<jspb.test.TestGroup.RepeatedGroup.$Properties>|null} [repeatedGroup] TestGroup repeatedGroup
+             * @property {jspb.test.TestGroup.RequiredGroup.$Properties} requiredGroup TestGroup requiredGroup
+             * @property {jspb.test.TestGroup.OptionalGroup.$Properties|null} [optionalGroup] TestGroup optionalGroup
+             * @property {jspb.test.TestGroup.MessageInGroup.$Properties|null} [messageInGroup] TestGroup messageInGroup
+             * @property {jspb.test.TestGroup.EnumInGroup.$Properties|null} [enumInGroup] TestGroup enumInGroup
+             * @property {string|null} [id] TestGroup id
+             * @property {jspb.test.Simple2.$Properties} requiredSimple TestGroup requiredSimple
+             * @property {jspb.test.Simple2.$Properties|null} [optionalSimple] TestGroup optionalSimple
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestGroup.
              * @memberof jspb.test
              * @interface ITestGroup
-             * @property {Array.<jspb.test.TestGroup.IRepeatedGroup>|null} [repeatedGroup] TestGroup repeatedGroup
-             * @property {jspb.test.TestGroup.IRequiredGroup} requiredGroup TestGroup requiredGroup
-             * @property {jspb.test.TestGroup.IOptionalGroup|null} [optionalGroup] TestGroup optionalGroup
-             * @property {jspb.test.TestGroup.IMessageInGroup|null} [messageInGroup] TestGroup messageInGroup
-             * @property {jspb.test.TestGroup.IEnumInGroup|null} [enumInGroup] TestGroup enumInGroup
-             * @property {string|null} [id] TestGroup id
-             * @property {jspb.test.ISimple2} requiredSimple TestGroup requiredSimple
-             * @property {jspb.test.ISimple2|null} [optionalSimple] TestGroup optionalSimple
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.TestGroup.$Properties
+             * @deprecated Use jspb.test.TestGroup.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestGroup.
+             * @typedef {jspb.test.TestGroup.$Properties} jspb.test.TestGroup.$Shape
              */
 
             /**
              * Constructs a new TestGroup.
              * @memberof jspb.test
              * @classdesc Represents a TestGroup.
-             * @implements ITestGroup
+             * @implements jspb.test.TestGroup.$Properties
              * @constructor
-             * @param {jspb.test.ITestGroup=} [properties] Properties to set
+             * @param {jspb.test.TestGroup.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestGroup(properties) {
@@ -5389,7 +5617,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup repeatedGroup.
-             * @member {Array.<jspb.test.TestGroup.IRepeatedGroup>} repeatedGroup
+             * @member {Array.<jspb.test.TestGroup.RepeatedGroup.$Properties>} repeatedGroup
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5397,7 +5625,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup requiredGroup.
-             * @member {jspb.test.TestGroup.IRequiredGroup} requiredGroup
+             * @member {jspb.test.TestGroup.RequiredGroup.$Properties} requiredGroup
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5405,7 +5633,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup optionalGroup.
-             * @member {jspb.test.TestGroup.IOptionalGroup|null|undefined} optionalGroup
+             * @member {jspb.test.TestGroup.OptionalGroup.$Properties|null|undefined} optionalGroup
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5413,7 +5641,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup messageInGroup.
-             * @member {jspb.test.TestGroup.IMessageInGroup|null|undefined} messageInGroup
+             * @member {jspb.test.TestGroup.MessageInGroup.$Properties|null|undefined} messageInGroup
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5421,7 +5649,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup enumInGroup.
-             * @member {jspb.test.TestGroup.IEnumInGroup|null|undefined} enumInGroup
+             * @member {jspb.test.TestGroup.EnumInGroup.$Properties|null|undefined} enumInGroup
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5437,7 +5665,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup requiredSimple.
-             * @member {jspb.test.ISimple2} requiredSimple
+             * @member {jspb.test.Simple2.$Properties} requiredSimple
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5445,7 +5673,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup optionalSimple.
-             * @member {jspb.test.ISimple2|null|undefined} optionalSimple
+             * @member {jspb.test.Simple2.$Properties|null|undefined} optionalSimple
              * @memberof jspb.test.TestGroup
              * @instance
              */
@@ -5456,7 +5684,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestGroup
              * @static
-             * @param {jspb.test.ITestGroup=} [properties] Properties to set
+             * @param {jspb.test.TestGroup.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestGroup} TestGroup instance
              */
             TestGroup.create = function create(properties) {
@@ -5468,7 +5696,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestGroup
              * @static
-             * @param {jspb.test.ITestGroup} message TestGroup message or plain object to encode
+             * @param {jspb.test.TestGroup.$Properties} message TestGroup message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -5501,7 +5729,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestGroup
              * @static
-             * @param {jspb.test.ITestGroup} message TestGroup message or plain object to encode
+             * @param {jspb.test.TestGroup.$Properties} message TestGroup message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -5813,20 +6041,32 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a RepeatedGroup.
-                 * @memberof jspb.test.TestGroup
-                 * @interface IRepeatedGroup
+                 * @typedef {Object} jspb.test.TestGroup.RepeatedGroup.$Properties
                  * @property {string} id RepeatedGroup id
                  * @property {Array.<boolean>|null} [someBool] RepeatedGroup someBool
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
 
                 /**
+                 * Properties of a RepeatedGroup.
+                 * @memberof jspb.test.TestGroup
+                 * @interface IRepeatedGroup
+                 * @augments jspb.test.TestGroup.RepeatedGroup.$Properties
+                 * @deprecated Use jspb.test.TestGroup.RepeatedGroup.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a RepeatedGroup.
+                 * @typedef {jspb.test.TestGroup.RepeatedGroup.$Properties} jspb.test.TestGroup.RepeatedGroup.$Shape
+                 */
+
+                /**
                  * Constructs a new RepeatedGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a RepeatedGroup.
-                 * @implements IRepeatedGroup
+                 * @implements jspb.test.TestGroup.RepeatedGroup.$Properties
                  * @constructor
-                 * @param {jspb.test.TestGroup.IRepeatedGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.RepeatedGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function RepeatedGroup(properties) {
@@ -5858,7 +6098,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.TestGroup.RepeatedGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRepeatedGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.RepeatedGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.RepeatedGroup} RepeatedGroup instance
                  */
                 RepeatedGroup.create = function create(properties) {
@@ -5870,7 +6110,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.TestGroup.RepeatedGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRepeatedGroup} message RepeatedGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.RepeatedGroup.$Properties} message RepeatedGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -5892,7 +6132,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.TestGroup.RepeatedGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRepeatedGroup} message RepeatedGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.RepeatedGroup.$Properties} message RepeatedGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6092,19 +6332,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a RequiredGroup.
-                 * @memberof jspb.test.TestGroup
-                 * @interface IRequiredGroup
+                 * @typedef {Object} jspb.test.TestGroup.RequiredGroup.$Properties
                  * @property {string} id RequiredGroup id
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a RequiredGroup.
+                 * @memberof jspb.test.TestGroup
+                 * @interface IRequiredGroup
+                 * @augments jspb.test.TestGroup.RequiredGroup.$Properties
+                 * @deprecated Use jspb.test.TestGroup.RequiredGroup.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a RequiredGroup.
+                 * @typedef {jspb.test.TestGroup.RequiredGroup.$Properties} jspb.test.TestGroup.RequiredGroup.$Shape
                  */
 
                 /**
                  * Constructs a new RequiredGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a RequiredGroup.
-                 * @implements IRequiredGroup
+                 * @implements jspb.test.TestGroup.RequiredGroup.$Properties
                  * @constructor
-                 * @param {jspb.test.TestGroup.IRequiredGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.RequiredGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function RequiredGroup(properties) {
@@ -6127,7 +6379,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.TestGroup.RequiredGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRequiredGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.RequiredGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.RequiredGroup} RequiredGroup instance
                  */
                 RequiredGroup.create = function create(properties) {
@@ -6139,7 +6391,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.TestGroup.RequiredGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRequiredGroup} message RequiredGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.RequiredGroup.$Properties} message RequiredGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6158,7 +6410,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.TestGroup.RequiredGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IRequiredGroup} message RequiredGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.RequiredGroup.$Properties} message RequiredGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6321,19 +6573,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of an OptionalGroup.
-                 * @memberof jspb.test.TestGroup
-                 * @interface IOptionalGroup
+                 * @typedef {Object} jspb.test.TestGroup.OptionalGroup.$Properties
                  * @property {string} id OptionalGroup id
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of an OptionalGroup.
+                 * @memberof jspb.test.TestGroup
+                 * @interface IOptionalGroup
+                 * @augments jspb.test.TestGroup.OptionalGroup.$Properties
+                 * @deprecated Use jspb.test.TestGroup.OptionalGroup.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an OptionalGroup.
+                 * @typedef {jspb.test.TestGroup.OptionalGroup.$Properties} jspb.test.TestGroup.OptionalGroup.$Shape
                  */
 
                 /**
                  * Constructs a new OptionalGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents an OptionalGroup.
-                 * @implements IOptionalGroup
+                 * @implements jspb.test.TestGroup.OptionalGroup.$Properties
                  * @constructor
-                 * @param {jspb.test.TestGroup.IOptionalGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.OptionalGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function OptionalGroup(properties) {
@@ -6356,7 +6620,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.TestGroup.OptionalGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IOptionalGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.OptionalGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.OptionalGroup} OptionalGroup instance
                  */
                 OptionalGroup.create = function create(properties) {
@@ -6368,7 +6632,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.TestGroup.OptionalGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IOptionalGroup} message OptionalGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.OptionalGroup.$Properties} message OptionalGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6387,7 +6651,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.TestGroup.OptionalGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IOptionalGroup} message OptionalGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.OptionalGroup.$Properties} message OptionalGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6550,19 +6814,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a MessageInGroup.
+                 * @typedef {Object} jspb.test.TestGroup.MessageInGroup.$Properties
+                 * @property {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties} id MessageInGroup id
+                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a MessageInGroup.
                  * @memberof jspb.test.TestGroup
                  * @interface IMessageInGroup
-                 * @property {jspb.test.TestGroup.MessageInGroup.INestedMessage} id MessageInGroup id
-                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 * @augments jspb.test.TestGroup.MessageInGroup.$Properties
+                 * @deprecated Use jspb.test.TestGroup.MessageInGroup.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a MessageInGroup.
+                 * @typedef {jspb.test.TestGroup.MessageInGroup.$Properties} jspb.test.TestGroup.MessageInGroup.$Shape
                  */
 
                 /**
                  * Constructs a new MessageInGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a MessageInGroup.
-                 * @implements IMessageInGroup
+                 * @implements jspb.test.TestGroup.MessageInGroup.$Properties
                  * @constructor
-                 * @param {jspb.test.TestGroup.IMessageInGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.MessageInGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function MessageInGroup(properties) {
@@ -6574,7 +6850,7 @@ $root.jspb = (function() {
 
                 /**
                  * MessageInGroup id.
-                 * @member {jspb.test.TestGroup.MessageInGroup.INestedMessage} id
+                 * @member {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties} id
                  * @memberof jspb.test.TestGroup.MessageInGroup
                  * @instance
                  */
@@ -6585,7 +6861,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.TestGroup.MessageInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IMessageInGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.MessageInGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.MessageInGroup} MessageInGroup instance
                  */
                 MessageInGroup.create = function create(properties) {
@@ -6597,7 +6873,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.TestGroup.MessageInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IMessageInGroup} message MessageInGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.MessageInGroup.$Properties} message MessageInGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6616,7 +6892,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.TestGroup.MessageInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IMessageInGroup} message MessageInGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.MessageInGroup.$Properties} message MessageInGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -6782,19 +7058,31 @@ $root.jspb = (function() {
 
                     /**
                      * Properties of a NestedMessage.
-                     * @memberof jspb.test.TestGroup.MessageInGroup
-                     * @interface INestedMessage
+                     * @typedef {Object} jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties
                      * @property {string|null} [id] NestedMessage id
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                     */
+
+                    /**
+                     * Properties of a NestedMessage.
+                     * @memberof jspb.test.TestGroup.MessageInGroup
+                     * @interface INestedMessage
+                     * @augments jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties
+                     * @deprecated Use jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties instead.
+                     */
+
+                    /**
+                     * Shape of a NestedMessage.
+                     * @typedef {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties} jspb.test.TestGroup.MessageInGroup.NestedMessage.$Shape
                      */
 
                     /**
                      * Constructs a new NestedMessage.
                      * @memberof jspb.test.TestGroup.MessageInGroup
                      * @classdesc Represents a NestedMessage.
-                     * @implements INestedMessage
+                     * @implements jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties
                      * @constructor
-                     * @param {jspb.test.TestGroup.MessageInGroup.INestedMessage=} [properties] Properties to set
+                     * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties=} [properties] Properties to set
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                      */
                     function NestedMessage(properties) {
@@ -6817,7 +7105,7 @@ $root.jspb = (function() {
                      * @function create
                      * @memberof jspb.test.TestGroup.MessageInGroup.NestedMessage
                      * @static
-                     * @param {jspb.test.TestGroup.MessageInGroup.INestedMessage=} [properties] Properties to set
+                     * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties=} [properties] Properties to set
                      * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage} NestedMessage instance
                      */
                     NestedMessage.create = function create(properties) {
@@ -6829,7 +7117,7 @@ $root.jspb = (function() {
                      * @function encode
                      * @memberof jspb.test.TestGroup.MessageInGroup.NestedMessage
                      * @static
-                     * @param {jspb.test.TestGroup.MessageInGroup.INestedMessage} message NestedMessage message or plain object to encode
+                     * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties} message NestedMessage message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
@@ -6849,7 +7137,7 @@ $root.jspb = (function() {
                      * @function encodeDelimited
                      * @memberof jspb.test.TestGroup.MessageInGroup.NestedMessage
                      * @static
-                     * @param {jspb.test.TestGroup.MessageInGroup.INestedMessage} message NestedMessage message or plain object to encode
+                     * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties} message NestedMessage message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
@@ -7014,19 +7302,31 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of an EnumInGroup.
-                 * @memberof jspb.test.TestGroup
-                 * @interface IEnumInGroup
+                 * @typedef {Object} jspb.test.TestGroup.EnumInGroup.$Properties
                  * @property {jspb.test.TestGroup.EnumInGroup.NestedEnum} id EnumInGroup id
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of an EnumInGroup.
+                 * @memberof jspb.test.TestGroup
+                 * @interface IEnumInGroup
+                 * @augments jspb.test.TestGroup.EnumInGroup.$Properties
+                 * @deprecated Use jspb.test.TestGroup.EnumInGroup.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an EnumInGroup.
+                 * @typedef {jspb.test.TestGroup.EnumInGroup.$Properties} jspb.test.TestGroup.EnumInGroup.$Shape
                  */
 
                 /**
                  * Constructs a new EnumInGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents an EnumInGroup.
-                 * @implements IEnumInGroup
+                 * @implements jspb.test.TestGroup.EnumInGroup.$Properties
                  * @constructor
-                 * @param {jspb.test.TestGroup.IEnumInGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.EnumInGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function EnumInGroup(properties) {
@@ -7049,7 +7349,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.TestGroup.EnumInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IEnumInGroup=} [properties] Properties to set
+                 * @param {jspb.test.TestGroup.EnumInGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.EnumInGroup} EnumInGroup instance
                  */
                 EnumInGroup.create = function create(properties) {
@@ -7061,7 +7361,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.TestGroup.EnumInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IEnumInGroup} message EnumInGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.EnumInGroup.$Properties} message EnumInGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -7080,7 +7380,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.TestGroup.EnumInGroup
                  * @static
-                 * @param {jspb.test.TestGroup.IEnumInGroup} message EnumInGroup message or plain object to encode
+                 * @param {jspb.test.TestGroup.EnumInGroup.$Properties} message EnumInGroup message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -7279,19 +7579,31 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestGroup1.
+             * @typedef {Object} jspb.test.TestGroup1.$Properties
+             * @property {jspb.test.TestGroup.RepeatedGroup.$Properties|null} [group] TestGroup1 group
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestGroup1.
              * @memberof jspb.test
              * @interface ITestGroup1
-             * @property {jspb.test.TestGroup.IRepeatedGroup|null} [group] TestGroup1 group
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.TestGroup1.$Properties
+             * @deprecated Use jspb.test.TestGroup1.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestGroup1.
+             * @typedef {jspb.test.TestGroup1.$Properties} jspb.test.TestGroup1.$Shape
              */
 
             /**
              * Constructs a new TestGroup1.
              * @memberof jspb.test
              * @classdesc Represents a TestGroup1.
-             * @implements ITestGroup1
+             * @implements jspb.test.TestGroup1.$Properties
              * @constructor
-             * @param {jspb.test.ITestGroup1=} [properties] Properties to set
+             * @param {jspb.test.TestGroup1.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestGroup1(properties) {
@@ -7303,7 +7615,7 @@ $root.jspb = (function() {
 
             /**
              * TestGroup1 group.
-             * @member {jspb.test.TestGroup.IRepeatedGroup|null|undefined} group
+             * @member {jspb.test.TestGroup.RepeatedGroup.$Properties|null|undefined} group
              * @memberof jspb.test.TestGroup1
              * @instance
              */
@@ -7314,7 +7626,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestGroup1
              * @static
-             * @param {jspb.test.ITestGroup1=} [properties] Properties to set
+             * @param {jspb.test.TestGroup1.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestGroup1} TestGroup1 instance
              */
             TestGroup1.create = function create(properties) {
@@ -7326,7 +7638,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestGroup1
              * @static
-             * @param {jspb.test.ITestGroup1} message TestGroup1 message or plain object to encode
+             * @param {jspb.test.TestGroup1.$Properties} message TestGroup1 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7346,7 +7658,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestGroup1
              * @static
-             * @param {jspb.test.ITestGroup1} message TestGroup1 message or plain object to encode
+             * @param {jspb.test.TestGroup1.$Properties} message TestGroup1 message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7513,20 +7825,32 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestReservedNames.
-             * @memberof jspb.test
-             * @interface ITestReservedNames
+             * @typedef {Object} jspb.test.TestReservedNames.$Properties
              * @property {number|null} [extension] TestReservedNames extension
              * @property {number|null} [".jspb.test.TestReservedNamesExtension.foo"] TestReservedNames .jspb.test.TestReservedNamesExtension.foo
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a TestReservedNames.
+             * @memberof jspb.test
+             * @interface ITestReservedNames
+             * @augments jspb.test.TestReservedNames.$Properties
+             * @deprecated Use jspb.test.TestReservedNames.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestReservedNames.
+             * @typedef {jspb.test.TestReservedNames.$Properties} jspb.test.TestReservedNames.$Shape
+             */
+
+            /**
              * Constructs a new TestReservedNames.
              * @memberof jspb.test
              * @classdesc Represents a TestReservedNames.
-             * @implements ITestReservedNames
+             * @implements jspb.test.TestReservedNames.$Properties
              * @constructor
-             * @param {jspb.test.ITestReservedNames=} [properties] Properties to set
+             * @param {jspb.test.TestReservedNames.$Properties=} [properties] Properties to set
              * @property {number} ".jspb.test.TestReservedNamesExtension.foo" TestReservedNames .jspb.test.TestReservedNamesExtension.foo
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
@@ -7552,7 +7876,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestReservedNames
              * @static
-             * @param {jspb.test.ITestReservedNames=} [properties] Properties to set
+             * @param {jspb.test.TestReservedNames.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestReservedNames} TestReservedNames instance
              */
             TestReservedNames.create = function create(properties) {
@@ -7564,7 +7888,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestReservedNames
              * @static
-             * @param {jspb.test.ITestReservedNames} message TestReservedNames message or plain object to encode
+             * @param {jspb.test.TestReservedNames.$Properties} message TestReservedNames message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7586,7 +7910,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestReservedNames
              * @static
-             * @param {jspb.test.ITestReservedNames} message TestReservedNames message or plain object to encode
+             * @param {jspb.test.TestReservedNames.$Properties} message TestReservedNames message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7763,18 +8087,30 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestReservedNamesExtension.
+             * @typedef {Object} jspb.test.TestReservedNamesExtension.$Properties
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestReservedNamesExtension.
              * @memberof jspb.test
              * @interface ITestReservedNamesExtension
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.TestReservedNamesExtension.$Properties
+             * @deprecated Use jspb.test.TestReservedNamesExtension.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestReservedNamesExtension.
+             * @typedef {jspb.test.TestReservedNamesExtension.$Properties} jspb.test.TestReservedNamesExtension.$Shape
              */
 
             /**
              * Constructs a new TestReservedNamesExtension.
              * @memberof jspb.test
              * @classdesc Represents a TestReservedNamesExtension.
-             * @implements ITestReservedNamesExtension
+             * @implements jspb.test.TestReservedNamesExtension.$Properties
              * @constructor
-             * @param {jspb.test.ITestReservedNamesExtension=} [properties] Properties to set
+             * @param {jspb.test.TestReservedNamesExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestReservedNamesExtension(properties) {
@@ -7789,7 +8125,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestReservedNamesExtension
              * @static
-             * @param {jspb.test.ITestReservedNamesExtension=} [properties] Properties to set
+             * @param {jspb.test.TestReservedNamesExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestReservedNamesExtension} TestReservedNamesExtension instance
              */
             TestReservedNamesExtension.create = function create(properties) {
@@ -7801,7 +8137,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestReservedNamesExtension
              * @static
-             * @param {jspb.test.ITestReservedNamesExtension} message TestReservedNamesExtension message or plain object to encode
+             * @param {jspb.test.TestReservedNamesExtension.$Properties} message TestReservedNamesExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7819,7 +8155,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestReservedNamesExtension
              * @static
-             * @param {jspb.test.ITestReservedNamesExtension} message TestReservedNamesExtension message or plain object to encode
+             * @param {jspb.test.TestReservedNamesExtension.$Properties} message TestReservedNamesExtension message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -7959,11 +8295,10 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestMessageWithOneof.
-             * @memberof jspb.test
-             * @interface ITestMessageWithOneof
+             * @typedef {Object} jspb.test.TestMessageWithOneof.$Properties
              * @property {string|null} [pone] TestMessageWithOneof pone
              * @property {string|null} [pthree] TestMessageWithOneof pthree
-             * @property {jspb.test.ITestMessageWithOneof|null} [rone] TestMessageWithOneof rone
+             * @property {jspb.test.TestMessageWithOneof.$Properties|null} [rone] TestMessageWithOneof rone
              * @property {string|null} [rtwo] TestMessageWithOneof rtwo
              * @property {boolean|null} [normalField] TestMessageWithOneof normalField
              * @property {Array.<string>|null} [repeatedField] TestMessageWithOneof repeatedField
@@ -7971,16 +8306,38 @@ $root.jspb = (function() {
              * @property {number|null} [atwo] TestMessageWithOneof atwo
              * @property {number|null} [bone] TestMessageWithOneof bone
              * @property {number|null} [btwo] TestMessageWithOneof btwo
+             * @property {"pone"|"pthree"|undefined} [partialOneof] TestMessageWithOneof partialOneof
+             * @property {"rone"|"rtwo"|undefined} [recursiveOneof] TestMessageWithOneof recursiveOneof
+             * @property {"aone"|"atwo"|undefined} [defaultOneofA] TestMessageWithOneof defaultOneofA
+             * @property {"bone"|"btwo"|undefined} [defaultOneofB] TestMessageWithOneof defaultOneofB
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestMessageWithOneof.
+             * @memberof jspb.test
+             * @interface ITestMessageWithOneof
+             * @augments jspb.test.TestMessageWithOneof.$Properties
+             * @deprecated Use jspb.test.TestMessageWithOneof.$Properties instead.
+             */
+
+            /**
+             * Oneofs of a TestMessageWithOneof.
+             * @typedef {({ partialOneof?: undefined; pone?: null; pthree?: null }|{ partialOneof?: "pone"; pone: string; pthree?: null }|{ partialOneof?: "pthree"; pone?: null; pthree: string }) & ({ recursiveOneof?: undefined; rone?: null; rtwo?: null }|{ recursiveOneof?: "rone"; rone: jspb.test.TestMessageWithOneof.$Properties; rtwo?: null }|{ recursiveOneof?: "rtwo"; rone?: null; rtwo: string }) & ({ defaultOneofA?: undefined; aone?: null; atwo?: null }|{ defaultOneofA?: "aone"; aone: number; atwo?: null }|{ defaultOneofA?: "atwo"; aone?: null; atwo: number }) & ({ defaultOneofB?: undefined; bone?: null; btwo?: null }|{ defaultOneofB?: "bone"; bone: number; btwo?: null }|{ defaultOneofB?: "btwo"; bone?: null; btwo: number })} jspb.test.TestMessageWithOneof.$Oneofs
+             */
+
+            /**
+             * Narrowed shape of a TestMessageWithOneof.
+             * @typedef {jspb.test.TestMessageWithOneof.$Properties & jspb.test.TestMessageWithOneof.$Oneofs} jspb.test.TestMessageWithOneof.$Shape
              */
 
             /**
              * Constructs a new TestMessageWithOneof.
              * @memberof jspb.test
              * @classdesc Represents a TestMessageWithOneof.
-             * @implements ITestMessageWithOneof
+             * @implements jspb.test.TestMessageWithOneof.$Properties
              * @constructor
-             * @param {jspb.test.ITestMessageWithOneof=} [properties] Properties to set
+             * @param {jspb.test.TestMessageWithOneof.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestMessageWithOneof(properties) {
@@ -8009,7 +8366,7 @@ $root.jspb = (function() {
 
             /**
              * TestMessageWithOneof rone.
-             * @member {jspb.test.ITestMessageWithOneof|null|undefined} rone
+             * @member {jspb.test.TestMessageWithOneof.$Properties|null|undefined} rone
              * @memberof jspb.test.TestMessageWithOneof
              * @instance
              */
@@ -8123,8 +8480,12 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestMessageWithOneof
              * @static
-             * @param {jspb.test.ITestMessageWithOneof=} [properties] Properties to set
+             * @param {jspb.test.TestMessageWithOneof.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestMessageWithOneof} TestMessageWithOneof instance
+             * @type {{
+             *   (properties: jspb.test.TestMessageWithOneof.$Shape): jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs;
+             *   (properties?: jspb.test.TestMessageWithOneof.$Properties): jspb.test.TestMessageWithOneof;
+             * }}
              */
             TestMessageWithOneof.create = function create(properties) {
                 return new TestMessageWithOneof(properties);
@@ -8135,7 +8496,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestMessageWithOneof
              * @static
-             * @param {jspb.test.ITestMessageWithOneof} message TestMessageWithOneof message or plain object to encode
+             * @param {jspb.test.TestMessageWithOneof.$Properties} message TestMessageWithOneof message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -8174,7 +8535,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestMessageWithOneof
              * @static
-             * @param {jspb.test.ITestMessageWithOneof} message TestMessageWithOneof message or plain object to encode
+             * @param {jspb.test.TestMessageWithOneof.$Properties} message TestMessageWithOneof message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -8189,7 +8550,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestMessageWithOneof} TestMessageWithOneof
+             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs} TestMessageWithOneof
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8296,7 +8657,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestMessageWithOneof
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestMessageWithOneof} TestMessageWithOneof
+             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs} TestMessageWithOneof
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8532,20 +8893,32 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestEndsWithBytes.
-             * @memberof jspb.test
-             * @interface ITestEndsWithBytes
+             * @typedef {Object} jspb.test.TestEndsWithBytes.$Properties
              * @property {number|null} [value] TestEndsWithBytes value
              * @property {Uint8Array|null} [data] TestEndsWithBytes data
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a TestEndsWithBytes.
+             * @memberof jspb.test
+             * @interface ITestEndsWithBytes
+             * @augments jspb.test.TestEndsWithBytes.$Properties
+             * @deprecated Use jspb.test.TestEndsWithBytes.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestEndsWithBytes.
+             * @typedef {jspb.test.TestEndsWithBytes.$Properties} jspb.test.TestEndsWithBytes.$Shape
+             */
+
+            /**
              * Constructs a new TestEndsWithBytes.
              * @memberof jspb.test
              * @classdesc Represents a TestEndsWithBytes.
-             * @implements ITestEndsWithBytes
+             * @implements jspb.test.TestEndsWithBytes.$Properties
              * @constructor
-             * @param {jspb.test.ITestEndsWithBytes=} [properties] Properties to set
+             * @param {jspb.test.TestEndsWithBytes.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestEndsWithBytes(properties) {
@@ -8576,7 +8949,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestEndsWithBytes
              * @static
-             * @param {jspb.test.ITestEndsWithBytes=} [properties] Properties to set
+             * @param {jspb.test.TestEndsWithBytes.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestEndsWithBytes} TestEndsWithBytes instance
              */
             TestEndsWithBytes.create = function create(properties) {
@@ -8588,7 +8961,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestEndsWithBytes
              * @static
-             * @param {jspb.test.ITestEndsWithBytes} message TestEndsWithBytes message or plain object to encode
+             * @param {jspb.test.TestEndsWithBytes.$Properties} message TestEndsWithBytes message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -8610,7 +8983,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestEndsWithBytes
              * @static
-             * @param {jspb.test.ITestEndsWithBytes} message TestEndsWithBytes message or plain object to encode
+             * @param {jspb.test.TestEndsWithBytes.$Properties} message TestEndsWithBytes message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -8796,30 +9169,42 @@ $root.jspb = (function() {
 
             /**
              * Properties of a TestMapFieldsNoBinary.
-             * @memberof jspb.test
-             * @interface ITestMapFieldsNoBinary
+             * @typedef {Object} jspb.test.TestMapFieldsNoBinary.$Properties
              * @property {Object.<string,string>|null} [mapStringString] TestMapFieldsNoBinary mapStringString
              * @property {Object.<string,number>|null} [mapStringInt32] TestMapFieldsNoBinary mapStringInt32
              * @property {Object.<string,number|Long>|null} [mapStringInt64] TestMapFieldsNoBinary mapStringInt64
              * @property {Object.<string,boolean>|null} [mapStringBool] TestMapFieldsNoBinary mapStringBool
              * @property {Object.<string,number>|null} [mapStringDouble] TestMapFieldsNoBinary mapStringDouble
              * @property {Object.<string,jspb.test.MapValueEnumNoBinary>|null} [mapStringEnum] TestMapFieldsNoBinary mapStringEnum
-             * @property {Object.<string,jspb.test.IMapValueMessageNoBinary>|null} [mapStringMsg] TestMapFieldsNoBinary mapStringMsg
+             * @property {Object.<string,jspb.test.MapValueMessageNoBinary.$Properties>|null} [mapStringMsg] TestMapFieldsNoBinary mapStringMsg
              * @property {Object.<string,string>|null} [mapInt32String] TestMapFieldsNoBinary mapInt32String
              * @property {Object.<string,string>|null} [mapInt64String] TestMapFieldsNoBinary mapInt64String
              * @property {Object.<string,string>|null} [mapBoolString] TestMapFieldsNoBinary mapBoolString
-             * @property {jspb.test.ITestMapFieldsNoBinary|null} [testMapFields] TestMapFieldsNoBinary testMapFields
-             * @property {Object.<string,jspb.test.ITestMapFieldsNoBinary>|null} [mapStringTestmapfields] TestMapFieldsNoBinary mapStringTestmapfields
+             * @property {jspb.test.TestMapFieldsNoBinary.$Properties|null} [testMapFields] TestMapFieldsNoBinary testMapFields
+             * @property {Object.<string,jspb.test.TestMapFieldsNoBinary.$Properties>|null} [mapStringTestmapfields] TestMapFieldsNoBinary mapStringTestmapfields
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a TestMapFieldsNoBinary.
+             * @memberof jspb.test
+             * @interface ITestMapFieldsNoBinary
+             * @augments jspb.test.TestMapFieldsNoBinary.$Properties
+             * @deprecated Use jspb.test.TestMapFieldsNoBinary.$Properties instead.
+             */
+
+            /**
+             * Shape of a TestMapFieldsNoBinary.
+             * @typedef {jspb.test.TestMapFieldsNoBinary.$Properties} jspb.test.TestMapFieldsNoBinary.$Shape
              */
 
             /**
              * Constructs a new TestMapFieldsNoBinary.
              * @memberof jspb.test
              * @classdesc Represents a TestMapFieldsNoBinary.
-             * @implements ITestMapFieldsNoBinary
+             * @implements jspb.test.TestMapFieldsNoBinary.$Properties
              * @constructor
-             * @param {jspb.test.ITestMapFieldsNoBinary=} [properties] Properties to set
+             * @param {jspb.test.TestMapFieldsNoBinary.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function TestMapFieldsNoBinary(properties) {
@@ -8890,7 +9275,7 @@ $root.jspb = (function() {
 
             /**
              * TestMapFieldsNoBinary mapStringMsg.
-             * @member {Object.<string,jspb.test.IMapValueMessageNoBinary>} mapStringMsg
+             * @member {Object.<string,jspb.test.MapValueMessageNoBinary.$Properties>} mapStringMsg
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @instance
              */
@@ -8922,7 +9307,7 @@ $root.jspb = (function() {
 
             /**
              * TestMapFieldsNoBinary testMapFields.
-             * @member {jspb.test.ITestMapFieldsNoBinary|null|undefined} testMapFields
+             * @member {jspb.test.TestMapFieldsNoBinary.$Properties|null|undefined} testMapFields
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @instance
              */
@@ -8930,7 +9315,7 @@ $root.jspb = (function() {
 
             /**
              * TestMapFieldsNoBinary mapStringTestmapfields.
-             * @member {Object.<string,jspb.test.ITestMapFieldsNoBinary>} mapStringTestmapfields
+             * @member {Object.<string,jspb.test.TestMapFieldsNoBinary.$Properties>} mapStringTestmapfields
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @instance
              */
@@ -8941,7 +9326,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @static
-             * @param {jspb.test.ITestMapFieldsNoBinary=} [properties] Properties to set
+             * @param {jspb.test.TestMapFieldsNoBinary.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestMapFieldsNoBinary} TestMapFieldsNoBinary instance
              */
             TestMapFieldsNoBinary.create = function create(properties) {
@@ -8953,7 +9338,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @static
-             * @param {jspb.test.ITestMapFieldsNoBinary} message TestMapFieldsNoBinary message or plain object to encode
+             * @param {jspb.test.TestMapFieldsNoBinary.$Properties} message TestMapFieldsNoBinary message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -9010,7 +9395,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @static
-             * @param {jspb.test.ITestMapFieldsNoBinary} message TestMapFieldsNoBinary message or plain object to encode
+             * @param {jspb.test.TestMapFieldsNoBinary.$Properties} message TestMapFieldsNoBinary message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -9870,19 +10255,31 @@ $root.jspb = (function() {
 
             /**
              * Properties of a MapValueMessageNoBinary.
-             * @memberof jspb.test
-             * @interface IMapValueMessageNoBinary
+             * @typedef {Object} jspb.test.MapValueMessageNoBinary.$Properties
              * @property {number|null} [foo] MapValueMessageNoBinary foo
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a MapValueMessageNoBinary.
+             * @memberof jspb.test
+             * @interface IMapValueMessageNoBinary
+             * @augments jspb.test.MapValueMessageNoBinary.$Properties
+             * @deprecated Use jspb.test.MapValueMessageNoBinary.$Properties instead.
+             */
+
+            /**
+             * Shape of a MapValueMessageNoBinary.
+             * @typedef {jspb.test.MapValueMessageNoBinary.$Properties} jspb.test.MapValueMessageNoBinary.$Shape
              */
 
             /**
              * Constructs a new MapValueMessageNoBinary.
              * @memberof jspb.test
              * @classdesc Represents a MapValueMessageNoBinary.
-             * @implements IMapValueMessageNoBinary
+             * @implements jspb.test.MapValueMessageNoBinary.$Properties
              * @constructor
-             * @param {jspb.test.IMapValueMessageNoBinary=} [properties] Properties to set
+             * @param {jspb.test.MapValueMessageNoBinary.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function MapValueMessageNoBinary(properties) {
@@ -9905,7 +10302,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.MapValueMessageNoBinary
              * @static
-             * @param {jspb.test.IMapValueMessageNoBinary=} [properties] Properties to set
+             * @param {jspb.test.MapValueMessageNoBinary.$Properties=} [properties] Properties to set
              * @returns {jspb.test.MapValueMessageNoBinary} MapValueMessageNoBinary instance
              */
             MapValueMessageNoBinary.create = function create(properties) {
@@ -9917,7 +10314,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.MapValueMessageNoBinary
              * @static
-             * @param {jspb.test.IMapValueMessageNoBinary} message MapValueMessageNoBinary message or plain object to encode
+             * @param {jspb.test.MapValueMessageNoBinary.$Properties} message MapValueMessageNoBinary message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -9937,7 +10334,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.MapValueMessageNoBinary
              * @static
-             * @param {jspb.test.IMapValueMessageNoBinary} message MapValueMessageNoBinary message or plain object to encode
+             * @param {jspb.test.MapValueMessageNoBinary.$Properties} message MapValueMessageNoBinary message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -10099,18 +10496,30 @@ $root.jspb = (function() {
 
             /**
              * Properties of a Deeply.
+             * @typedef {Object} jspb.test.Deeply.$Properties
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a Deeply.
              * @memberof jspb.test
              * @interface IDeeply
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments jspb.test.Deeply.$Properties
+             * @deprecated Use jspb.test.Deeply.$Properties instead.
+             */
+
+            /**
+             * Shape of a Deeply.
+             * @typedef {jspb.test.Deeply.$Properties} jspb.test.Deeply.$Shape
              */
 
             /**
              * Constructs a new Deeply.
              * @memberof jspb.test
              * @classdesc Represents a Deeply.
-             * @implements IDeeply
+             * @implements jspb.test.Deeply.$Properties
              * @constructor
-             * @param {jspb.test.IDeeply=} [properties] Properties to set
+             * @param {jspb.test.Deeply.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function Deeply(properties) {
@@ -10125,7 +10534,7 @@ $root.jspb = (function() {
              * @function create
              * @memberof jspb.test.Deeply
              * @static
-             * @param {jspb.test.IDeeply=} [properties] Properties to set
+             * @param {jspb.test.Deeply.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Deeply} Deeply instance
              */
             Deeply.create = function create(properties) {
@@ -10137,7 +10546,7 @@ $root.jspb = (function() {
              * @function encode
              * @memberof jspb.test.Deeply
              * @static
-             * @param {jspb.test.IDeeply} message Deeply message or plain object to encode
+             * @param {jspb.test.Deeply.$Properties} message Deeply message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -10155,7 +10564,7 @@ $root.jspb = (function() {
              * @function encodeDelimited
              * @memberof jspb.test.Deeply
              * @static
-             * @param {jspb.test.IDeeply} message Deeply message or plain object to encode
+             * @param {jspb.test.Deeply.$Properties} message Deeply message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -10292,18 +10701,30 @@ $root.jspb = (function() {
 
                 /**
                  * Properties of a Nested.
+                 * @typedef {Object} jspb.test.Deeply.Nested.$Properties
+                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a Nested.
                  * @memberof jspb.test.Deeply
                  * @interface INested
-                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 * @augments jspb.test.Deeply.Nested.$Properties
+                 * @deprecated Use jspb.test.Deeply.Nested.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Nested.
+                 * @typedef {jspb.test.Deeply.Nested.$Properties} jspb.test.Deeply.Nested.$Shape
                  */
 
                 /**
                  * Constructs a new Nested.
                  * @memberof jspb.test.Deeply
                  * @classdesc Represents a Nested.
-                 * @implements INested
+                 * @implements jspb.test.Deeply.Nested.$Properties
                  * @constructor
-                 * @param {jspb.test.Deeply.INested=} [properties] Properties to set
+                 * @param {jspb.test.Deeply.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Nested(properties) {
@@ -10318,7 +10739,7 @@ $root.jspb = (function() {
                  * @function create
                  * @memberof jspb.test.Deeply.Nested
                  * @static
-                 * @param {jspb.test.Deeply.INested=} [properties] Properties to set
+                 * @param {jspb.test.Deeply.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.Deeply.Nested} Nested instance
                  */
                 Nested.create = function create(properties) {
@@ -10330,7 +10751,7 @@ $root.jspb = (function() {
                  * @function encode
                  * @memberof jspb.test.Deeply.Nested
                  * @static
-                 * @param {jspb.test.Deeply.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.Deeply.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -10348,7 +10769,7 @@ $root.jspb = (function() {
                  * @function encodeDelimited
                  * @memberof jspb.test.Deeply.Nested
                  * @static
-                 * @param {jspb.test.Deeply.INested} message Nested message or plain object to encode
+                 * @param {jspb.test.Deeply.Nested.$Properties} message Nested message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -10485,19 +10906,31 @@ $root.jspb = (function() {
 
                     /**
                      * Properties of a Message.
-                     * @memberof jspb.test.Deeply.Nested
-                     * @interface IMessage
+                     * @typedef {Object} jspb.test.Deeply.Nested.Message.$Properties
                      * @property {number|null} [count] Message count
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                     */
+
+                    /**
+                     * Properties of a Message.
+                     * @memberof jspb.test.Deeply.Nested
+                     * @interface IMessage
+                     * @augments jspb.test.Deeply.Nested.Message.$Properties
+                     * @deprecated Use jspb.test.Deeply.Nested.Message.$Properties instead.
+                     */
+
+                    /**
+                     * Shape of a Message.
+                     * @typedef {jspb.test.Deeply.Nested.Message.$Properties} jspb.test.Deeply.Nested.Message.$Shape
                      */
 
                     /**
                      * Constructs a new Message.
                      * @memberof jspb.test.Deeply.Nested
                      * @classdesc Represents a Message.
-                     * @implements IMessage
+                     * @implements jspb.test.Deeply.Nested.Message.$Properties
                      * @constructor
-                     * @param {jspb.test.Deeply.Nested.IMessage=} [properties] Properties to set
+                     * @param {jspb.test.Deeply.Nested.Message.$Properties=} [properties] Properties to set
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                      */
                     function Message(properties) {
@@ -10520,7 +10953,7 @@ $root.jspb = (function() {
                      * @function create
                      * @memberof jspb.test.Deeply.Nested.Message
                      * @static
-                     * @param {jspb.test.Deeply.Nested.IMessage=} [properties] Properties to set
+                     * @param {jspb.test.Deeply.Nested.Message.$Properties=} [properties] Properties to set
                      * @returns {jspb.test.Deeply.Nested.Message} Message instance
                      */
                     Message.create = function create(properties) {
@@ -10532,7 +10965,7 @@ $root.jspb = (function() {
                      * @function encode
                      * @memberof jspb.test.Deeply.Nested.Message
                      * @static
-                     * @param {jspb.test.Deeply.Nested.IMessage} message Message message or plain object to encode
+                     * @param {jspb.test.Deeply.Nested.Message.$Properties} message Message message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
@@ -10552,7 +10985,7 @@ $root.jspb = (function() {
                      * @function encodeDelimited
                      * @memberof jspb.test.Deeply.Nested.Message
                      * @static
-                     * @param {jspb.test.Deeply.Nested.IMessage} message Message message or plain object to encode
+                     * @param {jspb.test.Deeply.Nested.Message.$Properties} message Message message or plain object to encode
                      * @param {$protobuf.Writer} [writer] Writer to encode to
                      * @returns {$protobuf.Writer} Writer
                      */
@@ -10744,19 +11177,31 @@ $root.google = (function() {
 
             /**
              * Properties of a FileDescriptorSet.
+             * @typedef {Object} google.protobuf.FileDescriptorSet.$Properties
+             * @property {Array.<google.protobuf.FileDescriptorProto.$Properties>|null} [file] FileDescriptorSet file
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a FileDescriptorSet.
              * @memberof google.protobuf
              * @interface IFileDescriptorSet
-             * @property {Array.<google.protobuf.IFileDescriptorProto>|null} [file] FileDescriptorSet file
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.FileDescriptorSet.$Properties
+             * @deprecated Use google.protobuf.FileDescriptorSet.$Properties instead.
+             */
+
+            /**
+             * Shape of a FileDescriptorSet.
+             * @typedef {google.protobuf.FileDescriptorSet.$Properties} google.protobuf.FileDescriptorSet.$Shape
              */
 
             /**
              * Constructs a new FileDescriptorSet.
              * @memberof google.protobuf
              * @classdesc Represents a FileDescriptorSet.
-             * @implements IFileDescriptorSet
+             * @implements google.protobuf.FileDescriptorSet.$Properties
              * @constructor
-             * @param {google.protobuf.IFileDescriptorSet=} [properties] Properties to set
+             * @param {google.protobuf.FileDescriptorSet.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FileDescriptorSet(properties) {
@@ -10769,7 +11214,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorSet file.
-             * @member {Array.<google.protobuf.IFileDescriptorProto>} file
+             * @member {Array.<google.protobuf.FileDescriptorProto.$Properties>} file
              * @memberof google.protobuf.FileDescriptorSet
              * @instance
              */
@@ -10780,7 +11225,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FileDescriptorSet
              * @static
-             * @param {google.protobuf.IFileDescriptorSet=} [properties] Properties to set
+             * @param {google.protobuf.FileDescriptorSet.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileDescriptorSet} FileDescriptorSet instance
              */
             FileDescriptorSet.create = function create(properties) {
@@ -10792,7 +11237,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FileDescriptorSet
              * @static
-             * @param {google.protobuf.IFileDescriptorSet} message FileDescriptorSet message or plain object to encode
+             * @param {google.protobuf.FileDescriptorSet.$Properties} message FileDescriptorSet message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -10813,7 +11258,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FileDescriptorSet
              * @static
-             * @param {google.protobuf.IFileDescriptorSet} message FileDescriptorSet message or plain object to encode
+             * @param {google.protobuf.FileDescriptorSet.$Properties} message FileDescriptorSet message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -11028,32 +11473,44 @@ $root.google = (function() {
 
             /**
              * Properties of a FileDescriptorProto.
-             * @memberof google.protobuf
-             * @interface IFileDescriptorProto
+             * @typedef {Object} google.protobuf.FileDescriptorProto.$Properties
              * @property {string|null} [name] FileDescriptorProto name
              * @property {string|null} ["package"] FileDescriptorProto package
              * @property {Array.<string>|null} [dependency] FileDescriptorProto dependency
              * @property {Array.<number>|null} [publicDependency] FileDescriptorProto publicDependency
              * @property {Array.<number>|null} [weakDependency] FileDescriptorProto weakDependency
              * @property {Array.<string>|null} [optionDependency] FileDescriptorProto optionDependency
-             * @property {Array.<google.protobuf.IDescriptorProto>|null} [messageType] FileDescriptorProto messageType
-             * @property {Array.<google.protobuf.IEnumDescriptorProto>|null} [enumType] FileDescriptorProto enumType
-             * @property {Array.<google.protobuf.IServiceDescriptorProto>|null} [service] FileDescriptorProto service
-             * @property {Array.<google.protobuf.IFieldDescriptorProto>|null} [extension] FileDescriptorProto extension
-             * @property {google.protobuf.IFileOptions|null} [options] FileDescriptorProto options
-             * @property {google.protobuf.ISourceCodeInfo|null} [sourceCodeInfo] FileDescriptorProto sourceCodeInfo
+             * @property {Array.<google.protobuf.DescriptorProto.$Properties>|null} [messageType] FileDescriptorProto messageType
+             * @property {Array.<google.protobuf.EnumDescriptorProto.$Properties>|null} [enumType] FileDescriptorProto enumType
+             * @property {Array.<google.protobuf.ServiceDescriptorProto.$Properties>|null} [service] FileDescriptorProto service
+             * @property {Array.<google.protobuf.FieldDescriptorProto.$Properties>|null} [extension] FileDescriptorProto extension
+             * @property {google.protobuf.FileOptions.$Properties|null} [options] FileDescriptorProto options
+             * @property {google.protobuf.SourceCodeInfo.$Properties|null} [sourceCodeInfo] FileDescriptorProto sourceCodeInfo
              * @property {string|null} [syntax] FileDescriptorProto syntax
              * @property {google.protobuf.Edition|null} [edition] FileDescriptorProto edition
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a FileDescriptorProto.
+             * @memberof google.protobuf
+             * @interface IFileDescriptorProto
+             * @augments google.protobuf.FileDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.FileDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a FileDescriptorProto.
+             * @typedef {google.protobuf.FileDescriptorProto.$Properties} google.protobuf.FileDescriptorProto.$Shape
+             */
+
+            /**
              * Constructs a new FileDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a FileDescriptorProto.
-             * @implements IFileDescriptorProto
+             * @implements google.protobuf.FileDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IFileDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.FileDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FileDescriptorProto(properties) {
@@ -11121,7 +11578,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto messageType.
-             * @member {Array.<google.protobuf.IDescriptorProto>} messageType
+             * @member {Array.<google.protobuf.DescriptorProto.$Properties>} messageType
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11129,7 +11586,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto enumType.
-             * @member {Array.<google.protobuf.IEnumDescriptorProto>} enumType
+             * @member {Array.<google.protobuf.EnumDescriptorProto.$Properties>} enumType
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11137,7 +11594,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto service.
-             * @member {Array.<google.protobuf.IServiceDescriptorProto>} service
+             * @member {Array.<google.protobuf.ServiceDescriptorProto.$Properties>} service
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11145,7 +11602,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto extension.
-             * @member {Array.<google.protobuf.IFieldDescriptorProto>} extension
+             * @member {Array.<google.protobuf.FieldDescriptorProto.$Properties>} extension
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11153,7 +11610,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto options.
-             * @member {google.protobuf.IFileOptions|null|undefined} options
+             * @member {google.protobuf.FileOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11161,7 +11618,7 @@ $root.google = (function() {
 
             /**
              * FileDescriptorProto sourceCodeInfo.
-             * @member {google.protobuf.ISourceCodeInfo|null|undefined} sourceCodeInfo
+             * @member {google.protobuf.SourceCodeInfo.$Properties|null|undefined} sourceCodeInfo
              * @memberof google.protobuf.FileDescriptorProto
              * @instance
              */
@@ -11188,7 +11645,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FileDescriptorProto
              * @static
-             * @param {google.protobuf.IFileDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.FileDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileDescriptorProto} FileDescriptorProto instance
              */
             FileDescriptorProto.create = function create(properties) {
@@ -11200,7 +11657,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FileDescriptorProto
              * @static
-             * @param {google.protobuf.IFileDescriptorProto} message FileDescriptorProto message or plain object to encode
+             * @param {google.protobuf.FileDescriptorProto.$Properties} message FileDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -11254,7 +11711,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FileDescriptorProto
              * @static
-             * @param {google.protobuf.IFileDescriptorProto} message FileDescriptorProto message or plain object to encode
+             * @param {google.protobuf.FileDescriptorProto.$Properties} message FileDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -11828,29 +12285,41 @@ $root.google = (function() {
 
             /**
              * Properties of a DescriptorProto.
-             * @memberof google.protobuf
-             * @interface IDescriptorProto
+             * @typedef {Object} google.protobuf.DescriptorProto.$Properties
              * @property {string|null} [name] DescriptorProto name
-             * @property {Array.<google.protobuf.IFieldDescriptorProto>|null} [field] DescriptorProto field
-             * @property {Array.<google.protobuf.IFieldDescriptorProto>|null} [extension] DescriptorProto extension
-             * @property {Array.<google.protobuf.IDescriptorProto>|null} [nestedType] DescriptorProto nestedType
-             * @property {Array.<google.protobuf.IEnumDescriptorProto>|null} [enumType] DescriptorProto enumType
-             * @property {Array.<google.protobuf.DescriptorProto.IExtensionRange>|null} [extensionRange] DescriptorProto extensionRange
-             * @property {Array.<google.protobuf.IOneofDescriptorProto>|null} [oneofDecl] DescriptorProto oneofDecl
-             * @property {google.protobuf.IMessageOptions|null} [options] DescriptorProto options
-             * @property {Array.<google.protobuf.DescriptorProto.IReservedRange>|null} [reservedRange] DescriptorProto reservedRange
+             * @property {Array.<google.protobuf.FieldDescriptorProto.$Properties>|null} [field] DescriptorProto field
+             * @property {Array.<google.protobuf.FieldDescriptorProto.$Properties>|null} [extension] DescriptorProto extension
+             * @property {Array.<google.protobuf.DescriptorProto.$Properties>|null} [nestedType] DescriptorProto nestedType
+             * @property {Array.<google.protobuf.EnumDescriptorProto.$Properties>|null} [enumType] DescriptorProto enumType
+             * @property {Array.<google.protobuf.DescriptorProto.ExtensionRange.$Properties>|null} [extensionRange] DescriptorProto extensionRange
+             * @property {Array.<google.protobuf.OneofDescriptorProto.$Properties>|null} [oneofDecl] DescriptorProto oneofDecl
+             * @property {google.protobuf.MessageOptions.$Properties|null} [options] DescriptorProto options
+             * @property {Array.<google.protobuf.DescriptorProto.ReservedRange.$Properties>|null} [reservedRange] DescriptorProto reservedRange
              * @property {Array.<string>|null} [reservedName] DescriptorProto reservedName
              * @property {google.protobuf.SymbolVisibility|null} [visibility] DescriptorProto visibility
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a DescriptorProto.
+             * @memberof google.protobuf
+             * @interface IDescriptorProto
+             * @augments google.protobuf.DescriptorProto.$Properties
+             * @deprecated Use google.protobuf.DescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a DescriptorProto.
+             * @typedef {google.protobuf.DescriptorProto.$Properties} google.protobuf.DescriptorProto.$Shape
+             */
+
+            /**
              * Constructs a new DescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a DescriptorProto.
-             * @implements IDescriptorProto
+             * @implements google.protobuf.DescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.DescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function DescriptorProto(properties) {
@@ -11878,7 +12347,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto field.
-             * @member {Array.<google.protobuf.IFieldDescriptorProto>} field
+             * @member {Array.<google.protobuf.FieldDescriptorProto.$Properties>} field
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11886,7 +12355,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto extension.
-             * @member {Array.<google.protobuf.IFieldDescriptorProto>} extension
+             * @member {Array.<google.protobuf.FieldDescriptorProto.$Properties>} extension
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11894,7 +12363,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto nestedType.
-             * @member {Array.<google.protobuf.IDescriptorProto>} nestedType
+             * @member {Array.<google.protobuf.DescriptorProto.$Properties>} nestedType
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11902,7 +12371,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto enumType.
-             * @member {Array.<google.protobuf.IEnumDescriptorProto>} enumType
+             * @member {Array.<google.protobuf.EnumDescriptorProto.$Properties>} enumType
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11910,7 +12379,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto extensionRange.
-             * @member {Array.<google.protobuf.DescriptorProto.IExtensionRange>} extensionRange
+             * @member {Array.<google.protobuf.DescriptorProto.ExtensionRange.$Properties>} extensionRange
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11918,7 +12387,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto oneofDecl.
-             * @member {Array.<google.protobuf.IOneofDescriptorProto>} oneofDecl
+             * @member {Array.<google.protobuf.OneofDescriptorProto.$Properties>} oneofDecl
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11926,7 +12395,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto options.
-             * @member {google.protobuf.IMessageOptions|null|undefined} options
+             * @member {google.protobuf.MessageOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11934,7 +12403,7 @@ $root.google = (function() {
 
             /**
              * DescriptorProto reservedRange.
-             * @member {Array.<google.protobuf.DescriptorProto.IReservedRange>} reservedRange
+             * @member {Array.<google.protobuf.DescriptorProto.ReservedRange.$Properties>} reservedRange
              * @memberof google.protobuf.DescriptorProto
              * @instance
              */
@@ -11961,7 +12430,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.DescriptorProto
              * @static
-             * @param {google.protobuf.IDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.DescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.DescriptorProto} DescriptorProto instance
              */
             DescriptorProto.create = function create(properties) {
@@ -11973,7 +12442,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.DescriptorProto
              * @static
-             * @param {google.protobuf.IDescriptorProto} message DescriptorProto message or plain object to encode
+             * @param {google.protobuf.DescriptorProto.$Properties} message DescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -12021,7 +12490,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.DescriptorProto
              * @static
-             * @param {google.protobuf.IDescriptorProto} message DescriptorProto message or plain object to encode
+             * @param {google.protobuf.DescriptorProto.$Properties} message DescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -12499,21 +12968,33 @@ $root.google = (function() {
 
                 /**
                  * Properties of an ExtensionRange.
-                 * @memberof google.protobuf.DescriptorProto
-                 * @interface IExtensionRange
+                 * @typedef {Object} google.protobuf.DescriptorProto.ExtensionRange.$Properties
                  * @property {number|null} [start] ExtensionRange start
                  * @property {number|null} [end] ExtensionRange end
-                 * @property {google.protobuf.IExtensionRangeOptions|null} [options] ExtensionRange options
+                 * @property {google.protobuf.ExtensionRangeOptions.$Properties|null} [options] ExtensionRange options
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of an ExtensionRange.
+                 * @memberof google.protobuf.DescriptorProto
+                 * @interface IExtensionRange
+                 * @augments google.protobuf.DescriptorProto.ExtensionRange.$Properties
+                 * @deprecated Use google.protobuf.DescriptorProto.ExtensionRange.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an ExtensionRange.
+                 * @typedef {google.protobuf.DescriptorProto.ExtensionRange.$Properties} google.protobuf.DescriptorProto.ExtensionRange.$Shape
                  */
 
                 /**
                  * Constructs a new ExtensionRange.
                  * @memberof google.protobuf.DescriptorProto
                  * @classdesc Represents an ExtensionRange.
-                 * @implements IExtensionRange
+                 * @implements google.protobuf.DescriptorProto.ExtensionRange.$Properties
                  * @constructor
-                 * @param {google.protobuf.DescriptorProto.IExtensionRange=} [properties] Properties to set
+                 * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function ExtensionRange(properties) {
@@ -12541,7 +13022,7 @@ $root.google = (function() {
 
                 /**
                  * ExtensionRange options.
-                 * @member {google.protobuf.IExtensionRangeOptions|null|undefined} options
+                 * @member {google.protobuf.ExtensionRangeOptions.$Properties|null|undefined} options
                  * @memberof google.protobuf.DescriptorProto.ExtensionRange
                  * @instance
                  */
@@ -12552,7 +13033,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.DescriptorProto.ExtensionRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IExtensionRange=} [properties] Properties to set
+                 * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.DescriptorProto.ExtensionRange} ExtensionRange instance
                  */
                 ExtensionRange.create = function create(properties) {
@@ -12564,7 +13045,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.DescriptorProto.ExtensionRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IExtensionRange} message ExtensionRange message or plain object to encode
+                 * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties} message ExtensionRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -12588,7 +13069,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.DescriptorProto.ExtensionRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IExtensionRange} message ExtensionRange message or plain object to encode
+                 * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties} message ExtensionRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -12784,20 +13265,32 @@ $root.google = (function() {
 
                 /**
                  * Properties of a ReservedRange.
-                 * @memberof google.protobuf.DescriptorProto
-                 * @interface IReservedRange
+                 * @typedef {Object} google.protobuf.DescriptorProto.ReservedRange.$Properties
                  * @property {number|null} [start] ReservedRange start
                  * @property {number|null} [end] ReservedRange end
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
 
                 /**
+                 * Properties of a ReservedRange.
+                 * @memberof google.protobuf.DescriptorProto
+                 * @interface IReservedRange
+                 * @augments google.protobuf.DescriptorProto.ReservedRange.$Properties
+                 * @deprecated Use google.protobuf.DescriptorProto.ReservedRange.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a ReservedRange.
+                 * @typedef {google.protobuf.DescriptorProto.ReservedRange.$Properties} google.protobuf.DescriptorProto.ReservedRange.$Shape
+                 */
+
+                /**
                  * Constructs a new ReservedRange.
                  * @memberof google.protobuf.DescriptorProto
                  * @classdesc Represents a ReservedRange.
-                 * @implements IReservedRange
+                 * @implements google.protobuf.DescriptorProto.ReservedRange.$Properties
                  * @constructor
-                 * @param {google.protobuf.DescriptorProto.IReservedRange=} [properties] Properties to set
+                 * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function ReservedRange(properties) {
@@ -12828,7 +13321,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.DescriptorProto.ReservedRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IReservedRange=} [properties] Properties to set
+                 * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.DescriptorProto.ReservedRange} ReservedRange instance
                  */
                 ReservedRange.create = function create(properties) {
@@ -12840,7 +13333,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.DescriptorProto.ReservedRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IReservedRange} message ReservedRange message or plain object to encode
+                 * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties} message ReservedRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -12862,7 +13355,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.DescriptorProto.ReservedRange
                  * @static
-                 * @param {google.protobuf.DescriptorProto.IReservedRange} message ReservedRange message or plain object to encode
+                 * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties} message ReservedRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -13042,22 +13535,34 @@ $root.google = (function() {
 
             /**
              * Properties of an ExtensionRangeOptions.
-             * @memberof google.protobuf
-             * @interface IExtensionRangeOptions
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] ExtensionRangeOptions uninterpretedOption
-             * @property {Array.<google.protobuf.ExtensionRangeOptions.IDeclaration>|null} [declaration] ExtensionRangeOptions declaration
-             * @property {google.protobuf.IFeatureSet|null} [features] ExtensionRangeOptions features
+             * @typedef {Object} google.protobuf.ExtensionRangeOptions.$Properties
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] ExtensionRangeOptions uninterpretedOption
+             * @property {Array.<google.protobuf.ExtensionRangeOptions.Declaration.$Properties>|null} [declaration] ExtensionRangeOptions declaration
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] ExtensionRangeOptions features
              * @property {google.protobuf.ExtensionRangeOptions.VerificationState|null} [verification] ExtensionRangeOptions verification
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an ExtensionRangeOptions.
+             * @memberof google.protobuf
+             * @interface IExtensionRangeOptions
+             * @augments google.protobuf.ExtensionRangeOptions.$Properties
+             * @deprecated Use google.protobuf.ExtensionRangeOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of an ExtensionRangeOptions.
+             * @typedef {google.protobuf.ExtensionRangeOptions.$Properties} google.protobuf.ExtensionRangeOptions.$Shape
              */
 
             /**
              * Constructs a new ExtensionRangeOptions.
              * @memberof google.protobuf
              * @classdesc Represents an ExtensionRangeOptions.
-             * @implements IExtensionRangeOptions
+             * @implements google.protobuf.ExtensionRangeOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IExtensionRangeOptions=} [properties] Properties to set
+             * @param {google.protobuf.ExtensionRangeOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function ExtensionRangeOptions(properties) {
@@ -13071,7 +13576,7 @@ $root.google = (function() {
 
             /**
              * ExtensionRangeOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.ExtensionRangeOptions
              * @instance
              */
@@ -13079,7 +13584,7 @@ $root.google = (function() {
 
             /**
              * ExtensionRangeOptions declaration.
-             * @member {Array.<google.protobuf.ExtensionRangeOptions.IDeclaration>} declaration
+             * @member {Array.<google.protobuf.ExtensionRangeOptions.Declaration.$Properties>} declaration
              * @memberof google.protobuf.ExtensionRangeOptions
              * @instance
              */
@@ -13087,7 +13592,7 @@ $root.google = (function() {
 
             /**
              * ExtensionRangeOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.ExtensionRangeOptions
              * @instance
              */
@@ -13106,7 +13611,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.ExtensionRangeOptions
              * @static
-             * @param {google.protobuf.IExtensionRangeOptions=} [properties] Properties to set
+             * @param {google.protobuf.ExtensionRangeOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ExtensionRangeOptions} ExtensionRangeOptions instance
              */
             ExtensionRangeOptions.create = function create(properties) {
@@ -13118,7 +13623,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.ExtensionRangeOptions
              * @static
-             * @param {google.protobuf.IExtensionRangeOptions} message ExtensionRangeOptions message or plain object to encode
+             * @param {google.protobuf.ExtensionRangeOptions.$Properties} message ExtensionRangeOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -13146,7 +13651,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.ExtensionRangeOptions
              * @static
-             * @param {google.protobuf.IExtensionRangeOptions} message ExtensionRangeOptions message or plain object to encode
+             * @param {google.protobuf.ExtensionRangeOptions.$Properties} message ExtensionRangeOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -13412,8 +13917,7 @@ $root.google = (function() {
 
                 /**
                  * Properties of a Declaration.
-                 * @memberof google.protobuf.ExtensionRangeOptions
-                 * @interface IDeclaration
+                 * @typedef {Object} google.protobuf.ExtensionRangeOptions.Declaration.$Properties
                  * @property {number|null} [number] Declaration number
                  * @property {string|null} [fullName] Declaration fullName
                  * @property {string|null} [type] Declaration type
@@ -13423,12 +13927,25 @@ $root.google = (function() {
                  */
 
                 /**
+                 * Properties of a Declaration.
+                 * @memberof google.protobuf.ExtensionRangeOptions
+                 * @interface IDeclaration
+                 * @augments google.protobuf.ExtensionRangeOptions.Declaration.$Properties
+                 * @deprecated Use google.protobuf.ExtensionRangeOptions.Declaration.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Declaration.
+                 * @typedef {google.protobuf.ExtensionRangeOptions.Declaration.$Properties} google.protobuf.ExtensionRangeOptions.Declaration.$Shape
+                 */
+
+                /**
                  * Constructs a new Declaration.
                  * @memberof google.protobuf.ExtensionRangeOptions
                  * @classdesc Represents a Declaration.
-                 * @implements IDeclaration
+                 * @implements google.protobuf.ExtensionRangeOptions.Declaration.$Properties
                  * @constructor
-                 * @param {google.protobuf.ExtensionRangeOptions.IDeclaration=} [properties] Properties to set
+                 * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Declaration(properties) {
@@ -13483,7 +14000,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.ExtensionRangeOptions.Declaration
                  * @static
-                 * @param {google.protobuf.ExtensionRangeOptions.IDeclaration=} [properties] Properties to set
+                 * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.ExtensionRangeOptions.Declaration} Declaration instance
                  */
                 Declaration.create = function create(properties) {
@@ -13495,7 +14012,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.ExtensionRangeOptions.Declaration
                  * @static
-                 * @param {google.protobuf.ExtensionRangeOptions.IDeclaration} message Declaration message or plain object to encode
+                 * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties} message Declaration message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -13523,7 +14040,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.ExtensionRangeOptions.Declaration
                  * @static
-                 * @param {google.protobuf.ExtensionRangeOptions.IDeclaration} message Declaration message or plain object to encode
+                 * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties} message Declaration message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -13759,8 +14276,7 @@ $root.google = (function() {
 
             /**
              * Properties of a FieldDescriptorProto.
-             * @memberof google.protobuf
-             * @interface IFieldDescriptorProto
+             * @typedef {Object} google.protobuf.FieldDescriptorProto.$Properties
              * @property {string|null} [name] FieldDescriptorProto name
              * @property {number|null} [number] FieldDescriptorProto number
              * @property {google.protobuf.FieldDescriptorProto.Label|null} [label] FieldDescriptorProto label
@@ -13770,18 +14286,31 @@ $root.google = (function() {
              * @property {string|null} [defaultValue] FieldDescriptorProto defaultValue
              * @property {number|null} [oneofIndex] FieldDescriptorProto oneofIndex
              * @property {string|null} [jsonName] FieldDescriptorProto jsonName
-             * @property {google.protobuf.IFieldOptions|null} [options] FieldDescriptorProto options
+             * @property {google.protobuf.FieldOptions.$Properties|null} [options] FieldDescriptorProto options
              * @property {boolean|null} [proto3Optional] FieldDescriptorProto proto3Optional
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a FieldDescriptorProto.
+             * @memberof google.protobuf
+             * @interface IFieldDescriptorProto
+             * @augments google.protobuf.FieldDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.FieldDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a FieldDescriptorProto.
+             * @typedef {google.protobuf.FieldDescriptorProto.$Properties} google.protobuf.FieldDescriptorProto.$Shape
              */
 
             /**
              * Constructs a new FieldDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a FieldDescriptorProto.
-             * @implements IFieldDescriptorProto
+             * @implements google.protobuf.FieldDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IFieldDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.FieldDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FieldDescriptorProto(properties) {
@@ -13865,7 +14394,7 @@ $root.google = (function() {
 
             /**
              * FieldDescriptorProto options.
-             * @member {google.protobuf.IFieldOptions|null|undefined} options
+             * @member {google.protobuf.FieldOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.FieldDescriptorProto
              * @instance
              */
@@ -13884,7 +14413,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FieldDescriptorProto
              * @static
-             * @param {google.protobuf.IFieldDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.FieldDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FieldDescriptorProto} FieldDescriptorProto instance
              */
             FieldDescriptorProto.create = function create(properties) {
@@ -13896,7 +14425,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FieldDescriptorProto
              * @static
-             * @param {google.protobuf.IFieldDescriptorProto} message FieldDescriptorProto message or plain object to encode
+             * @param {google.protobuf.FieldDescriptorProto.$Properties} message FieldDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -13936,7 +14465,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FieldDescriptorProto
              * @static
-             * @param {google.protobuf.IFieldDescriptorProto} message FieldDescriptorProto message or plain object to encode
+             * @param {google.protobuf.FieldDescriptorProto.$Properties} message FieldDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -14428,21 +14957,33 @@ $root.google = (function() {
         protobuf.OneofDescriptorProto = (function() {
 
             /**
-             * Properties of an OneofDescriptorProto.
+             * Properties of a OneofDescriptorProto.
+             * @typedef {Object} google.protobuf.OneofDescriptorProto.$Properties
+             * @property {string|null} [name] OneofDescriptorProto name
+             * @property {google.protobuf.OneofOptions.$Properties|null} [options] OneofDescriptorProto options
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a OneofDescriptorProto.
              * @memberof google.protobuf
              * @interface IOneofDescriptorProto
-             * @property {string|null} [name] OneofDescriptorProto name
-             * @property {google.protobuf.IOneofOptions|null} [options] OneofDescriptorProto options
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.OneofDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.OneofDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a OneofDescriptorProto.
+             * @typedef {google.protobuf.OneofDescriptorProto.$Properties} google.protobuf.OneofDescriptorProto.$Shape
              */
 
             /**
              * Constructs a new OneofDescriptorProto.
              * @memberof google.protobuf
-             * @classdesc Represents an OneofDescriptorProto.
-             * @implements IOneofDescriptorProto
+             * @classdesc Represents a OneofDescriptorProto.
+             * @implements google.protobuf.OneofDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IOneofDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.OneofDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function OneofDescriptorProto(properties) {
@@ -14462,7 +15003,7 @@ $root.google = (function() {
 
             /**
              * OneofDescriptorProto options.
-             * @member {google.protobuf.IOneofOptions|null|undefined} options
+             * @member {google.protobuf.OneofOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.OneofDescriptorProto
              * @instance
              */
@@ -14473,7 +15014,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
-             * @param {google.protobuf.IOneofDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.OneofDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.OneofDescriptorProto} OneofDescriptorProto instance
              */
             OneofDescriptorProto.create = function create(properties) {
@@ -14485,7 +15026,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
-             * @param {google.protobuf.IOneofDescriptorProto} message OneofDescriptorProto message or plain object to encode
+             * @param {google.protobuf.OneofDescriptorProto.$Properties} message OneofDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -14507,7 +15048,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
-             * @param {google.protobuf.IOneofDescriptorProto} message OneofDescriptorProto message or plain object to encode
+             * @param {google.protobuf.OneofDescriptorProto.$Properties} message OneofDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -14516,7 +15057,7 @@ $root.google = (function() {
             };
 
             /**
-             * Decodes an OneofDescriptorProto message from the specified reader or buffer.
+             * Decodes a OneofDescriptorProto message from the specified reader or buffer.
              * @function decode
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
@@ -14566,7 +15107,7 @@ $root.google = (function() {
             };
 
             /**
-             * Decodes an OneofDescriptorProto message from the specified reader or buffer, length delimited.
+             * Decodes a OneofDescriptorProto message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
@@ -14582,7 +15123,7 @@ $root.google = (function() {
             };
 
             /**
-             * Verifies an OneofDescriptorProto message.
+             * Verifies a OneofDescriptorProto message.
              * @function verify
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
@@ -14608,7 +15149,7 @@ $root.google = (function() {
             };
 
             /**
-             * Creates an OneofDescriptorProto message from a plain object. Also converts values to their respective internal types.
+             * Creates a OneofDescriptorProto message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
@@ -14634,7 +15175,7 @@ $root.google = (function() {
             };
 
             /**
-             * Creates a plain object from an OneofDescriptorProto message. Also converts values to other types if specified.
+             * Creates a plain object from a OneofDescriptorProto message. Also converts values to other types if specified.
              * @function toObject
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
@@ -14689,24 +15230,36 @@ $root.google = (function() {
 
             /**
              * Properties of an EnumDescriptorProto.
-             * @memberof google.protobuf
-             * @interface IEnumDescriptorProto
+             * @typedef {Object} google.protobuf.EnumDescriptorProto.$Properties
              * @property {string|null} [name] EnumDescriptorProto name
-             * @property {Array.<google.protobuf.IEnumValueDescriptorProto>|null} [value] EnumDescriptorProto value
-             * @property {google.protobuf.IEnumOptions|null} [options] EnumDescriptorProto options
-             * @property {Array.<google.protobuf.EnumDescriptorProto.IEnumReservedRange>|null} [reservedRange] EnumDescriptorProto reservedRange
+             * @property {Array.<google.protobuf.EnumValueDescriptorProto.$Properties>|null} [value] EnumDescriptorProto value
+             * @property {google.protobuf.EnumOptions.$Properties|null} [options] EnumDescriptorProto options
+             * @property {Array.<google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties>|null} [reservedRange] EnumDescriptorProto reservedRange
              * @property {Array.<string>|null} [reservedName] EnumDescriptorProto reservedName
              * @property {google.protobuf.SymbolVisibility|null} [visibility] EnumDescriptorProto visibility
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of an EnumDescriptorProto.
+             * @memberof google.protobuf
+             * @interface IEnumDescriptorProto
+             * @augments google.protobuf.EnumDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.EnumDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of an EnumDescriptorProto.
+             * @typedef {google.protobuf.EnumDescriptorProto.$Properties} google.protobuf.EnumDescriptorProto.$Shape
+             */
+
+            /**
              * Constructs a new EnumDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents an EnumDescriptorProto.
-             * @implements IEnumDescriptorProto
+             * @implements google.protobuf.EnumDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IEnumDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.EnumDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function EnumDescriptorProto(properties) {
@@ -14729,7 +15282,7 @@ $root.google = (function() {
 
             /**
              * EnumDescriptorProto value.
-             * @member {Array.<google.protobuf.IEnumValueDescriptorProto>} value
+             * @member {Array.<google.protobuf.EnumValueDescriptorProto.$Properties>} value
              * @memberof google.protobuf.EnumDescriptorProto
              * @instance
              */
@@ -14737,7 +15290,7 @@ $root.google = (function() {
 
             /**
              * EnumDescriptorProto options.
-             * @member {google.protobuf.IEnumOptions|null|undefined} options
+             * @member {google.protobuf.EnumOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.EnumDescriptorProto
              * @instance
              */
@@ -14745,7 +15298,7 @@ $root.google = (function() {
 
             /**
              * EnumDescriptorProto reservedRange.
-             * @member {Array.<google.protobuf.EnumDescriptorProto.IEnumReservedRange>} reservedRange
+             * @member {Array.<google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties>} reservedRange
              * @memberof google.protobuf.EnumDescriptorProto
              * @instance
              */
@@ -14772,7 +15325,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.EnumDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.EnumDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumDescriptorProto} EnumDescriptorProto instance
              */
             EnumDescriptorProto.create = function create(properties) {
@@ -14784,7 +15337,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.EnumDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumDescriptorProto} message EnumDescriptorProto message or plain object to encode
+             * @param {google.protobuf.EnumDescriptorProto.$Properties} message EnumDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -14817,7 +15370,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.EnumDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumDescriptorProto} message EnumDescriptorProto message or plain object to encode
+             * @param {google.protobuf.EnumDescriptorProto.$Properties} message EnumDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -15130,20 +15683,32 @@ $root.google = (function() {
 
                 /**
                  * Properties of an EnumReservedRange.
-                 * @memberof google.protobuf.EnumDescriptorProto
-                 * @interface IEnumReservedRange
+                 * @typedef {Object} google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties
                  * @property {number|null} [start] EnumReservedRange start
                  * @property {number|null} [end] EnumReservedRange end
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
 
                 /**
+                 * Properties of an EnumReservedRange.
+                 * @memberof google.protobuf.EnumDescriptorProto
+                 * @interface IEnumReservedRange
+                 * @augments google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties
+                 * @deprecated Use google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an EnumReservedRange.
+                 * @typedef {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties} google.protobuf.EnumDescriptorProto.EnumReservedRange.$Shape
+                 */
+
+                /**
                  * Constructs a new EnumReservedRange.
                  * @memberof google.protobuf.EnumDescriptorProto
                  * @classdesc Represents an EnumReservedRange.
-                 * @implements IEnumReservedRange
+                 * @implements google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties
                  * @constructor
-                 * @param {google.protobuf.EnumDescriptorProto.IEnumReservedRange=} [properties] Properties to set
+                 * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function EnumReservedRange(properties) {
@@ -15174,7 +15739,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.EnumDescriptorProto.EnumReservedRange
                  * @static
-                 * @param {google.protobuf.EnumDescriptorProto.IEnumReservedRange=} [properties] Properties to set
+                 * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange} EnumReservedRange instance
                  */
                 EnumReservedRange.create = function create(properties) {
@@ -15186,7 +15751,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.EnumDescriptorProto.EnumReservedRange
                  * @static
-                 * @param {google.protobuf.EnumDescriptorProto.IEnumReservedRange} message EnumReservedRange message or plain object to encode
+                 * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties} message EnumReservedRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -15208,7 +15773,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.EnumDescriptorProto.EnumReservedRange
                  * @static
-                 * @param {google.protobuf.EnumDescriptorProto.IEnumReservedRange} message EnumReservedRange message or plain object to encode
+                 * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties} message EnumReservedRange message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -15388,21 +15953,33 @@ $root.google = (function() {
 
             /**
              * Properties of an EnumValueDescriptorProto.
-             * @memberof google.protobuf
-             * @interface IEnumValueDescriptorProto
+             * @typedef {Object} google.protobuf.EnumValueDescriptorProto.$Properties
              * @property {string|null} [name] EnumValueDescriptorProto name
              * @property {number|null} [number] EnumValueDescriptorProto number
-             * @property {google.protobuf.IEnumValueOptions|null} [options] EnumValueDescriptorProto options
+             * @property {google.protobuf.EnumValueOptions.$Properties|null} [options] EnumValueDescriptorProto options
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an EnumValueDescriptorProto.
+             * @memberof google.protobuf
+             * @interface IEnumValueDescriptorProto
+             * @augments google.protobuf.EnumValueDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.EnumValueDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of an EnumValueDescriptorProto.
+             * @typedef {google.protobuf.EnumValueDescriptorProto.$Properties} google.protobuf.EnumValueDescriptorProto.$Shape
              */
 
             /**
              * Constructs a new EnumValueDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents an EnumValueDescriptorProto.
-             * @implements IEnumValueDescriptorProto
+             * @implements google.protobuf.EnumValueDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IEnumValueDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.EnumValueDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function EnumValueDescriptorProto(properties) {
@@ -15430,7 +16007,7 @@ $root.google = (function() {
 
             /**
              * EnumValueDescriptorProto options.
-             * @member {google.protobuf.IEnumValueOptions|null|undefined} options
+             * @member {google.protobuf.EnumValueOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.EnumValueDescriptorProto
              * @instance
              */
@@ -15441,7 +16018,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.EnumValueDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumValueDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.EnumValueDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumValueDescriptorProto} EnumValueDescriptorProto instance
              */
             EnumValueDescriptorProto.create = function create(properties) {
@@ -15453,7 +16030,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.EnumValueDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumValueDescriptorProto} message EnumValueDescriptorProto message or plain object to encode
+             * @param {google.protobuf.EnumValueDescriptorProto.$Properties} message EnumValueDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -15477,7 +16054,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.EnumValueDescriptorProto
              * @static
-             * @param {google.protobuf.IEnumValueDescriptorProto} message EnumValueDescriptorProto message or plain object to encode
+             * @param {google.protobuf.EnumValueDescriptorProto.$Properties} message EnumValueDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -15673,21 +16250,33 @@ $root.google = (function() {
 
             /**
              * Properties of a ServiceDescriptorProto.
+             * @typedef {Object} google.protobuf.ServiceDescriptorProto.$Properties
+             * @property {string|null} [name] ServiceDescriptorProto name
+             * @property {Array.<google.protobuf.MethodDescriptorProto.$Properties>|null} [method] ServiceDescriptorProto method
+             * @property {google.protobuf.ServiceOptions.$Properties|null} [options] ServiceDescriptorProto options
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a ServiceDescriptorProto.
              * @memberof google.protobuf
              * @interface IServiceDescriptorProto
-             * @property {string|null} [name] ServiceDescriptorProto name
-             * @property {Array.<google.protobuf.IMethodDescriptorProto>|null} [method] ServiceDescriptorProto method
-             * @property {google.protobuf.IServiceOptions|null} [options] ServiceDescriptorProto options
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.ServiceDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.ServiceDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a ServiceDescriptorProto.
+             * @typedef {google.protobuf.ServiceDescriptorProto.$Properties} google.protobuf.ServiceDescriptorProto.$Shape
              */
 
             /**
              * Constructs a new ServiceDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a ServiceDescriptorProto.
-             * @implements IServiceDescriptorProto
+             * @implements google.protobuf.ServiceDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IServiceDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.ServiceDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function ServiceDescriptorProto(properties) {
@@ -15708,7 +16297,7 @@ $root.google = (function() {
 
             /**
              * ServiceDescriptorProto method.
-             * @member {Array.<google.protobuf.IMethodDescriptorProto>} method
+             * @member {Array.<google.protobuf.MethodDescriptorProto.$Properties>} method
              * @memberof google.protobuf.ServiceDescriptorProto
              * @instance
              */
@@ -15716,7 +16305,7 @@ $root.google = (function() {
 
             /**
              * ServiceDescriptorProto options.
-             * @member {google.protobuf.IServiceOptions|null|undefined} options
+             * @member {google.protobuf.ServiceOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.ServiceDescriptorProto
              * @instance
              */
@@ -15727,7 +16316,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.ServiceDescriptorProto
              * @static
-             * @param {google.protobuf.IServiceDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.ServiceDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ServiceDescriptorProto} ServiceDescriptorProto instance
              */
             ServiceDescriptorProto.create = function create(properties) {
@@ -15739,7 +16328,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.ServiceDescriptorProto
              * @static
-             * @param {google.protobuf.IServiceDescriptorProto} message ServiceDescriptorProto message or plain object to encode
+             * @param {google.protobuf.ServiceDescriptorProto.$Properties} message ServiceDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -15764,7 +16353,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.ServiceDescriptorProto
              * @static
-             * @param {google.protobuf.IServiceDescriptorProto} message ServiceDescriptorProto message or plain object to encode
+             * @param {google.protobuf.ServiceDescriptorProto.$Properties} message ServiceDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -15980,24 +16569,36 @@ $root.google = (function() {
 
             /**
              * Properties of a MethodDescriptorProto.
-             * @memberof google.protobuf
-             * @interface IMethodDescriptorProto
+             * @typedef {Object} google.protobuf.MethodDescriptorProto.$Properties
              * @property {string|null} [name] MethodDescriptorProto name
              * @property {string|null} [inputType] MethodDescriptorProto inputType
              * @property {string|null} [outputType] MethodDescriptorProto outputType
-             * @property {google.protobuf.IMethodOptions|null} [options] MethodDescriptorProto options
+             * @property {google.protobuf.MethodOptions.$Properties|null} [options] MethodDescriptorProto options
              * @property {boolean|null} [clientStreaming] MethodDescriptorProto clientStreaming
              * @property {boolean|null} [serverStreaming] MethodDescriptorProto serverStreaming
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a MethodDescriptorProto.
+             * @memberof google.protobuf
+             * @interface IMethodDescriptorProto
+             * @augments google.protobuf.MethodDescriptorProto.$Properties
+             * @deprecated Use google.protobuf.MethodDescriptorProto.$Properties instead.
+             */
+
+            /**
+             * Shape of a MethodDescriptorProto.
+             * @typedef {google.protobuf.MethodDescriptorProto.$Properties} google.protobuf.MethodDescriptorProto.$Shape
+             */
+
+            /**
              * Constructs a new MethodDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a MethodDescriptorProto.
-             * @implements IMethodDescriptorProto
+             * @implements google.protobuf.MethodDescriptorProto.$Properties
              * @constructor
-             * @param {google.protobuf.IMethodDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.MethodDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function MethodDescriptorProto(properties) {
@@ -16033,7 +16634,7 @@ $root.google = (function() {
 
             /**
              * MethodDescriptorProto options.
-             * @member {google.protobuf.IMethodOptions|null|undefined} options
+             * @member {google.protobuf.MethodOptions.$Properties|null|undefined} options
              * @memberof google.protobuf.MethodDescriptorProto
              * @instance
              */
@@ -16060,7 +16661,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.MethodDescriptorProto
              * @static
-             * @param {google.protobuf.IMethodDescriptorProto=} [properties] Properties to set
+             * @param {google.protobuf.MethodDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MethodDescriptorProto} MethodDescriptorProto instance
              */
             MethodDescriptorProto.create = function create(properties) {
@@ -16072,7 +16673,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.MethodDescriptorProto
              * @static
-             * @param {google.protobuf.IMethodDescriptorProto} message MethodDescriptorProto message or plain object to encode
+             * @param {google.protobuf.MethodDescriptorProto.$Properties} message MethodDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -16102,7 +16703,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.MethodDescriptorProto
              * @static
-             * @param {google.protobuf.IMethodDescriptorProto} message MethodDescriptorProto message or plain object to encode
+             * @param {google.protobuf.MethodDescriptorProto.$Properties} message MethodDescriptorProto message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -16340,8 +16941,7 @@ $root.google = (function() {
 
             /**
              * Properties of a FileOptions.
-             * @memberof google.protobuf
-             * @interface IFileOptions
+             * @typedef {Object} google.protobuf.FileOptions.$Properties
              * @property {string|null} [javaPackage] FileOptions javaPackage
              * @property {string|null} [javaOuterClassname] FileOptions javaOuterClassname
              * @property {boolean|null} [javaMultipleFiles] FileOptions javaMultipleFiles
@@ -16361,18 +16961,31 @@ $root.google = (function() {
              * @property {string|null} [phpNamespace] FileOptions phpNamespace
              * @property {string|null} [phpMetadataNamespace] FileOptions phpMetadataNamespace
              * @property {string|null} [rubyPackage] FileOptions rubyPackage
-             * @property {google.protobuf.IFeatureSet|null} [features] FileOptions features
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] FileOptions uninterpretedOption
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] FileOptions features
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] FileOptions uninterpretedOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a FileOptions.
+             * @memberof google.protobuf
+             * @interface IFileOptions
+             * @augments google.protobuf.FileOptions.$Properties
+             * @deprecated Use google.protobuf.FileOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a FileOptions.
+             * @typedef {google.protobuf.FileOptions.$Properties} google.protobuf.FileOptions.$Shape
              */
 
             /**
              * Constructs a new FileOptions.
              * @memberof google.protobuf
              * @classdesc Represents a FileOptions.
-             * @implements IFileOptions
+             * @implements google.protobuf.FileOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IFileOptions=} [properties] Properties to set
+             * @param {google.protobuf.FileOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FileOptions(properties) {
@@ -16537,7 +17150,7 @@ $root.google = (function() {
 
             /**
              * FileOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.FileOptions
              * @instance
              */
@@ -16545,7 +17158,7 @@ $root.google = (function() {
 
             /**
              * FileOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.FileOptions
              * @instance
              */
@@ -16556,7 +17169,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FileOptions
              * @static
-             * @param {google.protobuf.IFileOptions=} [properties] Properties to set
+             * @param {google.protobuf.FileOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileOptions} FileOptions instance
              */
             FileOptions.create = function create(properties) {
@@ -16568,7 +17181,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FileOptions
              * @static
-             * @param {google.protobuf.IFileOptions} message FileOptions message or plain object to encode
+             * @param {google.protobuf.FileOptions.$Properties} message FileOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -16629,7 +17242,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FileOptions
              * @static
-             * @param {google.protobuf.IFileOptions} message FileOptions message or plain object to encode
+             * @param {google.protobuf.FileOptions.$Properties} message FileOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -17137,25 +17750,37 @@ $root.google = (function() {
 
             /**
              * Properties of a MessageOptions.
-             * @memberof google.protobuf
-             * @interface IMessageOptions
+             * @typedef {Object} google.protobuf.MessageOptions.$Properties
              * @property {boolean|null} [messageSetWireFormat] MessageOptions messageSetWireFormat
              * @property {boolean|null} [noStandardDescriptorAccessor] MessageOptions noStandardDescriptorAccessor
              * @property {boolean|null} [deprecated] MessageOptions deprecated
              * @property {boolean|null} [mapEntry] MessageOptions mapEntry
              * @property {boolean|null} [deprecatedLegacyJsonFieldConflicts] MessageOptions deprecatedLegacyJsonFieldConflicts
-             * @property {google.protobuf.IFeatureSet|null} [features] MessageOptions features
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] MessageOptions uninterpretedOption
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] MessageOptions features
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] MessageOptions uninterpretedOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a MessageOptions.
+             * @memberof google.protobuf
+             * @interface IMessageOptions
+             * @augments google.protobuf.MessageOptions.$Properties
+             * @deprecated Use google.protobuf.MessageOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a MessageOptions.
+             * @typedef {google.protobuf.MessageOptions.$Properties} google.protobuf.MessageOptions.$Shape
              */
 
             /**
              * Constructs a new MessageOptions.
              * @memberof google.protobuf
              * @classdesc Represents a MessageOptions.
-             * @implements IMessageOptions
+             * @implements google.protobuf.MessageOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IMessageOptions=} [properties] Properties to set
+             * @param {google.protobuf.MessageOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function MessageOptions(properties) {
@@ -17208,7 +17833,7 @@ $root.google = (function() {
 
             /**
              * MessageOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.MessageOptions
              * @instance
              */
@@ -17216,7 +17841,7 @@ $root.google = (function() {
 
             /**
              * MessageOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.MessageOptions
              * @instance
              */
@@ -17227,7 +17852,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.MessageOptions
              * @static
-             * @param {google.protobuf.IMessageOptions=} [properties] Properties to set
+             * @param {google.protobuf.MessageOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MessageOptions} MessageOptions instance
              */
             MessageOptions.create = function create(properties) {
@@ -17239,7 +17864,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.MessageOptions
              * @static
-             * @param {google.protobuf.IMessageOptions} message MessageOptions message or plain object to encode
+             * @param {google.protobuf.MessageOptions.$Properties} message MessageOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -17272,7 +17897,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.MessageOptions
              * @static
-             * @param {google.protobuf.IMessageOptions} message MessageOptions message or plain object to encode
+             * @param {google.protobuf.MessageOptions.$Properties} message MessageOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -17544,8 +18169,7 @@ $root.google = (function() {
 
             /**
              * Properties of a FieldOptions.
-             * @memberof google.protobuf
-             * @interface IFieldOptions
+             * @typedef {Object} google.protobuf.FieldOptions.$Properties
              * @property {google.protobuf.FieldOptions.CType|null} [ctype] FieldOptions ctype
              * @property {boolean|null} [packed] FieldOptions packed
              * @property {google.protobuf.FieldOptions.JSType|null} [jstype] FieldOptions jstype
@@ -17556,20 +18180,33 @@ $root.google = (function() {
              * @property {boolean|null} [debugRedact] FieldOptions debugRedact
              * @property {google.protobuf.FieldOptions.OptionRetention|null} [retention] FieldOptions retention
              * @property {Array.<google.protobuf.FieldOptions.OptionTargetType>|null} [targets] FieldOptions targets
-             * @property {Array.<google.protobuf.FieldOptions.IEditionDefault>|null} [editionDefaults] FieldOptions editionDefaults
-             * @property {google.protobuf.IFeatureSet|null} [features] FieldOptions features
-             * @property {google.protobuf.FieldOptions.IFeatureSupport|null} [featureSupport] FieldOptions featureSupport
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] FieldOptions uninterpretedOption
+             * @property {Array.<google.protobuf.FieldOptions.EditionDefault.$Properties>|null} [editionDefaults] FieldOptions editionDefaults
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] FieldOptions features
+             * @property {google.protobuf.FieldOptions.FeatureSupport.$Properties|null} [featureSupport] FieldOptions featureSupport
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] FieldOptions uninterpretedOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a FieldOptions.
+             * @memberof google.protobuf
+             * @interface IFieldOptions
+             * @augments google.protobuf.FieldOptions.$Properties
+             * @deprecated Use google.protobuf.FieldOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a FieldOptions.
+             * @typedef {google.protobuf.FieldOptions.$Properties} google.protobuf.FieldOptions.$Shape
              */
 
             /**
              * Constructs a new FieldOptions.
              * @memberof google.protobuf
              * @classdesc Represents a FieldOptions.
-             * @implements IFieldOptions
+             * @implements google.protobuf.FieldOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IFieldOptions=} [properties] Properties to set
+             * @param {google.protobuf.FieldOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FieldOptions(properties) {
@@ -17664,7 +18301,7 @@ $root.google = (function() {
 
             /**
              * FieldOptions editionDefaults.
-             * @member {Array.<google.protobuf.FieldOptions.IEditionDefault>} editionDefaults
+             * @member {Array.<google.protobuf.FieldOptions.EditionDefault.$Properties>} editionDefaults
              * @memberof google.protobuf.FieldOptions
              * @instance
              */
@@ -17672,7 +18309,7 @@ $root.google = (function() {
 
             /**
              * FieldOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.FieldOptions
              * @instance
              */
@@ -17680,7 +18317,7 @@ $root.google = (function() {
 
             /**
              * FieldOptions featureSupport.
-             * @member {google.protobuf.FieldOptions.IFeatureSupport|null|undefined} featureSupport
+             * @member {google.protobuf.FieldOptions.FeatureSupport.$Properties|null|undefined} featureSupport
              * @memberof google.protobuf.FieldOptions
              * @instance
              */
@@ -17688,7 +18325,7 @@ $root.google = (function() {
 
             /**
              * FieldOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.FieldOptions
              * @instance
              */
@@ -17699,7 +18336,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FieldOptions
              * @static
-             * @param {google.protobuf.IFieldOptions=} [properties] Properties to set
+             * @param {google.protobuf.FieldOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FieldOptions} FieldOptions instance
              */
             FieldOptions.create = function create(properties) {
@@ -17711,7 +18348,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FieldOptions
              * @static
-             * @param {google.protobuf.IFieldOptions} message FieldOptions message or plain object to encode
+             * @param {google.protobuf.FieldOptions.$Properties} message FieldOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -17760,7 +18397,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FieldOptions
              * @static
-             * @param {google.protobuf.IFieldOptions} message FieldOptions message or plain object to encode
+             * @param {google.protobuf.FieldOptions.$Properties} message FieldOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -18383,20 +19020,32 @@ $root.google = (function() {
 
                 /**
                  * Properties of an EditionDefault.
-                 * @memberof google.protobuf.FieldOptions
-                 * @interface IEditionDefault
+                 * @typedef {Object} google.protobuf.FieldOptions.EditionDefault.$Properties
                  * @property {google.protobuf.Edition|null} [edition] EditionDefault edition
                  * @property {string|null} [value] EditionDefault value
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
 
                 /**
+                 * Properties of an EditionDefault.
+                 * @memberof google.protobuf.FieldOptions
+                 * @interface IEditionDefault
+                 * @augments google.protobuf.FieldOptions.EditionDefault.$Properties
+                 * @deprecated Use google.protobuf.FieldOptions.EditionDefault.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an EditionDefault.
+                 * @typedef {google.protobuf.FieldOptions.EditionDefault.$Properties} google.protobuf.FieldOptions.EditionDefault.$Shape
+                 */
+
+                /**
                  * Constructs a new EditionDefault.
                  * @memberof google.protobuf.FieldOptions
                  * @classdesc Represents an EditionDefault.
-                 * @implements IEditionDefault
+                 * @implements google.protobuf.FieldOptions.EditionDefault.$Properties
                  * @constructor
-                 * @param {google.protobuf.FieldOptions.IEditionDefault=} [properties] Properties to set
+                 * @param {google.protobuf.FieldOptions.EditionDefault.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function EditionDefault(properties) {
@@ -18427,7 +19076,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.FieldOptions.EditionDefault
                  * @static
-                 * @param {google.protobuf.FieldOptions.IEditionDefault=} [properties] Properties to set
+                 * @param {google.protobuf.FieldOptions.EditionDefault.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FieldOptions.EditionDefault} EditionDefault instance
                  */
                 EditionDefault.create = function create(properties) {
@@ -18439,7 +19088,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.FieldOptions.EditionDefault
                  * @static
-                 * @param {google.protobuf.FieldOptions.IEditionDefault} message EditionDefault message or plain object to encode
+                 * @param {google.protobuf.FieldOptions.EditionDefault.$Properties} message EditionDefault message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -18461,7 +19110,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.FieldOptions.EditionDefault
                  * @static
-                 * @param {google.protobuf.FieldOptions.IEditionDefault} message EditionDefault message or plain object to encode
+                 * @param {google.protobuf.FieldOptions.EditionDefault.$Properties} message EditionDefault message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -18707,8 +19356,7 @@ $root.google = (function() {
 
                 /**
                  * Properties of a FeatureSupport.
-                 * @memberof google.protobuf.FieldOptions
-                 * @interface IFeatureSupport
+                 * @typedef {Object} google.protobuf.FieldOptions.FeatureSupport.$Properties
                  * @property {google.protobuf.Edition|null} [editionIntroduced] FeatureSupport editionIntroduced
                  * @property {google.protobuf.Edition|null} [editionDeprecated] FeatureSupport editionDeprecated
                  * @property {string|null} [deprecationWarning] FeatureSupport deprecationWarning
@@ -18717,12 +19365,25 @@ $root.google = (function() {
                  */
 
                 /**
+                 * Properties of a FeatureSupport.
+                 * @memberof google.protobuf.FieldOptions
+                 * @interface IFeatureSupport
+                 * @augments google.protobuf.FieldOptions.FeatureSupport.$Properties
+                 * @deprecated Use google.protobuf.FieldOptions.FeatureSupport.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a FeatureSupport.
+                 * @typedef {google.protobuf.FieldOptions.FeatureSupport.$Properties} google.protobuf.FieldOptions.FeatureSupport.$Shape
+                 */
+
+                /**
                  * Constructs a new FeatureSupport.
                  * @memberof google.protobuf.FieldOptions
                  * @classdesc Represents a FeatureSupport.
-                 * @implements IFeatureSupport
+                 * @implements google.protobuf.FieldOptions.FeatureSupport.$Properties
                  * @constructor
-                 * @param {google.protobuf.FieldOptions.IFeatureSupport=} [properties] Properties to set
+                 * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function FeatureSupport(properties) {
@@ -18769,7 +19430,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.FieldOptions.FeatureSupport
                  * @static
-                 * @param {google.protobuf.FieldOptions.IFeatureSupport=} [properties] Properties to set
+                 * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FieldOptions.FeatureSupport} FeatureSupport instance
                  */
                 FeatureSupport.create = function create(properties) {
@@ -18781,7 +19442,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.FieldOptions.FeatureSupport
                  * @static
-                 * @param {google.protobuf.FieldOptions.IFeatureSupport} message FeatureSupport message or plain object to encode
+                 * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties} message FeatureSupport message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -18807,7 +19468,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.FieldOptions.FeatureSupport
                  * @static
-                 * @param {google.protobuf.FieldOptions.IFeatureSupport} message FeatureSupport message or plain object to encode
+                 * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties} message FeatureSupport message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -19221,21 +19882,33 @@ $root.google = (function() {
         protobuf.OneofOptions = (function() {
 
             /**
-             * Properties of an OneofOptions.
+             * Properties of a OneofOptions.
+             * @typedef {Object} google.protobuf.OneofOptions.$Properties
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] OneofOptions features
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] OneofOptions uninterpretedOption
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a OneofOptions.
              * @memberof google.protobuf
              * @interface IOneofOptions
-             * @property {google.protobuf.IFeatureSet|null} [features] OneofOptions features
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] OneofOptions uninterpretedOption
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.OneofOptions.$Properties
+             * @deprecated Use google.protobuf.OneofOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a OneofOptions.
+             * @typedef {google.protobuf.OneofOptions.$Properties} google.protobuf.OneofOptions.$Shape
              */
 
             /**
              * Constructs a new OneofOptions.
              * @memberof google.protobuf
-             * @classdesc Represents an OneofOptions.
-             * @implements IOneofOptions
+             * @classdesc Represents a OneofOptions.
+             * @implements google.protobuf.OneofOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IOneofOptions=} [properties] Properties to set
+             * @param {google.protobuf.OneofOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function OneofOptions(properties) {
@@ -19248,7 +19921,7 @@ $root.google = (function() {
 
             /**
              * OneofOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.OneofOptions
              * @instance
              */
@@ -19256,7 +19929,7 @@ $root.google = (function() {
 
             /**
              * OneofOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.OneofOptions
              * @instance
              */
@@ -19267,7 +19940,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.OneofOptions
              * @static
-             * @param {google.protobuf.IOneofOptions=} [properties] Properties to set
+             * @param {google.protobuf.OneofOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.OneofOptions} OneofOptions instance
              */
             OneofOptions.create = function create(properties) {
@@ -19279,7 +19952,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.OneofOptions
              * @static
-             * @param {google.protobuf.IOneofOptions} message OneofOptions message or plain object to encode
+             * @param {google.protobuf.OneofOptions.$Properties} message OneofOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -19302,7 +19975,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.OneofOptions
              * @static
-             * @param {google.protobuf.IOneofOptions} message OneofOptions message or plain object to encode
+             * @param {google.protobuf.OneofOptions.$Properties} message OneofOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -19311,7 +19984,7 @@ $root.google = (function() {
             };
 
             /**
-             * Decodes an OneofOptions message from the specified reader or buffer.
+             * Decodes a OneofOptions message from the specified reader or buffer.
              * @function decode
              * @memberof google.protobuf.OneofOptions
              * @static
@@ -19363,7 +20036,7 @@ $root.google = (function() {
             };
 
             /**
-             * Decodes an OneofOptions message from the specified reader or buffer, length delimited.
+             * Decodes a OneofOptions message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
              * @memberof google.protobuf.OneofOptions
              * @static
@@ -19379,7 +20052,7 @@ $root.google = (function() {
             };
 
             /**
-             * Verifies an OneofOptions message.
+             * Verifies a OneofOptions message.
              * @function verify
              * @memberof google.protobuf.OneofOptions
              * @static
@@ -19411,7 +20084,7 @@ $root.google = (function() {
             };
 
             /**
-             * Creates an OneofOptions message from a plain object. Also converts values to their respective internal types.
+             * Creates a OneofOptions message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
              * @memberof google.protobuf.OneofOptions
              * @static
@@ -19445,7 +20118,7 @@ $root.google = (function() {
             };
 
             /**
-             * Creates a plain object from an OneofOptions message. Also converts values to other types if specified.
+             * Creates a plain object from a OneofOptions message. Also converts values to other types if specified.
              * @function toObject
              * @memberof google.protobuf.OneofOptions
              * @static
@@ -19503,24 +20176,36 @@ $root.google = (function() {
 
             /**
              * Properties of an EnumOptions.
-             * @memberof google.protobuf
-             * @interface IEnumOptions
+             * @typedef {Object} google.protobuf.EnumOptions.$Properties
              * @property {boolean|null} [allowAlias] EnumOptions allowAlias
              * @property {boolean|null} [deprecated] EnumOptions deprecated
              * @property {boolean|null} [deprecatedLegacyJsonFieldConflicts] EnumOptions deprecatedLegacyJsonFieldConflicts
-             * @property {google.protobuf.IFeatureSet|null} [features] EnumOptions features
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] EnumOptions uninterpretedOption
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] EnumOptions features
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] EnumOptions uninterpretedOption
              * @property {string|null} [".jspb.test.IsExtension.simpleOption"] EnumOptions .jspb.test.IsExtension.simpleOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an EnumOptions.
+             * @memberof google.protobuf
+             * @interface IEnumOptions
+             * @augments google.protobuf.EnumOptions.$Properties
+             * @deprecated Use google.protobuf.EnumOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of an EnumOptions.
+             * @typedef {google.protobuf.EnumOptions.$Properties} google.protobuf.EnumOptions.$Shape
              */
 
             /**
              * Constructs a new EnumOptions.
              * @memberof google.protobuf
              * @classdesc Represents an EnumOptions.
-             * @implements IEnumOptions
+             * @implements google.protobuf.EnumOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IEnumOptions=} [properties] Properties to set
+             * @param {google.protobuf.EnumOptions.$Properties=} [properties] Properties to set
              * @property {string} ".jspb.test.IsExtension.simpleOption" EnumOptions .jspb.test.IsExtension.simpleOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
@@ -19558,7 +20243,7 @@ $root.google = (function() {
 
             /**
              * EnumOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.EnumOptions
              * @instance
              */
@@ -19566,7 +20251,7 @@ $root.google = (function() {
 
             /**
              * EnumOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.EnumOptions
              * @instance
              */
@@ -19579,7 +20264,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.EnumOptions
              * @static
-             * @param {google.protobuf.IEnumOptions=} [properties] Properties to set
+             * @param {google.protobuf.EnumOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumOptions} EnumOptions instance
              */
             EnumOptions.create = function create(properties) {
@@ -19591,7 +20276,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.EnumOptions
              * @static
-             * @param {google.protobuf.IEnumOptions} message EnumOptions message or plain object to encode
+             * @param {google.protobuf.EnumOptions.$Properties} message EnumOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -19622,7 +20307,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.EnumOptions
              * @static
-             * @param {google.protobuf.IEnumOptions} message EnumOptions message or plain object to encode
+             * @param {google.protobuf.EnumOptions.$Properties} message EnumOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -19880,23 +20565,35 @@ $root.google = (function() {
 
             /**
              * Properties of an EnumValueOptions.
+             * @typedef {Object} google.protobuf.EnumValueOptions.$Properties
+             * @property {boolean|null} [deprecated] EnumValueOptions deprecated
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] EnumValueOptions features
+             * @property {boolean|null} [debugRedact] EnumValueOptions debugRedact
+             * @property {google.protobuf.FieldOptions.FeatureSupport.$Properties|null} [featureSupport] EnumValueOptions featureSupport
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] EnumValueOptions uninterpretedOption
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of an EnumValueOptions.
              * @memberof google.protobuf
              * @interface IEnumValueOptions
-             * @property {boolean|null} [deprecated] EnumValueOptions deprecated
-             * @property {google.protobuf.IFeatureSet|null} [features] EnumValueOptions features
-             * @property {boolean|null} [debugRedact] EnumValueOptions debugRedact
-             * @property {google.protobuf.FieldOptions.IFeatureSupport|null} [featureSupport] EnumValueOptions featureSupport
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] EnumValueOptions uninterpretedOption
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.EnumValueOptions.$Properties
+             * @deprecated Use google.protobuf.EnumValueOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of an EnumValueOptions.
+             * @typedef {google.protobuf.EnumValueOptions.$Properties} google.protobuf.EnumValueOptions.$Shape
              */
 
             /**
              * Constructs a new EnumValueOptions.
              * @memberof google.protobuf
              * @classdesc Represents an EnumValueOptions.
-             * @implements IEnumValueOptions
+             * @implements google.protobuf.EnumValueOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IEnumValueOptions=} [properties] Properties to set
+             * @param {google.protobuf.EnumValueOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function EnumValueOptions(properties) {
@@ -19917,7 +20614,7 @@ $root.google = (function() {
 
             /**
              * EnumValueOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.EnumValueOptions
              * @instance
              */
@@ -19933,7 +20630,7 @@ $root.google = (function() {
 
             /**
              * EnumValueOptions featureSupport.
-             * @member {google.protobuf.FieldOptions.IFeatureSupport|null|undefined} featureSupport
+             * @member {google.protobuf.FieldOptions.FeatureSupport.$Properties|null|undefined} featureSupport
              * @memberof google.protobuf.EnumValueOptions
              * @instance
              */
@@ -19941,7 +20638,7 @@ $root.google = (function() {
 
             /**
              * EnumValueOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.EnumValueOptions
              * @instance
              */
@@ -19952,7 +20649,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.EnumValueOptions
              * @static
-             * @param {google.protobuf.IEnumValueOptions=} [properties] Properties to set
+             * @param {google.protobuf.EnumValueOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumValueOptions} EnumValueOptions instance
              */
             EnumValueOptions.create = function create(properties) {
@@ -19964,7 +20661,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.EnumValueOptions
              * @static
-             * @param {google.protobuf.IEnumValueOptions} message EnumValueOptions message or plain object to encode
+             * @param {google.protobuf.EnumValueOptions.$Properties} message EnumValueOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -19993,7 +20690,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.EnumValueOptions
              * @static
-             * @param {google.protobuf.IEnumValueOptions} message EnumValueOptions message or plain object to encode
+             * @param {google.protobuf.EnumValueOptions.$Properties} message EnumValueOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -20242,21 +20939,33 @@ $root.google = (function() {
 
             /**
              * Properties of a ServiceOptions.
+             * @typedef {Object} google.protobuf.ServiceOptions.$Properties
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] ServiceOptions features
+             * @property {boolean|null} [deprecated] ServiceOptions deprecated
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] ServiceOptions uninterpretedOption
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a ServiceOptions.
              * @memberof google.protobuf
              * @interface IServiceOptions
-             * @property {google.protobuf.IFeatureSet|null} [features] ServiceOptions features
-             * @property {boolean|null} [deprecated] ServiceOptions deprecated
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] ServiceOptions uninterpretedOption
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.ServiceOptions.$Properties
+             * @deprecated Use google.protobuf.ServiceOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a ServiceOptions.
+             * @typedef {google.protobuf.ServiceOptions.$Properties} google.protobuf.ServiceOptions.$Shape
              */
 
             /**
              * Constructs a new ServiceOptions.
              * @memberof google.protobuf
              * @classdesc Represents a ServiceOptions.
-             * @implements IServiceOptions
+             * @implements google.protobuf.ServiceOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IServiceOptions=} [properties] Properties to set
+             * @param {google.protobuf.ServiceOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function ServiceOptions(properties) {
@@ -20269,7 +20978,7 @@ $root.google = (function() {
 
             /**
              * ServiceOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.ServiceOptions
              * @instance
              */
@@ -20285,7 +20994,7 @@ $root.google = (function() {
 
             /**
              * ServiceOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.ServiceOptions
              * @instance
              */
@@ -20296,7 +21005,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.ServiceOptions
              * @static
-             * @param {google.protobuf.IServiceOptions=} [properties] Properties to set
+             * @param {google.protobuf.ServiceOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ServiceOptions} ServiceOptions instance
              */
             ServiceOptions.create = function create(properties) {
@@ -20308,7 +21017,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.ServiceOptions
              * @static
-             * @param {google.protobuf.IServiceOptions} message ServiceOptions message or plain object to encode
+             * @param {google.protobuf.ServiceOptions.$Properties} message ServiceOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -20333,7 +21042,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.ServiceOptions
              * @static
-             * @param {google.protobuf.IServiceOptions} message ServiceOptions message or plain object to encode
+             * @param {google.protobuf.ServiceOptions.$Properties} message ServiceOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -20549,22 +21258,34 @@ $root.google = (function() {
 
             /**
              * Properties of a MethodOptions.
-             * @memberof google.protobuf
-             * @interface IMethodOptions
+             * @typedef {Object} google.protobuf.MethodOptions.$Properties
              * @property {boolean|null} [deprecated] MethodOptions deprecated
              * @property {google.protobuf.MethodOptions.IdempotencyLevel|null} [idempotencyLevel] MethodOptions idempotencyLevel
-             * @property {google.protobuf.IFeatureSet|null} [features] MethodOptions features
-             * @property {Array.<google.protobuf.IUninterpretedOption>|null} [uninterpretedOption] MethodOptions uninterpretedOption
+             * @property {google.protobuf.FeatureSet.$Properties|null} [features] MethodOptions features
+             * @property {Array.<google.protobuf.UninterpretedOption.$Properties>|null} [uninterpretedOption] MethodOptions uninterpretedOption
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a MethodOptions.
+             * @memberof google.protobuf
+             * @interface IMethodOptions
+             * @augments google.protobuf.MethodOptions.$Properties
+             * @deprecated Use google.protobuf.MethodOptions.$Properties instead.
+             */
+
+            /**
+             * Shape of a MethodOptions.
+             * @typedef {google.protobuf.MethodOptions.$Properties} google.protobuf.MethodOptions.$Shape
              */
 
             /**
              * Constructs a new MethodOptions.
              * @memberof google.protobuf
              * @classdesc Represents a MethodOptions.
-             * @implements IMethodOptions
+             * @implements google.protobuf.MethodOptions.$Properties
              * @constructor
-             * @param {google.protobuf.IMethodOptions=} [properties] Properties to set
+             * @param {google.protobuf.MethodOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function MethodOptions(properties) {
@@ -20593,7 +21314,7 @@ $root.google = (function() {
 
             /**
              * MethodOptions features.
-             * @member {google.protobuf.IFeatureSet|null|undefined} features
+             * @member {google.protobuf.FeatureSet.$Properties|null|undefined} features
              * @memberof google.protobuf.MethodOptions
              * @instance
              */
@@ -20601,7 +21322,7 @@ $root.google = (function() {
 
             /**
              * MethodOptions uninterpretedOption.
-             * @member {Array.<google.protobuf.IUninterpretedOption>} uninterpretedOption
+             * @member {Array.<google.protobuf.UninterpretedOption.$Properties>} uninterpretedOption
              * @memberof google.protobuf.MethodOptions
              * @instance
              */
@@ -20612,7 +21333,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.MethodOptions
              * @static
-             * @param {google.protobuf.IMethodOptions=} [properties] Properties to set
+             * @param {google.protobuf.MethodOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MethodOptions} MethodOptions instance
              */
             MethodOptions.create = function create(properties) {
@@ -20624,7 +21345,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.MethodOptions
              * @static
-             * @param {google.protobuf.IMethodOptions} message MethodOptions message or plain object to encode
+             * @param {google.protobuf.MethodOptions.$Properties} message MethodOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -20651,7 +21372,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.MethodOptions
              * @static
-             * @param {google.protobuf.IMethodOptions} message MethodOptions message or plain object to encode
+             * @param {google.protobuf.MethodOptions.$Properties} message MethodOptions message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -20921,9 +21642,8 @@ $root.google = (function() {
 
             /**
              * Properties of an UninterpretedOption.
-             * @memberof google.protobuf
-             * @interface IUninterpretedOption
-             * @property {Array.<google.protobuf.UninterpretedOption.INamePart>|null} [name] UninterpretedOption name
+             * @typedef {Object} google.protobuf.UninterpretedOption.$Properties
+             * @property {Array.<google.protobuf.UninterpretedOption.NamePart.$Properties>|null} [name] UninterpretedOption name
              * @property {string|null} [identifierValue] UninterpretedOption identifierValue
              * @property {number|Long|null} [positiveIntValue] UninterpretedOption positiveIntValue
              * @property {number|Long|null} [negativeIntValue] UninterpretedOption negativeIntValue
@@ -20934,12 +21654,25 @@ $root.google = (function() {
              */
 
             /**
+             * Properties of an UninterpretedOption.
+             * @memberof google.protobuf
+             * @interface IUninterpretedOption
+             * @augments google.protobuf.UninterpretedOption.$Properties
+             * @deprecated Use google.protobuf.UninterpretedOption.$Properties instead.
+             */
+
+            /**
+             * Shape of an UninterpretedOption.
+             * @typedef {google.protobuf.UninterpretedOption.$Properties} google.protobuf.UninterpretedOption.$Shape
+             */
+
+            /**
              * Constructs a new UninterpretedOption.
              * @memberof google.protobuf
              * @classdesc Represents an UninterpretedOption.
-             * @implements IUninterpretedOption
+             * @implements google.protobuf.UninterpretedOption.$Properties
              * @constructor
-             * @param {google.protobuf.IUninterpretedOption=} [properties] Properties to set
+             * @param {google.protobuf.UninterpretedOption.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function UninterpretedOption(properties) {
@@ -20952,7 +21685,7 @@ $root.google = (function() {
 
             /**
              * UninterpretedOption name.
-             * @member {Array.<google.protobuf.UninterpretedOption.INamePart>} name
+             * @member {Array.<google.protobuf.UninterpretedOption.NamePart.$Properties>} name
              * @memberof google.protobuf.UninterpretedOption
              * @instance
              */
@@ -21011,7 +21744,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.UninterpretedOption
              * @static
-             * @param {google.protobuf.IUninterpretedOption=} [properties] Properties to set
+             * @param {google.protobuf.UninterpretedOption.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.UninterpretedOption} UninterpretedOption instance
              */
             UninterpretedOption.create = function create(properties) {
@@ -21023,7 +21756,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.UninterpretedOption
              * @static
-             * @param {google.protobuf.IUninterpretedOption} message UninterpretedOption message or plain object to encode
+             * @param {google.protobuf.UninterpretedOption.$Properties} message UninterpretedOption message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -21056,7 +21789,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.UninterpretedOption
              * @static
-             * @param {google.protobuf.IUninterpretedOption} message UninterpretedOption message or plain object to encode
+             * @param {google.protobuf.UninterpretedOption.$Properties} message UninterpretedOption message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -21357,20 +22090,32 @@ $root.google = (function() {
 
                 /**
                  * Properties of a NamePart.
-                 * @memberof google.protobuf.UninterpretedOption
-                 * @interface INamePart
+                 * @typedef {Object} google.protobuf.UninterpretedOption.NamePart.$Properties
                  * @property {string} namePart NamePart namePart
                  * @property {boolean} isExtension NamePart isExtension
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
 
                 /**
+                 * Properties of a NamePart.
+                 * @memberof google.protobuf.UninterpretedOption
+                 * @interface INamePart
+                 * @augments google.protobuf.UninterpretedOption.NamePart.$Properties
+                 * @deprecated Use google.protobuf.UninterpretedOption.NamePart.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a NamePart.
+                 * @typedef {google.protobuf.UninterpretedOption.NamePart.$Properties} google.protobuf.UninterpretedOption.NamePart.$Shape
+                 */
+
+                /**
                  * Constructs a new NamePart.
                  * @memberof google.protobuf.UninterpretedOption
                  * @classdesc Represents a NamePart.
-                 * @implements INamePart
+                 * @implements google.protobuf.UninterpretedOption.NamePart.$Properties
                  * @constructor
-                 * @param {google.protobuf.UninterpretedOption.INamePart=} [properties] Properties to set
+                 * @param {google.protobuf.UninterpretedOption.NamePart.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function NamePart(properties) {
@@ -21401,7 +22146,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.UninterpretedOption.NamePart
                  * @static
-                 * @param {google.protobuf.UninterpretedOption.INamePart=} [properties] Properties to set
+                 * @param {google.protobuf.UninterpretedOption.NamePart.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.UninterpretedOption.NamePart} NamePart instance
                  */
                 NamePart.create = function create(properties) {
@@ -21413,7 +22158,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.UninterpretedOption.NamePart
                  * @static
-                 * @param {google.protobuf.UninterpretedOption.INamePart} message NamePart message or plain object to encode
+                 * @param {google.protobuf.UninterpretedOption.NamePart.$Properties} message NamePart message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -21433,7 +22178,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.UninterpretedOption.NamePart
                  * @static
-                 * @param {google.protobuf.UninterpretedOption.INamePart} message NamePart message or plain object to encode
+                 * @param {google.protobuf.UninterpretedOption.NamePart.$Properties} message NamePart message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -21615,8 +22360,7 @@ $root.google = (function() {
 
             /**
              * Properties of a FeatureSet.
-             * @memberof google.protobuf
-             * @interface IFeatureSet
+             * @typedef {Object} google.protobuf.FeatureSet.$Properties
              * @property {google.protobuf.FeatureSet.FieldPresence|null} [fieldPresence] FeatureSet fieldPresence
              * @property {google.protobuf.FeatureSet.EnumType|null} [enumType] FeatureSet enumType
              * @property {google.protobuf.FeatureSet.RepeatedFieldEncoding|null} [repeatedFieldEncoding] FeatureSet repeatedFieldEncoding
@@ -21629,12 +22373,25 @@ $root.google = (function() {
              */
 
             /**
+             * Properties of a FeatureSet.
+             * @memberof google.protobuf
+             * @interface IFeatureSet
+             * @augments google.protobuf.FeatureSet.$Properties
+             * @deprecated Use google.protobuf.FeatureSet.$Properties instead.
+             */
+
+            /**
+             * Shape of a FeatureSet.
+             * @typedef {google.protobuf.FeatureSet.$Properties} google.protobuf.FeatureSet.$Shape
+             */
+
+            /**
              * Constructs a new FeatureSet.
              * @memberof google.protobuf
              * @classdesc Represents a FeatureSet.
-             * @implements IFeatureSet
+             * @implements google.protobuf.FeatureSet.$Properties
              * @constructor
-             * @param {google.protobuf.IFeatureSet=} [properties] Properties to set
+             * @param {google.protobuf.FeatureSet.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FeatureSet(properties) {
@@ -21713,7 +22470,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FeatureSet
              * @static
-             * @param {google.protobuf.IFeatureSet=} [properties] Properties to set
+             * @param {google.protobuf.FeatureSet.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FeatureSet} FeatureSet instance
              */
             FeatureSet.create = function create(properties) {
@@ -21725,7 +22482,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FeatureSet
              * @static
-             * @param {google.protobuf.IFeatureSet} message FeatureSet message or plain object to encode
+             * @param {google.protobuf.FeatureSet.$Properties} message FeatureSet message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -21759,7 +22516,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FeatureSet
              * @static
-             * @param {google.protobuf.IFeatureSet} message FeatureSet message or plain object to encode
+             * @param {google.protobuf.FeatureSet.$Properties} message FeatureSet message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -22338,18 +23095,30 @@ $root.google = (function() {
 
                 /**
                  * Properties of a VisibilityFeature.
+                 * @typedef {Object} google.protobuf.FeatureSet.VisibilityFeature.$Properties
+                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a VisibilityFeature.
                  * @memberof google.protobuf.FeatureSet
                  * @interface IVisibilityFeature
-                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 * @augments google.protobuf.FeatureSet.VisibilityFeature.$Properties
+                 * @deprecated Use google.protobuf.FeatureSet.VisibilityFeature.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a VisibilityFeature.
+                 * @typedef {google.protobuf.FeatureSet.VisibilityFeature.$Properties} google.protobuf.FeatureSet.VisibilityFeature.$Shape
                  */
 
                 /**
                  * Constructs a new VisibilityFeature.
                  * @memberof google.protobuf.FeatureSet
                  * @classdesc Represents a VisibilityFeature.
-                 * @implements IVisibilityFeature
+                 * @implements google.protobuf.FeatureSet.VisibilityFeature.$Properties
                  * @constructor
-                 * @param {google.protobuf.FeatureSet.IVisibilityFeature=} [properties] Properties to set
+                 * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function VisibilityFeature(properties) {
@@ -22364,7 +23133,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.FeatureSet.VisibilityFeature
                  * @static
-                 * @param {google.protobuf.FeatureSet.IVisibilityFeature=} [properties] Properties to set
+                 * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FeatureSet.VisibilityFeature} VisibilityFeature instance
                  */
                 VisibilityFeature.create = function create(properties) {
@@ -22376,7 +23145,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.FeatureSet.VisibilityFeature
                  * @static
-                 * @param {google.protobuf.FeatureSet.IVisibilityFeature} message VisibilityFeature message or plain object to encode
+                 * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties} message VisibilityFeature message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -22394,7 +23163,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.FeatureSet.VisibilityFeature
                  * @static
-                 * @param {google.protobuf.FeatureSet.IVisibilityFeature} message VisibilityFeature message or plain object to encode
+                 * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties} message VisibilityFeature message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -22557,21 +23326,33 @@ $root.google = (function() {
 
             /**
              * Properties of a FeatureSetDefaults.
-             * @memberof google.protobuf
-             * @interface IFeatureSetDefaults
-             * @property {Array.<google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault>|null} [defaults] FeatureSetDefaults defaults
+             * @typedef {Object} google.protobuf.FeatureSetDefaults.$Properties
+             * @property {Array.<google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties>|null} [defaults] FeatureSetDefaults defaults
              * @property {google.protobuf.Edition|null} [minimumEdition] FeatureSetDefaults minimumEdition
              * @property {google.protobuf.Edition|null} [maximumEdition] FeatureSetDefaults maximumEdition
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 
             /**
+             * Properties of a FeatureSetDefaults.
+             * @memberof google.protobuf
+             * @interface IFeatureSetDefaults
+             * @augments google.protobuf.FeatureSetDefaults.$Properties
+             * @deprecated Use google.protobuf.FeatureSetDefaults.$Properties instead.
+             */
+
+            /**
+             * Shape of a FeatureSetDefaults.
+             * @typedef {google.protobuf.FeatureSetDefaults.$Properties} google.protobuf.FeatureSetDefaults.$Shape
+             */
+
+            /**
              * Constructs a new FeatureSetDefaults.
              * @memberof google.protobuf
              * @classdesc Represents a FeatureSetDefaults.
-             * @implements IFeatureSetDefaults
+             * @implements google.protobuf.FeatureSetDefaults.$Properties
              * @constructor
-             * @param {google.protobuf.IFeatureSetDefaults=} [properties] Properties to set
+             * @param {google.protobuf.FeatureSetDefaults.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function FeatureSetDefaults(properties) {
@@ -22584,7 +23365,7 @@ $root.google = (function() {
 
             /**
              * FeatureSetDefaults defaults.
-             * @member {Array.<google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault>} defaults
+             * @member {Array.<google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties>} defaults
              * @memberof google.protobuf.FeatureSetDefaults
              * @instance
              */
@@ -22611,7 +23392,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.FeatureSetDefaults
              * @static
-             * @param {google.protobuf.IFeatureSetDefaults=} [properties] Properties to set
+             * @param {google.protobuf.FeatureSetDefaults.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FeatureSetDefaults} FeatureSetDefaults instance
              */
             FeatureSetDefaults.create = function create(properties) {
@@ -22623,7 +23404,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.FeatureSetDefaults
              * @static
-             * @param {google.protobuf.IFeatureSetDefaults} message FeatureSetDefaults message or plain object to encode
+             * @param {google.protobuf.FeatureSetDefaults.$Properties} message FeatureSetDefaults message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -22648,7 +23429,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.FeatureSetDefaults
              * @static
-             * @param {google.protobuf.IFeatureSetDefaults} message FeatureSetDefaults message or plain object to encode
+             * @param {google.protobuf.FeatureSetDefaults.$Properties} message FeatureSetDefaults message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -22994,21 +23775,33 @@ $root.google = (function() {
 
                 /**
                  * Properties of a FeatureSetEditionDefault.
+                 * @typedef {Object} google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties
+                 * @property {google.protobuf.Edition|null} [edition] FeatureSetEditionDefault edition
+                 * @property {google.protobuf.FeatureSet.$Properties|null} [overridableFeatures] FeatureSetEditionDefault overridableFeatures
+                 * @property {google.protobuf.FeatureSet.$Properties|null} [fixedFeatures] FeatureSetEditionDefault fixedFeatures
+                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 */
+
+                /**
+                 * Properties of a FeatureSetEditionDefault.
                  * @memberof google.protobuf.FeatureSetDefaults
                  * @interface IFeatureSetEditionDefault
-                 * @property {google.protobuf.Edition|null} [edition] FeatureSetEditionDefault edition
-                 * @property {google.protobuf.IFeatureSet|null} [overridableFeatures] FeatureSetEditionDefault overridableFeatures
-                 * @property {google.protobuf.IFeatureSet|null} [fixedFeatures] FeatureSetEditionDefault fixedFeatures
-                 * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+                 * @augments google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties
+                 * @deprecated Use google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a FeatureSetEditionDefault.
+                 * @typedef {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties} google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Shape
                  */
 
                 /**
                  * Constructs a new FeatureSetEditionDefault.
                  * @memberof google.protobuf.FeatureSetDefaults
                  * @classdesc Represents a FeatureSetEditionDefault.
-                 * @implements IFeatureSetEditionDefault
+                 * @implements google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties
                  * @constructor
-                 * @param {google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault=} [properties] Properties to set
+                 * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function FeatureSetEditionDefault(properties) {
@@ -23028,7 +23821,7 @@ $root.google = (function() {
 
                 /**
                  * FeatureSetEditionDefault overridableFeatures.
-                 * @member {google.protobuf.IFeatureSet|null|undefined} overridableFeatures
+                 * @member {google.protobuf.FeatureSet.$Properties|null|undefined} overridableFeatures
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @instance
                  */
@@ -23036,7 +23829,7 @@ $root.google = (function() {
 
                 /**
                  * FeatureSetEditionDefault fixedFeatures.
-                 * @member {google.protobuf.IFeatureSet|null|undefined} fixedFeatures
+                 * @member {google.protobuf.FeatureSet.$Properties|null|undefined} fixedFeatures
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @instance
                  */
@@ -23047,7 +23840,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @static
-                 * @param {google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault=} [properties] Properties to set
+                 * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault} FeatureSetEditionDefault instance
                  */
                 FeatureSetEditionDefault.create = function create(properties) {
@@ -23059,7 +23852,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @static
-                 * @param {google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault} message FeatureSetEditionDefault message or plain object to encode
+                 * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties} message FeatureSetEditionDefault message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -23083,7 +23876,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @static
-                 * @param {google.protobuf.FeatureSetDefaults.IFeatureSetEditionDefault} message FeatureSetEditionDefault message or plain object to encode
+                 * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties} message FeatureSetEditionDefault message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -23356,19 +24149,31 @@ $root.google = (function() {
 
             /**
              * Properties of a SourceCodeInfo.
+             * @typedef {Object} google.protobuf.SourceCodeInfo.$Properties
+             * @property {Array.<google.protobuf.SourceCodeInfo.Location.$Properties>|null} [location] SourceCodeInfo location
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a SourceCodeInfo.
              * @memberof google.protobuf
              * @interface ISourceCodeInfo
-             * @property {Array.<google.protobuf.SourceCodeInfo.ILocation>|null} [location] SourceCodeInfo location
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.SourceCodeInfo.$Properties
+             * @deprecated Use google.protobuf.SourceCodeInfo.$Properties instead.
+             */
+
+            /**
+             * Shape of a SourceCodeInfo.
+             * @typedef {google.protobuf.SourceCodeInfo.$Properties} google.protobuf.SourceCodeInfo.$Shape
              */
 
             /**
              * Constructs a new SourceCodeInfo.
              * @memberof google.protobuf
              * @classdesc Represents a SourceCodeInfo.
-             * @implements ISourceCodeInfo
+             * @implements google.protobuf.SourceCodeInfo.$Properties
              * @constructor
-             * @param {google.protobuf.ISourceCodeInfo=} [properties] Properties to set
+             * @param {google.protobuf.SourceCodeInfo.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function SourceCodeInfo(properties) {
@@ -23381,7 +24186,7 @@ $root.google = (function() {
 
             /**
              * SourceCodeInfo location.
-             * @member {Array.<google.protobuf.SourceCodeInfo.ILocation>} location
+             * @member {Array.<google.protobuf.SourceCodeInfo.Location.$Properties>} location
              * @memberof google.protobuf.SourceCodeInfo
              * @instance
              */
@@ -23392,7 +24197,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.SourceCodeInfo
              * @static
-             * @param {google.protobuf.ISourceCodeInfo=} [properties] Properties to set
+             * @param {google.protobuf.SourceCodeInfo.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.SourceCodeInfo} SourceCodeInfo instance
              */
             SourceCodeInfo.create = function create(properties) {
@@ -23404,7 +24209,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.SourceCodeInfo
              * @static
-             * @param {google.protobuf.ISourceCodeInfo} message SourceCodeInfo message or plain object to encode
+             * @param {google.protobuf.SourceCodeInfo.$Properties} message SourceCodeInfo message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -23425,7 +24230,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.SourceCodeInfo
              * @static
-             * @param {google.protobuf.ISourceCodeInfo} message SourceCodeInfo message or plain object to encode
+             * @param {google.protobuf.SourceCodeInfo.$Properties} message SourceCodeInfo message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -23603,8 +24408,7 @@ $root.google = (function() {
 
                 /**
                  * Properties of a Location.
-                 * @memberof google.protobuf.SourceCodeInfo
-                 * @interface ILocation
+                 * @typedef {Object} google.protobuf.SourceCodeInfo.Location.$Properties
                  * @property {Array.<number>|null} [path] Location path
                  * @property {Array.<number>|null} [span] Location span
                  * @property {string|null} [leadingComments] Location leadingComments
@@ -23614,12 +24418,25 @@ $root.google = (function() {
                  */
 
                 /**
+                 * Properties of a Location.
+                 * @memberof google.protobuf.SourceCodeInfo
+                 * @interface ILocation
+                 * @augments google.protobuf.SourceCodeInfo.Location.$Properties
+                 * @deprecated Use google.protobuf.SourceCodeInfo.Location.$Properties instead.
+                 */
+
+                /**
+                 * Shape of a Location.
+                 * @typedef {google.protobuf.SourceCodeInfo.Location.$Properties} google.protobuf.SourceCodeInfo.Location.$Shape
+                 */
+
+                /**
                  * Constructs a new Location.
                  * @memberof google.protobuf.SourceCodeInfo
                  * @classdesc Represents a Location.
-                 * @implements ILocation
+                 * @implements google.protobuf.SourceCodeInfo.Location.$Properties
                  * @constructor
-                 * @param {google.protobuf.SourceCodeInfo.ILocation=} [properties] Properties to set
+                 * @param {google.protobuf.SourceCodeInfo.Location.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Location(properties) {
@@ -23677,7 +24494,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.SourceCodeInfo.Location
                  * @static
-                 * @param {google.protobuf.SourceCodeInfo.ILocation=} [properties] Properties to set
+                 * @param {google.protobuf.SourceCodeInfo.Location.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.SourceCodeInfo.Location} Location instance
                  */
                 Location.create = function create(properties) {
@@ -23689,7 +24506,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.SourceCodeInfo.Location
                  * @static
-                 * @param {google.protobuf.SourceCodeInfo.ILocation} message Location message or plain object to encode
+                 * @param {google.protobuf.SourceCodeInfo.Location.$Properties} message Location message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -23726,7 +24543,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.SourceCodeInfo.Location
                  * @static
-                 * @param {google.protobuf.SourceCodeInfo.ILocation} message Location message or plain object to encode
+                 * @param {google.protobuf.SourceCodeInfo.Location.$Properties} message Location message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -24008,19 +24825,31 @@ $root.google = (function() {
 
             /**
              * Properties of a GeneratedCodeInfo.
+             * @typedef {Object} google.protobuf.GeneratedCodeInfo.$Properties
+             * @property {Array.<google.protobuf.GeneratedCodeInfo.Annotation.$Properties>|null} [annotation] GeneratedCodeInfo annotation
+             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             */
+
+            /**
+             * Properties of a GeneratedCodeInfo.
              * @memberof google.protobuf
              * @interface IGeneratedCodeInfo
-             * @property {Array.<google.protobuf.GeneratedCodeInfo.IAnnotation>|null} [annotation] GeneratedCodeInfo annotation
-             * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
+             * @augments google.protobuf.GeneratedCodeInfo.$Properties
+             * @deprecated Use google.protobuf.GeneratedCodeInfo.$Properties instead.
+             */
+
+            /**
+             * Shape of a GeneratedCodeInfo.
+             * @typedef {google.protobuf.GeneratedCodeInfo.$Properties} google.protobuf.GeneratedCodeInfo.$Shape
              */
 
             /**
              * Constructs a new GeneratedCodeInfo.
              * @memberof google.protobuf
              * @classdesc Represents a GeneratedCodeInfo.
-             * @implements IGeneratedCodeInfo
+             * @implements google.protobuf.GeneratedCodeInfo.$Properties
              * @constructor
-             * @param {google.protobuf.IGeneratedCodeInfo=} [properties] Properties to set
+             * @param {google.protobuf.GeneratedCodeInfo.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
             function GeneratedCodeInfo(properties) {
@@ -24033,7 +24862,7 @@ $root.google = (function() {
 
             /**
              * GeneratedCodeInfo annotation.
-             * @member {Array.<google.protobuf.GeneratedCodeInfo.IAnnotation>} annotation
+             * @member {Array.<google.protobuf.GeneratedCodeInfo.Annotation.$Properties>} annotation
              * @memberof google.protobuf.GeneratedCodeInfo
              * @instance
              */
@@ -24044,7 +24873,7 @@ $root.google = (function() {
              * @function create
              * @memberof google.protobuf.GeneratedCodeInfo
              * @static
-             * @param {google.protobuf.IGeneratedCodeInfo=} [properties] Properties to set
+             * @param {google.protobuf.GeneratedCodeInfo.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.GeneratedCodeInfo} GeneratedCodeInfo instance
              */
             GeneratedCodeInfo.create = function create(properties) {
@@ -24056,7 +24885,7 @@ $root.google = (function() {
              * @function encode
              * @memberof google.protobuf.GeneratedCodeInfo
              * @static
-             * @param {google.protobuf.IGeneratedCodeInfo} message GeneratedCodeInfo message or plain object to encode
+             * @param {google.protobuf.GeneratedCodeInfo.$Properties} message GeneratedCodeInfo message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -24077,7 +24906,7 @@ $root.google = (function() {
              * @function encodeDelimited
              * @memberof google.protobuf.GeneratedCodeInfo
              * @static
-             * @param {google.protobuf.IGeneratedCodeInfo} message GeneratedCodeInfo message or plain object to encode
+             * @param {google.protobuf.GeneratedCodeInfo.$Properties} message GeneratedCodeInfo message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
@@ -24255,8 +25084,7 @@ $root.google = (function() {
 
                 /**
                  * Properties of an Annotation.
-                 * @memberof google.protobuf.GeneratedCodeInfo
-                 * @interface IAnnotation
+                 * @typedef {Object} google.protobuf.GeneratedCodeInfo.Annotation.$Properties
                  * @property {Array.<number>|null} [path] Annotation path
                  * @property {string|null} [sourceFile] Annotation sourceFile
                  * @property {number|null} [begin] Annotation begin
@@ -24266,12 +25094,25 @@ $root.google = (function() {
                  */
 
                 /**
+                 * Properties of an Annotation.
+                 * @memberof google.protobuf.GeneratedCodeInfo
+                 * @interface IAnnotation
+                 * @augments google.protobuf.GeneratedCodeInfo.Annotation.$Properties
+                 * @deprecated Use google.protobuf.GeneratedCodeInfo.Annotation.$Properties instead.
+                 */
+
+                /**
+                 * Shape of an Annotation.
+                 * @typedef {google.protobuf.GeneratedCodeInfo.Annotation.$Properties} google.protobuf.GeneratedCodeInfo.Annotation.$Shape
+                 */
+
+                /**
                  * Constructs a new Annotation.
                  * @memberof google.protobuf.GeneratedCodeInfo
                  * @classdesc Represents an Annotation.
-                 * @implements IAnnotation
+                 * @implements google.protobuf.GeneratedCodeInfo.Annotation.$Properties
                  * @constructor
-                 * @param {google.protobuf.GeneratedCodeInfo.IAnnotation=} [properties] Properties to set
+                 * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
                  */
                 function Annotation(properties) {
@@ -24327,7 +25168,7 @@ $root.google = (function() {
                  * @function create
                  * @memberof google.protobuf.GeneratedCodeInfo.Annotation
                  * @static
-                 * @param {google.protobuf.GeneratedCodeInfo.IAnnotation=} [properties] Properties to set
+                 * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.GeneratedCodeInfo.Annotation} Annotation instance
                  */
                 Annotation.create = function create(properties) {
@@ -24339,7 +25180,7 @@ $root.google = (function() {
                  * @function encode
                  * @memberof google.protobuf.GeneratedCodeInfo.Annotation
                  * @static
-                 * @param {google.protobuf.GeneratedCodeInfo.IAnnotation} message Annotation message or plain object to encode
+                 * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties} message Annotation message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */
@@ -24371,7 +25212,7 @@ $root.google = (function() {
                  * @function encodeDelimited
                  * @memberof google.protobuf.GeneratedCodeInfo.Annotation
                  * @static
-                 * @param {google.protobuf.GeneratedCodeInfo.IAnnotation} message Annotation message or plain object to encode
+                 * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties} message Annotation message or plain object to encode
                  * @param {$protobuf.Writer} [writer] Writer to encode to
                  * @returns {$protobuf.Writer} Writer
                  */

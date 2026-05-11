@@ -14,6 +14,7 @@ var recursionLimit;
 
 /**
  * Maximum recursion depth for text format parsing and formatting. Defaults to util.recursionLimit.
+ * @name recursionLimit
  * @type {number}
  */
 Object.defineProperty(textformat, "recursionLimit", {
@@ -27,6 +28,7 @@ Object.defineProperty(textformat, "recursionLimit", {
 
 /**
  * Maximum recursion depth for formatting length-delimited unknown fields.
+ * @name unknownRecursionLimit
  * @type {number}
  */
 textformat.unknownRecursionLimit = 10;
@@ -59,6 +61,7 @@ var identRe = /^[A-Za-z_][A-Za-z0-9_]*$/,
  * @param {Type} type Reflected message type
  * @param {string} text Text format input
  * @returns {Message<{}>} Message instance
+ * @private
  */
 function parseText(type, text) {
     if (!(type instanceof Type))
@@ -76,12 +79,18 @@ function parseText(type, text) {
 }
 
 /**
+ * Text format options.
+ * @interface ITextFormatOptions
+ * @property {boolean} [unknowns=false] Also includes and formats unknown fields.
+ */
+
+/**
  * Formats a message as protobuf text format using the specified reflected type.
  * @param {Type} type Reflected message type
  * @param {Message<{}>|Object.<string,*>} message Message instance or plain object
- * @param {Object} [options] Text format options
- * @param {boolean} [options.unknowns=false] Includes and formats unknown fields
+ * @param {ITextFormatOptions} [options] Text format options
  * @returns {string} Text format output
+ * @private
  */
 function formatText(type, message, options) {
     if (!(type instanceof Type))
@@ -104,7 +113,7 @@ Type.prototype.fromText = function fromText(text) {
 /**
  * Formats a message of this type as protobuf text format.
  * @param {Message<{}>|Object.<string,*>} message Message instance or plain object
- * @param {Object} [options] Text format options
+ * @param {ITextFormatOptions} [options] Text format options
  * @returns {string} Text format output
  */
 Type.prototype.toText = function toText(message, options) {

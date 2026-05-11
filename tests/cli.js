@@ -401,7 +401,8 @@ tape.test("pbjs --dts writes module declarations", function(test) {
             test.ok(fs.existsSync(staticOut), "writes static-module javascript");
             test.ok(fs.existsSync(staticDts), "writes static-module declarations");
             var staticTypes = fs.readFileSync(staticDts, "utf8");
-            test.ok(staticTypes.indexOf("constructor(properties?: IPackage);") >= 0, "keeps constructable static declarations");
+            test.ok(staticTypes.indexOf("constructor(properties?: Package.$Properties);") >= 0, "keeps constructable static declarations");
+            test.ok(staticTypes.indexOf("type $Shape = Package.$Properties;") >= 0, "emits a shape type for messages without oneofs");
 
             pbjs.main([
                 "--target", "json-module",
@@ -416,8 +417,8 @@ tape.test("pbjs --dts writes module declarations", function(test) {
                 var jsonTypes = fs.readFileSync(jsonDts, "utf8");
                 test.ok(jsonTypes.indexOf("private constructor();") >= 0, "marks reflection-backed declarations as non-constructable");
                 test.ok(jsonTypes.indexOf("Reflection-backed declarations are not constructable. Use Package.create(...) instead.") >= 0, "explains create usage");
-                test.ok(jsonTypes.indexOf("public static create(properties?: IPackage): Package;") >= 0, "keeps reflection Type create declaration");
-                test.equal(jsonTypes.indexOf("constructor(properties?: IPackage);"), -1, "does not expose public message constructors");
+                test.ok(jsonTypes.indexOf("static create(properties?: Package.$Properties): Package;") >= 0, "keeps reflection Type create declaration");
+                test.equal(jsonTypes.indexOf("constructor(properties?: Package.$Properties);"), -1, "does not expose public message constructors");
 
                 pbjs.main([
                     "--target", "json-module",
@@ -451,17 +452,180 @@ tape.test("pbjs --dts writes module declarations", function(test) {
                         test.ok(fs.existsSync(jsonMinimalOut), "writes minimal json-module javascript");
                         test.ok(fs.existsSync(jsonMinimalDts), "writes minimal json-module declarations");
                         var minimalTypes = fs.readFileSync(jsonMinimalDts, "utf8");
-                        test.equal(minimalTypes.indexOf("public static create("), -1, "omits disabled create declaration");
-                        test.equal(minimalTypes.indexOf("public static encode("), -1, "omits disabled encode declaration");
-                        test.equal(minimalTypes.indexOf("public static decode("), -1, "omits disabled decode declaration");
-                        test.equal(minimalTypes.indexOf("public static verify("), -1, "omits disabled verify declaration");
-                        test.equal(minimalTypes.indexOf("public static fromObject("), -1, "omits disabled fromObject declaration");
-                        test.equal(minimalTypes.indexOf("public static toObject("), -1, "omits disabled toObject declaration");
-                        test.equal(minimalTypes.indexOf("public static getTypeUrl("), -1, "omits disabled getTypeUrl declaration");
+                        test.equal(minimalTypes.indexOf("static create("), -1, "omits disabled create declaration");
+                        test.equal(minimalTypes.indexOf("static encode("), -1, "omits disabled encode declaration");
+                        test.equal(minimalTypes.indexOf("static decode("), -1, "omits disabled decode declaration");
+                        test.equal(minimalTypes.indexOf("static verify("), -1, "omits disabled verify declaration");
+                        test.equal(minimalTypes.indexOf("static fromObject("), -1, "omits disabled fromObject declaration");
+                        test.equal(minimalTypes.indexOf("static toObject("), -1, "omits disabled toObject declaration");
+                        test.equal(minimalTypes.indexOf("static getTypeUrl("), -1, "omits disabled getTypeUrl declaration");
                         cleanup();
                         test.end();
                     });
                 });
+            });
+        });
+    });
+});
+
+tape.test("pbjs --dts narrows oneof interfaces", function(test) {
+    cliTest(test, function() {
+        var pbjs = require("../cli/pbjs");
+        var prefix = path.join(".tmp", "pbjs-dts-oneof-test-" + process.pid + "-" + Date.now());
+        var staticOut = prefix + ".js";
+        var staticDts = prefix + ".d.ts";
+
+        if (!fs.existsSync(".tmp"))
+            fs.mkdirSync(".tmp");
+
+        function cleanup() {
+            [ staticOut, staticDts ].forEach(function(file) {
+                try {
+                    fs.unlinkSync(file);
+                } catch (e) {
+                    // best effort cleanup
+                }
+            });
+        }
+
+        cleanup();
+        pbjs.main([
+            "--target", "static-module",
+            "--wrap", "commonjs",
+            "--out", staticOut,
+            "--dts",
+            "tests/data/cli/test.proto"
+        ], function(err) {
+            test.error(err, "static-module --dts generation worked");
+            test.ok(fs.existsSync(staticDts), "writes static-module declarations");
+
+            var staticCode = fs.readFileSync(staticOut, "utf8");
+            var staticTypes = fs.readFileSync(staticDts, "utf8");
+            test.ok(staticCode.indexOf("@type {{") >= 0, "documents create overloads with TypeScript JSDoc");
+            test.equal(staticCode.indexOf("@tstype"), -1, "uses standard JSDoc return types");
+            test.ok(staticTypes.indexOf("export interface IOneofContainer extends OneofContainer.$Properties") >= 0, "keeps a legacy properties interface");
+            test.ok(staticTypes.indexOf("export class OneofContainer implements OneofContainer.$Properties") >= 0, "implements the scoped properties interface");
+            test.ok(staticTypes.indexOf("constructor(properties?: OneofContainer.$Properties);") >= 0, "uses the scoped properties type for construction");
+            test.ok(staticTypes.indexOf("static create(properties: OneofContainer.$Shape): OneofContainer & OneofContainer.$Oneofs;") >= 0, "narrows create from oneof-safe input");
+            test.ok(staticTypes.indexOf("static create(properties?: OneofContainer.$Properties): OneofContainer;") >= 0, "keeps broad create overload");
+            test.ok(staticTypes.indexOf("static encode(message: OneofContainer.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;") >= 0, "uses the scoped properties type for encoding");
+            test.ok(staticTypes.indexOf("static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): OneofContainer & OneofContainer.$Oneofs;") >= 0, "narrows decoded oneof messages");
+            test.ok(staticTypes.indexOf("type $Oneofs = ({ someOneof?: undefined; stringInOneof?: null; messageInOneof?: null }|{ someOneof?: \"stringInOneof\"; stringInOneof: string; messageInOneof?: null }|{ someOneof?: \"messageInOneof\"; stringInOneof?: null; messageInOneof: Message.$Properties });") >= 0, "emits oneof refinement union");
+            test.ok(staticTypes.indexOf("type $Shape = OneofContainer.$Properties & OneofContainer.$Oneofs;") >= 0, "emits narrowed shape type");
+            test.ok(staticTypes.indexOf("type $Shape = Message.$Properties;") >= 0, "emits plain shape type for non-oneof message");
+
+            cleanup();
+            test.end();
+        });
+    });
+});
+
+tape.test("pbjs --dts generated message typings compile", function(test) {
+    cliTest(test, function() {
+        var pbjs = require("../cli/pbjs");
+        var prefix = path.join(".tmp", "pbjs-dts-types-test-" + process.pid + "-" + Date.now());
+        var staticOut = prefix + ".js";
+        var staticDts = prefix + ".d.ts";
+        var tsOut = prefix + ".check.ts";
+        var tsconfigOut = prefix + ".tsconfig.json";
+        var tsc = require.resolve("typescript/bin/tsc");
+
+        if (!fs.existsSync(".tmp"))
+            fs.mkdirSync(".tmp");
+
+        function cleanup() {
+            [ staticOut, staticDts, tsOut, tsconfigOut ].forEach(function(file) {
+                try {
+                    fs.unlinkSync(file);
+                } catch (e) {
+                    // best effort cleanup
+                }
+            });
+        }
+
+        cleanup();
+        pbjs.main([
+            "--target", "static-module",
+            "--wrap", "commonjs",
+            "--out", staticOut,
+            "--dts",
+            "tests/data/cli/test.proto"
+        ], function(err) {
+            test.error(err, "static-module --dts generation worked");
+
+            fs.writeFileSync(tsOut, [
+                "import { Enum, Message, OneofContainer } from \"./" + path.basename(prefix) + "\";",
+                "",
+                "function expectType<T>(value: T): void { void value; }",
+                "",
+                "const message = new Message({ value: 1 });",
+                "Message.encode(message).finish();",
+                "Message.encode({ value: 1 }).finish();",
+                "expectType<number>(Message.decode(new Uint8Array()).value);",
+                "",
+                "const byCase = OneofContainer.create({ someOneof: \"stringInOneof\", stringInOneof: \"abc\" });",
+                "if (byCase.someOneof === \"stringInOneof\") {",
+                "    expectType<string>(byCase.stringInOneof);",
+                "    expectType<null|undefined>(byCase.messageInOneof);",
+                "}",
+                "",
+                "const byField = OneofContainer.create({ stringInOneof: \"abc\" });",
+                "if (byField.stringInOneof != null) {",
+                "    expectType<string>(byField.stringInOneof);",
+                "    expectType<null|undefined>(byField.messageInOneof);",
+                "}",
+                "",
+                "const byMessage = OneofContainer.create({ messageInOneof: { value: 1 } });",
+                "if (byMessage.someOneof === \"messageInOneof\")",
+                "    expectType<Message.$Properties>(byMessage.messageInOneof);",
+                "",
+                "const broadProperties: OneofContainer.$Properties = {",
+                "    stringInOneof: \"abc\",",
+                "    messageInOneof: { value: 1 }",
+                "};",
+                "const broad = OneofContainer.create(broadProperties);",
+                "expectType<string|null|undefined>(broad.stringInOneof);",
+                "",
+                "const constructed = new OneofContainer({ stringInOneof: \"abc\" });",
+                "expectType<string|null|undefined>(constructed.stringInOneof);",
+                "",
+                "const decoded = OneofContainer.decode(new Uint8Array());",
+                "if (decoded.someOneof === \"stringInOneof\")",
+                "    expectType<string>(decoded.stringInOneof);",
+                "if (decoded.messageInOneof != null)",
+                "    expectType<Message.$Properties>(decoded.messageInOneof);",
+                "",
+                "OneofContainer.encode({",
+                "    regularField: \"regular\",",
+                "    enumField: Enum.SOMETHING,",
+                "    stringInOneof: \"abc\"",
+                "}).finish();"
+            ].join("\n"));
+
+            fs.writeFileSync(tsconfigOut, JSON.stringify({
+                compilerOptions: {
+                    baseUrl: "..",
+                    esModuleInterop: true,
+                    lib: [ "es2015" ],
+                    noEmit: true,
+                    paths: {
+                        "protobufjs/minimal": [ "minimal" ],
+                        "protobufjs": [ "index" ]
+                    },
+                    strictNullChecks: true,
+                    types: [ "node" ]
+                },
+                files: [ path.basename(tsOut) ]
+            }, null, 4));
+
+            child_process.execFile(process.execPath, [ tsc, "-p", tsconfigOut ], function(tscErr, stdout, stderr) {
+                if (stdout)
+                    process.stdout.write(stdout);
+                if (stderr)
+                    process.stderr.write(stderr);
+                test.error(tscErr, "generated declarations type-check");
+                cleanup();
+                test.end();
             });
         });
     });
@@ -523,13 +687,131 @@ tape.test("pbts passes jsdoc arguments without a shell", function(test) {
     });
 });
 
+tape.test("pbts supports explicit import mappings", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Reflected foo.",
+        " * @name Foo",
+        " * @type {$protobuf.Type}",
+        " * @const",
+        " */"
+    ].join("\n"), ["--import", "\\$protobuf=.."], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("import * as $protobuf from \"..\";") >= 0, "overrides the protobuf import");
+        test.ok(tsCode.indexOf("import Long = require(\"long\");") >= 0, "keeps default Long import");
+        test.end();
+    });
+});
+
+tape.test("pbts supports explicit imports with main output", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Reflected foo.",
+        " * @name Foo",
+        " * @type {$protobuf.Type}",
+        " * @const",
+        " */"
+    ].join("\n"), ["--main", "--import", "\\$protobuf=.."], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("// DO NOT EDIT!") >= 0, "emits generated header");
+        test.ok(tsCode.indexOf("import * as $protobuf from \"..\";") >= 0, "emits explicit import");
+        test.equal(tsCode.indexOf("import Long = require(\"long\");"), -1, "does not emit default Long import");
+        test.end();
+    });
+});
+
+tape.test("pbts emits exported overloads", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Makes a value.",
+        " * @name make",
+        " * @function",
+        " * @type {{",
+        " *   (name: string): number;",
+        " *   (id: number): number;",
+        " * }}",
+        " */"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("export function make(name: string): number;") >= 0, "exports first overload");
+        test.ok(tsCode.indexOf("export function make(id: number): number;") >= 0, "exports subsequent overload");
+        test.end();
+    });
+});
+
+tape.test("pbts emits overloads with nested parameter types", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Makes a value.",
+        " * @name makeNested",
+        " * @function",
+        " * @type {{",
+        " *   (callback: (value: string) => void): number;",
+        " *   (name: string): number;",
+        " * }}",
+        " */"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("export function makeNested(callback: (value: string) => void): number;") >= 0, "keeps nested function parameter type");
+        test.ok(tsCode.indexOf("export function makeNested(name: string): number;") >= 0, "keeps second overload");
+        test.end();
+    });
+});
+
+tape.test("pbts emits qualified typedefs in namespaces", function(test) {
+    var pbts = require("../cli/pbts");
+    var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");
+
+    if (!fs.existsSync(".tmp"))
+        fs.mkdirSync(".tmp");
+
+    fs.writeFileSync(file, [
+        "/** @constructor */",
+        "function Foo() {}",
+        "",
+        "/**",
+        " * Bar object.",
+        " * @typedef {Object} Foo.Bar",
+        " * @property {string} name",
+        " */",
+        "",
+        "/**",
+        " * Identifier.",
+        " * @typedef {string|number} Foo.Id",
+        " */"
+    ].join("\n"));
+
+    pbts.main([file], function(err, tsCode) {
+        try {
+            fs.unlinkSync(file);
+        } catch (e) {
+            // best effort cleanup
+        }
+
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("export namespace Foo") >= 0, "emits qualified typedef namespace");
+        test.ok(tsCode.indexOf("interface Bar") >= 0, "emits object typedef as interface");
+        test.ok(tsCode.indexOf("name: string;") >= 0, "emits object typedef properties");
+        test.ok(tsCode.indexOf("type Id = (string|number);") >= 0, "emits non-object typedef as type alias");
+        test.end();
+    });
+});
+
 tape.test("pbts emits class properties for extension fields", function(test) {
     var pbts = require("../cli/pbts");
 
     pbts.main(["tests/data/test.js"], function(err, tsCode) {
         test.error(err, "definition generation worked");
-        test.ok(tsCode.indexOf('public ".jspb.test.IndirectExtension.str": string;') >= 0, "should emit scalar extension property on the class");
-        test.ok(tsCode.indexOf('public ".jspb.test.CloneExtension.extField"?: (jspb.test.ICloneExtension|null);') >= 0, "should emit message extension property on the class");
+        test.ok(tsCode.indexOf('".jspb.test.IndirectExtension.str": string;') >= 0, "should emit scalar extension property on the class");
+        test.ok(tsCode.indexOf('".jspb.test.CloneExtension.extField"?: (jspb.test.ICloneExtension|null);') >= 0, "should emit message extension property on the class");
         test.end();
     });
 });
@@ -624,7 +906,7 @@ tape.test("with --null-semantics, optional fields are handled correctly in proto
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.ISubMessage|null|undefined} [a] OptionalFields a"), "Property for a should use an interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
@@ -660,7 +942,7 @@ tape.test("with --null-semantics, optional fields are handled correctly in proto
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.ISubMessage|null|undefined} [a] OptionalFields a"), "Property for a should use an interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
@@ -695,7 +977,7 @@ tape.test("with --null-semantics, optional fields are handled correctly in editi
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.ISubMessage|null|undefined} [a] OptionalFields a"), "Property for a should use an interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
