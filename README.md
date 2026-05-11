@@ -70,7 +70,7 @@ protobuf.js converts `.proto` field names to camelCase by default, so `awesome_f
 
 ### Load a schema
 
-```js
+```ts
 const protobuf = require("protobufjs");
 
 const root = protobuf.loadSync("awesome.proto");
@@ -81,7 +81,7 @@ Use `protobuf.load()` for the asynchronous variant.
 
 ### Encode and decode
 
-```js
+```ts
 const payload = { awesomeField: "hello" };
 
 // Optionally verify if the payload is of uncertain shape
@@ -103,7 +103,7 @@ Install [`long`](https://github.com/dcodeIO/long.js) with protobuf.js when exact
 
 ### Convert plain objects
 
-```js
+```ts
 const message = AwesomeMessage.fromObject({ awesomeField: 42 });
 const object = AwesomeMessage.toObject(message, {
   longs: String,
@@ -197,7 +197,7 @@ Bundling schemas avoids reparsing `.proto` files at runtime and can reduce brows
 npx pbjs -t json -o awesome.json awesome1.proto awesome2.proto ...
 ```
 
-```js
+```ts
 const bundle = require("./awesome.json");
 
 const root = protobuf.Root.fromJSON(bundle);
@@ -208,7 +208,7 @@ const AwesomeMessage = root.lookupType("awesomepackage.AwesomeMessage");
 npx pbjs -t json-module -w esm -o awesome.js --dts awesome.proto
 ```
 
-```js
+```ts
 import { awesomepackage } from "./awesome.js";
 
 const AwesomeMessage = awesomepackage.AwesomeMessage;
@@ -226,7 +226,7 @@ TypeScript is a first-class target in protobuf.js. The runtime API is typed, and
 
 The full and light builds can construct schemas directly through reflection:
 
-```js
+```ts
 const AwesomeMessage = new protobuf.Type("AwesomeMessage")
   .add(new protobuf.Field("awesomeField", 1, "string"));
 

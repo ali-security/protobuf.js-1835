@@ -1,14 +1,28 @@
 "use strict";
 
-var patched = false;
+var typeParserPatched = false;
 
-function patchTypeParser() {
-    if (patched)
-        return;
-    patched = true;
-
+function patchTypeScriptTypes(dictionary) {
     var type = require("jsdoc/tag/type");
-    var parse = type.parse;
+    var parse = type.parse,
+        typeTag = dictionary.lookUp("type");
+
+    if (typeTag && !typeTag.protobufjsPatched) {
+        typeTag.onTagText = function onTypeTagText(text) {
+            var openIdx = text.indexOf("{"),
+                closeIdx = text.indexOf("}");
+
+            if (openIdx !== 0 || closeIdx <= openIdx + 1)
+                text = "{" + text + "}";
+
+            return text;
+        };
+        typeTag.protobufjsPatched = true;
+    }
+
+    if (typeParserPatched)
+        return;
+    typeParserPatched = true;
 
     type.parse = function parseTypeScriptType(tagValue, canHaveName, canHaveType) {
         try {
@@ -51,7 +65,7 @@ function patchTypeParser() {
 }
 
 exports.defineTags = function(dictionary) {
-    patchTypeParser();
+    patchTypeScriptTypes(dictionary);
 
     dictionary.defineTag("template", {
         mustHaveValue: true,

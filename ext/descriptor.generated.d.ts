@@ -9,10 +9,16 @@ export const FileDescriptorSet: $protobuf.Type;
 export const FileDescriptorProto: $protobuf.Type;
 
 /** Reflected descriptor proto. */
-export const DescriptorProto: $protobuf.Type & {    ExtensionRange: $protobuf.Type,    ReservedRange: $protobuf.Type};
+export const DescriptorProto: $protobuf.Type & {
+    ExtensionRange: $protobuf.Type,
+    ReservedRange: $protobuf.Type
+};
 
 /** Reflected field descriptor proto. */
-export const FieldDescriptorProto: $protobuf.Type & {    Label: $protobuf.Enum,    Type: $protobuf.Enum};
+export const FieldDescriptorProto: $protobuf.Type & {
+    Label: $protobuf.Enum,
+    Type: $protobuf.Enum
+};
 
 /** Reflected oneof descriptor proto. */
 export const OneofDescriptorProto: $protobuf.Type;
@@ -30,13 +36,18 @@ export const EnumValueDescriptorProto: $protobuf.Type;
 export const MethodDescriptorProto: $protobuf.Type;
 
 /** Reflected file options. */
-export const FileOptions: $protobuf.Type & {    OptimizeMode: $protobuf.Enum};
+export const FileOptions: $protobuf.Type & {
+    OptimizeMode: $protobuf.Enum
+};
 
 /** Reflected message options. */
 export const MessageOptions: $protobuf.Type;
 
 /** Reflected field options. */
-export const FieldOptions: $protobuf.Type & {    CType: $protobuf.Enum,    JSType: $protobuf.Enum};
+export const FieldOptions: $protobuf.Type & {
+    CType: $protobuf.Enum,
+    JSType: $protobuf.Enum
+};
 
 /** Reflected oneof options. */
 export const OneofOptions: $protobuf.Type;
@@ -54,19 +65,36 @@ export const ServiceOptions: $protobuf.Type;
 export const MethodOptions: $protobuf.Type;
 
 /** Reflected feature set. */
-export const FeatureSet: $protobuf.Type & {    FieldPresence: $protobuf.Enum,    EnumType: $protobuf.Enum,    RepeatedFieldEncoding: $protobuf.Enum,    Utf8Validation: $protobuf.Enum,    MessageEncoding: $protobuf.Enum,    JsonFormat: $protobuf.Enum,    EnforceNamingStyle: $protobuf.Enum,    VisibilityFeature: $protobuf.Type};
+export const FeatureSet: $protobuf.Type & {
+    FieldPresence: $protobuf.Enum,
+    EnumType: $protobuf.Enum,
+    RepeatedFieldEncoding: $protobuf.Enum,
+    Utf8Validation: $protobuf.Enum,
+    MessageEncoding: $protobuf.Enum,
+    JsonFormat: $protobuf.Enum,
+    EnforceNamingStyle: $protobuf.Enum,
+    VisibilityFeature: $protobuf.Type
+};
 
 /** Reflected feature set defaults. */
-export const FeatureSetDefaults: $protobuf.Type & {    FeatureSetEditionDefault: $protobuf.Type};
+export const FeatureSetDefaults: $protobuf.Type & {
+    FeatureSetEditionDefault: $protobuf.Type
+};
 
 /** Reflected uninterpretet option. */
-export const UninterpretedOption: $protobuf.Type & {    NamePart: $protobuf.Type};
+export const UninterpretedOption: $protobuf.Type & {
+    NamePart: $protobuf.Type
+};
 
 /** Reflected source code info. */
-export const SourceCodeInfo: $protobuf.Type & {    Location: $protobuf.Type};
+export const SourceCodeInfo: $protobuf.Type & {
+    Location: $protobuf.Type
+};
 
 /** Reflected generated code info. */
-export const GeneratedCodeInfo: $protobuf.Type & {    Annotation: $protobuf.Type};
+export const GeneratedCodeInfo: $protobuf.Type & {
+    Annotation: $protobuf.Type
+};
 
 /** Properties of a FileDescriptorSet message. */
 export interface IFileDescriptorSet {
