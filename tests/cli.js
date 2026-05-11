@@ -811,7 +811,7 @@ tape.test("pbts emits class properties for extension fields", function(test) {
     pbts.main(["tests/data/test.js"], function(err, tsCode) {
         test.error(err, "definition generation worked");
         test.ok(tsCode.indexOf('".jspb.test.IndirectExtension.str": string;') >= 0, "should emit scalar extension property on the class");
-        test.ok(tsCode.indexOf('".jspb.test.CloneExtension.extField"?: (jspb.test.ICloneExtension|null);') >= 0, "should emit message extension property on the class");
+        test.ok(tsCode.indexOf('".jspb.test.CloneExtension.extField"?: (jspb.test.CloneExtension.$Properties|null);') >= 0, "should emit message extension property on the class");
         test.end();
     });
 });

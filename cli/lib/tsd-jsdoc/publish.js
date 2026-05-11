@@ -382,7 +382,8 @@ function getCallSignatureParametersEnd(signature) {
         if (ch === "(")
             ++depth;
         else if (ch === ")" && --depth === 0) {
-            while (++i < signature.length && /\s/.test(signature.charAt(i))) {}
+            while (++i < signature.length && /\s/.test(signature.charAt(i)))
+                continue;
             return signature.charAt(i) === ":" ? i : -1;
         }
     }
