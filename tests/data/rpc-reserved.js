@@ -130,6 +130,10 @@ $root.MyRequest = (function() {
      * @static
      * @param {MyRequest.$Properties=} [properties] Properties to set
      * @returns {MyRequest} MyRequest instance
+     * @type {{
+     *   (properties: MyRequest.$Shape): MyRequest & MyRequest.$Shape;
+     *   (properties?: MyRequest.$Properties): MyRequest;
+     * }}
      */
     MyRequest.create = function create(properties) {
         return new MyRequest(properties);
@@ -175,7 +179,7 @@ $root.MyRequest = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {MyRequest} MyRequest
+     * @returns {MyRequest & MyRequest.$Shape} MyRequest
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -221,7 +225,7 @@ $root.MyRequest = (function() {
      * @memberof MyRequest
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {MyRequest} MyRequest
+     * @returns {MyRequest & MyRequest.$Shape} MyRequest
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -375,6 +379,10 @@ $root.MyResponse = (function() {
      * @static
      * @param {MyResponse.$Properties=} [properties] Properties to set
      * @returns {MyResponse} MyResponse instance
+     * @type {{
+     *   (properties: MyResponse.$Shape): MyResponse & MyResponse.$Shape;
+     *   (properties?: MyResponse.$Properties): MyResponse;
+     * }}
      */
     MyResponse.create = function create(properties) {
         return new MyResponse(properties);
@@ -420,7 +428,7 @@ $root.MyResponse = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {MyResponse} MyResponse
+     * @returns {MyResponse & MyResponse.$Shape} MyResponse
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -466,7 +474,7 @@ $root.MyResponse = (function() {
      * @memberof MyResponse
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {MyResponse} MyResponse
+     * @returns {MyResponse & MyResponse.$Shape} MyResponse
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */

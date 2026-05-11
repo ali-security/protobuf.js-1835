@@ -71,6 +71,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.Empty.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Empty} Empty instance
+             * @type {{
+             *   (properties: jspb.test.Empty.$Shape): jspb.test.Empty & jspb.test.Empty.$Shape;
+             *   (properties?: jspb.test.Empty.$Properties): jspb.test.Empty;
+             * }}
              */
             Empty.create = function create(properties) {
                 return new Empty(properties);
@@ -114,7 +118,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.Empty} Empty
+             * @returns {jspb.test.Empty & jspb.test.Empty.$Shape} Empty
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -148,7 +152,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.Empty
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.Empty} Empty
+             * @returns {jspb.test.Empty & jspb.test.Empty.$Shape} Empty
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -302,6 +306,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.EnumContainer.$Properties=} [properties] Properties to set
              * @returns {jspb.test.EnumContainer} EnumContainer instance
+             * @type {{
+             *   (properties: jspb.test.EnumContainer.$Shape): jspb.test.EnumContainer & jspb.test.EnumContainer.$Shape;
+             *   (properties?: jspb.test.EnumContainer.$Properties): jspb.test.EnumContainer;
+             * }}
              */
             EnumContainer.create = function create(properties) {
                 return new EnumContainer(properties);
@@ -347,7 +355,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.EnumContainer} EnumContainer
+             * @returns {jspb.test.EnumContainer & jspb.test.EnumContainer.$Shape} EnumContainer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -390,7 +398,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.EnumContainer
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.EnumContainer} EnumContainer
+             * @returns {jspb.test.EnumContainer & jspb.test.EnumContainer.$Shape} EnumContainer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -581,6 +589,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.Simple1.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Simple1} Simple1 instance
+             * @type {{
+             *   (properties: jspb.test.Simple1.$Shape): jspb.test.Simple1 & jspb.test.Simple1.$Shape;
+             *   (properties?: jspb.test.Simple1.$Properties): jspb.test.Simple1;
+             * }}
              */
             Simple1.create = function create(properties) {
                 return new Simple1(properties);
@@ -630,7 +642,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.Simple1} Simple1
+             * @returns {jspb.test.Simple1 & jspb.test.Simple1.$Shape} Simple1
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -689,7 +701,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.Simple1
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.Simple1} Simple1
+             * @returns {jspb.test.Simple1 & jspb.test.Simple1.$Shape} Simple1
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -881,6 +893,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.Simple2.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Simple2} Simple2 instance
+             * @type {{
+             *   (properties: jspb.test.Simple2.$Shape): jspb.test.Simple2 & jspb.test.Simple2.$Shape;
+             *   (properties?: jspb.test.Simple2.$Properties): jspb.test.Simple2;
+             * }}
              */
             Simple2.create = function create(properties) {
                 return new Simple2(properties);
@@ -928,7 +944,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.Simple2} Simple2
+             * @returns {jspb.test.Simple2 & jspb.test.Simple2.$Shape} Simple2
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -981,7 +997,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.Simple2
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.Simple2} Simple2
+             * @returns {jspb.test.Simple2 & jspb.test.Simple2.$Shape} Simple2
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1181,6 +1197,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.SpecialCases.$Properties=} [properties] Properties to set
              * @returns {jspb.test.SpecialCases} SpecialCases instance
+             * @type {{
+             *   (properties: jspb.test.SpecialCases.$Shape): jspb.test.SpecialCases & jspb.test.SpecialCases.$Shape;
+             *   (properties?: jspb.test.SpecialCases.$Properties): jspb.test.SpecialCases;
+             * }}
              */
             SpecialCases.create = function create(properties) {
                 return new SpecialCases(properties);
@@ -1228,7 +1248,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.SpecialCases} SpecialCases
+             * @returns {jspb.test.SpecialCases & jspb.test.SpecialCases.$Shape} SpecialCases
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1297,7 +1317,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.SpecialCases
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.SpecialCases} SpecialCases
+             * @returns {jspb.test.SpecialCases & jspb.test.SpecialCases.$Shape} SpecialCases
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1509,6 +1529,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.OptionalFields.$Properties=} [properties] Properties to set
              * @returns {jspb.test.OptionalFields} OptionalFields instance
+             * @type {{
+             *   (properties: jspb.test.OptionalFields.$Shape): jspb.test.OptionalFields & jspb.test.OptionalFields.$Shape;
+             *   (properties?: jspb.test.OptionalFields.$Properties): jspb.test.OptionalFields;
+             * }}
              */
             OptionalFields.create = function create(properties) {
                 return new OptionalFields(properties);
@@ -1563,7 +1587,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.OptionalFields} OptionalFields
+             * @returns {jspb.test.OptionalFields & jspb.test.OptionalFields.$Shape} OptionalFields
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1636,7 +1660,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.OptionalFields
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.OptionalFields} OptionalFields
+             * @returns {jspb.test.OptionalFields & jspb.test.OptionalFields.$Shape} OptionalFields
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1854,6 +1878,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.OptionalFields.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.OptionalFields.Nested} Nested instance
+                 * @type {{
+                 *   (properties: jspb.test.OptionalFields.Nested.$Shape): jspb.test.OptionalFields.Nested & jspb.test.OptionalFields.Nested.$Shape;
+                 *   (properties?: jspb.test.OptionalFields.Nested.$Properties): jspb.test.OptionalFields.Nested;
+                 * }}
                  */
                 Nested.create = function create(properties) {
                     return new Nested(properties);
@@ -1899,7 +1927,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.OptionalFields.Nested} Nested
+                 * @returns {jspb.test.OptionalFields.Nested & jspb.test.OptionalFields.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -1942,7 +1970,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.OptionalFields.Nested
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.OptionalFields.Nested} Nested
+                 * @returns {jspb.test.OptionalFields.Nested & jspb.test.OptionalFields.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -2137,6 +2165,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.HasExtensions.$Properties=} [properties] Properties to set
              * @returns {jspb.test.HasExtensions} HasExtensions instance
+             * @type {{
+             *   (properties: jspb.test.HasExtensions.$Shape): jspb.test.HasExtensions & jspb.test.HasExtensions.$Shape;
+             *   (properties?: jspb.test.HasExtensions.$Properties): jspb.test.HasExtensions;
+             * }}
              */
             HasExtensions.create = function create(properties) {
                 return new HasExtensions(properties);
@@ -2200,7 +2232,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.HasExtensions} HasExtensions
+             * @returns {jspb.test.HasExtensions & jspb.test.HasExtensions.$Shape} HasExtensions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -2295,7 +2327,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.HasExtensions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.HasExtensions} HasExtensions
+             * @returns {jspb.test.HasExtensions & jspb.test.HasExtensions.$Shape} HasExtensions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -2597,6 +2629,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.Complex.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Complex} Complex instance
+             * @type {{
+             *   (properties: jspb.test.Complex.$Shape): jspb.test.Complex & jspb.test.Complex.$Shape;
+             *   (properties?: jspb.test.Complex.$Properties): jspb.test.Complex;
+             * }}
              */
             Complex.create = function create(properties) {
                 return new Complex(properties);
@@ -2650,7 +2686,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.Complex} Complex
+             * @returns {jspb.test.Complex & jspb.test.Complex.$Shape} Complex
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -2725,7 +2761,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.Complex
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.Complex} Complex
+             * @returns {jspb.test.Complex & jspb.test.Complex.$Shape} Complex
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -2942,6 +2978,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.Complex.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.Complex.Nested} Nested instance
+                 * @type {{
+                 *   (properties: jspb.test.Complex.Nested.$Shape): jspb.test.Complex.Nested & jspb.test.Complex.Nested.$Shape;
+                 *   (properties?: jspb.test.Complex.Nested.$Properties): jspb.test.Complex.Nested;
+                 * }}
                  */
                 Nested.create = function create(properties) {
                     return new Nested(properties);
@@ -2986,7 +3026,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.Complex.Nested} Nested
+                 * @returns {jspb.test.Complex.Nested & jspb.test.Complex.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -3031,7 +3071,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.Complex.Nested
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.Complex.Nested} Nested
+                 * @returns {jspb.test.Complex.Nested & jspb.test.Complex.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -3177,6 +3217,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.OuterMessage.$Properties=} [properties] Properties to set
              * @returns {jspb.test.OuterMessage} OuterMessage instance
+             * @type {{
+             *   (properties: jspb.test.OuterMessage.$Shape): jspb.test.OuterMessage & jspb.test.OuterMessage.$Shape;
+             *   (properties?: jspb.test.OuterMessage.$Properties): jspb.test.OuterMessage;
+             * }}
              */
             OuterMessage.create = function create(properties) {
                 return new OuterMessage(properties);
@@ -3220,7 +3264,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.OuterMessage} OuterMessage
+             * @returns {jspb.test.OuterMessage & jspb.test.OuterMessage.$Shape} OuterMessage
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -3254,7 +3298,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.OuterMessage
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.OuterMessage} OuterMessage
+             * @returns {jspb.test.OuterMessage & jspb.test.OuterMessage.$Shape} OuterMessage
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -3391,6 +3435,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.OuterMessage.Complex.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.OuterMessage.Complex} Complex instance
+                 * @type {{
+                 *   (properties: jspb.test.OuterMessage.Complex.$Shape): jspb.test.OuterMessage.Complex & jspb.test.OuterMessage.Complex.$Shape;
+                 *   (properties?: jspb.test.OuterMessage.Complex.$Properties): jspb.test.OuterMessage.Complex;
+                 * }}
                  */
                 Complex.create = function create(properties) {
                     return new Complex(properties);
@@ -3436,7 +3484,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.OuterMessage.Complex} Complex
+                 * @returns {jspb.test.OuterMessage.Complex & jspb.test.OuterMessage.Complex.$Shape} Complex
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -3479,7 +3527,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.OuterMessage.Complex
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.OuterMessage.Complex} Complex
+                 * @returns {jspb.test.OuterMessage.Complex & jspb.test.OuterMessage.Complex.$Shape} Complex
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -3635,6 +3683,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.IsExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.IsExtension} IsExtension instance
+             * @type {{
+             *   (properties: jspb.test.IsExtension.$Shape): jspb.test.IsExtension & jspb.test.IsExtension.$Shape;
+             *   (properties?: jspb.test.IsExtension.$Properties): jspb.test.IsExtension;
+             * }}
              */
             IsExtension.create = function create(properties) {
                 return new IsExtension(properties);
@@ -3680,7 +3732,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.IsExtension} IsExtension
+             * @returns {jspb.test.IsExtension & jspb.test.IsExtension.$Shape} IsExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -3723,7 +3775,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.IsExtension
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.IsExtension} IsExtension
+             * @returns {jspb.test.IsExtension & jspb.test.IsExtension.$Shape} IsExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -3867,6 +3919,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.IndirectExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.IndirectExtension} IndirectExtension instance
+             * @type {{
+             *   (properties: jspb.test.IndirectExtension.$Shape): jspb.test.IndirectExtension & jspb.test.IndirectExtension.$Shape;
+             *   (properties?: jspb.test.IndirectExtension.$Properties): jspb.test.IndirectExtension;
+             * }}
              */
             IndirectExtension.create = function create(properties) {
                 return new IndirectExtension(properties);
@@ -3910,7 +3966,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.IndirectExtension} IndirectExtension
+             * @returns {jspb.test.IndirectExtension & jspb.test.IndirectExtension.$Shape} IndirectExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -3944,7 +4000,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.IndirectExtension
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.IndirectExtension} IndirectExtension
+             * @returns {jspb.test.IndirectExtension & jspb.test.IndirectExtension.$Shape} IndirectExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -4129,6 +4185,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.DefaultValues.$Properties=} [properties] Properties to set
              * @returns {jspb.test.DefaultValues} DefaultValues instance
+             * @type {{
+             *   (properties: jspb.test.DefaultValues.$Shape): jspb.test.DefaultValues & jspb.test.DefaultValues.$Shape;
+             *   (properties?: jspb.test.DefaultValues.$Properties): jspb.test.DefaultValues;
+             * }}
              */
             DefaultValues.create = function create(properties) {
                 return new DefaultValues(properties);
@@ -4184,7 +4244,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.DefaultValues} DefaultValues
+             * @returns {jspb.test.DefaultValues & jspb.test.DefaultValues.$Shape} DefaultValues
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -4257,7 +4317,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.DefaultValues
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.DefaultValues} DefaultValues
+             * @returns {jspb.test.DefaultValues & jspb.test.DefaultValues.$Shape} DefaultValues
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -4576,6 +4636,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.FloatingPointFields.$Properties=} [properties] Properties to set
              * @returns {jspb.test.FloatingPointFields} FloatingPointFields instance
+             * @type {{
+             *   (properties: jspb.test.FloatingPointFields.$Shape): jspb.test.FloatingPointFields & jspb.test.FloatingPointFields.$Shape;
+             *   (properties?: jspb.test.FloatingPointFields.$Properties): jspb.test.FloatingPointFields;
+             * }}
              */
             FloatingPointFields.create = function create(properties) {
                 return new FloatingPointFields(properties);
@@ -4635,7 +4699,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.FloatingPointFields} FloatingPointFields
+             * @returns {jspb.test.FloatingPointFields & jspb.test.FloatingPointFields.$Shape} FloatingPointFields
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -4744,7 +4808,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.FloatingPointFields
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.FloatingPointFields} FloatingPointFields
+             * @returns {jspb.test.FloatingPointFields & jspb.test.FloatingPointFields.$Shape} FloatingPointFields
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5019,6 +5083,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestClone.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestClone} TestClone instance
+             * @type {{
+             *   (properties: jspb.test.TestClone.$Shape): jspb.test.TestClone & jspb.test.TestClone.$Shape;
+             *   (properties?: jspb.test.TestClone.$Properties): jspb.test.TestClone;
+             * }}
              */
             TestClone.create = function create(properties) {
                 return new TestClone(properties);
@@ -5075,7 +5143,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestClone} TestClone
+             * @returns {jspb.test.TestClone & jspb.test.TestClone.$Shape} TestClone
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5150,7 +5218,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestClone
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestClone} TestClone
+             * @returns {jspb.test.TestClone & jspb.test.TestClone.$Shape} TestClone
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5381,6 +5449,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.CloneExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.CloneExtension} CloneExtension instance
+             * @type {{
+             *   (properties: jspb.test.CloneExtension.$Shape): jspb.test.CloneExtension & jspb.test.CloneExtension.$Shape;
+             *   (properties?: jspb.test.CloneExtension.$Properties): jspb.test.CloneExtension;
+             * }}
              */
             CloneExtension.create = function create(properties) {
                 return new CloneExtension(properties);
@@ -5426,7 +5498,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.CloneExtension} CloneExtension
+             * @returns {jspb.test.CloneExtension & jspb.test.CloneExtension.$Shape} CloneExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5469,7 +5541,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.CloneExtension
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.CloneExtension} CloneExtension
+             * @returns {jspb.test.CloneExtension & jspb.test.CloneExtension.$Shape} CloneExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5686,6 +5758,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestGroup.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestGroup} TestGroup instance
+             * @type {{
+             *   (properties: jspb.test.TestGroup.$Shape): jspb.test.TestGroup & jspb.test.TestGroup.$Shape;
+             *   (properties?: jspb.test.TestGroup.$Properties): jspb.test.TestGroup;
+             * }}
              */
             TestGroup.create = function create(properties) {
                 return new TestGroup(properties);
@@ -5744,7 +5820,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestGroup} TestGroup
+             * @returns {jspb.test.TestGroup & jspb.test.TestGroup.$Shape} TestGroup
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -5835,7 +5911,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestGroup
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestGroup} TestGroup
+             * @returns {jspb.test.TestGroup & jspb.test.TestGroup.$Shape} TestGroup
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -6100,6 +6176,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.TestGroup.RepeatedGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.RepeatedGroup} RepeatedGroup instance
+                 * @type {{
+                 *   (properties: jspb.test.TestGroup.RepeatedGroup.$Shape): jspb.test.TestGroup.RepeatedGroup & jspb.test.TestGroup.RepeatedGroup.$Shape;
+                 *   (properties?: jspb.test.TestGroup.RepeatedGroup.$Properties): jspb.test.TestGroup.RepeatedGroup;
+                 * }}
                  */
                 RepeatedGroup.create = function create(properties) {
                     return new RepeatedGroup(properties);
@@ -6147,7 +6227,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.TestGroup.RepeatedGroup} RepeatedGroup
+                 * @returns {jspb.test.TestGroup.RepeatedGroup & jspb.test.TestGroup.RepeatedGroup.$Shape} RepeatedGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6208,7 +6288,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.TestGroup.RepeatedGroup
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.TestGroup.RepeatedGroup} RepeatedGroup
+                 * @returns {jspb.test.TestGroup.RepeatedGroup & jspb.test.TestGroup.RepeatedGroup.$Shape} RepeatedGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6381,6 +6461,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.TestGroup.RequiredGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.RequiredGroup} RequiredGroup instance
+                 * @type {{
+                 *   (properties: jspb.test.TestGroup.RequiredGroup.$Shape): jspb.test.TestGroup.RequiredGroup & jspb.test.TestGroup.RequiredGroup.$Shape;
+                 *   (properties?: jspb.test.TestGroup.RequiredGroup.$Properties): jspb.test.TestGroup.RequiredGroup;
+                 * }}
                  */
                 RequiredGroup.create = function create(properties) {
                     return new RequiredGroup(properties);
@@ -6425,7 +6509,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.TestGroup.RequiredGroup} RequiredGroup
+                 * @returns {jspb.test.TestGroup.RequiredGroup & jspb.test.TestGroup.RequiredGroup.$Shape} RequiredGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6470,7 +6554,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.TestGroup.RequiredGroup
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.TestGroup.RequiredGroup} RequiredGroup
+                 * @returns {jspb.test.TestGroup.RequiredGroup & jspb.test.TestGroup.RequiredGroup.$Shape} RequiredGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6622,6 +6706,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.TestGroup.OptionalGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.OptionalGroup} OptionalGroup instance
+                 * @type {{
+                 *   (properties: jspb.test.TestGroup.OptionalGroup.$Shape): jspb.test.TestGroup.OptionalGroup & jspb.test.TestGroup.OptionalGroup.$Shape;
+                 *   (properties?: jspb.test.TestGroup.OptionalGroup.$Properties): jspb.test.TestGroup.OptionalGroup;
+                 * }}
                  */
                 OptionalGroup.create = function create(properties) {
                     return new OptionalGroup(properties);
@@ -6666,7 +6754,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.TestGroup.OptionalGroup} OptionalGroup
+                 * @returns {jspb.test.TestGroup.OptionalGroup & jspb.test.TestGroup.OptionalGroup.$Shape} OptionalGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6711,7 +6799,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.TestGroup.OptionalGroup
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.TestGroup.OptionalGroup} OptionalGroup
+                 * @returns {jspb.test.TestGroup.OptionalGroup & jspb.test.TestGroup.OptionalGroup.$Shape} OptionalGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6863,6 +6951,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.TestGroup.MessageInGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.MessageInGroup} MessageInGroup instance
+                 * @type {{
+                 *   (properties: jspb.test.TestGroup.MessageInGroup.$Shape): jspb.test.TestGroup.MessageInGroup & jspb.test.TestGroup.MessageInGroup.$Shape;
+                 *   (properties?: jspb.test.TestGroup.MessageInGroup.$Properties): jspb.test.TestGroup.MessageInGroup;
+                 * }}
                  */
                 MessageInGroup.create = function create(properties) {
                     return new MessageInGroup(properties);
@@ -6907,7 +6999,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.TestGroup.MessageInGroup} MessageInGroup
+                 * @returns {jspb.test.TestGroup.MessageInGroup & jspb.test.TestGroup.MessageInGroup.$Shape} MessageInGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -6952,7 +7044,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.TestGroup.MessageInGroup
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.TestGroup.MessageInGroup} MessageInGroup
+                 * @returns {jspb.test.TestGroup.MessageInGroup & jspb.test.TestGroup.MessageInGroup.$Shape} MessageInGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -7107,6 +7199,10 @@ $root.jspb = (function() {
                      * @static
                      * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties=} [properties] Properties to set
                      * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage} NestedMessage instance
+                     * @type {{
+                     *   (properties: jspb.test.TestGroup.MessageInGroup.NestedMessage.$Shape): jspb.test.TestGroup.MessageInGroup.NestedMessage & jspb.test.TestGroup.MessageInGroup.NestedMessage.$Shape;
+                     *   (properties?: jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties): jspb.test.TestGroup.MessageInGroup.NestedMessage;
+                     * }}
                      */
                     NestedMessage.create = function create(properties) {
                         return new NestedMessage(properties);
@@ -7152,7 +7248,7 @@ $root.jspb = (function() {
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                      * @param {number} [length] Message length if known beforehand
-                     * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage} NestedMessage
+                     * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage & jspb.test.TestGroup.MessageInGroup.NestedMessage.$Shape} NestedMessage
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
@@ -7195,7 +7291,7 @@ $root.jspb = (function() {
                      * @memberof jspb.test.TestGroup.MessageInGroup.NestedMessage
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage} NestedMessage
+                     * @returns {jspb.test.TestGroup.MessageInGroup.NestedMessage & jspb.test.TestGroup.MessageInGroup.NestedMessage.$Shape} NestedMessage
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
@@ -7351,6 +7447,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.TestGroup.EnumInGroup.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.TestGroup.EnumInGroup} EnumInGroup instance
+                 * @type {{
+                 *   (properties: jspb.test.TestGroup.EnumInGroup.$Shape): jspb.test.TestGroup.EnumInGroup & jspb.test.TestGroup.EnumInGroup.$Shape;
+                 *   (properties?: jspb.test.TestGroup.EnumInGroup.$Properties): jspb.test.TestGroup.EnumInGroup;
+                 * }}
                  */
                 EnumInGroup.create = function create(properties) {
                     return new EnumInGroup(properties);
@@ -7395,7 +7495,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.TestGroup.EnumInGroup} EnumInGroup
+                 * @returns {jspb.test.TestGroup.EnumInGroup & jspb.test.TestGroup.EnumInGroup.$Shape} EnumInGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -7440,7 +7540,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.TestGroup.EnumInGroup
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.TestGroup.EnumInGroup} EnumInGroup
+                 * @returns {jspb.test.TestGroup.EnumInGroup & jspb.test.TestGroup.EnumInGroup.$Shape} EnumInGroup
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -7628,6 +7728,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestGroup1.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestGroup1} TestGroup1 instance
+             * @type {{
+             *   (properties: jspb.test.TestGroup1.$Shape): jspb.test.TestGroup1 & jspb.test.TestGroup1.$Shape;
+             *   (properties?: jspb.test.TestGroup1.$Properties): jspb.test.TestGroup1;
+             * }}
              */
             TestGroup1.create = function create(properties) {
                 return new TestGroup1(properties);
@@ -7673,7 +7777,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestGroup1} TestGroup1
+             * @returns {jspb.test.TestGroup1 & jspb.test.TestGroup1.$Shape} TestGroup1
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -7716,7 +7820,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestGroup1
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestGroup1} TestGroup1
+             * @returns {jspb.test.TestGroup1 & jspb.test.TestGroup1.$Shape} TestGroup1
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -7878,6 +7982,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestReservedNames.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestReservedNames} TestReservedNames instance
+             * @type {{
+             *   (properties: jspb.test.TestReservedNames.$Shape): jspb.test.TestReservedNames & jspb.test.TestReservedNames.$Shape;
+             *   (properties?: jspb.test.TestReservedNames.$Properties): jspb.test.TestReservedNames;
+             * }}
              */
             TestReservedNames.create = function create(properties) {
                 return new TestReservedNames(properties);
@@ -7925,7 +8033,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestReservedNames} TestReservedNames
+             * @returns {jspb.test.TestReservedNames & jspb.test.TestReservedNames.$Shape} TestReservedNames
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -7974,7 +8082,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestReservedNames
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestReservedNames} TestReservedNames
+             * @returns {jspb.test.TestReservedNames & jspb.test.TestReservedNames.$Shape} TestReservedNames
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8127,6 +8235,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestReservedNamesExtension.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestReservedNamesExtension} TestReservedNamesExtension instance
+             * @type {{
+             *   (properties: jspb.test.TestReservedNamesExtension.$Shape): jspb.test.TestReservedNamesExtension & jspb.test.TestReservedNamesExtension.$Shape;
+             *   (properties?: jspb.test.TestReservedNamesExtension.$Properties): jspb.test.TestReservedNamesExtension;
+             * }}
              */
             TestReservedNamesExtension.create = function create(properties) {
                 return new TestReservedNamesExtension(properties);
@@ -8170,7 +8282,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestReservedNamesExtension} TestReservedNamesExtension
+             * @returns {jspb.test.TestReservedNamesExtension & jspb.test.TestReservedNamesExtension.$Shape} TestReservedNamesExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8204,7 +8316,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestReservedNamesExtension
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestReservedNamesExtension} TestReservedNamesExtension
+             * @returns {jspb.test.TestReservedNamesExtension & jspb.test.TestReservedNamesExtension.$Shape} TestReservedNamesExtension
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8322,13 +8434,28 @@ $root.jspb = (function() {
              */
 
             /**
-             * Oneofs of a TestMessageWithOneof.
-             * @typedef {({ partialOneof?: undefined; pone?: null; pthree?: null }|{ partialOneof?: "pone"; pone: string; pthree?: null }|{ partialOneof?: "pthree"; pone?: null; pthree: string }) & ({ recursiveOneof?: undefined; rone?: null; rtwo?: null }|{ recursiveOneof?: "rone"; rone: jspb.test.TestMessageWithOneof.$Properties; rtwo?: null }|{ recursiveOneof?: "rtwo"; rone?: null; rtwo: string }) & ({ defaultOneofA?: undefined; aone?: null; atwo?: null }|{ defaultOneofA?: "aone"; aone: number; atwo?: null }|{ defaultOneofA?: "atwo"; aone?: null; atwo: number }) & ({ defaultOneofB?: undefined; bone?: null; btwo?: null }|{ defaultOneofB?: "bone"; bone: number; btwo?: null }|{ defaultOneofB?: "btwo"; bone?: null; btwo: number })} jspb.test.TestMessageWithOneof.$Oneofs
-             */
-
-            /**
              * Narrowed shape of a TestMessageWithOneof.
-             * @typedef {jspb.test.TestMessageWithOneof.$Properties & jspb.test.TestMessageWithOneof.$Oneofs} jspb.test.TestMessageWithOneof.$Shape
+             * @typedef {{
+             *   pone?: string|null;
+             *   pthree?: string|null;
+             *   rone?: jspb.test.TestMessageWithOneof.$Shape|null;
+             *   rtwo?: string|null;
+             *   normalField?: boolean|null;
+             *   repeatedField?: Array.<string>|null;
+             *   aone?: number|null;
+             *   atwo?: number|null;
+             *   bone?: number|null;
+             *   btwo?: number|null;
+             *   $unknowns?: Array.<Uint8Array>;
+             * } & (
+             *   ({ partialOneof?: undefined; pone?: null; pthree?: null }|{ partialOneof?: "pone"; pone: string; pthree?: null }|{ partialOneof?: "pthree"; pone?: null; pthree: string })
+             * ) & (
+             *   ({ recursiveOneof?: undefined; rone?: null; rtwo?: null }|{ recursiveOneof?: "rone"; rone: jspb.test.TestMessageWithOneof.$Shape; rtwo?: null }|{ recursiveOneof?: "rtwo"; rone?: null; rtwo: string })
+             * ) & (
+             *   ({ defaultOneofA?: undefined; aone?: null; atwo?: null }|{ defaultOneofA?: "aone"; aone: number; atwo?: null }|{ defaultOneofA?: "atwo"; aone?: null; atwo: number })
+             * ) & (
+             *   ({ defaultOneofB?: undefined; bone?: null; btwo?: null }|{ defaultOneofB?: "bone"; bone: number; btwo?: null }|{ defaultOneofB?: "btwo"; bone?: null; btwo: number })
+             * )} jspb.test.TestMessageWithOneof.$Shape
              */
 
             /**
@@ -8483,7 +8610,7 @@ $root.jspb = (function() {
              * @param {jspb.test.TestMessageWithOneof.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestMessageWithOneof} TestMessageWithOneof instance
              * @type {{
-             *   (properties: jspb.test.TestMessageWithOneof.$Shape): jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs;
+             *   (properties: jspb.test.TestMessageWithOneof.$Shape): jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Shape;
              *   (properties?: jspb.test.TestMessageWithOneof.$Properties): jspb.test.TestMessageWithOneof;
              * }}
              */
@@ -8550,7 +8677,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs} TestMessageWithOneof
+             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Shape} TestMessageWithOneof
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8657,7 +8784,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestMessageWithOneof
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Oneofs} TestMessageWithOneof
+             * @returns {jspb.test.TestMessageWithOneof & jspb.test.TestMessageWithOneof.$Shape} TestMessageWithOneof
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -8951,6 +9078,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestEndsWithBytes.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestEndsWithBytes} TestEndsWithBytes instance
+             * @type {{
+             *   (properties: jspb.test.TestEndsWithBytes.$Shape): jspb.test.TestEndsWithBytes & jspb.test.TestEndsWithBytes.$Shape;
+             *   (properties?: jspb.test.TestEndsWithBytes.$Properties): jspb.test.TestEndsWithBytes;
+             * }}
              */
             TestEndsWithBytes.create = function create(properties) {
                 return new TestEndsWithBytes(properties);
@@ -8998,7 +9129,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestEndsWithBytes} TestEndsWithBytes
+             * @returns {jspb.test.TestEndsWithBytes & jspb.test.TestEndsWithBytes.$Shape} TestEndsWithBytes
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -9047,7 +9178,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestEndsWithBytes
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestEndsWithBytes} TestEndsWithBytes
+             * @returns {jspb.test.TestEndsWithBytes & jspb.test.TestEndsWithBytes.$Shape} TestEndsWithBytes
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -9328,6 +9459,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.TestMapFieldsNoBinary.$Properties=} [properties] Properties to set
              * @returns {jspb.test.TestMapFieldsNoBinary} TestMapFieldsNoBinary instance
+             * @type {{
+             *   (properties: jspb.test.TestMapFieldsNoBinary.$Shape): jspb.test.TestMapFieldsNoBinary & jspb.test.TestMapFieldsNoBinary.$Shape;
+             *   (properties?: jspb.test.TestMapFieldsNoBinary.$Properties): jspb.test.TestMapFieldsNoBinary;
+             * }}
              */
             TestMapFieldsNoBinary.create = function create(properties) {
                 return new TestMapFieldsNoBinary(properties);
@@ -9410,7 +9545,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.TestMapFieldsNoBinary} TestMapFieldsNoBinary
+             * @returns {jspb.test.TestMapFieldsNoBinary & jspb.test.TestMapFieldsNoBinary.$Shape} TestMapFieldsNoBinary
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -9777,7 +9912,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.TestMapFieldsNoBinary
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.TestMapFieldsNoBinary} TestMapFieldsNoBinary
+             * @returns {jspb.test.TestMapFieldsNoBinary & jspb.test.TestMapFieldsNoBinary.$Shape} TestMapFieldsNoBinary
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -10304,6 +10439,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.MapValueMessageNoBinary.$Properties=} [properties] Properties to set
              * @returns {jspb.test.MapValueMessageNoBinary} MapValueMessageNoBinary instance
+             * @type {{
+             *   (properties: jspb.test.MapValueMessageNoBinary.$Shape): jspb.test.MapValueMessageNoBinary & jspb.test.MapValueMessageNoBinary.$Shape;
+             *   (properties?: jspb.test.MapValueMessageNoBinary.$Properties): jspb.test.MapValueMessageNoBinary;
+             * }}
              */
             MapValueMessageNoBinary.create = function create(properties) {
                 return new MapValueMessageNoBinary(properties);
@@ -10349,7 +10488,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.MapValueMessageNoBinary} MapValueMessageNoBinary
+             * @returns {jspb.test.MapValueMessageNoBinary & jspb.test.MapValueMessageNoBinary.$Shape} MapValueMessageNoBinary
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -10392,7 +10531,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.MapValueMessageNoBinary
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.MapValueMessageNoBinary} MapValueMessageNoBinary
+             * @returns {jspb.test.MapValueMessageNoBinary & jspb.test.MapValueMessageNoBinary.$Shape} MapValueMessageNoBinary
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -10536,6 +10675,10 @@ $root.jspb = (function() {
              * @static
              * @param {jspb.test.Deeply.$Properties=} [properties] Properties to set
              * @returns {jspb.test.Deeply} Deeply instance
+             * @type {{
+             *   (properties: jspb.test.Deeply.$Shape): jspb.test.Deeply & jspb.test.Deeply.$Shape;
+             *   (properties?: jspb.test.Deeply.$Properties): jspb.test.Deeply;
+             * }}
              */
             Deeply.create = function create(properties) {
                 return new Deeply(properties);
@@ -10579,7 +10722,7 @@ $root.jspb = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {jspb.test.Deeply} Deeply
+             * @returns {jspb.test.Deeply & jspb.test.Deeply.$Shape} Deeply
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -10613,7 +10756,7 @@ $root.jspb = (function() {
              * @memberof jspb.test.Deeply
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {jspb.test.Deeply} Deeply
+             * @returns {jspb.test.Deeply & jspb.test.Deeply.$Shape} Deeply
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -10741,6 +10884,10 @@ $root.jspb = (function() {
                  * @static
                  * @param {jspb.test.Deeply.Nested.$Properties=} [properties] Properties to set
                  * @returns {jspb.test.Deeply.Nested} Nested instance
+                 * @type {{
+                 *   (properties: jspb.test.Deeply.Nested.$Shape): jspb.test.Deeply.Nested & jspb.test.Deeply.Nested.$Shape;
+                 *   (properties?: jspb.test.Deeply.Nested.$Properties): jspb.test.Deeply.Nested;
+                 * }}
                  */
                 Nested.create = function create(properties) {
                     return new Nested(properties);
@@ -10784,7 +10931,7 @@ $root.jspb = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {jspb.test.Deeply.Nested} Nested
+                 * @returns {jspb.test.Deeply.Nested & jspb.test.Deeply.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -10818,7 +10965,7 @@ $root.jspb = (function() {
                  * @memberof jspb.test.Deeply.Nested
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {jspb.test.Deeply.Nested} Nested
+                 * @returns {jspb.test.Deeply.Nested & jspb.test.Deeply.Nested.$Shape} Nested
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -10955,6 +11102,10 @@ $root.jspb = (function() {
                      * @static
                      * @param {jspb.test.Deeply.Nested.Message.$Properties=} [properties] Properties to set
                      * @returns {jspb.test.Deeply.Nested.Message} Message instance
+                     * @type {{
+                     *   (properties: jspb.test.Deeply.Nested.Message.$Shape): jspb.test.Deeply.Nested.Message & jspb.test.Deeply.Nested.Message.$Shape;
+                     *   (properties?: jspb.test.Deeply.Nested.Message.$Properties): jspb.test.Deeply.Nested.Message;
+                     * }}
                      */
                     Message.create = function create(properties) {
                         return new Message(properties);
@@ -11000,7 +11151,7 @@ $root.jspb = (function() {
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                      * @param {number} [length] Message length if known beforehand
-                     * @returns {jspb.test.Deeply.Nested.Message} Message
+                     * @returns {jspb.test.Deeply.Nested.Message & jspb.test.Deeply.Nested.Message.$Shape} Message
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
@@ -11043,7 +11194,7 @@ $root.jspb = (function() {
                      * @memberof jspb.test.Deeply.Nested.Message
                      * @static
                      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                     * @returns {jspb.test.Deeply.Nested.Message} Message
+                     * @returns {jspb.test.Deeply.Nested.Message & jspb.test.Deeply.Nested.Message.$Shape} Message
                      * @throws {Error} If the payload is not a reader or valid buffer
                      * @throws {$protobuf.util.ProtocolError} If required fields are missing
                      */
@@ -11227,6 +11378,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FileDescriptorSet.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileDescriptorSet} FileDescriptorSet instance
+             * @type {{
+             *   (properties: google.protobuf.FileDescriptorSet.$Shape): google.protobuf.FileDescriptorSet & google.protobuf.FileDescriptorSet.$Shape;
+             *   (properties?: google.protobuf.FileDescriptorSet.$Properties): google.protobuf.FileDescriptorSet;
+             * }}
              */
             FileDescriptorSet.create = function create(properties) {
                 return new FileDescriptorSet(properties);
@@ -11273,7 +11428,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FileDescriptorSet} FileDescriptorSet
+             * @returns {google.protobuf.FileDescriptorSet & google.protobuf.FileDescriptorSet.$Shape} FileDescriptorSet
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -11318,7 +11473,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FileDescriptorSet
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FileDescriptorSet} FileDescriptorSet
+             * @returns {google.protobuf.FileDescriptorSet & google.protobuf.FileDescriptorSet.$Shape} FileDescriptorSet
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -11647,6 +11802,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FileDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileDescriptorProto} FileDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.FileDescriptorProto.$Shape): google.protobuf.FileDescriptorProto & google.protobuf.FileDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.FileDescriptorProto.$Properties): google.protobuf.FileDescriptorProto;
+             * }}
              */
             FileDescriptorProto.create = function create(properties) {
                 return new FileDescriptorProto(properties);
@@ -11726,7 +11885,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FileDescriptorProto} FileDescriptorProto
+             * @returns {google.protobuf.FileDescriptorProto & google.protobuf.FileDescriptorProto.$Shape} FileDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -11879,7 +12038,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FileDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FileDescriptorProto} FileDescriptorProto
+             * @returns {google.protobuf.FileDescriptorProto & google.protobuf.FileDescriptorProto.$Shape} FileDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -12432,6 +12591,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.DescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.DescriptorProto} DescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.DescriptorProto.$Shape): google.protobuf.DescriptorProto & google.protobuf.DescriptorProto.$Shape;
+             *   (properties?: google.protobuf.DescriptorProto.$Properties): google.protobuf.DescriptorProto;
+             * }}
              */
             DescriptorProto.create = function create(properties) {
                 return new DescriptorProto(properties);
@@ -12505,7 +12668,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.DescriptorProto} DescriptorProto
+             * @returns {google.protobuf.DescriptorProto & google.protobuf.DescriptorProto.$Shape} DescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -12624,7 +12787,7 @@ $root.google = (function() {
              * @memberof google.protobuf.DescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.DescriptorProto} DescriptorProto
+             * @returns {google.protobuf.DescriptorProto & google.protobuf.DescriptorProto.$Shape} DescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -13035,6 +13198,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.DescriptorProto.ExtensionRange} ExtensionRange instance
+                 * @type {{
+                 *   (properties: google.protobuf.DescriptorProto.ExtensionRange.$Shape): google.protobuf.DescriptorProto.ExtensionRange & google.protobuf.DescriptorProto.ExtensionRange.$Shape;
+                 *   (properties?: google.protobuf.DescriptorProto.ExtensionRange.$Properties): google.protobuf.DescriptorProto.ExtensionRange;
+                 * }}
                  */
                 ExtensionRange.create = function create(properties) {
                     return new ExtensionRange(properties);
@@ -13084,7 +13251,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.DescriptorProto.ExtensionRange} ExtensionRange
+                 * @returns {google.protobuf.DescriptorProto.ExtensionRange & google.protobuf.DescriptorProto.ExtensionRange.$Shape} ExtensionRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -13139,7 +13306,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.DescriptorProto.ExtensionRange
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.DescriptorProto.ExtensionRange} ExtensionRange
+                 * @returns {google.protobuf.DescriptorProto.ExtensionRange & google.protobuf.DescriptorProto.ExtensionRange.$Shape} ExtensionRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -13323,6 +13490,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.DescriptorProto.ReservedRange} ReservedRange instance
+                 * @type {{
+                 *   (properties: google.protobuf.DescriptorProto.ReservedRange.$Shape): google.protobuf.DescriptorProto.ReservedRange & google.protobuf.DescriptorProto.ReservedRange.$Shape;
+                 *   (properties?: google.protobuf.DescriptorProto.ReservedRange.$Properties): google.protobuf.DescriptorProto.ReservedRange;
+                 * }}
                  */
                 ReservedRange.create = function create(properties) {
                     return new ReservedRange(properties);
@@ -13370,7 +13541,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.DescriptorProto.ReservedRange} ReservedRange
+                 * @returns {google.protobuf.DescriptorProto.ReservedRange & google.protobuf.DescriptorProto.ReservedRange.$Shape} ReservedRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -13419,7 +13590,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.DescriptorProto.ReservedRange
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.DescriptorProto.ReservedRange} ReservedRange
+                 * @returns {google.protobuf.DescriptorProto.ReservedRange & google.protobuf.DescriptorProto.ReservedRange.$Shape} ReservedRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -13613,6 +13784,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.ExtensionRangeOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ExtensionRangeOptions} ExtensionRangeOptions instance
+             * @type {{
+             *   (properties: google.protobuf.ExtensionRangeOptions.$Shape): google.protobuf.ExtensionRangeOptions & google.protobuf.ExtensionRangeOptions.$Shape;
+             *   (properties?: google.protobuf.ExtensionRangeOptions.$Properties): google.protobuf.ExtensionRangeOptions;
+             * }}
              */
             ExtensionRangeOptions.create = function create(properties) {
                 return new ExtensionRangeOptions(properties);
@@ -13666,7 +13841,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.ExtensionRangeOptions} ExtensionRangeOptions
+             * @returns {google.protobuf.ExtensionRangeOptions & google.protobuf.ExtensionRangeOptions.$Shape} ExtensionRangeOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -13731,7 +13906,7 @@ $root.google = (function() {
              * @memberof google.protobuf.ExtensionRangeOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.ExtensionRangeOptions} ExtensionRangeOptions
+             * @returns {google.protobuf.ExtensionRangeOptions & google.protobuf.ExtensionRangeOptions.$Shape} ExtensionRangeOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -14002,6 +14177,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.ExtensionRangeOptions.Declaration} Declaration instance
+                 * @type {{
+                 *   (properties: google.protobuf.ExtensionRangeOptions.Declaration.$Shape): google.protobuf.ExtensionRangeOptions.Declaration & google.protobuf.ExtensionRangeOptions.Declaration.$Shape;
+                 *   (properties?: google.protobuf.ExtensionRangeOptions.Declaration.$Properties): google.protobuf.ExtensionRangeOptions.Declaration;
+                 * }}
                  */
                 Declaration.create = function create(properties) {
                     return new Declaration(properties);
@@ -14055,7 +14234,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.ExtensionRangeOptions.Declaration} Declaration
+                 * @returns {google.protobuf.ExtensionRangeOptions.Declaration & google.protobuf.ExtensionRangeOptions.Declaration.$Shape} Declaration
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -14122,7 +14301,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.ExtensionRangeOptions.Declaration
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.ExtensionRangeOptions.Declaration} Declaration
+                 * @returns {google.protobuf.ExtensionRangeOptions.Declaration & google.protobuf.ExtensionRangeOptions.Declaration.$Shape} Declaration
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -14415,6 +14594,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FieldDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FieldDescriptorProto} FieldDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.FieldDescriptorProto.$Shape): google.protobuf.FieldDescriptorProto & google.protobuf.FieldDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.FieldDescriptorProto.$Properties): google.protobuf.FieldDescriptorProto;
+             * }}
              */
             FieldDescriptorProto.create = function create(properties) {
                 return new FieldDescriptorProto(properties);
@@ -14480,7 +14663,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FieldDescriptorProto} FieldDescriptorProto
+             * @returns {google.protobuf.FieldDescriptorProto & google.protobuf.FieldDescriptorProto.$Shape} FieldDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -14583,7 +14766,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FieldDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FieldDescriptorProto} FieldDescriptorProto
+             * @returns {google.protobuf.FieldDescriptorProto & google.protobuf.FieldDescriptorProto.$Shape} FieldDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -15016,6 +15199,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.OneofDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.OneofDescriptorProto} OneofDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.OneofDescriptorProto.$Shape): google.protobuf.OneofDescriptorProto & google.protobuf.OneofDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.OneofDescriptorProto.$Properties): google.protobuf.OneofDescriptorProto;
+             * }}
              */
             OneofDescriptorProto.create = function create(properties) {
                 return new OneofDescriptorProto(properties);
@@ -15063,7 +15250,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.OneofDescriptorProto} OneofDescriptorProto
+             * @returns {google.protobuf.OneofDescriptorProto & google.protobuf.OneofDescriptorProto.$Shape} OneofDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -15112,7 +15299,7 @@ $root.google = (function() {
              * @memberof google.protobuf.OneofDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.OneofDescriptorProto} OneofDescriptorProto
+             * @returns {google.protobuf.OneofDescriptorProto & google.protobuf.OneofDescriptorProto.$Shape} OneofDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -15327,6 +15514,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.EnumDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumDescriptorProto} EnumDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.EnumDescriptorProto.$Shape): google.protobuf.EnumDescriptorProto & google.protobuf.EnumDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.EnumDescriptorProto.$Properties): google.protobuf.EnumDescriptorProto;
+             * }}
              */
             EnumDescriptorProto.create = function create(properties) {
                 return new EnumDescriptorProto(properties);
@@ -15385,7 +15576,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.EnumDescriptorProto} EnumDescriptorProto
+             * @returns {google.protobuf.EnumDescriptorProto & google.protobuf.EnumDescriptorProto.$Shape} EnumDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -15464,7 +15655,7 @@ $root.google = (function() {
              * @memberof google.protobuf.EnumDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.EnumDescriptorProto} EnumDescriptorProto
+             * @returns {google.protobuf.EnumDescriptorProto & google.protobuf.EnumDescriptorProto.$Shape} EnumDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -15741,6 +15932,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange} EnumReservedRange instance
+                 * @type {{
+                 *   (properties: google.protobuf.EnumDescriptorProto.EnumReservedRange.$Shape): google.protobuf.EnumDescriptorProto.EnumReservedRange & google.protobuf.EnumDescriptorProto.EnumReservedRange.$Shape;
+                 *   (properties?: google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties): google.protobuf.EnumDescriptorProto.EnumReservedRange;
+                 * }}
                  */
                 EnumReservedRange.create = function create(properties) {
                     return new EnumReservedRange(properties);
@@ -15788,7 +15983,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange} EnumReservedRange
+                 * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange & google.protobuf.EnumDescriptorProto.EnumReservedRange.$Shape} EnumReservedRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -15837,7 +16032,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.EnumDescriptorProto.EnumReservedRange
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange} EnumReservedRange
+                 * @returns {google.protobuf.EnumDescriptorProto.EnumReservedRange & google.protobuf.EnumDescriptorProto.EnumReservedRange.$Shape} EnumReservedRange
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -16020,6 +16215,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.EnumValueDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumValueDescriptorProto} EnumValueDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.EnumValueDescriptorProto.$Shape): google.protobuf.EnumValueDescriptorProto & google.protobuf.EnumValueDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.EnumValueDescriptorProto.$Properties): google.protobuf.EnumValueDescriptorProto;
+             * }}
              */
             EnumValueDescriptorProto.create = function create(properties) {
                 return new EnumValueDescriptorProto(properties);
@@ -16069,7 +16268,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.EnumValueDescriptorProto} EnumValueDescriptorProto
+             * @returns {google.protobuf.EnumValueDescriptorProto & google.protobuf.EnumValueDescriptorProto.$Shape} EnumValueDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -16124,7 +16323,7 @@ $root.google = (function() {
              * @memberof google.protobuf.EnumValueDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.EnumValueDescriptorProto} EnumValueDescriptorProto
+             * @returns {google.protobuf.EnumValueDescriptorProto & google.protobuf.EnumValueDescriptorProto.$Shape} EnumValueDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -16318,6 +16517,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.ServiceDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ServiceDescriptorProto} ServiceDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.ServiceDescriptorProto.$Shape): google.protobuf.ServiceDescriptorProto & google.protobuf.ServiceDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.ServiceDescriptorProto.$Properties): google.protobuf.ServiceDescriptorProto;
+             * }}
              */
             ServiceDescriptorProto.create = function create(properties) {
                 return new ServiceDescriptorProto(properties);
@@ -16368,7 +16571,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.ServiceDescriptorProto} ServiceDescriptorProto
+             * @returns {google.protobuf.ServiceDescriptorProto & google.protobuf.ServiceDescriptorProto.$Shape} ServiceDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -16425,7 +16628,7 @@ $root.google = (function() {
              * @memberof google.protobuf.ServiceDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.ServiceDescriptorProto} ServiceDescriptorProto
+             * @returns {google.protobuf.ServiceDescriptorProto & google.protobuf.ServiceDescriptorProto.$Shape} ServiceDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -16663,6 +16866,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.MethodDescriptorProto.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MethodDescriptorProto} MethodDescriptorProto instance
+             * @type {{
+             *   (properties: google.protobuf.MethodDescriptorProto.$Shape): google.protobuf.MethodDescriptorProto & google.protobuf.MethodDescriptorProto.$Shape;
+             *   (properties?: google.protobuf.MethodDescriptorProto.$Properties): google.protobuf.MethodDescriptorProto;
+             * }}
              */
             MethodDescriptorProto.create = function create(properties) {
                 return new MethodDescriptorProto(properties);
@@ -16718,7 +16925,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.MethodDescriptorProto} MethodDescriptorProto
+             * @returns {google.protobuf.MethodDescriptorProto & google.protobuf.MethodDescriptorProto.$Shape} MethodDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -16791,7 +16998,7 @@ $root.google = (function() {
              * @memberof google.protobuf.MethodDescriptorProto
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.MethodDescriptorProto} MethodDescriptorProto
+             * @returns {google.protobuf.MethodDescriptorProto & google.protobuf.MethodDescriptorProto.$Shape} MethodDescriptorProto
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -17171,6 +17378,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FileOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FileOptions} FileOptions instance
+             * @type {{
+             *   (properties: google.protobuf.FileOptions.$Shape): google.protobuf.FileOptions & google.protobuf.FileOptions.$Shape;
+             *   (properties?: google.protobuf.FileOptions.$Properties): google.protobuf.FileOptions;
+             * }}
              */
             FileOptions.create = function create(properties) {
                 return new FileOptions(properties);
@@ -17257,7 +17468,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FileOptions} FileOptions
+             * @returns {google.protobuf.FileOptions & google.protobuf.FileOptions.$Shape} FileOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -17422,7 +17633,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FileOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FileOptions} FileOptions
+             * @returns {google.protobuf.FileOptions & google.protobuf.FileOptions.$Shape} FileOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -17854,6 +18065,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.MessageOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MessageOptions} MessageOptions instance
+             * @type {{
+             *   (properties: google.protobuf.MessageOptions.$Shape): google.protobuf.MessageOptions & google.protobuf.MessageOptions.$Shape;
+             *   (properties?: google.protobuf.MessageOptions.$Properties): google.protobuf.MessageOptions;
+             * }}
              */
             MessageOptions.create = function create(properties) {
                 return new MessageOptions(properties);
@@ -17912,7 +18127,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.MessageOptions} MessageOptions
+             * @returns {google.protobuf.MessageOptions & google.protobuf.MessageOptions.$Shape} MessageOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -17993,7 +18208,7 @@ $root.google = (function() {
              * @memberof google.protobuf.MessageOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.MessageOptions} MessageOptions
+             * @returns {google.protobuf.MessageOptions & google.protobuf.MessageOptions.$Shape} MessageOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -18338,6 +18553,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FieldOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FieldOptions} FieldOptions instance
+             * @type {{
+             *   (properties: google.protobuf.FieldOptions.$Shape): google.protobuf.FieldOptions & google.protobuf.FieldOptions.$Shape;
+             *   (properties?: google.protobuf.FieldOptions.$Properties): google.protobuf.FieldOptions;
+             * }}
              */
             FieldOptions.create = function create(properties) {
                 return new FieldOptions(properties);
@@ -18412,7 +18631,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FieldOptions} FieldOptions
+             * @returns {google.protobuf.FieldOptions & google.protobuf.FieldOptions.$Shape} FieldOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -18547,7 +18766,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FieldOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FieldOptions} FieldOptions
+             * @returns {google.protobuf.FieldOptions & google.protobuf.FieldOptions.$Shape} FieldOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -19078,6 +19297,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.FieldOptions.EditionDefault.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FieldOptions.EditionDefault} EditionDefault instance
+                 * @type {{
+                 *   (properties: google.protobuf.FieldOptions.EditionDefault.$Shape): google.protobuf.FieldOptions.EditionDefault & google.protobuf.FieldOptions.EditionDefault.$Shape;
+                 *   (properties?: google.protobuf.FieldOptions.EditionDefault.$Properties): google.protobuf.FieldOptions.EditionDefault;
+                 * }}
                  */
                 EditionDefault.create = function create(properties) {
                     return new EditionDefault(properties);
@@ -19125,7 +19348,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.FieldOptions.EditionDefault} EditionDefault
+                 * @returns {google.protobuf.FieldOptions.EditionDefault & google.protobuf.FieldOptions.EditionDefault.$Shape} EditionDefault
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -19174,7 +19397,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.FieldOptions.EditionDefault
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.FieldOptions.EditionDefault} EditionDefault
+                 * @returns {google.protobuf.FieldOptions.EditionDefault & google.protobuf.FieldOptions.EditionDefault.$Shape} EditionDefault
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -19432,6 +19655,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FieldOptions.FeatureSupport} FeatureSupport instance
+                 * @type {{
+                 *   (properties: google.protobuf.FieldOptions.FeatureSupport.$Shape): google.protobuf.FieldOptions.FeatureSupport & google.protobuf.FieldOptions.FeatureSupport.$Shape;
+                 *   (properties?: google.protobuf.FieldOptions.FeatureSupport.$Properties): google.protobuf.FieldOptions.FeatureSupport;
+                 * }}
                  */
                 FeatureSupport.create = function create(properties) {
                     return new FeatureSupport(properties);
@@ -19483,7 +19710,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.FieldOptions.FeatureSupport} FeatureSupport
+                 * @returns {google.protobuf.FieldOptions.FeatureSupport & google.protobuf.FieldOptions.FeatureSupport.$Shape} FeatureSupport
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -19544,7 +19771,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.FieldOptions.FeatureSupport
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.FieldOptions.FeatureSupport} FeatureSupport
+                 * @returns {google.protobuf.FieldOptions.FeatureSupport & google.protobuf.FieldOptions.FeatureSupport.$Shape} FeatureSupport
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -19942,6 +20169,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.OneofOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.OneofOptions} OneofOptions instance
+             * @type {{
+             *   (properties: google.protobuf.OneofOptions.$Shape): google.protobuf.OneofOptions & google.protobuf.OneofOptions.$Shape;
+             *   (properties?: google.protobuf.OneofOptions.$Properties): google.protobuf.OneofOptions;
+             * }}
              */
             OneofOptions.create = function create(properties) {
                 return new OneofOptions(properties);
@@ -19990,7 +20221,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.OneofOptions} OneofOptions
+             * @returns {google.protobuf.OneofOptions & google.protobuf.OneofOptions.$Shape} OneofOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -20041,7 +20272,7 @@ $root.google = (function() {
              * @memberof google.protobuf.OneofOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.OneofOptions} OneofOptions
+             * @returns {google.protobuf.OneofOptions & google.protobuf.OneofOptions.$Shape} OneofOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -20266,6 +20497,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.EnumOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumOptions} EnumOptions instance
+             * @type {{
+             *   (properties: google.protobuf.EnumOptions.$Shape): google.protobuf.EnumOptions & google.protobuf.EnumOptions.$Shape;
+             *   (properties?: google.protobuf.EnumOptions.$Properties): google.protobuf.EnumOptions;
+             * }}
              */
             EnumOptions.create = function create(properties) {
                 return new EnumOptions(properties);
@@ -20322,7 +20557,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.EnumOptions} EnumOptions
+             * @returns {google.protobuf.EnumOptions & google.protobuf.EnumOptions.$Shape} EnumOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -20397,7 +20632,7 @@ $root.google = (function() {
              * @memberof google.protobuf.EnumOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.EnumOptions} EnumOptions
+             * @returns {google.protobuf.EnumOptions & google.protobuf.EnumOptions.$Shape} EnumOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -20651,6 +20886,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.EnumValueOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.EnumValueOptions} EnumValueOptions instance
+             * @type {{
+             *   (properties: google.protobuf.EnumValueOptions.$Shape): google.protobuf.EnumValueOptions & google.protobuf.EnumValueOptions.$Shape;
+             *   (properties?: google.protobuf.EnumValueOptions.$Properties): google.protobuf.EnumValueOptions;
+             * }}
              */
             EnumValueOptions.create = function create(properties) {
                 return new EnumValueOptions(properties);
@@ -20705,7 +20944,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.EnumValueOptions} EnumValueOptions
+             * @returns {google.protobuf.EnumValueOptions & google.protobuf.EnumValueOptions.$Shape} EnumValueOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -20774,7 +21013,7 @@ $root.google = (function() {
              * @memberof google.protobuf.EnumValueOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.EnumValueOptions} EnumValueOptions
+             * @returns {google.protobuf.EnumValueOptions & google.protobuf.EnumValueOptions.$Shape} EnumValueOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21007,6 +21246,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.ServiceOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.ServiceOptions} ServiceOptions instance
+             * @type {{
+             *   (properties: google.protobuf.ServiceOptions.$Shape): google.protobuf.ServiceOptions & google.protobuf.ServiceOptions.$Shape;
+             *   (properties?: google.protobuf.ServiceOptions.$Properties): google.protobuf.ServiceOptions;
+             * }}
              */
             ServiceOptions.create = function create(properties) {
                 return new ServiceOptions(properties);
@@ -21057,7 +21300,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.ServiceOptions} ServiceOptions
+             * @returns {google.protobuf.ServiceOptions & google.protobuf.ServiceOptions.$Shape} ServiceOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21114,7 +21357,7 @@ $root.google = (function() {
              * @memberof google.protobuf.ServiceOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.ServiceOptions} ServiceOptions
+             * @returns {google.protobuf.ServiceOptions & google.protobuf.ServiceOptions.$Shape} ServiceOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21335,6 +21578,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.MethodOptions.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.MethodOptions} MethodOptions instance
+             * @type {{
+             *   (properties: google.protobuf.MethodOptions.$Shape): google.protobuf.MethodOptions & google.protobuf.MethodOptions.$Shape;
+             *   (properties?: google.protobuf.MethodOptions.$Properties): google.protobuf.MethodOptions;
+             * }}
              */
             MethodOptions.create = function create(properties) {
                 return new MethodOptions(properties);
@@ -21387,7 +21634,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.MethodOptions} MethodOptions
+             * @returns {google.protobuf.MethodOptions & google.protobuf.MethodOptions.$Shape} MethodOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21450,7 +21697,7 @@ $root.google = (function() {
              * @memberof google.protobuf.MethodOptions
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.MethodOptions} MethodOptions
+             * @returns {google.protobuf.MethodOptions & google.protobuf.MethodOptions.$Shape} MethodOptions
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21746,6 +21993,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.UninterpretedOption.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.UninterpretedOption} UninterpretedOption instance
+             * @type {{
+             *   (properties: google.protobuf.UninterpretedOption.$Shape): google.protobuf.UninterpretedOption & google.protobuf.UninterpretedOption.$Shape;
+             *   (properties?: google.protobuf.UninterpretedOption.$Properties): google.protobuf.UninterpretedOption;
+             * }}
              */
             UninterpretedOption.create = function create(properties) {
                 return new UninterpretedOption(properties);
@@ -21804,7 +22055,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.UninterpretedOption} UninterpretedOption
+             * @returns {google.protobuf.UninterpretedOption & google.protobuf.UninterpretedOption.$Shape} UninterpretedOption
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -21885,7 +22136,7 @@ $root.google = (function() {
              * @memberof google.protobuf.UninterpretedOption
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.UninterpretedOption} UninterpretedOption
+             * @returns {google.protobuf.UninterpretedOption & google.protobuf.UninterpretedOption.$Shape} UninterpretedOption
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -22148,6 +22399,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.UninterpretedOption.NamePart.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.UninterpretedOption.NamePart} NamePart instance
+                 * @type {{
+                 *   (properties: google.protobuf.UninterpretedOption.NamePart.$Shape): google.protobuf.UninterpretedOption.NamePart & google.protobuf.UninterpretedOption.NamePart.$Shape;
+                 *   (properties?: google.protobuf.UninterpretedOption.NamePart.$Properties): google.protobuf.UninterpretedOption.NamePart;
+                 * }}
                  */
                 NamePart.create = function create(properties) {
                     return new NamePart(properties);
@@ -22193,7 +22448,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.UninterpretedOption.NamePart} NamePart
+                 * @returns {google.protobuf.UninterpretedOption.NamePart & google.protobuf.UninterpretedOption.NamePart.$Shape} NamePart
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -22246,7 +22501,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.UninterpretedOption.NamePart
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.UninterpretedOption.NamePart} NamePart
+                 * @returns {google.protobuf.UninterpretedOption.NamePart & google.protobuf.UninterpretedOption.NamePart.$Shape} NamePart
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -22472,6 +22727,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FeatureSet.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FeatureSet} FeatureSet instance
+             * @type {{
+             *   (properties: google.protobuf.FeatureSet.$Shape): google.protobuf.FeatureSet & google.protobuf.FeatureSet.$Shape;
+             *   (properties?: google.protobuf.FeatureSet.$Properties): google.protobuf.FeatureSet;
+             * }}
              */
             FeatureSet.create = function create(properties) {
                 return new FeatureSet(properties);
@@ -22531,7 +22790,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FeatureSet} FeatureSet
+             * @returns {google.protobuf.FeatureSet & google.protobuf.FeatureSet.$Shape} FeatureSet
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -22616,7 +22875,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FeatureSet
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FeatureSet} FeatureSet
+             * @returns {google.protobuf.FeatureSet & google.protobuf.FeatureSet.$Shape} FeatureSet
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -23135,6 +23394,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FeatureSet.VisibilityFeature} VisibilityFeature instance
+                 * @type {{
+                 *   (properties: google.protobuf.FeatureSet.VisibilityFeature.$Shape): google.protobuf.FeatureSet.VisibilityFeature & google.protobuf.FeatureSet.VisibilityFeature.$Shape;
+                 *   (properties?: google.protobuf.FeatureSet.VisibilityFeature.$Properties): google.protobuf.FeatureSet.VisibilityFeature;
+                 * }}
                  */
                 VisibilityFeature.create = function create(properties) {
                     return new VisibilityFeature(properties);
@@ -23178,7 +23441,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.FeatureSet.VisibilityFeature} VisibilityFeature
+                 * @returns {google.protobuf.FeatureSet.VisibilityFeature & google.protobuf.FeatureSet.VisibilityFeature.$Shape} VisibilityFeature
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -23212,7 +23475,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.FeatureSet.VisibilityFeature
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.FeatureSet.VisibilityFeature} VisibilityFeature
+                 * @returns {google.protobuf.FeatureSet.VisibilityFeature & google.protobuf.FeatureSet.VisibilityFeature.$Shape} VisibilityFeature
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -23394,6 +23657,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.FeatureSetDefaults.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.FeatureSetDefaults} FeatureSetDefaults instance
+             * @type {{
+             *   (properties: google.protobuf.FeatureSetDefaults.$Shape): google.protobuf.FeatureSetDefaults & google.protobuf.FeatureSetDefaults.$Shape;
+             *   (properties?: google.protobuf.FeatureSetDefaults.$Properties): google.protobuf.FeatureSetDefaults;
+             * }}
              */
             FeatureSetDefaults.create = function create(properties) {
                 return new FeatureSetDefaults(properties);
@@ -23444,7 +23711,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.FeatureSetDefaults} FeatureSetDefaults
+             * @returns {google.protobuf.FeatureSetDefaults & google.protobuf.FeatureSetDefaults.$Shape} FeatureSetDefaults
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -23501,7 +23768,7 @@ $root.google = (function() {
              * @memberof google.protobuf.FeatureSetDefaults
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.FeatureSetDefaults} FeatureSetDefaults
+             * @returns {google.protobuf.FeatureSetDefaults & google.protobuf.FeatureSetDefaults.$Shape} FeatureSetDefaults
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -23842,6 +24109,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault} FeatureSetEditionDefault instance
+                 * @type {{
+                 *   (properties: google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Shape): google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault & google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Shape;
+                 *   (properties?: google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties): google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault;
+                 * }}
                  */
                 FeatureSetEditionDefault.create = function create(properties) {
                     return new FeatureSetEditionDefault(properties);
@@ -23891,7 +24162,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault} FeatureSetEditionDefault
+                 * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault & google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Shape} FeatureSetEditionDefault
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -23946,7 +24217,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault} FeatureSetEditionDefault
+                 * @returns {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault & google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Shape} FeatureSetEditionDefault
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -24199,6 +24470,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.SourceCodeInfo.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.SourceCodeInfo} SourceCodeInfo instance
+             * @type {{
+             *   (properties: google.protobuf.SourceCodeInfo.$Shape): google.protobuf.SourceCodeInfo & google.protobuf.SourceCodeInfo.$Shape;
+             *   (properties?: google.protobuf.SourceCodeInfo.$Properties): google.protobuf.SourceCodeInfo;
+             * }}
              */
             SourceCodeInfo.create = function create(properties) {
                 return new SourceCodeInfo(properties);
@@ -24245,7 +24520,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.SourceCodeInfo} SourceCodeInfo
+             * @returns {google.protobuf.SourceCodeInfo & google.protobuf.SourceCodeInfo.$Shape} SourceCodeInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -24290,7 +24565,7 @@ $root.google = (function() {
              * @memberof google.protobuf.SourceCodeInfo
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.SourceCodeInfo} SourceCodeInfo
+             * @returns {google.protobuf.SourceCodeInfo & google.protobuf.SourceCodeInfo.$Shape} SourceCodeInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -24496,6 +24771,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.SourceCodeInfo.Location.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.SourceCodeInfo.Location} Location instance
+                 * @type {{
+                 *   (properties: google.protobuf.SourceCodeInfo.Location.$Shape): google.protobuf.SourceCodeInfo.Location & google.protobuf.SourceCodeInfo.Location.$Shape;
+                 *   (properties?: google.protobuf.SourceCodeInfo.Location.$Properties): google.protobuf.SourceCodeInfo.Location;
+                 * }}
                  */
                 Location.create = function create(properties) {
                     return new Location(properties);
@@ -24558,7 +24837,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.SourceCodeInfo.Location} Location
+                 * @returns {google.protobuf.SourceCodeInfo.Location & google.protobuf.SourceCodeInfo.Location.$Shape} Location
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -24647,7 +24926,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.SourceCodeInfo.Location
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.SourceCodeInfo.Location} Location
+                 * @returns {google.protobuf.SourceCodeInfo.Location & google.protobuf.SourceCodeInfo.Location.$Shape} Location
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -24875,6 +25154,10 @@ $root.google = (function() {
              * @static
              * @param {google.protobuf.GeneratedCodeInfo.$Properties=} [properties] Properties to set
              * @returns {google.protobuf.GeneratedCodeInfo} GeneratedCodeInfo instance
+             * @type {{
+             *   (properties: google.protobuf.GeneratedCodeInfo.$Shape): google.protobuf.GeneratedCodeInfo & google.protobuf.GeneratedCodeInfo.$Shape;
+             *   (properties?: google.protobuf.GeneratedCodeInfo.$Properties): google.protobuf.GeneratedCodeInfo;
+             * }}
              */
             GeneratedCodeInfo.create = function create(properties) {
                 return new GeneratedCodeInfo(properties);
@@ -24921,7 +25204,7 @@ $root.google = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {google.protobuf.GeneratedCodeInfo} GeneratedCodeInfo
+             * @returns {google.protobuf.GeneratedCodeInfo & google.protobuf.GeneratedCodeInfo.$Shape} GeneratedCodeInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -24966,7 +25249,7 @@ $root.google = (function() {
              * @memberof google.protobuf.GeneratedCodeInfo
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {google.protobuf.GeneratedCodeInfo} GeneratedCodeInfo
+             * @returns {google.protobuf.GeneratedCodeInfo & google.protobuf.GeneratedCodeInfo.$Shape} GeneratedCodeInfo
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -25170,6 +25453,10 @@ $root.google = (function() {
                  * @static
                  * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties=} [properties] Properties to set
                  * @returns {google.protobuf.GeneratedCodeInfo.Annotation} Annotation instance
+                 * @type {{
+                 *   (properties: google.protobuf.GeneratedCodeInfo.Annotation.$Shape): google.protobuf.GeneratedCodeInfo.Annotation & google.protobuf.GeneratedCodeInfo.Annotation.$Shape;
+                 *   (properties?: google.protobuf.GeneratedCodeInfo.Annotation.$Properties): google.protobuf.GeneratedCodeInfo.Annotation;
+                 * }}
                  */
                 Annotation.create = function create(properties) {
                     return new Annotation(properties);
@@ -25227,7 +25514,7 @@ $root.google = (function() {
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
                  * @param {number} [length] Message length if known beforehand
-                 * @returns {google.protobuf.GeneratedCodeInfo.Annotation} Annotation
+                 * @returns {google.protobuf.GeneratedCodeInfo.Annotation & google.protobuf.GeneratedCodeInfo.Annotation.$Shape} Annotation
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */
@@ -25304,7 +25591,7 @@ $root.google = (function() {
                  * @memberof google.protobuf.GeneratedCodeInfo.Annotation
                  * @static
                  * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-                 * @returns {google.protobuf.GeneratedCodeInfo.Annotation} Annotation
+                 * @returns {google.protobuf.GeneratedCodeInfo.Annotation & google.protobuf.GeneratedCodeInfo.Annotation.$Shape} Annotation
                  * @throws {Error} If the payload is not a reader or valid buffer
                  * @throws {$protobuf.util.ProtocolError} If required fields are missing
                  */

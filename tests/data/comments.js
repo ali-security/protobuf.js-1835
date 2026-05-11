@@ -83,6 +83,10 @@ $root.Test1 = (function() {
      * @static
      * @param {Test1.$Properties=} [properties] Properties to set
      * @returns {Test1} Test1 instance
+     * @type {{
+     *   (properties: Test1.$Shape): Test1 & Test1.$Shape;
+     *   (properties?: Test1.$Properties): Test1;
+     * }}
      */
     Test1.create = function create(properties) {
         return new Test1(properties);
@@ -132,7 +136,7 @@ $root.Test1 = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {Test1} Test1
+     * @returns {Test1 & Test1.$Shape} Test1
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -196,7 +200,7 @@ $root.Test1 = (function() {
      * @memberof Test1
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {Test1} Test1
+     * @returns {Test1 & Test1.$Shape} Test1
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -360,6 +364,10 @@ $root.Test2 = (function() {
      * @static
      * @param {Test2.$Properties=} [properties] Properties to set
      * @returns {Test2} Test2 instance
+     * @type {{
+     *   (properties: Test2.$Shape): Test2 & Test2.$Shape;
+     *   (properties?: Test2.$Properties): Test2;
+     * }}
      */
     Test2.create = function create(properties) {
         return new Test2(properties);
@@ -403,7 +411,7 @@ $root.Test2 = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {Test2} Test2
+     * @returns {Test2 & Test2.$Shape} Test2
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -437,7 +445,7 @@ $root.Test2 = (function() {
      * @memberof Test2
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {Test2} Test2
+     * @returns {Test2 & Test2.$Shape} Test2
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */

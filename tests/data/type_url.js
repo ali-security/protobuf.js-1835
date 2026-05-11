@@ -62,6 +62,10 @@ $root.TypeUrlTest = (function() {
      * @static
      * @param {TypeUrlTest.$Properties=} [properties] Properties to set
      * @returns {TypeUrlTest} TypeUrlTest instance
+     * @type {{
+     *   (properties: TypeUrlTest.$Shape): TypeUrlTest & TypeUrlTest.$Shape;
+     *   (properties?: TypeUrlTest.$Properties): TypeUrlTest;
+     * }}
      */
     TypeUrlTest.create = function create(properties) {
         return new TypeUrlTest(properties);
@@ -107,7 +111,7 @@ $root.TypeUrlTest = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {TypeUrlTest} TypeUrlTest
+     * @returns {TypeUrlTest & TypeUrlTest.$Shape} TypeUrlTest
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -150,7 +154,7 @@ $root.TypeUrlTest = (function() {
      * @memberof TypeUrlTest
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {TypeUrlTest} TypeUrlTest
+     * @returns {TypeUrlTest & TypeUrlTest.$Shape} TypeUrlTest
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -305,6 +309,10 @@ $root.TypeUrlTest = (function() {
          * @static
          * @param {TypeUrlTest.Nested.$Properties=} [properties] Properties to set
          * @returns {TypeUrlTest.Nested} Nested instance
+         * @type {{
+         *   (properties: TypeUrlTest.Nested.$Shape): TypeUrlTest.Nested & TypeUrlTest.Nested.$Shape;
+         *   (properties?: TypeUrlTest.Nested.$Properties): TypeUrlTest.Nested;
+         * }}
          */
         Nested.create = function create(properties) {
             return new Nested(properties);
@@ -350,7 +358,7 @@ $root.TypeUrlTest = (function() {
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {TypeUrlTest.Nested} Nested
+         * @returns {TypeUrlTest.Nested & TypeUrlTest.Nested.$Shape} Nested
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
@@ -396,7 +404,7 @@ $root.TypeUrlTest = (function() {
          * @memberof TypeUrlTest.Nested
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {TypeUrlTest.Nested} Nested
+         * @returns {TypeUrlTest.Nested & TypeUrlTest.Nested.$Shape} Nested
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */

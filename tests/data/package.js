@@ -212,6 +212,10 @@ $root.Package = (function() {
      * @static
      * @param {Package.$Properties=} [properties] Properties to set
      * @returns {Package} Package instance
+     * @type {{
+     *   (properties: Package.$Shape): Package & Package.$Shape;
+     *   (properties?: Package.$Properties): Package;
+     * }}
      */
     Package.create = function create(properties) {
         return new Package(properties);
@@ -295,7 +299,7 @@ $root.Package = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {Package} Package
+     * @returns {Package & Package.$Shape} Package
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -564,7 +568,7 @@ $root.Package = (function() {
      * @memberof Package
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {Package} Package
+     * @returns {Package & Package.$Shape} Package
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -972,6 +976,10 @@ $root.Package = (function() {
          * @static
          * @param {Package.Repository.$Properties=} [properties] Properties to set
          * @returns {Package.Repository} Repository instance
+         * @type {{
+         *   (properties: Package.Repository.$Shape): Package.Repository & Package.Repository.$Shape;
+         *   (properties?: Package.Repository.$Properties): Package.Repository;
+         * }}
          */
         Repository.create = function create(properties) {
             return new Repository(properties);
@@ -1019,7 +1027,7 @@ $root.Package = (function() {
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {Package.Repository} Repository
+         * @returns {Package.Repository & Package.Repository.$Shape} Repository
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
@@ -1074,7 +1082,7 @@ $root.Package = (function() {
          * @memberof Package.Repository
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {Package.Repository} Repository
+         * @returns {Package.Repository & Package.Repository.$Shape} Repository
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */

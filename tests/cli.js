@@ -402,7 +402,7 @@ tape.test("pbjs --dts writes module declarations", function(test) {
             test.ok(fs.existsSync(staticDts), "writes static-module declarations");
             var staticTypes = fs.readFileSync(staticDts, "utf8");
             test.ok(staticTypes.indexOf("constructor(properties?: Package.$Properties);") >= 0, "keeps constructable static declarations");
-            test.ok(staticTypes.indexOf("type $Shape = Package.$Properties;") >= 0, "emits a shape type for messages without oneofs");
+            test.ok(staticTypes.indexOf("type $Shape = Package.$Properties;") >= 0, "aliases shape to properties when there is no narrowing");
 
             pbjs.main([
                 "--target", "json-module",
@@ -506,13 +506,14 @@ tape.test("pbjs --dts narrows oneof interfaces", function(test) {
             test.ok(staticTypes.indexOf("export interface IOneofContainer extends OneofContainer.$Properties") >= 0, "keeps a legacy properties interface");
             test.ok(staticTypes.indexOf("export class OneofContainer implements OneofContainer.$Properties") >= 0, "implements the scoped properties interface");
             test.ok(staticTypes.indexOf("constructor(properties?: OneofContainer.$Properties);") >= 0, "uses the scoped properties type for construction");
-            test.ok(staticTypes.indexOf("static create(properties: OneofContainer.$Shape): OneofContainer & OneofContainer.$Oneofs;") >= 0, "narrows create from oneof-safe input");
+            test.ok(staticTypes.indexOf("static create(properties: OneofContainer.$Shape): OneofContainer & OneofContainer.$Shape;") >= 0, "narrows create from oneof-safe input");
             test.ok(staticTypes.indexOf("static create(properties?: OneofContainer.$Properties): OneofContainer;") >= 0, "keeps broad create overload");
             test.ok(staticTypes.indexOf("static encode(message: OneofContainer.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;") >= 0, "uses the scoped properties type for encoding");
-            test.ok(staticTypes.indexOf("static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): OneofContainer & OneofContainer.$Oneofs;") >= 0, "narrows decoded oneof messages");
-            test.ok(staticTypes.indexOf("type $Oneofs = ({ someOneof?: undefined; stringInOneof?: null; messageInOneof?: null }|{ someOneof?: \"stringInOneof\"; stringInOneof: string; messageInOneof?: null }|{ someOneof?: \"messageInOneof\"; stringInOneof?: null; messageInOneof: Message.$Properties });") >= 0, "emits oneof refinement union");
-            test.ok(staticTypes.indexOf("type $Shape = OneofContainer.$Properties & OneofContainer.$Oneofs;") >= 0, "emits narrowed shape type");
-            test.ok(staticTypes.indexOf("type $Shape = Message.$Properties;") >= 0, "emits plain shape type for non-oneof message");
+            test.ok(staticTypes.indexOf("static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): OneofContainer & OneofContainer.$Shape;") >= 0, "narrows decoded oneof messages");
+            test.equal(staticTypes.indexOf("$Oneofs"), -1, "does not expose an intermediate oneof type");
+            test.ok(staticTypes.indexOf("type $Shape = {\n  stringInOneof?: string|null;\n  messageInOneof?: Message.$Shape|null;") >= 0, "emits multiline recursive shape fields");
+            test.ok(staticTypes.indexOf("{ someOneof?: \"messageInOneof\"; stringInOneof?: null; messageInOneof: Message.$Shape }") >= 0, "emits oneof refinement union");
+            test.ok(staticTypes.indexOf("type $Shape = Message.$Properties;") >= 0, "aliases plain shape type for non-oneof message");
 
             cleanup();
             test.end();
@@ -577,7 +578,7 @@ tape.test("pbjs --dts generated message typings compile", function(test) {
                 "",
                 "const byMessage = OneofContainer.create({ messageInOneof: { value: 1 } });",
                 "if (byMessage.someOneof === \"messageInOneof\")",
-                "    expectType<Message.$Properties>(byMessage.messageInOneof);",
+                "    expectType<Message.$Shape>(byMessage.messageInOneof);",
                 "",
                 "const broadProperties: OneofContainer.$Properties = {",
                 "    stringInOneof: \"abc\",",
@@ -593,7 +594,7 @@ tape.test("pbjs --dts generated message typings compile", function(test) {
                 "if (decoded.someOneof === \"stringInOneof\")",
                 "    expectType<string>(decoded.stringInOneof);",
                 "if (decoded.messageInOneof != null)",
-                "    expectType<Message.$Properties>(decoded.messageInOneof);",
+                "    expectType<Message.$Shape>(decoded.messageInOneof);",
                 "",
                 "OneofContainer.encode({",
                 "    regularField: \"regular\",",

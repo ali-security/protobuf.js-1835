@@ -16,11 +16,12 @@ export class Message implements Message.$Properties {
     enumVal: Message.SomeEnum;
     enumRepeated: Message.SomeEnum[];
     int64Map: { [k: string]: (number|Long) };
+    static create(properties: Message.$Shape): Message & Message.$Shape;
     static create(properties?: Message.$Properties): Message;
     static encode(message: Message.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
     static encodeDelimited(message: Message.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Message;
-    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Message;
+    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Message & Message.$Shape;
+    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Message & Message.$Shape;
     static verify(message: { [k: string]: any }): (string|null);
     static fromObject(object: { [k: string]: any }): Message;
     static toObject(message: Message, options?: $protobuf.IConversionOptions): { [k: string]: any };

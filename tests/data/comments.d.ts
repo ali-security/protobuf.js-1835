@@ -10,11 +10,12 @@ export class Test1 implements Test1.$Properties {
     field1: string;
     field2: number;
     field3: boolean;
+    static create(properties: Test1.$Shape): Test1 & Test1.$Shape;
     static create(properties?: Test1.$Properties): Test1;
     static encode(message: Test1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
     static encodeDelimited(message: Test1.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test1;
-    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test1;
+    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test1 & Test1.$Shape;
+    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test1 & Test1.$Shape;
     static verify(message: { [k: string]: any }): (string|null);
     static fromObject(object: { [k: string]: any }): Test1;
     static toObject(message: Test1, options?: $protobuf.IConversionOptions): { [k: string]: any };
@@ -38,11 +39,12 @@ export interface ITest2 extends Test2.$Properties {
 export class Test2 implements Test2.$Properties {
     constructor(properties?: Test2.$Properties);
     $unknowns?: Uint8Array[];
+    static create(properties: Test2.$Shape): Test2 & Test2.$Shape;
     static create(properties?: Test2.$Properties): Test2;
     static encode(message: Test2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
     static encodeDelimited(message: Test2.$Properties, writer?: $protobuf.Writer): $protobuf.Writer;
-    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test2;
-    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test2;
+    static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Test2 & Test2.$Shape;
+    static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Test2 & Test2.$Shape;
     static verify(message: { [k: string]: any }): (string|null);
     static fromObject(object: { [k: string]: any }): Test2;
     static toObject(message: Test2, options?: $protobuf.IConversionOptions): { [k: string]: any };

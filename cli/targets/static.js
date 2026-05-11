@@ -346,7 +346,7 @@ function buildFunction(type, functionName, gen, scope) {
         push("};");
 }
 
-function toJsType(field, parentIsInterface = false) {
+function toJsType(field, parentIsInterface = false, withNarrowing = false) {
     var type;
 
     // With null semantics, interfaces are composed from interfaces and messages from messages
@@ -383,9 +383,14 @@ function toJsType(field, parentIsInterface = false) {
             break;
         default:
             if (field.resolve().resolvedType) {
-                type = asInterface && field.resolvedType instanceof protobuf.Type
-                    ? propertiesName(field.resolvedType)
-                    : exportName(field.resolvedType, asInterface);
+                if (field.resolvedType instanceof protobuf.Type)
+                    type = withNarrowing
+                        ? shapeName(field.resolvedType)
+                        : asInterface
+                        ? propertiesName(field.resolvedType)
+                        : exportName(field.resolvedType, asInterface);
+                else
+                    type = exportName(field.resolvedType, asInterface);
             }
             else {
                 type = "*"; // should not happen
@@ -427,7 +432,7 @@ function toTypePropName(name, optional) {
     if (prop.charAt(0) === ".")
         prop = prop.substring(1);
     else
-        prop = JSON.parse(prop.substring(1));
+        prop = JSON.parse(prop.substring(1, prop.length - 1));
     if (!/^[$\w]+$/.test(prop) || util.patterns.reservedRe.test(prop))
         prop = JSON.stringify(prop);
     return prop + (optional ? "?" : "");
@@ -441,15 +446,19 @@ function propertiesName(type) {
     return exportName(type) + ".$Properties";
 }
 
+function shapeName(type) {
+    return exportName(type) + ".$Shape";
+}
+
 function narrowedType(type) {
-    return exportName(type) + " & " + exportName(type) + ".$Oneofs";
+    return exportName(type) + " & " + shapeName(type);
 }
 
 function oneofType(oneof, selectedField) {
     var props = [ toTypePropName(oneof.name, true) + ": " + (selectedField ? JSON.stringify(selectedField.name) : "undefined") ];
     oneof.oneof.forEach(function(fieldName) {
         var field = oneof.parent.fields[fieldName];
-        props.push(toTypePropName(field.name, field !== selectedField) + ": " + (field === selectedField ? toJsType(field, true) : "null"));
+        props.push(toTypePropName(field.name, field !== selectedField) + ": " + (field === selectedField ? toJsType(field, true, true) : "null"));
     });
     return "{ " + props.join("; ") + " }";
 }
@@ -467,8 +476,70 @@ function oneofTypes(type) {
     });
 }
 
+function hasNarrowing(type, seen) {
+    if (!seen)
+        seen = {};
+    if (seen[type.fullName])
+        return false;
+    seen[type.fullName] = true;
+    if (type.oneofsArray.some(function(oneof) { return !oneof.isProto3Optional; })) {
+        delete seen[type.fullName];
+        return true;
+    }
+    var narrowed = type.fieldsArray.some(function(field) {
+        field.resolve();
+        return field.resolvedType instanceof protobuf.Type && hasNarrowing(field.resolvedType, seen);
+    });
+    delete seen[type.fullName];
+    return narrowed;
+}
+
 function returnTags(typeName, description, tsType) {
     return [ "@returns {" + (tsType || typeName) + "} " + description ];
+}
+
+function propertyType(field, withNarrowing) {
+    var jsType = toJsType(field, /* parentIsInterface = */ true, withNarrowing);
+    var nullable = false;
+    if (config["null-semantics"]) {
+        // With semantic nulls, only explicit optional fields and one-of members can be set to null
+        // Implicit fields (proto3), maps and lists can be omitted, but if specified must be non-null
+        // Implicit fields will take their default value when the message is constructed
+        if (field.optional) {
+            if (isNullable(field)) {
+                jsType = jsType + "|null|undefined";
+                nullable = true;
+            }
+            else {
+                jsType = jsType + "|undefined";
+                nullable = true;
+            }
+        }
+    }
+    else {
+        // Without semantic nulls, everything is optional in proto3
+        // Do not allow |undefined to keep backwards compatibility
+        if (field.optional) {
+            jsType = jsType + "|null";
+            nullable = true;
+        }
+    }
+    return {
+        jsType: jsType,
+        nullable: nullable
+    };
+}
+
+function shapeType(type, oneofs) {
+    if (!hasNarrowing(type))
+        return propertiesName(type);
+    var props = [];
+    type.fieldsArray.forEach(function(field) {
+        var prop = propertyType(field, /* withNarrowing = */ true);
+        props.push("  " + toTypePropName(field.name, prop.nullable) + ": " + prop.jsType + ";");
+    });
+    props.push("  " + toTypePropName("$unknowns", true) + ": Array.<Uint8Array>;");
+    return "{\n" + props.join("\n") + "\n}" + (oneofs.length ? " & (\n  " + oneofs.join("\n) & (\n  ") + "\n)" : "");
 }
 
 function buildType(ref, type) {
@@ -480,32 +551,8 @@ function buildType(ref, type) {
             "@typedef {Object} " + propertiesName(type)
         ];
         type.fieldsArray.forEach(function(field) {
-            var jsType = toJsType(field, /* parentIsInterface = */ true);
-            var nullable = false;
-            if (config["null-semantics"]) {
-                // With semantic nulls, only explicit optional fields and one-of members can be set to null
-                // Implicit fields (proto3), maps and lists can be omitted, but if specified must be non-null
-                // Implicit fields will take their default value when the message is constructed
-                if (field.optional) {
-                    if (isNullable(field)) {
-                        jsType = jsType + "|null|undefined";
-                        nullable = true;
-                    }
-                    else {
-                        jsType = jsType + "|undefined";
-                        nullable = true;
-                    }
-                }
-            }
-            else {
-                // Without semantic nulls, everything is optional in proto3
-                // Do not allow |undefined to keep backwards compatibility
-                if (field.optional) {
-                    jsType = jsType + "|null";
-                    nullable = true;
-                }
-            }
-            typeDef.push("@property {" + jsType + "} " + toPropName(field, nullable) + " " + (field.comment || type.name + " " + field.name));
+            var prop = propertyType(field, /* withNarrowing = */ false);
+            typeDef.push("@property {" + prop.jsType + "} " + toPropName(field, prop.nullable) + " " + (field.comment || type.name + " " + field.name));
         });
         if (oneofs.length) {
             type.oneofsArray.forEach(function(oneof) {
@@ -525,24 +572,11 @@ function buildType(ref, type) {
             "@augments " + propertiesName(type),
             "@deprecated Use " + propertiesName(type) + " instead."
         ]);
-        if (oneofs.length) {
-            push("");
-            pushComment([
-                "Oneofs of " + aOrAn(type.name) + ".",
-                "@typedef {" + oneofs.join(" & ") + "} " + exportName(type) + ".$Oneofs"
-            ]);
-            push("");
-            pushComment([
-                "Narrowed shape of " + aOrAn(type.name) + ".",
-                "@typedef {" + propertiesName(type) + " & " + exportName(type) + ".$Oneofs} " + exportName(type) + ".$Shape"
-            ]);
-        } else {
-            push("");
-            pushComment([
-                "Shape of " + aOrAn(type.name) + ".",
-                "@typedef {" + propertiesName(type) + "} " + exportName(type) + ".$Shape"
-            ]);
-        }
+        push("");
+        pushComment([
+            (oneofs.length ? "Narrowed shape" : "Shape") + " of " + aOrAn(type.name) + ".",
+            "@typedef {" + shapeType(type, oneofs) + "} " + shapeName(type)
+        ]);
     }
 
     // constructor
@@ -650,12 +684,12 @@ function buildType(ref, type) {
             "@static",
             "@param {" + propertiesName(type) + "=} [properties] Properties to set",
             "@returns {" + exportName(type) + "} " + type.name + " instance"
-        ].concat(oneofs.length ? [
+        ].concat([
             "@type {{\n" +
-            "  (properties: " + exportName(type) + ".$Shape): " + narrowedType(type) + ";\n" +
+            "  (properties: " + shapeName(type) + "): " + narrowedType(type) + ";\n" +
             "  (properties?: " + propertiesName(type) + "): " + exportName(type) + ";\n" +
             "}}"
-        ] : []));
+        ]));
         push(escapeName(type.name) + ".create = function create(properties) {");
             ++indent;
             push("return new " + escapeName(type.name) + "(properties);");
@@ -704,7 +738,7 @@ function buildType(ref, type) {
             "@static",
             "@param {$protobuf.Reader|Uint8Array} " + (config.beautify ? "reader" : "r") + " Reader or buffer to decode from",
             "@param {number} [" + (config.beautify ? "length" : "l") + "] Message length if known beforehand"
-        ].concat(returnTags(exportName(type), type.name, oneofs.length ? narrowedType(type) : null)).concat([
+        ].concat(returnTags(exportName(type), type.name, narrowedType(type))).concat([
             "@throws {Error} If the payload is not a reader or valid buffer",
             "@throws {$protobuf.util.ProtocolError} If required fields are missing"
         ]));
@@ -718,7 +752,7 @@ function buildType(ref, type) {
                 "@memberof " + exportName(type),
                 "@static",
                 "@param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from"
-            ].concat(returnTags(exportName(type), type.name, oneofs.length ? narrowedType(type) : null)).concat([
+            ].concat(returnTags(exportName(type), type.name, narrowedType(type))).concat([
                 "@throws {Error} If the payload is not a reader or valid buffer",
                 "@throws {$protobuf.util.ProtocolError} If required fields are missing"
             ]));

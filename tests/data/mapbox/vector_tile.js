@@ -72,6 +72,10 @@ $root.vector_tile = (function() {
          * @static
          * @param {vector_tile.Tile.$Properties=} [properties] Properties to set
          * @returns {vector_tile.Tile} Tile instance
+         * @type {{
+         *   (properties: vector_tile.Tile.$Shape): vector_tile.Tile & vector_tile.Tile.$Shape;
+         *   (properties?: vector_tile.Tile.$Properties): vector_tile.Tile;
+         * }}
          */
         Tile.create = function create(properties) {
             return new Tile(properties);
@@ -118,7 +122,7 @@ $root.vector_tile = (function() {
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
          * @param {number} [length] Message length if known beforehand
-         * @returns {vector_tile.Tile} Tile
+         * @returns {vector_tile.Tile & vector_tile.Tile.$Shape} Tile
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
@@ -163,7 +167,7 @@ $root.vector_tile = (function() {
          * @memberof vector_tile.Tile
          * @static
          * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-         * @returns {vector_tile.Tile} Tile
+         * @returns {vector_tile.Tile & vector_tile.Tile.$Shape} Tile
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
@@ -402,6 +406,10 @@ $root.vector_tile = (function() {
              * @static
              * @param {vector_tile.Tile.Value.$Properties=} [properties] Properties to set
              * @returns {vector_tile.Tile.Value} Value instance
+             * @type {{
+             *   (properties: vector_tile.Tile.Value.$Shape): vector_tile.Tile.Value & vector_tile.Tile.Value.$Shape;
+             *   (properties?: vector_tile.Tile.Value.$Properties): vector_tile.Tile.Value;
+             * }}
              */
             Value.create = function create(properties) {
                 return new Value(properties);
@@ -459,7 +467,7 @@ $root.vector_tile = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {vector_tile.Tile.Value} Value
+             * @returns {vector_tile.Tile.Value & vector_tile.Tile.Value.$Shape} Value
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -538,7 +546,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Value
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {vector_tile.Tile.Value} Value
+             * @returns {vector_tile.Tile.Value & vector_tile.Tile.Value.$Shape} Value
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -811,6 +819,10 @@ $root.vector_tile = (function() {
              * @static
              * @param {vector_tile.Tile.Feature.$Properties=} [properties] Properties to set
              * @returns {vector_tile.Tile.Feature} Feature instance
+             * @type {{
+             *   (properties: vector_tile.Tile.Feature.$Shape): vector_tile.Tile.Feature & vector_tile.Tile.Feature.$Shape;
+             *   (properties?: vector_tile.Tile.Feature.$Properties): vector_tile.Tile.Feature;
+             * }}
              */
             Feature.create = function create(properties) {
                 return new Feature(properties);
@@ -870,7 +882,7 @@ $root.vector_tile = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {vector_tile.Tile.Feature} Feature
+             * @returns {vector_tile.Tile.Feature & vector_tile.Tile.Feature.$Shape} Feature
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -951,7 +963,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Feature
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {vector_tile.Tile.Feature} Feature
+             * @returns {vector_tile.Tile.Feature & vector_tile.Tile.Feature.$Shape} Feature
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1246,6 +1258,10 @@ $root.vector_tile = (function() {
              * @static
              * @param {vector_tile.Tile.Layer.$Properties=} [properties] Properties to set
              * @returns {vector_tile.Tile.Layer} Layer instance
+             * @type {{
+             *   (properties: vector_tile.Tile.Layer.$Shape): vector_tile.Tile.Layer & vector_tile.Tile.Layer.$Shape;
+             *   (properties?: vector_tile.Tile.Layer.$Properties): vector_tile.Tile.Layer;
+             * }}
              */
             Layer.create = function create(properties) {
                 return new Layer(properties);
@@ -1302,7 +1318,7 @@ $root.vector_tile = (function() {
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {vector_tile.Tile.Layer} Layer
+             * @returns {vector_tile.Tile.Layer & vector_tile.Tile.Layer.$Shape} Layer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
@@ -1385,7 +1401,7 @@ $root.vector_tile = (function() {
              * @memberof vector_tile.Tile.Layer
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {vector_tile.Tile.Layer} Layer
+             * @returns {vector_tile.Tile.Layer & vector_tile.Tile.Layer.$Shape} Layer
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */

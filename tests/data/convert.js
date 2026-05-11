@@ -139,6 +139,10 @@ $root.Message = (function() {
      * @static
      * @param {Message.$Properties=} [properties] Properties to set
      * @returns {Message} Message instance
+     * @type {{
+     *   (properties: Message.$Shape): Message & Message.$Shape;
+     *   (properties?: Message.$Properties): Message;
+     * }}
      */
     Message.create = function create(properties) {
         return new Message(properties);
@@ -211,7 +215,7 @@ $root.Message = (function() {
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
      * @param {number} [length] Message length if known beforehand
-     * @returns {Message} Message
+     * @returns {Message & Message.$Shape} Message
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
@@ -362,7 +366,7 @@ $root.Message = (function() {
      * @memberof Message
      * @static
      * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-     * @returns {Message} Message
+     * @returns {Message & Message.$Shape} Message
      * @throws {Error} If the payload is not a reader or valid buffer
      * @throws {$protobuf.util.ProtocolError} If required fields are missing
      */
