@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.5.8](https://github.com/protobufjs/protobuf.js/compare/protobufjs-v7.5.7...protobufjs-v7.5.8) (2026-05-12)
+
+
+### Bug Fixes
+
+* Backport parser hardening to 7.x ([#2245](https://github.com/protobufjs/protobuf.js/issues/2245)) ([54b593f](https://github.com/protobufjs/protobuf.js/commit/54b593ffd960f7fe4b0c448a12542c3de0a0cf26))
+
 ## [7.5.7](https://github.com/protobufjs/protobuf.js/compare/protobufjs-v7.5.6...protobufjs-v7.5.7) (2026-05-09)
 
 
