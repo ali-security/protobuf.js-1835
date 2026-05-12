@@ -4,7 +4,7 @@ import Long = require("long");
 export interface IPackage extends Package.$Properties {
 }
 
-export class Package implements Package.$Properties {
+export class Package {
     constructor(properties?: Package.$Properties);
     $unknowns?: Uint8Array[];
     name: string;
@@ -63,7 +63,7 @@ export namespace Package {
     interface IRepository extends Package.Repository.$Properties {
     }
 
-    class Repository implements Package.Repository.$Properties {
+    class Repository {
         constructor(properties?: Package.Repository.$Properties);
         $unknowns?: Uint8Array[];
         type: string;

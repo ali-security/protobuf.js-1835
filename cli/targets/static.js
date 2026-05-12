@@ -580,7 +580,6 @@ function buildType(ref, type) {
         "Constructs a new " + type.name + ".",
         type.parent instanceof protobuf.Root ? "@exports " + escapeName(type.name) : "@memberof " + exportName(type.parent),
         "@classdesc " + (type.comment || "Represents " + aOrAn(type.name) + "."),
-        config.comments ? "@implements " + propertiesName(type) : null,
         "@constructor",
         "@param {" + propertiesName(type) + "=} [" + (config.beautify ? "properties" : "p") + "] Properties to set"
     ];

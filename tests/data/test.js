@@ -52,7 +52,6 @@ $root.jspb = (function() {
              * Constructs a new Empty.
              * @memberof jspb.test
              * @classdesc Represents an Empty.
-             * @implements jspb.test.Empty.$Properties
              * @constructor
              * @param {jspb.test.Empty.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -279,7 +278,6 @@ $root.jspb = (function() {
              * Constructs a new EnumContainer.
              * @memberof jspb.test
              * @classdesc Represents an EnumContainer.
-             * @implements jspb.test.EnumContainer.$Properties
              * @constructor
              * @param {jspb.test.EnumContainer.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -545,7 +543,6 @@ $root.jspb = (function() {
              * Constructs a new Simple1.
              * @memberof jspb.test
              * @classdesc Represents a Simple1.
-             * @implements jspb.test.Simple1.$Properties
              * @constructor
              * @param {jspb.test.Simple1.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -857,7 +854,6 @@ $root.jspb = (function() {
              * Constructs a new Simple2.
              * @memberof jspb.test
              * @classdesc Represents a Simple2.
-             * @implements jspb.test.Simple2.$Properties
              * @constructor
              * @param {jspb.test.Simple2.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -1146,7 +1142,6 @@ $root.jspb = (function() {
              * Constructs a new SpecialCases.
              * @memberof jspb.test
              * @classdesc Represents a SpecialCases.
-             * @implements jspb.test.SpecialCases.$Properties
              * @constructor
              * @param {jspb.test.SpecialCases.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -1468,7 +1463,6 @@ $root.jspb = (function() {
              * Constructs a new OptionalFields.
              * @memberof jspb.test
              * @classdesc Represents an OptionalFields.
-             * @implements jspb.test.OptionalFields.$Properties
              * @constructor
              * @param {jspb.test.OptionalFields.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -1851,7 +1845,6 @@ $root.jspb = (function() {
                  * Constructs a new Nested.
                  * @memberof jspb.test.OptionalFields
                  * @classdesc Represents a Nested.
-                 * @implements jspb.test.OptionalFields.Nested.$Properties
                  * @constructor
                  * @param {jspb.test.OptionalFields.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -2107,7 +2100,6 @@ $root.jspb = (function() {
              * Constructs a new HasExtensions.
              * @memberof jspb.test
              * @classdesc Represents a HasExtensions.
-             * @implements jspb.test.HasExtensions.$Properties
              * @constructor
              * @param {jspb.test.HasExtensions.$Properties=} [properties] Properties to set
              * @property {jspb.test.IsExtension.$Properties|null} [".jspb.test.IsExtension.extField"] HasExtensions .jspb.test.IsExtension.extField
@@ -2568,7 +2560,6 @@ $root.jspb = (function() {
              * Constructs a new Complex.
              * @memberof jspb.test
              * @classdesc Represents a Complex.
-             * @implements jspb.test.Complex.$Properties
              * @constructor
              * @param {jspb.test.Complex.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -2951,7 +2942,6 @@ $root.jspb = (function() {
                  * Constructs a new Nested.
                  * @memberof jspb.test.Complex
                  * @classdesc Represents a Nested.
-                 * @implements jspb.test.Complex.Nested.$Properties
                  * @constructor
                  * @param {jspb.test.Complex.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -3198,7 +3188,6 @@ $root.jspb = (function() {
              * Constructs a new OuterMessage.
              * @memberof jspb.test
              * @classdesc Represents an OuterMessage.
-             * @implements jspb.test.OuterMessage.$Properties
              * @constructor
              * @param {jspb.test.OuterMessage.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -3408,7 +3397,6 @@ $root.jspb = (function() {
                  * Constructs a new Complex.
                  * @memberof jspb.test.OuterMessage
                  * @classdesc Represents a Complex.
-                 * @implements jspb.test.OuterMessage.Complex.$Properties
                  * @constructor
                  * @param {jspb.test.OuterMessage.Complex.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -3656,7 +3644,6 @@ $root.jspb = (function() {
              * Constructs a new IsExtension.
              * @memberof jspb.test
              * @classdesc Represents an IsExtension.
-             * @implements jspb.test.IsExtension.$Properties
              * @constructor
              * @param {jspb.test.IsExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -3900,7 +3887,6 @@ $root.jspb = (function() {
              * Constructs a new IndirectExtension.
              * @memberof jspb.test
              * @classdesc Represents an IndirectExtension.
-             * @implements jspb.test.IndirectExtension.$Properties
              * @constructor
              * @param {jspb.test.IndirectExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -4118,7 +4104,6 @@ $root.jspb = (function() {
              * Constructs a new DefaultValues.
              * @memberof jspb.test
              * @classdesc Represents a DefaultValues.
-             * @implements jspb.test.DefaultValues.$Properties
              * @constructor
              * @param {jspb.test.DefaultValues.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -4551,7 +4536,6 @@ $root.jspb = (function() {
              * Constructs a new FloatingPointFields.
              * @memberof jspb.test
              * @classdesc Represents a FloatingPointFields.
-             * @implements jspb.test.FloatingPointFields.$Properties
              * @constructor
              * @param {jspb.test.FloatingPointFields.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -5020,7 +5004,6 @@ $root.jspb = (function() {
              * Constructs a new TestClone.
              * @memberof jspb.test
              * @classdesc Represents a TestClone.
-             * @implements jspb.test.TestClone.$Properties
              * @constructor
              * @param {jspb.test.TestClone.$Properties=} [properties] Properties to set
              * @property {jspb.test.CloneExtension.$Properties|null} [".jspb.test.CloneExtension.extField"] TestClone .jspb.test.CloneExtension.extField
@@ -5422,7 +5405,6 @@ $root.jspb = (function() {
              * Constructs a new CloneExtension.
              * @memberof jspb.test
              * @classdesc Represents a CloneExtension.
-             * @implements jspb.test.CloneExtension.$Properties
              * @constructor
              * @param {jspb.test.CloneExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -5674,7 +5656,6 @@ $root.jspb = (function() {
              * Constructs a new TestGroup.
              * @memberof jspb.test
              * @classdesc Represents a TestGroup.
-             * @implements jspb.test.TestGroup.$Properties
              * @constructor
              * @param {jspb.test.TestGroup.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -6140,7 +6121,6 @@ $root.jspb = (function() {
                  * Constructs a new RepeatedGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a RepeatedGroup.
-                 * @implements jspb.test.TestGroup.RepeatedGroup.$Properties
                  * @constructor
                  * @param {jspb.test.TestGroup.RepeatedGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -6434,7 +6414,6 @@ $root.jspb = (function() {
                  * Constructs a new RequiredGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a RequiredGroup.
-                 * @implements jspb.test.TestGroup.RequiredGroup.$Properties
                  * @constructor
                  * @param {jspb.test.TestGroup.RequiredGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -6679,7 +6658,6 @@ $root.jspb = (function() {
                  * Constructs a new OptionalGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents an OptionalGroup.
-                 * @implements jspb.test.TestGroup.OptionalGroup.$Properties
                  * @constructor
                  * @param {jspb.test.TestGroup.OptionalGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -6924,7 +6902,6 @@ $root.jspb = (function() {
                  * Constructs a new MessageInGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents a MessageInGroup.
-                 * @implements jspb.test.TestGroup.MessageInGroup.$Properties
                  * @constructor
                  * @param {jspb.test.TestGroup.MessageInGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -7172,7 +7149,6 @@ $root.jspb = (function() {
                      * Constructs a new NestedMessage.
                      * @memberof jspb.test.TestGroup.MessageInGroup
                      * @classdesc Represents a NestedMessage.
-                     * @implements jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties
                      * @constructor
                      * @param {jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties=} [properties] Properties to set
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -7420,7 +7396,6 @@ $root.jspb = (function() {
                  * Constructs a new EnumInGroup.
                  * @memberof jspb.test.TestGroup
                  * @classdesc Represents an EnumInGroup.
-                 * @implements jspb.test.TestGroup.EnumInGroup.$Properties
                  * @constructor
                  * @param {jspb.test.TestGroup.EnumInGroup.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -7701,7 +7676,6 @@ $root.jspb = (function() {
              * Constructs a new TestGroup1.
              * @memberof jspb.test
              * @classdesc Represents a TestGroup1.
-             * @implements jspb.test.TestGroup1.$Properties
              * @constructor
              * @param {jspb.test.TestGroup1.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -7952,7 +7926,6 @@ $root.jspb = (function() {
              * Constructs a new TestReservedNames.
              * @memberof jspb.test
              * @classdesc Represents a TestReservedNames.
-             * @implements jspb.test.TestReservedNames.$Properties
              * @constructor
              * @param {jspb.test.TestReservedNames.$Properties=} [properties] Properties to set
              * @property {number} ".jspb.test.TestReservedNamesExtension.foo" TestReservedNames .jspb.test.TestReservedNamesExtension.foo
@@ -8216,7 +8189,6 @@ $root.jspb = (function() {
              * Constructs a new TestReservedNamesExtension.
              * @memberof jspb.test
              * @classdesc Represents a TestReservedNamesExtension.
-             * @implements jspb.test.TestReservedNamesExtension.$Properties
              * @constructor
              * @param {jspb.test.TestReservedNamesExtension.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -8462,7 +8434,6 @@ $root.jspb = (function() {
              * Constructs a new TestMessageWithOneof.
              * @memberof jspb.test
              * @classdesc Represents a TestMessageWithOneof.
-             * @implements jspb.test.TestMessageWithOneof.$Properties
              * @constructor
              * @param {jspb.test.TestMessageWithOneof.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -9043,7 +9014,6 @@ $root.jspb = (function() {
              * Constructs a new TestEndsWithBytes.
              * @memberof jspb.test
              * @classdesc Represents a TestEndsWithBytes.
-             * @implements jspb.test.TestEndsWithBytes.$Properties
              * @constructor
              * @param {jspb.test.TestEndsWithBytes.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -9333,7 +9303,6 @@ $root.jspb = (function() {
              * Constructs a new TestMapFieldsNoBinary.
              * @memberof jspb.test
              * @classdesc Represents a TestMapFieldsNoBinary.
-             * @implements jspb.test.TestMapFieldsNoBinary.$Properties
              * @constructor
              * @param {jspb.test.TestMapFieldsNoBinary.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -10412,7 +10381,6 @@ $root.jspb = (function() {
              * Constructs a new MapValueMessageNoBinary.
              * @memberof jspb.test
              * @classdesc Represents a MapValueMessageNoBinary.
-             * @implements jspb.test.MapValueMessageNoBinary.$Properties
              * @constructor
              * @param {jspb.test.MapValueMessageNoBinary.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -10656,7 +10624,6 @@ $root.jspb = (function() {
              * Constructs a new Deeply.
              * @memberof jspb.test
              * @classdesc Represents a Deeply.
-             * @implements jspb.test.Deeply.$Properties
              * @constructor
              * @param {jspb.test.Deeply.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -10865,7 +10832,6 @@ $root.jspb = (function() {
                  * Constructs a new Nested.
                  * @memberof jspb.test.Deeply
                  * @classdesc Represents a Nested.
-                 * @implements jspb.test.Deeply.Nested.$Properties
                  * @constructor
                  * @param {jspb.test.Deeply.Nested.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -11075,7 +11041,6 @@ $root.jspb = (function() {
                      * Constructs a new Message.
                      * @memberof jspb.test.Deeply.Nested
                      * @classdesc Represents a Message.
-                     * @implements jspb.test.Deeply.Nested.Message.$Properties
                      * @constructor
                      * @param {jspb.test.Deeply.Nested.Message.$Properties=} [properties] Properties to set
                      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -11350,7 +11315,6 @@ $root.google = (function() {
              * Constructs a new FileDescriptorSet.
              * @memberof google.protobuf
              * @classdesc Represents a FileDescriptorSet.
-             * @implements google.protobuf.FileDescriptorSet.$Properties
              * @constructor
              * @param {google.protobuf.FileDescriptorSet.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -11663,7 +11627,6 @@ $root.google = (function() {
              * Constructs a new FileDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a FileDescriptorProto.
-             * @implements google.protobuf.FileDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.FileDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -12476,7 +12439,6 @@ $root.google = (function() {
              * Constructs a new DescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a DescriptorProto.
-             * @implements google.protobuf.DescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.DescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -13155,7 +13117,6 @@ $root.google = (function() {
                  * Constructs a new ExtensionRange.
                  * @memberof google.protobuf.DescriptorProto
                  * @classdesc Represents an ExtensionRange.
-                 * @implements google.protobuf.DescriptorProto.ExtensionRange.$Properties
                  * @constructor
                  * @param {google.protobuf.DescriptorProto.ExtensionRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -13455,7 +13416,6 @@ $root.google = (function() {
                  * Constructs a new ReservedRange.
                  * @memberof google.protobuf.DescriptorProto
                  * @classdesc Represents a ReservedRange.
-                 * @implements google.protobuf.DescriptorProto.ReservedRange.$Properties
                  * @constructor
                  * @param {google.protobuf.DescriptorProto.ReservedRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -13731,7 +13691,6 @@ $root.google = (function() {
              * Constructs a new ExtensionRangeOptions.
              * @memberof google.protobuf
              * @classdesc Represents an ExtensionRangeOptions.
-             * @implements google.protobuf.ExtensionRangeOptions.$Properties
              * @constructor
              * @param {google.protobuf.ExtensionRangeOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -14118,7 +14077,6 @@ $root.google = (function() {
                  * Constructs a new Declaration.
                  * @memberof google.protobuf.ExtensionRangeOptions
                  * @classdesc Represents a Declaration.
-                 * @implements google.protobuf.ExtensionRangeOptions.Declaration.$Properties
                  * @constructor
                  * @param {google.protobuf.ExtensionRangeOptions.Declaration.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -14487,7 +14445,6 @@ $root.google = (function() {
              * Constructs a new FieldDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a FieldDescriptorProto.
-             * @implements google.protobuf.FieldDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.FieldDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -15164,7 +15121,6 @@ $root.google = (function() {
              * Constructs a new OneofDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a OneofDescriptorProto.
-             * @implements google.protobuf.OneofDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.OneofDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -15444,7 +15400,6 @@ $root.google = (function() {
              * Constructs a new EnumDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents an EnumDescriptorProto.
-             * @implements google.protobuf.EnumDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.EnumDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -15897,7 +15852,6 @@ $root.google = (function() {
                  * Constructs a new EnumReservedRange.
                  * @memberof google.protobuf.EnumDescriptorProto
                  * @classdesc Represents an EnumReservedRange.
-                 * @implements google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties
                  * @constructor
                  * @param {google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -16172,7 +16126,6 @@ $root.google = (function() {
              * Constructs a new EnumValueDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents an EnumValueDescriptorProto.
-             * @implements google.protobuf.EnumValueDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.EnumValueDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -16473,7 +16426,6 @@ $root.google = (function() {
              * Constructs a new ServiceDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a ServiceDescriptorProto.
-             * @implements google.protobuf.ServiceDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.ServiceDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -16799,7 +16751,6 @@ $root.google = (function() {
              * Constructs a new MethodDescriptorProto.
              * @memberof google.protobuf
              * @classdesc Represents a MethodDescriptorProto.
-             * @implements google.protobuf.MethodDescriptorProto.$Properties
              * @constructor
              * @param {google.protobuf.MethodDescriptorProto.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -17190,7 +17141,6 @@ $root.google = (function() {
              * Constructs a new FileOptions.
              * @memberof google.protobuf
              * @classdesc Represents a FileOptions.
-             * @implements google.protobuf.FileOptions.$Properties
              * @constructor
              * @param {google.protobuf.FileOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -17989,7 +17939,6 @@ $root.google = (function() {
              * Constructs a new MessageOptions.
              * @memberof google.protobuf
              * @classdesc Represents a MessageOptions.
-             * @implements google.protobuf.MessageOptions.$Properties
              * @constructor
              * @param {google.protobuf.MessageOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -18419,7 +18368,6 @@ $root.google = (function() {
              * Constructs a new FieldOptions.
              * @memberof google.protobuf
              * @classdesc Represents a FieldOptions.
-             * @implements google.protobuf.FieldOptions.$Properties
              * @constructor
              * @param {google.protobuf.FieldOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -19262,7 +19210,6 @@ $root.google = (function() {
                  * Constructs a new EditionDefault.
                  * @memberof google.protobuf.FieldOptions
                  * @classdesc Represents an EditionDefault.
-                 * @implements google.protobuf.FieldOptions.EditionDefault.$Properties
                  * @constructor
                  * @param {google.protobuf.FieldOptions.EditionDefault.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -19604,7 +19551,6 @@ $root.google = (function() {
                  * Constructs a new FeatureSupport.
                  * @memberof google.protobuf.FieldOptions
                  * @classdesc Represents a FeatureSupport.
-                 * @implements google.protobuf.FieldOptions.FeatureSupport.$Properties
                  * @constructor
                  * @param {google.protobuf.FieldOptions.FeatureSupport.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -20133,7 +20079,6 @@ $root.google = (function() {
              * Constructs a new OneofOptions.
              * @memberof google.protobuf
              * @classdesc Represents a OneofOptions.
-             * @implements google.protobuf.OneofOptions.$Properties
              * @constructor
              * @param {google.protobuf.OneofOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -20434,7 +20379,6 @@ $root.google = (function() {
              * Constructs a new EnumOptions.
              * @memberof google.protobuf
              * @classdesc Represents an EnumOptions.
-             * @implements google.protobuf.EnumOptions.$Properties
              * @constructor
              * @param {google.protobuf.EnumOptions.$Properties=} [properties] Properties to set
              * @property {string} ".jspb.test.IsExtension.simpleOption" EnumOptions .jspb.test.IsExtension.simpleOption
@@ -20826,7 +20770,6 @@ $root.google = (function() {
              * Constructs a new EnumValueOptions.
              * @memberof google.protobuf
              * @classdesc Represents an EnumValueOptions.
-             * @implements google.protobuf.EnumValueOptions.$Properties
              * @constructor
              * @param {google.protobuf.EnumValueOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -21202,7 +21145,6 @@ $root.google = (function() {
              * Constructs a new ServiceOptions.
              * @memberof google.protobuf
              * @classdesc Represents a ServiceOptions.
-             * @implements google.protobuf.ServiceOptions.$Properties
              * @constructor
              * @param {google.protobuf.ServiceOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -21526,7 +21468,6 @@ $root.google = (function() {
              * Constructs a new MethodOptions.
              * @memberof google.protobuf
              * @classdesc Represents a MethodOptions.
-             * @implements google.protobuf.MethodOptions.$Properties
              * @constructor
              * @param {google.protobuf.MethodOptions.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -21917,7 +21858,6 @@ $root.google = (function() {
              * Constructs a new UninterpretedOption.
              * @memberof google.protobuf
              * @classdesc Represents an UninterpretedOption.
-             * @implements google.protobuf.UninterpretedOption.$Properties
              * @constructor
              * @param {google.protobuf.UninterpretedOption.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -22364,7 +22304,6 @@ $root.google = (function() {
                  * Constructs a new NamePart.
                  * @memberof google.protobuf.UninterpretedOption
                  * @classdesc Represents a NamePart.
-                 * @implements google.protobuf.UninterpretedOption.NamePart.$Properties
                  * @constructor
                  * @param {google.protobuf.UninterpretedOption.NamePart.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -22644,7 +22583,6 @@ $root.google = (function() {
              * Constructs a new FeatureSet.
              * @memberof google.protobuf
              * @classdesc Represents a FeatureSet.
-             * @implements google.protobuf.FeatureSet.$Properties
              * @constructor
              * @param {google.protobuf.FeatureSet.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -23375,7 +23313,6 @@ $root.google = (function() {
                  * Constructs a new VisibilityFeature.
                  * @memberof google.protobuf.FeatureSet
                  * @classdesc Represents a VisibilityFeature.
-                 * @implements google.protobuf.FeatureSet.VisibilityFeature.$Properties
                  * @constructor
                  * @param {google.protobuf.FeatureSet.VisibilityFeature.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -23613,7 +23550,6 @@ $root.google = (function() {
              * Constructs a new FeatureSetDefaults.
              * @memberof google.protobuf
              * @classdesc Represents a FeatureSetDefaults.
-             * @implements google.protobuf.FeatureSetDefaults.$Properties
              * @constructor
              * @param {google.protobuf.FeatureSetDefaults.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -24066,7 +24002,6 @@ $root.google = (function() {
                  * Constructs a new FeatureSetEditionDefault.
                  * @memberof google.protobuf.FeatureSetDefaults
                  * @classdesc Represents a FeatureSetEditionDefault.
-                 * @implements google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties
                  * @constructor
                  * @param {google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -24442,7 +24377,6 @@ $root.google = (function() {
              * Constructs a new SourceCodeInfo.
              * @memberof google.protobuf
              * @classdesc Represents a SourceCodeInfo.
-             * @implements google.protobuf.SourceCodeInfo.$Properties
              * @constructor
              * @param {google.protobuf.SourceCodeInfo.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -24709,7 +24643,6 @@ $root.google = (function() {
                  * Constructs a new Location.
                  * @memberof google.protobuf.SourceCodeInfo
                  * @classdesc Represents a Location.
-                 * @implements google.protobuf.SourceCodeInfo.Location.$Properties
                  * @constructor
                  * @param {google.protobuf.SourceCodeInfo.Location.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -25126,7 +25059,6 @@ $root.google = (function() {
              * Constructs a new GeneratedCodeInfo.
              * @memberof google.protobuf
              * @classdesc Represents a GeneratedCodeInfo.
-             * @implements google.protobuf.GeneratedCodeInfo.$Properties
              * @constructor
              * @param {google.protobuf.GeneratedCodeInfo.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -25393,7 +25325,6 @@ $root.google = (function() {
                  * Constructs a new Annotation.
                  * @memberof google.protobuf.GeneratedCodeInfo
                  * @classdesc Represents an Annotation.
-                 * @implements google.protobuf.GeneratedCodeInfo.Annotation.$Properties
                  * @constructor
                  * @param {google.protobuf.GeneratedCodeInfo.Annotation.$Properties=} [properties] Properties to set
                  * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

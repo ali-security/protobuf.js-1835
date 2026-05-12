@@ -43,7 +43,6 @@ $root.Message = (function() {
      * Constructs a new Message.
      * @exports Message
      * @classdesc Represents a Message.
-     * @implements Message.$Properties
      * @constructor
      * @param {Message.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

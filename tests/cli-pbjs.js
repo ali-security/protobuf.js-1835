@@ -476,7 +476,8 @@ tape.test("pbjs --dts narrows oneof interfaces", function(test) {
             test.ok(staticCode.indexOf("@type {{") >= 0, "documents create overloads with TypeScript JSDoc");
             test.equal(staticCode.indexOf("@tstype"), -1, "uses standard JSDoc return types");
             test.ok(staticTypes.indexOf("export interface IOneofContainer extends OneofContainer.$Properties") >= 0, "keeps a legacy properties interface");
-            test.ok(staticTypes.indexOf("export class OneofContainer implements OneofContainer.$Properties") >= 0, "implements the scoped properties interface");
+            test.ok(staticTypes.indexOf("export class OneofContainer {") >= 0, "does not implement the scoped properties interface");
+            test.equal(staticTypes.indexOf("implements OneofContainer.$Properties"), -1, "omits explicit scoped properties implementation");
             test.ok(staticTypes.indexOf("constructor(properties?: OneofContainer.$Properties);") >= 0, "uses the scoped properties type for construction");
             test.ok(staticTypes.indexOf("static create(properties: OneofContainer.$Shape): OneofContainer & OneofContainer.$Shape;") >= 0, "narrows create from oneof-safe input");
             test.ok(staticTypes.indexOf("static create(properties?: OneofContainer.$Properties): OneofContainer;") >= 0, "keeps broad create overload");

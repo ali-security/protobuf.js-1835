@@ -40,7 +40,6 @@ $root.Test1 = (function() {
      * with
      * a
      * comment.
-     * @implements Test1.$Properties
      * @constructor
      * @param {Test1.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -345,7 +344,6 @@ $root.Test2 = (function() {
      * Constructs a new Test2.
      * @exports Test2
      * @classdesc Represents a Test2.
-     * @implements Test2.$Properties
      * @constructor
      * @param {Test2.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

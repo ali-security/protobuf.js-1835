@@ -44,7 +44,6 @@ $root.vector_tile = (function() {
          * Constructs a new Tile.
          * @memberof vector_tile
          * @classdesc Represents a Tile.
-         * @implements vector_tile.Tile.$Properties
          * @constructor
          * @param {vector_tile.Tile.$Properties=} [properties] Properties to set
          * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -331,7 +330,6 @@ $root.vector_tile = (function() {
              * Constructs a new Value.
              * @memberof vector_tile.Tile
              * @classdesc Represents a Value.
-             * @implements vector_tile.Tile.Value.$Properties
              * @constructor
              * @param {vector_tile.Tile.Value.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -766,7 +764,6 @@ $root.vector_tile = (function() {
              * Constructs a new Feature.
              * @memberof vector_tile.Tile
              * @classdesc Represents a Feature.
-             * @implements vector_tile.Tile.Feature.$Properties
              * @constructor
              * @param {vector_tile.Tile.Feature.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -1188,7 +1185,6 @@ $root.vector_tile = (function() {
              * Constructs a new Layer.
              * @memberof vector_tile.Tile
              * @classdesc Represents a Layer.
-             * @implements vector_tile.Tile.Layer.$Properties
              * @constructor
              * @param {vector_tile.Tile.Layer.$Properties=} [properties] Properties to set
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

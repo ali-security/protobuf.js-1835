@@ -8,7 +8,7 @@ export namespace jspb {
         interface IEmpty extends jspb.test.Empty.$Properties {
         }
 
-        class Empty implements jspb.test.Empty.$Properties {
+        class Empty {
             constructor(properties?: jspb.test.Empty.$Properties);
             $unknowns?: Uint8Array[];
             static create(properties: jspb.test.Empty.$Shape): jspb.test.Empty & jspb.test.Empty.$Shape;
@@ -39,7 +39,7 @@ export namespace jspb {
         interface IEnumContainer extends jspb.test.EnumContainer.$Properties {
         }
 
-        class EnumContainer implements jspb.test.EnumContainer.$Properties {
+        class EnumContainer {
             constructor(properties?: jspb.test.EnumContainer.$Properties);
             $unknowns?: Uint8Array[];
             outerEnum: jspb.test.OuterEnum;
@@ -67,7 +67,7 @@ export namespace jspb {
         interface ISimple1 extends jspb.test.Simple1.$Properties {
         }
 
-        class Simple1 implements jspb.test.Simple1.$Properties {
+        class Simple1 {
             constructor(properties?: jspb.test.Simple1.$Properties);
             $unknowns?: Uint8Array[];
             aString: string;
@@ -99,7 +99,7 @@ export namespace jspb {
         interface ISimple2 extends jspb.test.Simple2.$Properties {
         }
 
-        class Simple2 implements jspb.test.Simple2.$Properties {
+        class Simple2 {
             constructor(properties?: jspb.test.Simple2.$Properties);
             $unknowns?: Uint8Array[];
             aString: string;
@@ -129,7 +129,7 @@ export namespace jspb {
         interface ISpecialCases extends jspb.test.SpecialCases.$Properties {
         }
 
-        class SpecialCases implements jspb.test.SpecialCases.$Properties {
+        class SpecialCases {
             constructor(properties?: jspb.test.SpecialCases.$Properties);
             $unknowns?: Uint8Array[];
             normal: string;
@@ -163,7 +163,7 @@ export namespace jspb {
         interface IOptionalFields extends jspb.test.OptionalFields.$Properties {
         }
 
-        class OptionalFields implements jspb.test.OptionalFields.$Properties {
+        class OptionalFields {
             constructor(properties?: jspb.test.OptionalFields.$Properties);
             $unknowns?: Uint8Array[];
             aString: string;
@@ -198,7 +198,7 @@ export namespace jspb {
             interface INested extends jspb.test.OptionalFields.Nested.$Properties {
             }
 
-            class Nested implements jspb.test.OptionalFields.Nested.$Properties {
+            class Nested {
                 constructor(properties?: jspb.test.OptionalFields.Nested.$Properties);
                 $unknowns?: Uint8Array[];
                 anInt: number;
@@ -227,7 +227,7 @@ export namespace jspb {
         interface IHasExtensions extends jspb.test.HasExtensions.$Properties {
         }
 
-        class HasExtensions implements jspb.test.HasExtensions.$Properties {
+        class HasExtensions {
             constructor(properties?: jspb.test.HasExtensions.$Properties);
             ".jspb.test.IsExtension.extField"?: (jspb.test.IsExtension.$Properties|null);
             ".jspb.test.IndirectExtension.simple"?: (jspb.test.Simple1.$Properties|null);
@@ -271,7 +271,7 @@ export namespace jspb {
         interface IComplex extends jspb.test.Complex.$Properties {
         }
 
-        class Complex implements jspb.test.Complex.$Properties {
+        class Complex {
             constructor(properties?: jspb.test.Complex.$Properties);
             $unknowns?: Uint8Array[];
             aString: string;
@@ -306,7 +306,7 @@ export namespace jspb {
             interface INested extends jspb.test.Complex.Nested.$Properties {
             }
 
-            class Nested implements jspb.test.Complex.Nested.$Properties {
+            class Nested {
                 constructor(properties?: jspb.test.Complex.Nested.$Properties);
                 $unknowns?: Uint8Array[];
                 anInt: number;
@@ -335,7 +335,7 @@ export namespace jspb {
         interface IOuterMessage extends jspb.test.OuterMessage.$Properties {
         }
 
-        class OuterMessage implements jspb.test.OuterMessage.$Properties {
+        class OuterMessage {
             constructor(properties?: jspb.test.OuterMessage.$Properties);
             $unknowns?: Uint8Array[];
             static create(properties: jspb.test.OuterMessage.$Shape): jspb.test.OuterMessage & jspb.test.OuterMessage.$Shape;
@@ -360,7 +360,7 @@ export namespace jspb {
             interface IComplex extends jspb.test.OuterMessage.Complex.$Properties {
             }
 
-            class Complex implements jspb.test.OuterMessage.Complex.$Properties {
+            class Complex {
                 constructor(properties?: jspb.test.OuterMessage.Complex.$Properties);
                 $unknowns?: Uint8Array[];
                 innerComplexField: number;
@@ -389,7 +389,7 @@ export namespace jspb {
         interface IIsExtension extends jspb.test.IsExtension.$Properties {
         }
 
-        class IsExtension implements jspb.test.IsExtension.$Properties {
+        class IsExtension {
             constructor(properties?: jspb.test.IsExtension.$Properties);
             $unknowns?: Uint8Array[];
             ext1: string;
@@ -417,7 +417,7 @@ export namespace jspb {
         interface IIndirectExtension extends jspb.test.IndirectExtension.$Properties {
         }
 
-        class IndirectExtension implements jspb.test.IndirectExtension.$Properties {
+        class IndirectExtension {
             constructor(properties?: jspb.test.IndirectExtension.$Properties);
             $unknowns?: Uint8Array[];
             static create(properties: jspb.test.IndirectExtension.$Shape): jspb.test.IndirectExtension & jspb.test.IndirectExtension.$Shape;
@@ -443,7 +443,7 @@ export namespace jspb {
         interface IDefaultValues extends jspb.test.DefaultValues.$Properties {
         }
 
-        class DefaultValues implements jspb.test.DefaultValues.$Properties {
+        class DefaultValues {
             constructor(properties?: jspb.test.DefaultValues.$Properties);
             $unknowns?: Uint8Array[];
             stringField: string;
@@ -486,7 +486,7 @@ export namespace jspb {
         interface IFloatingPointFields extends jspb.test.FloatingPointFields.$Properties {
         }
 
-        class FloatingPointFields implements jspb.test.FloatingPointFields.$Properties {
+        class FloatingPointFields {
             constructor(properties?: jspb.test.FloatingPointFields.$Properties);
             $unknowns?: Uint8Array[];
             optionalFloatField: number;
@@ -528,7 +528,7 @@ export namespace jspb {
         interface ITestClone extends jspb.test.TestClone.$Properties {
         }
 
-        class TestClone implements jspb.test.TestClone.$Properties {
+        class TestClone {
             constructor(properties?: jspb.test.TestClone.$Properties);
             ".jspb.test.CloneExtension.extField"?: (jspb.test.CloneExtension.$Properties|null);
             $unknowns?: Uint8Array[];
@@ -566,7 +566,7 @@ export namespace jspb {
         interface ICloneExtension extends jspb.test.CloneExtension.$Properties {
         }
 
-        class CloneExtension implements jspb.test.CloneExtension.$Properties {
+        class CloneExtension {
             constructor(properties?: jspb.test.CloneExtension.$Properties);
             $unknowns?: Uint8Array[];
             ext: string;
@@ -594,7 +594,7 @@ export namespace jspb {
         interface ITestGroup extends jspb.test.TestGroup.$Properties {
         }
 
-        class TestGroup implements jspb.test.TestGroup.$Properties {
+        class TestGroup {
             constructor(properties?: jspb.test.TestGroup.$Properties);
             $unknowns?: Uint8Array[];
             repeatedGroup: jspb.test.TestGroup.RepeatedGroup.$Properties[];
@@ -635,7 +635,7 @@ export namespace jspb {
             interface IRepeatedGroup extends jspb.test.TestGroup.RepeatedGroup.$Properties {
             }
 
-            class RepeatedGroup implements jspb.test.TestGroup.RepeatedGroup.$Properties {
+            class RepeatedGroup {
                 constructor(properties?: jspb.test.TestGroup.RepeatedGroup.$Properties);
                 $unknowns?: Uint8Array[];
                 id: string;
@@ -665,7 +665,7 @@ export namespace jspb {
             interface IRequiredGroup extends jspb.test.TestGroup.RequiredGroup.$Properties {
             }
 
-            class RequiredGroup implements jspb.test.TestGroup.RequiredGroup.$Properties {
+            class RequiredGroup {
                 constructor(properties?: jspb.test.TestGroup.RequiredGroup.$Properties);
                 $unknowns?: Uint8Array[];
                 id: string;
@@ -693,7 +693,7 @@ export namespace jspb {
             interface IOptionalGroup extends jspb.test.TestGroup.OptionalGroup.$Properties {
             }
 
-            class OptionalGroup implements jspb.test.TestGroup.OptionalGroup.$Properties {
+            class OptionalGroup {
                 constructor(properties?: jspb.test.TestGroup.OptionalGroup.$Properties);
                 $unknowns?: Uint8Array[];
                 id: string;
@@ -721,7 +721,7 @@ export namespace jspb {
             interface IMessageInGroup extends jspb.test.TestGroup.MessageInGroup.$Properties {
             }
 
-            class MessageInGroup implements jspb.test.TestGroup.MessageInGroup.$Properties {
+            class MessageInGroup {
                 constructor(properties?: jspb.test.TestGroup.MessageInGroup.$Properties);
                 $unknowns?: Uint8Array[];
                 id: jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties;
@@ -748,7 +748,7 @@ export namespace jspb {
                 interface INestedMessage extends jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties {
                 }
 
-                class NestedMessage implements jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties {
+                class NestedMessage {
                     constructor(properties?: jspb.test.TestGroup.MessageInGroup.NestedMessage.$Properties);
                     $unknowns?: Uint8Array[];
                     id: string;
@@ -777,7 +777,7 @@ export namespace jspb {
             interface IEnumInGroup extends jspb.test.TestGroup.EnumInGroup.$Properties {
             }
 
-            class EnumInGroup implements jspb.test.TestGroup.EnumInGroup.$Properties {
+            class EnumInGroup {
                 constructor(properties?: jspb.test.TestGroup.EnumInGroup.$Properties);
                 $unknowns?: Uint8Array[];
                 id: jspb.test.TestGroup.EnumInGroup.NestedEnum;
@@ -811,7 +811,7 @@ export namespace jspb {
         interface ITestGroup1 extends jspb.test.TestGroup1.$Properties {
         }
 
-        class TestGroup1 implements jspb.test.TestGroup1.$Properties {
+        class TestGroup1 {
             constructor(properties?: jspb.test.TestGroup1.$Properties);
             $unknowns?: Uint8Array[];
             group?: (jspb.test.TestGroup.RepeatedGroup.$Properties|null);
@@ -839,7 +839,7 @@ export namespace jspb {
         interface ITestReservedNames extends jspb.test.TestReservedNames.$Properties {
         }
 
-        class TestReservedNames implements jspb.test.TestReservedNames.$Properties {
+        class TestReservedNames {
             constructor(properties?: jspb.test.TestReservedNames.$Properties);
             ".jspb.test.TestReservedNamesExtension.foo": number;
             $unknowns?: Uint8Array[];
@@ -869,7 +869,7 @@ export namespace jspb {
         interface ITestReservedNamesExtension extends jspb.test.TestReservedNamesExtension.$Properties {
         }
 
-        class TestReservedNamesExtension implements jspb.test.TestReservedNamesExtension.$Properties {
+        class TestReservedNamesExtension {
             constructor(properties?: jspb.test.TestReservedNamesExtension.$Properties);
             $unknowns?: Uint8Array[];
             static create(properties: jspb.test.TestReservedNamesExtension.$Shape): jspb.test.TestReservedNamesExtension & jspb.test.TestReservedNamesExtension.$Shape;
@@ -895,7 +895,7 @@ export namespace jspb {
         interface ITestMessageWithOneof extends jspb.test.TestMessageWithOneof.$Properties {
         }
 
-        class TestMessageWithOneof implements jspb.test.TestMessageWithOneof.$Properties {
+        class TestMessageWithOneof {
             constructor(properties?: jspb.test.TestMessageWithOneof.$Properties);
             $unknowns?: Uint8Array[];
             pone?: (string|null);
@@ -969,7 +969,7 @@ export namespace jspb {
         interface ITestEndsWithBytes extends jspb.test.TestEndsWithBytes.$Properties {
         }
 
-        class TestEndsWithBytes implements jspb.test.TestEndsWithBytes.$Properties {
+        class TestEndsWithBytes {
             constructor(properties?: jspb.test.TestEndsWithBytes.$Properties);
             $unknowns?: Uint8Array[];
             value: number;
@@ -999,7 +999,7 @@ export namespace jspb {
         interface ITestMapFieldsNoBinary extends jspb.test.TestMapFieldsNoBinary.$Properties {
         }
 
-        class TestMapFieldsNoBinary implements jspb.test.TestMapFieldsNoBinary.$Properties {
+        class TestMapFieldsNoBinary {
             constructor(properties?: jspb.test.TestMapFieldsNoBinary.$Properties);
             $unknowns?: Uint8Array[];
             mapStringString: { [k: string]: string };
@@ -1055,7 +1055,7 @@ export namespace jspb {
         interface IMapValueMessageNoBinary extends jspb.test.MapValueMessageNoBinary.$Properties {
         }
 
-        class MapValueMessageNoBinary implements jspb.test.MapValueMessageNoBinary.$Properties {
+        class MapValueMessageNoBinary {
             constructor(properties?: jspb.test.MapValueMessageNoBinary.$Properties);
             $unknowns?: Uint8Array[];
             foo: number;
@@ -1083,7 +1083,7 @@ export namespace jspb {
         interface IDeeply extends jspb.test.Deeply.$Properties {
         }
 
-        class Deeply implements jspb.test.Deeply.$Properties {
+        class Deeply {
             constructor(properties?: jspb.test.Deeply.$Properties);
             $unknowns?: Uint8Array[];
             static create(properties: jspb.test.Deeply.$Shape): jspb.test.Deeply & jspb.test.Deeply.$Shape;
@@ -1108,7 +1108,7 @@ export namespace jspb {
             interface INested extends jspb.test.Deeply.Nested.$Properties {
             }
 
-            class Nested implements jspb.test.Deeply.Nested.$Properties {
+            class Nested {
                 constructor(properties?: jspb.test.Deeply.Nested.$Properties);
                 $unknowns?: Uint8Array[];
                 static create(properties: jspb.test.Deeply.Nested.$Shape): jspb.test.Deeply.Nested & jspb.test.Deeply.Nested.$Shape;
@@ -1133,7 +1133,7 @@ export namespace jspb {
                 interface IMessage extends jspb.test.Deeply.Nested.Message.$Properties {
                 }
 
-                class Message implements jspb.test.Deeply.Nested.Message.$Properties {
+                class Message {
                     constructor(properties?: jspb.test.Deeply.Nested.Message.$Properties);
                     $unknowns?: Uint8Array[];
                     count: number;
@@ -1169,7 +1169,7 @@ export namespace google {
         interface IFileDescriptorSet extends google.protobuf.FileDescriptorSet.$Properties {
         }
 
-        class FileDescriptorSet implements google.protobuf.FileDescriptorSet.$Properties {
+        class FileDescriptorSet {
             constructor(properties?: google.protobuf.FileDescriptorSet.$Properties);
             $unknowns?: Uint8Array[];
             file: google.protobuf.FileDescriptorProto.$Properties[];
@@ -1212,7 +1212,7 @@ export namespace google {
         interface IFileDescriptorProto extends google.protobuf.FileDescriptorProto.$Properties {
         }
 
-        class FileDescriptorProto implements google.protobuf.FileDescriptorProto.$Properties {
+        class FileDescriptorProto {
             constructor(properties?: google.protobuf.FileDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1266,7 +1266,7 @@ export namespace google {
         interface IDescriptorProto extends google.protobuf.DescriptorProto.$Properties {
         }
 
-        class DescriptorProto implements google.protobuf.DescriptorProto.$Properties {
+        class DescriptorProto {
             constructor(properties?: google.protobuf.DescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1313,7 +1313,7 @@ export namespace google {
             interface IExtensionRange extends google.protobuf.DescriptorProto.ExtensionRange.$Properties {
             }
 
-            class ExtensionRange implements google.protobuf.DescriptorProto.ExtensionRange.$Properties {
+            class ExtensionRange {
                 constructor(properties?: google.protobuf.DescriptorProto.ExtensionRange.$Properties);
                 $unknowns?: Uint8Array[];
                 start: number;
@@ -1345,7 +1345,7 @@ export namespace google {
             interface IReservedRange extends google.protobuf.DescriptorProto.ReservedRange.$Properties {
             }
 
-            class ReservedRange implements google.protobuf.DescriptorProto.ReservedRange.$Properties {
+            class ReservedRange {
                 constructor(properties?: google.protobuf.DescriptorProto.ReservedRange.$Properties);
                 $unknowns?: Uint8Array[];
                 start: number;
@@ -1376,7 +1376,7 @@ export namespace google {
         interface IExtensionRangeOptions extends google.protobuf.ExtensionRangeOptions.$Properties {
         }
 
-        class ExtensionRangeOptions implements google.protobuf.ExtensionRangeOptions.$Properties {
+        class ExtensionRangeOptions {
             constructor(properties?: google.protobuf.ExtensionRangeOptions.$Properties);
             $unknowns?: Uint8Array[];
             uninterpretedOption: google.protobuf.UninterpretedOption.$Properties[];
@@ -1409,7 +1409,7 @@ export namespace google {
             interface IDeclaration extends google.protobuf.ExtensionRangeOptions.Declaration.$Properties {
             }
 
-            class Declaration implements google.protobuf.ExtensionRangeOptions.Declaration.$Properties {
+            class Declaration {
                 constructor(properties?: google.protobuf.ExtensionRangeOptions.Declaration.$Properties);
                 $unknowns?: Uint8Array[];
                 number: number;
@@ -1451,7 +1451,7 @@ export namespace google {
         interface IFieldDescriptorProto extends google.protobuf.FieldDescriptorProto.$Properties {
         }
 
-        class FieldDescriptorProto implements google.protobuf.FieldDescriptorProto.$Properties {
+        class FieldDescriptorProto {
             constructor(properties?: google.protobuf.FieldDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1526,7 +1526,7 @@ export namespace google {
         interface IOneofDescriptorProto extends google.protobuf.OneofDescriptorProto.$Properties {
         }
 
-        class OneofDescriptorProto implements google.protobuf.OneofDescriptorProto.$Properties {
+        class OneofDescriptorProto {
             constructor(properties?: google.protobuf.OneofDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1556,7 +1556,7 @@ export namespace google {
         interface IEnumDescriptorProto extends google.protobuf.EnumDescriptorProto.$Properties {
         }
 
-        class EnumDescriptorProto implements google.protobuf.EnumDescriptorProto.$Properties {
+        class EnumDescriptorProto {
             constructor(properties?: google.protobuf.EnumDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1593,7 +1593,7 @@ export namespace google {
             interface IEnumReservedRange extends google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties {
             }
 
-            class EnumReservedRange implements google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties {
+            class EnumReservedRange {
                 constructor(properties?: google.protobuf.EnumDescriptorProto.EnumReservedRange.$Properties);
                 $unknowns?: Uint8Array[];
                 start: number;
@@ -1624,7 +1624,7 @@ export namespace google {
         interface IEnumValueDescriptorProto extends google.protobuf.EnumValueDescriptorProto.$Properties {
         }
 
-        class EnumValueDescriptorProto implements google.protobuf.EnumValueDescriptorProto.$Properties {
+        class EnumValueDescriptorProto {
             constructor(properties?: google.protobuf.EnumValueDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1656,7 +1656,7 @@ export namespace google {
         interface IServiceDescriptorProto extends google.protobuf.ServiceDescriptorProto.$Properties {
         }
 
-        class ServiceDescriptorProto implements google.protobuf.ServiceDescriptorProto.$Properties {
+        class ServiceDescriptorProto {
             constructor(properties?: google.protobuf.ServiceDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1688,7 +1688,7 @@ export namespace google {
         interface IMethodDescriptorProto extends google.protobuf.MethodDescriptorProto.$Properties {
         }
 
-        class MethodDescriptorProto implements google.protobuf.MethodDescriptorProto.$Properties {
+        class MethodDescriptorProto {
             constructor(properties?: google.protobuf.MethodDescriptorProto.$Properties);
             $unknowns?: Uint8Array[];
             name: string;
@@ -1726,7 +1726,7 @@ export namespace google {
         interface IFileOptions extends google.protobuf.FileOptions.$Properties {
         }
 
-        class FileOptions implements google.protobuf.FileOptions.$Properties {
+        class FileOptions {
             constructor(properties?: google.protobuf.FileOptions.$Properties);
             $unknowns?: Uint8Array[];
             javaPackage: string;
@@ -1800,7 +1800,7 @@ export namespace google {
         interface IMessageOptions extends google.protobuf.MessageOptions.$Properties {
         }
 
-        class MessageOptions implements google.protobuf.MessageOptions.$Properties {
+        class MessageOptions {
             constructor(properties?: google.protobuf.MessageOptions.$Properties);
             $unknowns?: Uint8Array[];
             messageSetWireFormat: boolean;
@@ -1840,7 +1840,7 @@ export namespace google {
         interface IFieldOptions extends google.protobuf.FieldOptions.$Properties {
         }
 
-        class FieldOptions implements google.protobuf.FieldOptions.$Properties {
+        class FieldOptions {
             constructor(properties?: google.protobuf.FieldOptions.$Properties);
             $unknowns?: Uint8Array[];
             ctype: google.protobuf.FieldOptions.CType;
@@ -1924,7 +1924,7 @@ export namespace google {
             interface IEditionDefault extends google.protobuf.FieldOptions.EditionDefault.$Properties {
             }
 
-            class EditionDefault implements google.protobuf.FieldOptions.EditionDefault.$Properties {
+            class EditionDefault {
                 constructor(properties?: google.protobuf.FieldOptions.EditionDefault.$Properties);
                 $unknowns?: Uint8Array[];
                 edition: google.protobuf.Edition;
@@ -1954,7 +1954,7 @@ export namespace google {
             interface IFeatureSupport extends google.protobuf.FieldOptions.FeatureSupport.$Properties {
             }
 
-            class FeatureSupport implements google.protobuf.FieldOptions.FeatureSupport.$Properties {
+            class FeatureSupport {
                 constructor(properties?: google.protobuf.FieldOptions.FeatureSupport.$Properties);
                 $unknowns?: Uint8Array[];
                 editionIntroduced: google.protobuf.Edition;
@@ -1989,7 +1989,7 @@ export namespace google {
         interface IOneofOptions extends google.protobuf.OneofOptions.$Properties {
         }
 
-        class OneofOptions implements google.protobuf.OneofOptions.$Properties {
+        class OneofOptions {
             constructor(properties?: google.protobuf.OneofOptions.$Properties);
             $unknowns?: Uint8Array[];
             features?: (google.protobuf.FeatureSet.$Properties|null);
@@ -2019,7 +2019,7 @@ export namespace google {
         interface IEnumOptions extends google.protobuf.EnumOptions.$Properties {
         }
 
-        class EnumOptions implements google.protobuf.EnumOptions.$Properties {
+        class EnumOptions {
             constructor(properties?: google.protobuf.EnumOptions.$Properties);
             ".jspb.test.IsExtension.simpleOption": string;
             $unknowns?: Uint8Array[];
@@ -2057,7 +2057,7 @@ export namespace google {
         interface IEnumValueOptions extends google.protobuf.EnumValueOptions.$Properties {
         }
 
-        class EnumValueOptions implements google.protobuf.EnumValueOptions.$Properties {
+        class EnumValueOptions {
             constructor(properties?: google.protobuf.EnumValueOptions.$Properties);
             $unknowns?: Uint8Array[];
             deprecated: boolean;
@@ -2093,7 +2093,7 @@ export namespace google {
         interface IServiceOptions extends google.protobuf.ServiceOptions.$Properties {
         }
 
-        class ServiceOptions implements google.protobuf.ServiceOptions.$Properties {
+        class ServiceOptions {
             constructor(properties?: google.protobuf.ServiceOptions.$Properties);
             $unknowns?: Uint8Array[];
             features?: (google.protobuf.FeatureSet.$Properties|null);
@@ -2125,7 +2125,7 @@ export namespace google {
         interface IMethodOptions extends google.protobuf.MethodOptions.$Properties {
         }
 
-        class MethodOptions implements google.protobuf.MethodOptions.$Properties {
+        class MethodOptions {
             constructor(properties?: google.protobuf.MethodOptions.$Properties);
             $unknowns?: Uint8Array[];
             deprecated: boolean;
@@ -2165,7 +2165,7 @@ export namespace google {
         interface IUninterpretedOption extends google.protobuf.UninterpretedOption.$Properties {
         }
 
-        class UninterpretedOption implements google.protobuf.UninterpretedOption.$Properties {
+        class UninterpretedOption {
             constructor(properties?: google.protobuf.UninterpretedOption.$Properties);
             $unknowns?: Uint8Array[];
             name: google.protobuf.UninterpretedOption.NamePart.$Properties[];
@@ -2204,7 +2204,7 @@ export namespace google {
             interface INamePart extends google.protobuf.UninterpretedOption.NamePart.$Properties {
             }
 
-            class NamePart implements google.protobuf.UninterpretedOption.NamePart.$Properties {
+            class NamePart {
                 constructor(properties?: google.protobuf.UninterpretedOption.NamePart.$Properties);
                 $unknowns?: Uint8Array[];
                 namePart: string;
@@ -2235,7 +2235,7 @@ export namespace google {
         interface IFeatureSet extends google.protobuf.FeatureSet.$Properties {
         }
 
-        class FeatureSet implements google.protobuf.FeatureSet.$Properties {
+        class FeatureSet {
             constructor(properties?: google.protobuf.FeatureSet.$Properties);
             $unknowns?: Uint8Array[];
             fieldPresence: google.protobuf.FeatureSet.FieldPresence;
@@ -2319,7 +2319,7 @@ export namespace google {
             interface IVisibilityFeature extends google.protobuf.FeatureSet.VisibilityFeature.$Properties {
             }
 
-            class VisibilityFeature implements google.protobuf.FeatureSet.VisibilityFeature.$Properties {
+            class VisibilityFeature {
                 constructor(properties?: google.protobuf.FeatureSet.VisibilityFeature.$Properties);
                 $unknowns?: Uint8Array[];
                 static create(properties: google.protobuf.FeatureSet.VisibilityFeature.$Shape): google.protobuf.FeatureSet.VisibilityFeature & google.protobuf.FeatureSet.VisibilityFeature.$Shape;
@@ -2354,7 +2354,7 @@ export namespace google {
         interface IFeatureSetDefaults extends google.protobuf.FeatureSetDefaults.$Properties {
         }
 
-        class FeatureSetDefaults implements google.protobuf.FeatureSetDefaults.$Properties {
+        class FeatureSetDefaults {
             constructor(properties?: google.protobuf.FeatureSetDefaults.$Properties);
             $unknowns?: Uint8Array[];
             defaults: google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties[];
@@ -2385,7 +2385,7 @@ export namespace google {
             interface IFeatureSetEditionDefault extends google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties {
             }
 
-            class FeatureSetEditionDefault implements google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties {
+            class FeatureSetEditionDefault {
                 constructor(properties?: google.protobuf.FeatureSetDefaults.FeatureSetEditionDefault.$Properties);
                 $unknowns?: Uint8Array[];
                 edition: google.protobuf.Edition;
@@ -2418,7 +2418,7 @@ export namespace google {
         interface ISourceCodeInfo extends google.protobuf.SourceCodeInfo.$Properties {
         }
 
-        class SourceCodeInfo implements google.protobuf.SourceCodeInfo.$Properties {
+        class SourceCodeInfo {
             constructor(properties?: google.protobuf.SourceCodeInfo.$Properties);
             $unknowns?: Uint8Array[];
             location: google.protobuf.SourceCodeInfo.Location.$Properties[];
@@ -2445,7 +2445,7 @@ export namespace google {
             interface ILocation extends google.protobuf.SourceCodeInfo.Location.$Properties {
             }
 
-            class Location implements google.protobuf.SourceCodeInfo.Location.$Properties {
+            class Location {
                 constructor(properties?: google.protobuf.SourceCodeInfo.Location.$Properties);
                 $unknowns?: Uint8Array[];
                 path: number[];
@@ -2482,7 +2482,7 @@ export namespace google {
         interface IGeneratedCodeInfo extends google.protobuf.GeneratedCodeInfo.$Properties {
         }
 
-        class GeneratedCodeInfo implements google.protobuf.GeneratedCodeInfo.$Properties {
+        class GeneratedCodeInfo {
             constructor(properties?: google.protobuf.GeneratedCodeInfo.$Properties);
             $unknowns?: Uint8Array[];
             annotation: google.protobuf.GeneratedCodeInfo.Annotation.$Properties[];
@@ -2509,7 +2509,7 @@ export namespace google {
             interface IAnnotation extends google.protobuf.GeneratedCodeInfo.Annotation.$Properties {
             }
 
-            class Annotation implements google.protobuf.GeneratedCodeInfo.Annotation.$Properties {
+            class Annotation {
                 constructor(properties?: google.protobuf.GeneratedCodeInfo.Annotation.$Properties);
                 $unknowns?: Uint8Array[];
                 path: number[];

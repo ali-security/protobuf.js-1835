@@ -51,7 +51,6 @@ $root.Package = (function() {
      * Constructs a new Package.
      * @exports Package
      * @classdesc Represents a Package.
-     * @implements Package.$Properties
      * @constructor
      * @param {Package.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -941,7 +940,6 @@ $root.Package = (function() {
          * Constructs a new Repository.
          * @memberof Package
          * @classdesc Represents a Repository.
-         * @implements Package.Repository.$Properties
          * @constructor
          * @param {Package.Repository.$Properties=} [properties] Properties to set
          * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

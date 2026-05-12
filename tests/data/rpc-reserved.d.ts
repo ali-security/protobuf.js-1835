@@ -15,7 +15,7 @@ export namespace MyService {
 export interface IMyRequest extends MyRequest.$Properties {
 }
 
-export class MyRequest implements MyRequest.$Properties {
+export class MyRequest {
     constructor(properties?: MyRequest.$Properties);
     $unknowns?: Uint8Array[];
     path: string;
@@ -43,7 +43,7 @@ export namespace MyRequest {
 export interface IMyResponse extends MyResponse.$Properties {
 }
 
-export class MyResponse implements MyResponse.$Properties {
+export class MyResponse {
     constructor(properties?: MyResponse.$Properties);
     $unknowns?: Uint8Array[];
     status: number;

@@ -103,7 +103,6 @@ $root.MyRequest = (function() {
      * Constructs a new MyRequest.
      * @exports MyRequest
      * @classdesc Represents a MyRequest.
-     * @implements MyRequest.$Properties
      * @constructor
      * @param {MyRequest.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -352,7 +351,6 @@ $root.MyResponse = (function() {
      * Constructs a new MyResponse.
      * @exports MyResponse
      * @classdesc Represents a MyResponse.
-     * @implements MyResponse.$Properties
      * @constructor
      * @param {MyResponse.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding

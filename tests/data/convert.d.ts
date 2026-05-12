@@ -4,7 +4,7 @@ import Long = require("long");
 export interface IMessage extends Message.$Properties {
 }
 
-export class Message implements Message.$Properties {
+export class Message {
     constructor(properties?: Message.$Properties);
     $unknowns?: Uint8Array[];
     stringVal: string;

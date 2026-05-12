@@ -4,7 +4,7 @@ import Long = require("long");
 export interface ITest1 extends Test1.$Properties {
 }
 
-export class Test1 implements Test1.$Properties {
+export class Test1 {
     constructor(properties?: Test1.$Properties);
     $unknowns?: Uint8Array[];
     field1: string;
@@ -36,7 +36,7 @@ export namespace Test1 {
 export interface ITest2 extends Test2.$Properties {
 }
 
-export class Test2 implements Test2.$Properties {
+export class Test2 {
     constructor(properties?: Test2.$Properties);
     $unknowns?: Uint8Array[];
     static create(properties: Test2.$Shape): Test2 & Test2.$Shape;

@@ -6,7 +6,7 @@ export namespace vector_tile {
     interface ITile extends vector_tile.Tile.$Properties {
     }
 
-    class Tile implements vector_tile.Tile.$Properties {
+    class Tile {
         constructor(properties?: vector_tile.Tile.$Properties);
         $unknowns?: Uint8Array[];
         layers: vector_tile.Tile.Layer.$Properties[];
@@ -40,7 +40,7 @@ export namespace vector_tile {
         interface IValue extends vector_tile.Tile.Value.$Properties {
         }
 
-        class Value implements vector_tile.Tile.Value.$Properties {
+        class Value {
             constructor(properties?: vector_tile.Tile.Value.$Properties);
             $unknowns?: Uint8Array[];
             stringValue: string;
@@ -80,7 +80,7 @@ export namespace vector_tile {
         interface IFeature extends vector_tile.Tile.Feature.$Properties {
         }
 
-        class Feature implements vector_tile.Tile.Feature.$Properties {
+        class Feature {
             constructor(properties?: vector_tile.Tile.Feature.$Properties);
             $unknowns?: Uint8Array[];
             id: (number|Long);
@@ -114,7 +114,7 @@ export namespace vector_tile {
         interface ILayer extends vector_tile.Tile.Layer.$Properties {
         }
 
-        class Layer implements vector_tile.Tile.Layer.$Properties {
+        class Layer {
             constructor(properties?: vector_tile.Tile.Layer.$Properties);
             $unknowns?: Uint8Array[];
             version: number;

@@ -35,7 +35,6 @@ $root.TypeUrlTest = (function() {
      * Constructs a new TypeUrlTest.
      * @exports TypeUrlTest
      * @classdesc Represents a TypeUrlTest.
-     * @implements TypeUrlTest.$Properties
      * @constructor
      * @param {TypeUrlTest.$Properties=} [properties] Properties to set
      * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
@@ -282,7 +281,6 @@ $root.TypeUrlTest = (function() {
          * Constructs a new Nested.
          * @memberof TypeUrlTest
          * @classdesc Represents a Nested.
-         * @implements TypeUrlTest.Nested.$Properties
          * @constructor
          * @param {TypeUrlTest.Nested.$Properties=} [properties] Properties to set
          * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
