@@ -95,11 +95,11 @@ tape.test("with --null-semantics, optional fields are handled correctly in proto
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
-            test.ok(jsCode.includes("@property {number|null|undefined} [c] OptionalFields c"), "Property for c should be nullable")
+            test.ok(jsCode.includes("@property {number|null} [c] OptionalFields c"), "Property for c should be nullable")
             test.ok(jsCode.includes("@member {number|null} c"), "Member for c should be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.c = null;"), "Initializer for c should be null")
 
@@ -130,15 +130,15 @@ tape.test("with --null-semantics, optional fields are handled correctly in proto
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
-            test.ok(jsCode.includes("@property {number|null|undefined} [c] OptionalFields c"), "Property for c should be nullable")
+            test.ok(jsCode.includes("@property {number|null} [c] OptionalFields c"), "Property for c should be nullable")
             test.ok(jsCode.includes("@member {number|null} c"), "Member for c should be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.c = null;"), "Initializer for c should be null")
 
-            test.ok(jsCode.includes("@property {number|undefined} [d] OptionalFields d"), "Property for d should be optional but not nullable")
+            test.ok(jsCode.includes("@property {number} [d] OptionalFields d"), "Property for d should be optional but not nullable")
             test.ok(jsCode.includes("@member {number} d"), "Member for d should not be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.d = 0;"), "Initializer for d should be zero")
 
@@ -165,11 +165,11 @@ tape.test("with --null-semantics, optional fields are handled correctly in editi
 
             test.error(err, 'static code generation worked');
 
-            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null|undefined} [a] OptionalFields a"), "Property for a should use a properties interface")
+            test.ok(jsCode.includes("@property {OptionalFields.SubMessage.$Properties|null} [a] OptionalFields a"), "Property for a should use a properties interface")
             test.ok(jsCode.includes("@member {OptionalFields.SubMessage|null} a"), "Member for a should use a message type")
             test.ok(jsCode.includes("OptionalFields.prototype.a = null;"), "Initializer for a should be null")
 
-            test.ok(jsCode.includes("@property {string|null|undefined} [e] OptionalFields e"), "Property for e should be nullable")
+            test.ok(jsCode.includes("@property {string|null} [e] OptionalFields e"), "Property for e should be nullable")
             test.ok(jsCode.includes("@member {string|null} e"), "Member for e should be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.e = null;"), "Initializer for e should be null")
 
@@ -177,7 +177,7 @@ tape.test("with --null-semantics, optional fields are handled correctly in editi
             test.ok(jsCode.includes("@member {number} r"), "Member for r should not be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.r = 0;"), "Initializer for r should be zero")
 
-            test.ok(jsCode.includes("@property {number|undefined} [i] OptionalFields i"), "Property for i should be optional but not nullable")
+            test.ok(jsCode.includes("@property {number} [i] OptionalFields i"), "Property for i should be optional but not nullable")
             test.ok(jsCode.includes("@member {number} i"), "Member for i should not be nullable")
             test.ok(jsCode.includes("OptionalFields.prototype.i = 0;"), "Initializer for i should be zero")
 
@@ -237,14 +237,16 @@ tape.test("with --null-semantics, pbts preserves proto3 optional nullability", f
                 test.error(pbtsErr, "definition generation worked");
 
                 var tsCode = fs.readFileSync(dtsOut, "utf8");
-                test.ok(tsCode.indexOf("type?: (string|undefined);") >= 0, "keeps non-optional string property non-nullable");
-                test.ok(tsCode.indexOf("address_1?: (string|undefined);") >= 0, "keeps second non-optional string property non-nullable");
-                test.ok(tsCode.indexOf("address_2?: (string|null|undefined);") >= 0, "keeps proto3 optional string property nullable");
+                test.ok(tsCode.indexOf("type?: string;") >= 0, "keeps non-optional string property non-nullable");
+                test.ok(tsCode.indexOf("address_1?: string;") >= 0, "keeps second non-optional string property non-nullable");
+                test.ok(tsCode.indexOf("address_2?: (string|null);") >= 0, "keeps proto3 optional string property nullable");
                 test.ok(tsCode.indexOf("type: string;") >= 0, "keeps non-optional string member non-nullable");
                 test.ok(tsCode.indexOf("address_1: string;") >= 0, "keeps second non-optional string member non-nullable");
                 test.ok(tsCode.indexOf("address_2: (string|null);") >= 0, "keeps proto3 optional string member nullable");
                 test.equal(tsCode.indexOf("type?: (string|null|undefined);"), -1, "does not make non-optional property nullable");
                 test.equal(tsCode.indexOf("address_1?: (string|null|undefined);"), -1, "does not make second non-optional property nullable");
+                test.equal(tsCode.indexOf("type?: (string|undefined);"), -1, "does not add explicit undefined to optional properties");
+                test.equal(tsCode.indexOf("address_2?: (string|null|undefined);"), -1, "does not add explicit undefined to nullable optional properties");
                 test.equal(tsCode.indexOf("type: (string|null);"), -1, "does not make non-optional member nullable");
                 test.equal(tsCode.indexOf("address_1: (string|null);"), -1, "does not make second non-optional member nullable");
 

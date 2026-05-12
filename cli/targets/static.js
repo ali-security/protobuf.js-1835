@@ -506,14 +506,9 @@ function propertyType(field, withNarrowing) {
         // Implicit fields (proto3), maps and lists can be omitted, but if specified must be non-null
         // Implicit fields will take their default value when the message is constructed
         if (field.optional) {
-            if (isNullable(field)) {
-                jsType = jsType + "|null|undefined";
-                nullable = true;
-            }
-            else {
-                jsType = jsType + "|undefined";
-                nullable = true;
-            }
+            if (isNullable(field))
+                jsType = jsType + "|null";
+            nullable = true;
         }
     }
     else {
