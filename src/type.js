@@ -171,6 +171,8 @@ Object.defineProperties(Type.prototype, {
             util.merge(ctor, Message, true);
 
             this._ctor = ctor;
+            delete this.decode;
+            delete this.fromObject;
 
             // Messages have non-enumerable default values on their prototype
             var i = 0;
@@ -239,7 +241,10 @@ function clearCache(type) {
  * @returns {Type} Created message type
  */
 Type.fromJSON = function fromJSON(name, json, depth) {
-    depth = util.checkDepth(depth);
+    if (depth === undefined)
+        depth = 0;
+    if (depth > util.nestingLimit)
+        throw Error("max depth exceeded");
     var type = new Type(name, json.options);
     type.extensions = json.extensions;
     type.reserved = json.reserved;
@@ -479,7 +484,8 @@ Type.prototype.setup = function setup() {
     this.decode = decoder(this)({
         Reader : Reader,
         types  : types,
-        util   : util
+        util   : util,
+        C      : this.ctor
     });
     this.verify = verifier(this)({
         types : types,
@@ -487,7 +493,8 @@ Type.prototype.setup = function setup() {
     });
     this.fromObject = converter.fromObject(this)({
         types : types,
-        util  : util
+        util  : util,
+        C     : this.ctor
     });
     this.toObject = converter.toObject(this)({
         types : types,

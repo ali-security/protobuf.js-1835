@@ -1,8 +1,5 @@
 // DO NOT EDIT! This is a generated file. Edit the source file instead and regenerate.
 
-/** Maximum recursion depth for text format parsing and formatting. Defaults to util.recursionLimit. */
-export let recursionLimit: number;
-
 /** Maximum recursion depth for formatting length-delimited unknown fields. */
 export let unknownRecursionLimit: number;
 

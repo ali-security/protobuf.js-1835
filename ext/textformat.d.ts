@@ -5,9 +5,6 @@ export * from "./textformat.generated";
 
 declare module ".." {
     namespace textformat {
-        /** Maximum recursion depth for text format parsing and formatting. Defaults to util.recursionLimit. */
-        let recursionLimit: number;
-
         /** Maximum recursion depth for formatting length-delimited unknown fields. */
         let unknownRecursionLimit: number;
     }
