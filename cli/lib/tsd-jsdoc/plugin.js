@@ -2,6 +2,10 @@
 
 var typeParserPatched = false;
 
+function normalizeType(type) {
+    return type.replace(/\r?\n|\r/g, "\n");
+}
+
 function patchTypeScriptTypes(dictionary) {
     var type = require("jsdoc/tag/type");
     var parse = type.parse,
@@ -50,7 +54,7 @@ function patchTypeScriptTypes(dictionary) {
             if (close < 0)
                 throw e;
 
-            var expression = text.substring(open + 1, close).trim();
+            var expression = normalizeType(text.substring(open + 1, close)).trim();
             if (!/[&;]|\?:|=>|\bkeyof\b|\btypeof\b|^\s*\{/.test(expression))
                 throw e;
 
@@ -81,7 +85,7 @@ exports.defineTags = function(dictionary) {
         canHaveType: false,
         canHaveName: false,
         onTagged: function(doclet, tag) {
-            doclet.tsType = tag.text;
+            doclet.tsType = normalizeType(tag.text);
         }
     });
 };
