@@ -556,7 +556,7 @@ function buildType(ref, type) {
             type.oneofsArray.forEach(function(oneof) {
                 if (oneof.isProto3Optional)
                     return;
-                typeDef.push("@property {" + oneof.oneof.map(JSON.stringify).join("|") + "|undefined} [" + oneof.name + "] " + (oneof.comment || type.name + " " + oneof.name));
+                typeDef.push("@property {" + oneof.oneof.map(JSON.stringify).join("|") + "} [" + oneof.name + "] " + (oneof.comment || type.name + " " + oneof.name));
             });
         }
         typeDef.push("@property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding");

@@ -8390,10 +8390,10 @@ $root.jspb = (function() {
              * @property {number|null} [atwo] TestMessageWithOneof atwo
              * @property {number|null} [bone] TestMessageWithOneof bone
              * @property {number|null} [btwo] TestMessageWithOneof btwo
-             * @property {"pone"|"pthree"|undefined} [partialOneof] TestMessageWithOneof partialOneof
-             * @property {"rone"|"rtwo"|undefined} [recursiveOneof] TestMessageWithOneof recursiveOneof
-             * @property {"aone"|"atwo"|undefined} [defaultOneofA] TestMessageWithOneof defaultOneofA
-             * @property {"bone"|"btwo"|undefined} [defaultOneofB] TestMessageWithOneof defaultOneofB
+             * @property {"pone"|"pthree"} [partialOneof] TestMessageWithOneof partialOneof
+             * @property {"rone"|"rtwo"} [recursiveOneof] TestMessageWithOneof recursiveOneof
+             * @property {"aone"|"atwo"} [defaultOneofA] TestMessageWithOneof defaultOneofA
+             * @property {"bone"|"btwo"} [defaultOneofB] TestMessageWithOneof defaultOneofB
              * @property {Array.<Uint8Array>} [$unknowns] Unknown fields preserved while decoding
              */
 

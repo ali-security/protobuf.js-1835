@@ -937,10 +937,10 @@ export namespace jspb {
                 atwo?: (number|null);
                 bone?: (number|null);
                 btwo?: (number|null);
-                partialOneof?: ("pone"|"pthree"|undefined);
-                recursiveOneof?: ("rone"|"rtwo"|undefined);
-                defaultOneofA?: ("aone"|"atwo"|undefined);
-                defaultOneofB?: ("bone"|"btwo"|undefined);
+                partialOneof?: ("pone"|"pthree");
+                recursiveOneof?: ("rone"|"rtwo");
+                defaultOneofA?: ("aone"|"atwo");
+                defaultOneofB?: ("bone"|"btwo");
                 $unknowns?: Uint8Array[];
             }
             type $Shape = {
