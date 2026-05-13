@@ -2231,14 +2231,14 @@ message AwesomeMessage {
 </code></pre>
 <p>protobuf.js converts <code>.proto</code> field names to camelCase by default, so <code>awesome_field</code> is used as <code>awesomeField</code> in JavaScript. Use the <code>keepCase</code> option when loading or parsing <code>.proto</code> files to preserve field names as written.</p>
 <h3 id="load-a-schema">Load a schema</h3>
-<pre class="prettyprint source lang-js"><code>const protobuf = require(&quot;protobufjs&quot;);
+<pre class="prettyprint source lang-ts"><code>const protobuf = require(&quot;protobufjs&quot;);
 
 const root = protobuf.loadSync(&quot;awesome.proto&quot;);
 const AwesomeMessage = root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;);
 </code></pre>
 <p>Use <code>protobuf.load()</code> for the asynchronous variant.</p>
 <h3 id="encode-and-decode">Encode and decode</h3>
-<pre class="prettyprint source lang-js"><code>const payload = { awesomeField: &quot;hello&quot; };
+<pre class="prettyprint source lang-ts"><code>const payload = { awesomeField: &quot;hello&quot; };
 
 // Optionally verify if the payload is of uncertain shape
 const err = AwesomeMessage.verify(payload);
@@ -2254,7 +2254,7 @@ const decoded = AwesomeMessage.decode(encoded);
 <p>Plain objects can be encoded directly when they already use protobuf.js runtime types: numbers for 32-bit numeric fields, booleans for <code>bool</code>, strings for <code>string</code>, <code>Uint8Array</code> or <code>Buffer</code> for <code>bytes</code>, arrays for repeated fields, and plain objects for maps. Map keys are the string representation of the respective value or an 8-character hash string for 64-bit/<code>Long</code> keys. Use <code>fromObject</code> when input may use broader JSON-style forms such as enum names, base64 strings for bytes, or decimal strings for 64-bit values.</p>
 <p>Install <a target="_blank" href="https://github.com/dcodeIO/long.js"><code>long</code></a> with protobuf.js when exact 64-bit integer support is required.</p>
 <h3 id="convert-plain-objects">Convert plain objects</h3>
-<pre class="prettyprint source lang-js"><code>const message = AwesomeMessage.fromObject({ awesomeField: 42 });
+<pre class="prettyprint source lang-ts"><code>const message = AwesomeMessage.fromObject({ awesomeField: 42 });
 const object = AwesomeMessage.toObject(message, {
   longs: String,
   enums: String,
@@ -2393,24 +2393,53 @@ const message = awesomepackage.AwesomeMessage.create({ awesomeField: &quot;hello
 <p>Bundling schemas avoids reparsing <code>.proto</code> files at runtime and can reduce browser requests when schemas would otherwise be loaded separately. While reflection requires at least <code>protobufjs/light.js</code>, large schemas often produce smaller bundles than equivalent static modules because most code is shared via reflection.</p>
 <pre class="prettyprint source lang-sh"><code>npx pbjs -t json -o awesome.json awesome1.proto awesome2.proto ...
 </code></pre>
-<pre class="prettyprint source lang-js"><code>const bundle = require(&quot;./awesome.json&quot;);
+<pre class="prettyprint source lang-ts"><code>const bundle = require(&quot;./awesome.json&quot;);
 
 const root = protobuf.Root.fromJSON(bundle);
 const AwesomeMessage = root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;);
 </code></pre>
 <pre class="prettyprint source lang-sh"><code>npx pbjs -t json-module -w esm -o awesome.js --dts awesome.proto
 </code></pre>
-<pre class="prettyprint source lang-js"><code>import { awesomepackage } from &quot;./awesome.js&quot;;
+<pre class="prettyprint source lang-ts"><code>import { awesomepackage } from &quot;./awesome.js&quot;;
 
 const AwesomeMessage = awesomepackage.AwesomeMessage;
 </code></pre>
 <p>JSON modules export the reflection root and, with <code>-w esm</code>, also provide top-level named exports that align with static modules. Their declarations mirror <code>static-module</code> typings, but because JSON modules are backed by reflection objects, message instances should be created with <code>MyMessage.create(...)</code> instead of constructors. Code using <code>create(...)</code> works with static modules as well.</p>
 <h3 id="typescript-integration">TypeScript integration</h3>
-<p>TypeScript is a first-class target in protobuf.js. The runtime API is typed, and with <code>--dts</code>, both <code>json-module</code> and <code>static-module</code> emit ready-to-run JavaScript modules together with matching TypeScript declarations. No separate transpile step is necessary.</p>
+<p>protobuf.js works with TypeScript out of the box: the runtime API is typed, and generated declarations expose idiomatic TypeScript types with type-checked oneofs and JavaScript-friendly plain-object input. No separate <code>protoc</code> invocation or TypeScript transpile step is necessary.</p>
+<p>For example, given the oneof:</p>
+<pre class="prettyprint source lang-proto"><code>message Profile {
+  oneof contact {
+    string email = 1;
+    string phone = 2;
+  }
+}
+</code></pre>
+<p>Generated declarations narrow both the <code>contact</code> oneof and the concrete values:</p>
+<pre class="prettyprint source lang-ts"><code>const profile = Profile.create({
+  contact: &quot;email&quot;,
+  email: &quot;hello@example.com&quot;
+});
+
+if (profile.contact === &quot;email&quot;) {
+  profile.email; // string
+}
+
+const decoded = Profile.decode(bytes);
+if (decoded.phone != null) {
+  decoded.phone; // string
+}
+</code></pre>
+<p>Plain objects can use the same narrowed shape through a collision-free scoped type:</p>
+<pre class="prettyprint source lang-ts"><code>const object: Profile.$Shape = {
+  contact: &quot;email&quot;,
+  email: &quot;hello@example.com&quot;
+};
+</code></pre>
 <h2 id="advanced-usage">Advanced usage</h2>
 <h3 id="programmatic-schemas">Programmatic schemas</h3>
 <p>The full and light builds can construct schemas directly through reflection:</p>
-<pre class="prettyprint source lang-js"><code>const AwesomeMessage = new protobuf.Type(&quot;AwesomeMessage&quot;)
+<pre class="prettyprint source lang-ts"><code>const AwesomeMessage = new protobuf.Type(&quot;AwesomeMessage&quot;)
   .add(new protobuf.Field(&quot;awesomeField&quot;, 1, &quot;string&quot;));
 
 const root = new protobuf.Root()
@@ -2418,24 +2447,26 @@ const root = new protobuf.Root()
   .add(AwesomeMessage);
 </code></pre>
 <h3 id="custom-message-classes">Custom message classes</h3>
-<p>Message classes can be extended by reusing the generated constructor:</p>
-<pre class="prettyprint source lang-js"><code>const AwesomeMessage = root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;).ctor;
+<p>A reflected type can use a custom class as its runtime constructor:</p>
+<pre class="prettyprint source lang-ts"><code>class AwesomeMessage extends protobuf.Message&lt;AwesomeMessage> {
+  awesomeField = &quot;&quot;;
 
-AwesomeMessage.customStaticMethod = function() {
-  // ...
-};
-AwesomeMessage.prototype.customInstanceMethod = function() {
-  // ...
-};
-</code></pre>
-<p>Alternatively, a custom constructor can be registered:</p>
-<pre class="prettyprint source lang-js"><code>function AwesomeMessage(properties) {
-  // ...
+  constructor(properties?: protobuf.Properties&lt;AwesomeMessage>) {
+    super(properties);
+    // ...
+  }
+
+  customInstanceMethod() {
+    return this.awesomeField.toLowerCase();
+  }
 }
 
 root.lookupType(&quot;awesomepackage.AwesomeMessage&quot;).ctor = AwesomeMessage;
+
+const decoded = AwesomeMessage.decode(bytes);
+decoded.customInstanceMethod(); // string
 </code></pre>
-<p>Custom constructors are populated with static <code>create</code>, <code>encode</code>, <code>encodeDelimited</code>, <code>decode</code>, <code>decodeDelimited</code>, <code>verify</code>, <code>fromObject</code>, <code>toObject</code>, and the instance method <code>toJSON</code>. The reflected type is available as <code>AwesomeMessage.$type</code> and <code>message.$type</code>.</p>
+<p>protobuf.js will populate the constructor with the usual static runtime methods and use it for decoded messages. In TypeScript, custom members are visible when using the custom class type in consuming code.</p>
 <h3 id="services">Services</h3>
 <p>protobuf.js supports service clients built from reflected service definitions. The service API is transport-agnostic: provide an <code>rpcImpl</code> function to connect it to HTTP, WebSocket, gRPC, or another transport. See <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/examples/streaming-rpc.js">examples/streaming-rpc.js</a> for details.</p>
 <h3 id="descriptors">Descriptors</h3>

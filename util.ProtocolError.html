@@ -2138,13 +2138,11 @@
 
 
 <section>
+
     
 <header>
-    <h2>
-        <span class="ancestors"><a href="util.html">util</a>.</span>
+    <h2><span class="ancestors"><a href="util.html">util</a>.</span>ProtocolError</h2>
     
-    ProtocolError
-    </h2>
     
         <div class="class-description"><p>Error subclass indicating a protocol specifc error.</p></div>
     
@@ -2186,23 +2184,10 @@
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -2271,11 +2256,31 @@
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -2285,38 +2290,11 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-        <h5>Example</h5>
+        <h5 class="subsection-title">Example:</h5>
         
 
     
-    <pre class="prettyprint"><code>try {
-    MyMessage.decode(someBuffer); // throws if required fields are missing
-} catch (e) {
-    if (e instanceof ProtocolError && e.instance)
-        console.log("decoded so far: " + JSON.stringify(e.instance));
-}</code></pre>
+    <pre class="prettyprint"><code>try {    MyMessage.decode(someBuffer); // throws if required fields are missing} catch (e) {    if (e instanceof ProtocolError && e.instance)        console.log("decoded so far: " + JSON.stringify(e.instance));}</code></pre>
     
 
 
@@ -2352,6 +2330,12 @@
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="instance">instance <span class="type-signature type">{ <a href="Message.html">Message</a>.&lt;T> }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L394">line 394</a>
+        </div>
+        
     </div>
     
     
@@ -2364,29 +2348,27 @@
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     

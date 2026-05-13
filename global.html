@@ -2138,11 +2138,11 @@
 
 
 <section>
+
     
 <header>
-    <h2>
+    <h2>Top Level</h2>
     
-    </h2>
     
 </header>  
 
@@ -2155,29 +2155,27 @@
         
         
         
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
         
@@ -2204,6 +2202,12 @@
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="build">build <span class="type-signature ">constant</span><span class="type-signature type">{ string }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/index-minimal.js">index-minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/index-minimal.js#L4">line 4</a>
+        </div>
+        
     </div>
     
     
@@ -2216,29 +2220,27 @@
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
@@ -2249,6 +2251,12 @@
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="roots">roots <span class="type-signature type">{ Object&lt;string, <a href="Root.html">Root</a>> }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/roots.js">roots.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/roots.js#L4">line 4</a>
+        </div>
+        
     </div>
     
     
@@ -2263,43 +2271,35 @@ Can also be used manually to make roots available across modules.</p>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-        <h5>Example</h5>
+        <h5 class="subsection-title">Example:</h5>
         
 
     
-    <pre class="prettyprint"><code>// pbjs -r myroot -o compiled.js ...
-
-// in another module:
-require("./compiled.js");
-
-// in any subsequent module:
-var root = protobuf.roots["myroot"];</code></pre>
+    <pre class="prettyprint"><code>// pbjs -r myroot -o compiled.js ...// in another module:require("./compiled.js");// in any subsequent module:var root = protobuf.roots["myroot"];</code></pre>
     
 
 
@@ -2311,6 +2311,12 @@ var root = protobuf.roots["myroot"];</code></pre>
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="wrappers">wrappers <span class="type-signature ">constant</span><span class="type-signature type">{ Object&lt;string, <a href="IWrapper.html">IWrapper</a>> }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/wrappers.js">wrappers.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/wrappers.js#L8">line 8</a>
+        </div>
+        
     </div>
     
     
@@ -2323,29 +2329,27 @@ var root = protobuf.roots["myroot"];</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
@@ -2389,23 +2393,10 @@ Can also be used to provide additional google types or your own custom types.</p
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -2462,30 +2453,11 @@ Can also be used to provide additional google types or your own custom types.</p
     
     
     
-<dl class="details">
-    
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl>
 
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<h5 class="subsection-title">Properties:</h5>
+
+
+<table class="props property-table">
 	<tbody>
 	
 	
@@ -2658,12 +2630,32 @@ Can also be used to provide additional google types or your own custom types.</p
 	
 	</tbody>
 </table>
-</dl>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -2671,40 +2663,11 @@ Can also be used to provide additional google types or your own custom types.</p
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -2725,15 +2688,11 @@ Can also be used to provide additional google types or your own custom types.</p
     
     
     
-        <h5>Example</h5>
+        <h5 class="subsection-title">Example:</h5>
         
 
     
-    <pre class="prettyprint"><code>// manually provides descriptor.proto (assumes google/protobuf/ namespace and .proto extension)
-protobuf.common("descriptor", descriptorJson);
-
-// manually provides a custom definition (uses my.foo namespace)
-protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
+    <pre class="prettyprint"><code>// manually provides descriptor.proto (assumes google/protobuf/ namespace and .proto extension)protobuf.common("descriptor", descriptorJson);// manually provides a custom definition (uses my.foo namespace)protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
 
 
@@ -2773,11 +2732,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -2785,40 +2764,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -2872,23 +2822,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -2921,11 +2858,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -2933,40 +2890,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3020,23 +2948,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -3069,11 +2984,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -3081,40 +3016,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3168,23 +3074,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -3268,36 +3161,32 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="Root.html#load">Root#load</a></li>
-        </ul>
-    </dd>
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="subsection-title">See:</h5>
+<ul class="tag-see detail-list">
+    <li><a href="Root.html#load">Root#load</a></li>
+</ul>
+
+
+
 
     
     
@@ -3309,18 +3198,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3374,23 +3256,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -3450,36 +3319,32 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="Root.html#load">Root#load</a></li>
-        </ul>
-    </dd>
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="subsection-title">See:</h5>
+<ul class="tag-see detail-list">
+    <li><a href="Root.html#load">Root#load</a></li>
+</ul>
+
+
+
 
     
     
@@ -3491,18 +3356,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3556,23 +3414,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -3644,36 +3489,32 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="Root.html#load">Root#load</a></li>
-        </ul>
-    </dd>
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="subsection-title">See:</h5>
+<ul class="tag-see detail-list">
+    <li><a href="Root.html#load">Root#load</a></li>
+</ul>
+
+
+
 
     
     
@@ -3685,18 +3526,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3750,23 +3584,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -3838,58 +3659,48 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="subsection-title">See:</h5>
+<ul class="tag-see detail-list">
+    <li><a href="Root.html#loadSync">Root#loadSync</a></li>
+</ul>
+
+
+
+
+    
+    
+
+    
+
+    
+    
+    
+    <h5 class="subsection-title">Throws:</h5>
+    <table class="params exception-table">
+        <tbody>
     
         
+<tr>
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="Root.html#loadSync">Root#loadSync</a></li>
-        </ul>
-    </dd>
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    <h5>Throws:</h5>
-    
-            
-
-<table class="params">
-    <thead>
-	<tr>
-		<th>Type</th>	
-		<th class="last">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
         <td class="type">
             
 <span class="param-type">Error</span>
@@ -3897,29 +3708,25 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 
 
         </td>
-        <td class="description last">
-            <p>If synchronous fetching is not supported (i.e. in browsers) or if a file's syntax is invalid</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-
+    
+    <td class="description last">
         
-    
-    
-    <h5>Returns:</h5>
-    
-
-
-<table class="params">
-    <thead>
-    <tr>
+        <p>If synchronous fetching is not supported (i.e. in browsers) or if a file's syntax is invalid</p>
         
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+    </td>
+</tr>
+
+    
+        </tbody>
+    </table>
+    
+    
+    
+    <h5 class="subsection-title">Returns:</h5>
+    
+
+
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -3973,23 +3780,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -4087,32 +3881,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl>
 
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		<th>Default</th>
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<h5 class="subsection-title">Properties:</h5>
+
+
+<table class="props property-table">
 	<tbody>
 	
 	
@@ -4175,12 +3948,32 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 	
 	</tbody>
 </table>
-</dl>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -4188,40 +3981,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -4275,23 +4039,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -4360,32 +4111,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-        <h5 class="subsection-title">Properties:</h5>
-        
-        <dl>
 
-<table class="props">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		<th>Default</th>
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<h5 class="subsection-title">Properties:</h5>
+
+
+<table class="props property-table">
 	<tbody>
 	
 	
@@ -4448,12 +4178,32 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 	
 	</tbody>
 </table>
-</dl>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -4461,40 +4211,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -4548,23 +4269,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -4621,11 +4329,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -4633,40 +4361,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -4720,23 +4419,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -4769,11 +4455,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -4781,40 +4487,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -4848,6 +4525,12 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="AnyExtensionField">AnyExtensionField <span class="type-signature type">{ <a href="IExtensionField.html">IExtensionField</a> | <a href="IExtensionMapField.html">IExtensionMapField</a> }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L172">line 172</a>
+        </div>
+        
     </div>
     
     
@@ -4860,29 +4543,27 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
@@ -4893,6 +4574,12 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="AnyNestedObject">AnyNestedObject <span class="type-signature type">{ <a href="IEnum.html">IEnum</a> | <a href="IType.html">IType</a> | <a href="IService.html">IService</a> | <a href="global.html#AnyExtensionField">AnyExtensionField</a> | <a href="INamespace.html">INamespace</a> | <a href="IOneOf.html">IOneOf</a> }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js">namespace.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/namespace.js#L178">line 178</a>
+        </div>
+        
     </div>
     
     
@@ -4905,29 +4592,27 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
@@ -4964,23 +4649,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5056,51 +4728,43 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+    
+    
+    <h5 class="subsection-title">Throws:</h5>
+    <table class="params exception-table">
+        <tbody>
     
         
+<tr>
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    <h5>Throws:</h5>
-    
-            
-
-<table class="params">
-    <thead>
-	<tr>
-		<th>Type</th>	
-		<th class="last">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
         <td class="type">
             
 <span class="param-type">Error</span>
@@ -5108,29 +4772,25 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 
 
         </td>
-        <td class="description last">
-            <p>If format parameter counts do not match</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-
+    
+    <td class="description last">
         
-    
-    
-    <h5>Returns:</h5>
-    
-
-
-<table class="params">
-    <thead>
-    <tr>
+        <p>If format parameter counts do not match</p>
         
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+    </td>
+</tr>
+
+    
+        </tbody>
+    </table>
+    
+    
+    
+    <h5 class="subsection-title">Returns:</h5>
+    
+
+
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -5152,6 +4812,55 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 
 
     
+    
+    
+</dd>
+
+            
+                
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="Constructor">Constructor <span class="type-signature type">{ Function &amp; { new(...params: any[]): T; prototype: T } }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/typescript.js">typescript.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/typescript.js#L7">line 7</a>
+        </div>
+        
+    </div>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Constructor type.</p>
+    </div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 </dd>
@@ -5187,23 +4896,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5243,11 +4939,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -5255,40 +4971,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -5342,23 +5029,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5429,11 +5103,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -5441,40 +5135,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -5508,7 +5173,7 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/field.js">field.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/field.js#L401">line 401</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/field.js">field.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/field.js#L403">line 403</a>
         </div>
         
     </div>
@@ -5528,23 +5193,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5601,54 +5253,46 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
+
+
+
+
+
+
+
+<h5 class="subsection-title">Deprecated:</h5>
+<div class="tag-deprecated detail-message">Legacy TypeScript decorator support. Will be removed in a future release.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 
     
-        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
 
     
     
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -5702,23 +5346,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5790,11 +5421,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -5802,40 +5453,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -5869,7 +5491,7 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/oneof.js">oneof.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/oneof.js#L193">line 193</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/oneof.js">oneof.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/oneof.js#L194">line 194</a>
         </div>
         
     </div>
@@ -5889,23 +5511,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -5962,54 +5571,46 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
+
+
+
+
+
+
+
+<h5 class="subsection-title">Deprecated:</h5>
+<div class="tag-deprecated detail-message">Legacy TypeScript decorator support. Will be removed in a future release.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 
     
-        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
 
     
     
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6065,11 +5666,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -6077,40 +5698,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6167,23 +5759,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -6219,11 +5798,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -6231,40 +5830,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6318,23 +5888,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -6367,11 +5924,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -6379,40 +5956,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6464,28 +6012,15 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-        <h5>This:</h5>
-        <ul><li>{Uint8Array}</li></ul>
+        <h5 class="subsection-title">This:</h5>
+        <ul class="detail-list"><li>Uint8Array</li></ul>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -6542,11 +6077,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -6554,40 +6109,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6614,7 +6140,13 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
                 
 <dt>
     <div class="nameContainer">
-        <h4 class="name" id="Properties">Properties <span class="type-signature type">{ Object&lt;string, *> }</span></h4>
+        <h4 class="name" id="Properties">Properties <span class="type-signature type">{ { [P in keyof T]?: T[P] } }</span></h4>
+
+        
+        <div class="tag-source">
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/typescript.js">typescript.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/typescript.js#L14">line 14</a>
+        </div>
+        
     </div>
     
     
@@ -6627,29 +6159,27 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     
@@ -6686,23 +6216,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -6786,11 +6303,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -6798,40 +6335,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -6852,17 +6360,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-        <h5>Example</h5>
+        <h5 class="subsection-title">Example:</h5>
         
 
     
-    <pre class="prettyprint"><code>function rpcImpl(method, requestData, callback) {
-    if (protobuf.util.lcFirst(method.name) !== "myMethod") // compatible with static code
-        throw Error("no such method");
-    asynchronouslyObtainAResponse(requestData, function(err, responseData) {
-        callback(err, responseData);
-    });
-}</code></pre>
+    <pre class="prettyprint"><code>function rpcImpl(method, requestData, callback) {    if (protobuf.util.lcFirst(method.name) !== "myMethod") // compatible with static code        throw Error("no such method");    asynchronouslyObtainAResponse(requestData, function(err, responseData) {        callback(err, responseData);    });}</code></pre>
     
 
 
@@ -6900,23 +6402,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -6991,11 +6480,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -7003,40 +6512,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7090,23 +6570,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -7146,11 +6613,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -7158,40 +6645,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7250,11 +6708,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -7262,40 +6740,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7354,11 +6803,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -7366,40 +6835,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7456,23 +6896,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -7505,11 +6932,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -7517,40 +6964,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7604,25 +7022,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		<th>Default</th>
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -7701,51 +7104,43 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+    
+    
+    <h5 class="subsection-title">Throws:</h5>
+    <table class="params exception-table">
+        <tbody>
     
         
+<tr>
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    <h5>Throws:</h5>
-    
-            
-
-<table class="params">
-    <thead>
-	<tr>
-		<th>Type</th>	
-		<th class="last">Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
         <td class="type">
             
 <span class="param-type">Error</span>
@@ -7753,29 +7148,25 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
 
 
         </td>
-        <td class="description last">
-            <p>If the token didn't match and is not optional</p>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-
+    
+    <td class="description last">
         
-    
-    
-    <h5>Returns:</h5>
-    
-
-
-<table class="params">
-    <thead>
-    <tr>
+        <p>If the token didn't match and is not optional</p>
         
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+    </td>
+</tr>
+
+    
+        </tbody>
+    </table>
+    
+    
+    
+    <h5 class="subsection-title">Returns:</h5>
+    
+
+
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7809,7 +7200,7 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L623">line 623</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L625">line 625</a>
         </div>
         
     </div>
@@ -7829,23 +7220,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -7857,7 +7235,7 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
             <td class="type">
             
                 
-<span class="param-type"><a href="Constructor.html">Constructor</a>.&lt;T></span>
+<span class="param-type"><a href="global.html#Constructor">Constructor</a>.&lt;T></span>
 
 
 
@@ -7878,54 +7256,46 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
-    
-        
-    
+
+
+
+
+
+
+
+<h5 class="subsection-title">Deprecated:</h5>
+<div class="tag-deprecated detail-message">Legacy TypeScript decorator support. Will be removed in a future release.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
 
     
-        <dt class="important tag-deprecated">Deprecated</dt><dd><ul class="dummy"><li>Legacy TypeScript decorator support. Will be removed in a future release.</li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
 
     
     
     
     
     
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -7977,28 +7347,15 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-        <h5>This:</h5>
-        <ul><li><a href="Type.html">Type</a></li></ul>
+        <h5 class="subsection-title">This:</h5>
+        <ul class="detail-list"><li><a href="Type.html">Type</a></li></ul>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -8031,11 +7388,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -8043,40 +7420,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -8128,28 +7476,15 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-        <h5>This:</h5>
-        <ul><li><a href="Type.html">Type</a></li></ul>
+        <h5 class="subsection-title">This:</h5>
+        <ul class="detail-list"><li><a href="Type.html">Type</a></li></ul>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -8218,11 +7553,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -8230,40 +7585,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
@@ -8317,23 +7643,10 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
+        <h5 class="subsection-title">Parameters:</h5>
         
 
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
+<table class="params parameter-table">
 	<tbody>
 	
 	
@@ -8405,11 +7718,31 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-<dl class="details">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-        
     
-    
+
     
 
     
@@ -8417,40 +7750,11 @@ protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    <h5>Returns:</h5>
+    <h5 class="subsection-title">Returns:</h5>
     
 
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Type</th>
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+<table class="returns return-table">
     <tbody>
     
         <tr>
