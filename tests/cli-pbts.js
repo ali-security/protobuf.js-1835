@@ -167,6 +167,25 @@ tape.test("pbts preserves qualified Object type names", function(test) {
     });
 });
 
+tape.test("pbts ignores unknown JSDoc tags", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Reflected tagged value.",
+        " * @customTag generated-by-tool",
+        " * @name TaggedValue",
+        " * @type {number}",
+        " * @const",
+        " */"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("export const TaggedValue: number;") >= 0, "emits tagged declaration");
+        test.equal(tsCode.indexOf("customTag"), -1, "does not emit unknown tag");
+        test.end();
+    });
+});
+
 tape.test("pbts emits qualified typedefs in namespaces", function(test) {
     var pbts = require("../cli/pbts");
     var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");
