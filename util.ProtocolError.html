@@ -172,6 +172,8 @@
                 
                     <li data-name="util.key64Re"><a href="util.html#.key64Re">key64Re</a></li>
                 
+                    <li data-name="util.nestingLimit"><a href="util.html#.nestingLimit">nestingLimit</a></li>
+                
                     <li data-name="util.recursionLimit"><a href="util.html#.recursionLimit">recursionLimit</a></li>
                 
                     <li data-name="util.toJSONOptions"><a href="util.html#.toJSONOptions">toJSONOptions</a></li>
@@ -192,8 +194,6 @@
                     <li data-name="util.boolFromKey"><a href="util.html#.boolFromKey">boolFromKey</a></li>
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
-                
-                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
                 
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
@@ -2166,7 +2166,7 @@
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L385">line 385</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L392">line 392</a>
         </div>
         
     </div>
@@ -2311,7 +2311,12 @@
         
 
     
-    <pre class="prettyprint"><code>try {    MyMessage.decode(someBuffer); // throws if required fields are missing} catch (e) {    if (e instanceof ProtocolError && e.instance)        console.log("decoded so far: " + JSON.stringify(e.instance));}</code></pre>
+    <pre class="prettyprint"><code>try {
+    MyMessage.decode(someBuffer); // throws if required fields are missing
+} catch (e) {
+    if (e instanceof ProtocolError && e.instance)
+        console.log("decoded so far: " + JSON.stringify(e.instance));
+}</code></pre>
     
 
 

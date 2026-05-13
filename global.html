@@ -172,6 +172,8 @@
                 
                     <li data-name="util.key64Re"><a href="util.html#.key64Re">key64Re</a></li>
                 
+                    <li data-name="util.nestingLimit"><a href="util.html#.nestingLimit">nestingLimit</a></li>
+                
                     <li data-name="util.recursionLimit"><a href="util.html#.recursionLimit">recursionLimit</a></li>
                 
                     <li data-name="util.toJSONOptions"><a href="util.html#.toJSONOptions">toJSONOptions</a></li>
@@ -192,8 +194,6 @@
                     <li data-name="util.boolFromKey"><a href="util.html#.boolFromKey">boolFromKey</a></li>
                 
                     <li data-name="util.camelCase"><a href="util.html#.camelCase">camelCase</a></li>
-                
-                    <li data-name="util.checkDepth"><a href="util.html#.checkDepth">checkDepth</a></li>
                 
                     <li data-name="util.codegen"><a href="util.html#.codegen">codegen</a></li>
                 
@@ -2293,7 +2293,13 @@ Can also be used manually to make roots available across modules.</p>
         
 
     
-    <pre class="prettyprint"><code>// pbjs -r myroot -o compiled.js ...// in another module:require("./compiled.js");// in any subsequent module:var root = protobuf.roots["myroot"];</code></pre>
+    <pre class="prettyprint"><code>// pbjs -r myroot -o compiled.js ...
+
+// in another module:
+require("./compiled.js");
+
+// in any subsequent module:
+var root = protobuf.roots["myroot"];</code></pre>
     
 
 
@@ -2723,7 +2729,11 @@ Can also be used to provide additional google types or your own custom types.</p
         
 
     
-    <pre class="prettyprint"><code>// manually provides descriptor.proto (assumes google/protobuf/ namespace and .proto extension)protobuf.common("descriptor", descriptorJson);// manually provides a custom definition (uses my.foo namespace)protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
+    <pre class="prettyprint"><code>// manually provides descriptor.proto (assumes google/protobuf/ namespace and .proto extension)
+protobuf.common("descriptor", descriptorJson);
+
+// manually provides a custom definition (uses my.foo namespace)
+protobuf.common("my/foo/bar.proto", myFooBarJson);</code></pre>
     
 
 
@@ -4245,7 +4255,7 @@ Can also be used to provide additional google types or your own custom types.</p
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/parse.js">parse.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/parse.js#L1027">line 1027</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/parse.js">parse.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/parse.js#L1041">line 1041</a>
         </div>
         
     </div>
@@ -6033,7 +6043,7 @@ Can also be used to provide additional google types or your own custom types.</p
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L393">line 393</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L400">line 400</a>
         </div>
         
     </div>
@@ -6137,7 +6147,7 @@ Can also be used to provide additional google types or your own custom types.</p
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L422">line 422</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js">util/minimal.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/util/minimal.js#L429">line 429</a>
         </div>
         
     </div>
@@ -6846,7 +6856,13 @@ Can also be used to provide additional google types or your own custom types.</p
         
 
     
-    <pre class="prettyprint"><code>function rpcImpl(method, requestData, callback) {    if (protobuf.util.lcFirst(method.name) !== "myMethod") // compatible with static code        throw Error("no such method");    asynchronouslyObtainAResponse(requestData, function(err, responseData) {        callback(err, responseData);    });}</code></pre>
+    <pre class="prettyprint"><code>function rpcImpl(method, requestData, callback) {
+    if (protobuf.util.lcFirst(method.name) !== "myMethod") // compatible with static code
+        throw Error("no such method");
+    asynchronouslyObtainAResponse(requestData, function(err, responseData) {
+        callback(err, responseData);
+    });
+}</code></pre>
     
 
 
@@ -7793,7 +7809,7 @@ Can also be used to provide additional google types or your own custom types.</p
     
         
         <div class="tag-source">
-            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L616">line 616</a>
+            <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js">type.js</a>, <a target="_blank" href="https://github.com/protobufjs/protobuf.js/blob/master/src/type.js#L623">line 623</a>
         </div>
         
     </div>
