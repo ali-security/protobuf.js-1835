@@ -226,6 +226,31 @@ tape.test("pbts preserves enum value comments", function(test) {
     });
 });
 
+tape.test("pbts emits abstract class methods", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * @abstract",
+        " * @class",
+        " */",
+        "function AbstractService() {}",
+        "",
+        "/**",
+        " * @abstract",
+        " * @function call",
+        " * @memberof AbstractService",
+        " * @instance",
+        " * @returns {number}",
+        " */",
+        "AbstractService.prototype.call = function() {};"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("abstract call(): number;") >= 0, "emits abstract instance method");
+        test.end();
+    });
+});
+
 tape.test("pbts emits qualified typedefs in namespaces", function(test) {
     var pbts = require("../cli/pbts");
     var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");

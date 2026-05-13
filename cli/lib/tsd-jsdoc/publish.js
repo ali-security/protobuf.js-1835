@@ -761,6 +761,8 @@ function writeFunctionName(element, insideClass, exported) {
             write(element.access, " ");
         if (element.scope === "static")
             write("static ");
+        else if (element.virtual)
+            write("abstract ");
     } else {
         if (exported)
             write("export ");
