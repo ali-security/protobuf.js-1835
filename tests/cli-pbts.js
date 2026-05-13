@@ -207,6 +207,25 @@ tape.test("pbts preserves deprecated JSDoc tags", function(test) {
     });
 });
 
+tape.test("pbts preserves enum value comments", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Example enum.",
+        " * @enum {number}",
+        " * @property {number} ONE=1 Custom comment.",
+        " * @property {number} TWO=2 TWO value",
+        " */",
+        "var Example;"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("/** Custom comment. */\n    ONE = 1,") >= 0, "keeps custom enum value comment");
+        test.ok(tsCode.indexOf("/** TWO value */\n    TWO = 2") >= 0, "keeps fallback enum value comment");
+        test.end();
+    });
+});
+
 tape.test("pbts emits qualified typedefs in namespaces", function(test) {
     var pbts = require("../cli/pbts");
     var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");

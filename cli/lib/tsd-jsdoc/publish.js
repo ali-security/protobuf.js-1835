@@ -699,6 +699,7 @@ function handleEnum(element) {
         writeln("enum ", element.name, " {");
         ++indent;
         element.properties.forEach(function(property, i) {
+            writeComment(property.description);
             write(property.name);
             if (property.defaultvalue !== undefined)
                 write(" = ", JSON.stringify(property.defaultvalue));
