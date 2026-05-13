@@ -84,6 +84,24 @@ tape.test("pbjs generates correct ES module static-module imports", function(tes
     });
 });
 
+tape.test("pbjs emits file overview comments on one line", function(test) {
+    cliTest(test, function() {
+        var root = new protobuf.Root();
+        root.comment = "Generated file.";
+
+        var staticTarget = require("../cli/targets/static");
+
+        staticTarget(root, {
+            comments: true
+        }, function(err, jsCode) {
+            test.error(err, "static code generation worked");
+            test.ok(jsCode.indexOf(" * @fileoverview Generated file.") >= 0, "emits file overview comment");
+            test.equal(jsCode.indexOf("@\n * f\n * i\n * l\n * e"), -1, "does not split file overview into characters");
+            test.end();
+        });
+    });
+});
+
 tape.test("pbjs keeps es6 as an ES module wrapper alias", function(test) {
     cliTest(test, function() {
         var root = protobuf.loadSync("tests/data/cli/test.proto");
