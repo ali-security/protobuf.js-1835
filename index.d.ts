@@ -162,7 +162,7 @@ export class Enum extends ReflectionObject {
      * @param [comments] The value comments for this enum
      * @param [valuesOptions] The value options for this enum
      */
-    constructor(name: string, values?: { [k: string]: number }, options?: { [k: string]: any }, comment?: string, comments?: { [k: string]: string }, valuesOptions?: ({ [k: string]: { [k: string]: any } }|undefined));
+    constructor(name: string, values?: { [k: string]: number }, options?: { [k: string]: any }, comment?: string, comments?: { [k: string]: (string|null) }, valuesOptions?: ({ [k: string]: { [k: string]: any } }|undefined));
 
     /** Enum values by id. */
     valuesById: { [k: number]: string };
@@ -174,7 +174,7 @@ export class Enum extends ReflectionObject {
     comment: (string|null);
 
     /** Value comment texts, if any. */
-    comments: { [k: string]: string };
+    comments: { [k: string]: (string|null) };
 
     /** Values options, if any */
     valuesOptions?: { [k: string]: { [k: string]: any } };
@@ -240,11 +240,26 @@ export class Enum extends ReflectionObject {
 /** Enum descriptor. */
 export interface IEnum {
 
+    /** Edition */
+    edition?: string;
+
     /** Enum values */
     values: { [k: string]: number };
 
     /** Enum options */
     options?: { [k: string]: any };
+
+    /** Enum value options */
+    valuesOptions?: { [k: string]: { [k: string]: any } };
+
+    /** Reserved ranges */
+    reserved?: (number[]|string)[];
+
+    /** Enum comment */
+    comment?: (string|null);
+
+    /** Value comments */
+    comments?: { [k: string]: (string|null) };
 }
 
 /** Reflected message field. */
@@ -396,6 +411,9 @@ export class FieldBase extends ReflectionObject {
 /** Field descriptor. */
 export interface IField {
 
+    /** Edition */
+    edition?: string;
+
     /** Field rule */
     rule?: string;
 
@@ -407,6 +425,9 @@ export interface IField {
 
     /** Field options */
     options?: { [k: string]: any };
+
+    /** Field comment */
+    comment?: (string|null);
 }
 
 /** Extension field descriptor. */
@@ -700,8 +721,8 @@ export interface IMethod {
     /** Method options */
     options?: { [k: string]: any };
 
-    /** Method comments */
-    comment: string;
+    /** Method comment */
+    comment?: (string|null);
 
     /** Method options properly parsed into objects */
     parsedOptions?: { [k: string]: any }[];
@@ -1096,6 +1117,9 @@ export interface IOneOf {
 
     /** Oneof options */
     options?: { [k: string]: any };
+
+    /** Oneof comment */
+    comment?: (string|null);
 }
 
 /**
@@ -1535,8 +1559,14 @@ export class Service extends NamespaceBase {
 /** Service descriptor. */
 export interface IService extends INamespace {
 
+    /** Edition */
+    edition?: string;
+
     /** Method descriptors */
     methods: { [k: string]: IMethod };
+
+    /** Service comment */
+    comment?: (string|null);
 }
 
 /**
@@ -1794,6 +1824,9 @@ export class Type extends NamespaceBase {
 /** Message type descriptor. */
 export interface IType extends INamespace {
 
+    /** Edition */
+    edition?: string;
+
     /** Oneof descriptors */
     oneofs?: { [k: string]: IOneOf };
 
@@ -1808,6 +1841,9 @@ export interface IType extends INamespace {
 
     /** Whether a legacy group or not */
     group?: boolean;
+
+    /** Message type comment */
+    comment?: (string|null);
 }
 
 /** Conversion options as used by {@link Type#toObject} and {@link Message.toObject}. */

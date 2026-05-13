@@ -32,6 +32,19 @@ HelloReflected.create({ value: "hi" });
 const parsedOptionValue = (_a = HelloReflected.parsedOptions) === null || _a === void 0 ? void 0 : _a[0]["(custom_option)"];
 const reflectedMethod = new __1.Method("Call", undefined, "Hello", "Hello", false, false, undefined, undefined, [{ option: 1 }]);
 const parsedMethodOptionValue = (_b = reflectedMethod.parsedOptions) === null || _b === void 0 ? void 0 : _b[0].option;
+const enumDescriptor = {
+    edition: "proto2",
+    values: { A: 0 },
+    valuesOptions: { A: { deprecated: true } },
+    reserved: [[100, 200], "OLD"],
+    comment: null,
+    comments: { A: null }
+};
+const fieldDescriptor = { edition: "2023", type: "string", id: 1, comment: null };
+const methodDescriptor = { requestType: "Hello", responseType: "Hello", comment: null };
+const oneofDescriptor = { oneof: ["value"], comment: null };
+const serviceDescriptor = { edition: "2023", methods: { Call: methodDescriptor }, comment: null };
+const typeDescriptor = { edition: "2023", fields: { value: fieldDescriptor }, oneofs: { choice: oneofDescriptor }, comment: null };
 // Custom classes
 class Hello extends __1.Message {
     foo() {
