@@ -140,6 +140,33 @@ tape.test("pbts preserves multiline TypeScript @type expressions", function(test
     });
 });
 
+tape.test("pbts preserves qualified Object type names", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * Uses plain Object.",
+        " * @name PlainObjectUser",
+        " * @type {Object}",
+        " * @const",
+        " */",
+        "",
+        "/**",
+        " * Uses a generated message named Object.",
+        " * @name ObjectUser",
+        " * @type {foo.Object}",
+        " * @const",
+        " */",
+        ""
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf("export const PlainObjectUser: object;") >= 0, "converts plain Object to object");
+        test.ok(tsCode.indexOf("export const ObjectUser: foo.Object;") >= 0, "preserves qualified Object names");
+        test.equal(tsCode.indexOf("foo.object"), -1, "does not lower-case qualified Object names");
+        test.end();
+    });
+});
+
 tape.test("pbts emits qualified typedefs in namespaces", function(test) {
     var pbts = require("../cli/pbts");
     var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");

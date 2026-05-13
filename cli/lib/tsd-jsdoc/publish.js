@@ -262,9 +262,6 @@ function getTypeOf(element) {
     // Replace catchalls with any
     name = name.replace(/\*|\bmixed\b/g, "any");
 
-    // Ensure upper case Object for map expressions below
-    name = name.replace(/\bobject\b/g, "Object");
-
     // Convert innermost generic types first so Array.<Object.<...>>
     // and Object.<string,Array.<...>> are both handled correctly
     var prevName;
@@ -289,9 +286,9 @@ function getTypeOf(element) {
     // Replace functions (there are no signatures) with Function
     name = name.replace(/\bfunction(?:\(\))?\b/g, "Function");
 
-    // Convert plain Object back to just object
-    name = name.replace(/\b(Object\b(?!\.))/g, function($0, $1) {
-        return $1.toLowerCase();
+    // Convert plain Object back to just object, but preserve qualified names like foo.Object
+    name = name.replace(/(^|[^\w$.])Object\b(?![.<])/g, function($0, prefix) {
+        return prefix + "object";
     });
 
     return name;
