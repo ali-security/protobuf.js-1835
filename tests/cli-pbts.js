@@ -186,6 +186,27 @@ tape.test("pbts ignores unknown JSDoc tags", function(test) {
     });
 });
 
+tape.test("pbts preserves deprecated JSDoc tags", function(test) {
+    var pbts = require("../cli/pbts");
+
+    pbts.process([
+        "/**",
+        " * @deprecated",
+        " */",
+        "function emptyDeprecated() {}",
+        "",
+        "/**",
+        " * @deprecated Use textDeprecated instead.",
+        " */",
+        "function textDeprecated() {}"
+    ].join("\n"), [], function(err, tsCode) {
+        test.error(err, "definition generation worked");
+        test.ok(tsCode.indexOf(" * @deprecated\n") >= 0, "keeps bare deprecated tag");
+        test.ok(tsCode.indexOf(" * @deprecated Use textDeprecated instead.") >= 0, "keeps deprecated tag text");
+        test.end();
+    });
+});
+
 tape.test("pbts emits qualified typedefs in namespaces", function(test) {
     var pbts = require("../cli/pbts");
     var file = path.join(".tmp", "pbts-qualified-typedef-" + process.pid + "-" + Date.now() + ".js");

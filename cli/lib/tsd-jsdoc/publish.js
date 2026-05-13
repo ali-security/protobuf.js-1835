@@ -196,6 +196,8 @@ function writeComment(comment, otherwiseNewline) {
                 }
                 writeln(line);
             });
+        } else if (tag.name === "deprecated") {
+            writeln(" * @deprecated");
         }
     });
     writeln(" */");
