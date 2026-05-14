@@ -19,6 +19,36 @@ util.inquire = require("@protobufjs/inquire");
 // converts to / from utf8 encoded strings
 util.utf8 = require("@protobufjs/utf8");
 
+// override utf8.read with overlong-safe version (CVE-2026-44288)
+var _replacementChar = "�";
+util.utf8.read = function utf8_read(buffer, start, end) {
+    if (end - start < 1)
+        return "";
+    var str = "";
+    for (var i = start; i < end;) {
+        var t = buffer[i++];
+        if (t <= 0x7F) {
+            str += String.fromCharCode(t);
+        } else if (t >= 0xC0 && t < 0xE0) {
+            var c2 = (t & 0x1F) << 6 | buffer[i++] & 0x3F;
+            str += c2 >= 0x80 ? String.fromCharCode(c2) : _replacementChar;
+        } else if (t >= 0xE0 && t < 0xF0) {
+            var c3 = (t & 0xF) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F;
+            str += c3 >= 0x800 ? String.fromCharCode(c3) : _replacementChar;
+        } else if (t >= 0xF0) {
+            var t2 = (t & 7) << 18 | (buffer[i++] & 0x3F) << 12 | (buffer[i++] & 0x3F) << 6 | buffer[i++] & 0x3F;
+            if (t2 < 0x10000 || t2 > 0x10FFFF)
+                str += _replacementChar;
+            else {
+                t2 -= 0x10000;
+                str += String.fromCharCode(0xD800 + (t2 >> 10));
+                str += String.fromCharCode(0xDC00 + (t2 & 0x3FF));
+            }
+        }
+    }
+    return str;
+};
+
 // provides a node-like buffer pool in the browser
 util.pool = require("@protobufjs/pool");
 
@@ -237,11 +267,34 @@ util.longFromHash = function longFromHash(hash, unsigned) {
 function merge(dst, src, ifNotSet) { // used by converters
     for (var keys = Object.keys(src), i = 0; i < keys.length; ++i)
         if (dst[keys[i]] === undefined || !ifNotSet)
-            dst[keys[i]] = src[keys[i]];
+            if (keys[i] !== "__proto__")
+                dst[keys[i]] = src[keys[i]];
     return dst;
 }
 
 util.merge = merge;
+
+/**
+ * Recursion limit.
+ * @memberof util
+ * @type {number}
+ */
+util.recursionLimit = 100;
+
+/**
+ * Makes a property safe for assignment as an own property.
+ * @memberof util
+ * @param {Object.<string,*>} obj Object
+ * @param {string} key Property key
+ * @returns {undefined}
+ */
+util.makeProp = function makeProp(obj, key) {
+    Object.defineProperty(obj, key, {
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+};
 
 /**
  * Converts the first character of a string to lower case.
